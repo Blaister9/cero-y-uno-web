@@ -46,6 +46,7 @@ src/components
 Contiene componentes reutilizables:
 
 - `layout`: header, footer y contenedores.
+- `experience`: intro binaria, canvas, wordmark, terminal decorativa y glow interactivo.
 - `motion`: wrappers de animación.
 - `ui`: tarjetas y headings.
 - `visual`: elementos visuales como la animación binaria.
@@ -85,6 +86,18 @@ Contiene utilidades compartidas y variantes de animación.
 - Preferir contenido estructurado para listas y cards.
 - Usar componentes cliente solo cuando sean necesarios para estado, interacción o animación.
 - Respetar `prefers-reduced-motion`.
+
+## Experiencia Binaria
+
+Los componentes de `src/components/experience` elevan la home sin cambiar la arquitectura multipágina:
+
+- `binary-intro.tsx`: intro inicial de la home, con botón para saltar, control por `sessionStorage` y degradación para reduced motion.
+- `binary-canvas.tsx`: lluvia binaria en canvas 2D. Se usa canvas para mantener bajo el número de nodos DOM y controlar densidad, velocidad y limpieza de `requestAnimationFrame`.
+- `binary-wordmark.tsx`: formación visual de `CERO Y UNO` con texto accesible para lectores de pantalla.
+- `code-terminal.tsx`: bloque decorativo de terminal con líneas de construcción del sistema.
+- `interactive-glow.tsx`: luz sutil guiada por cursor en desktop, desactivada para touch o reduced motion.
+
+La intro solo se monta en la ruta `/`. Las páginas internas mantienen navegación y contenido corporativo sin depender de la animación para comunicar información esencial.
 
 ## SEO
 
