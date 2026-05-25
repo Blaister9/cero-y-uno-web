@@ -53,6 +53,12 @@ https://cero-y-uno-web.vercel.app
 
 Esta URL debe tratarse como productiva mientras no exista dominio propio.
 
+## Experiencia Interactiva Binaria
+
+La home incluye una intro visual de lluvia binaria y formación de marca. La experiencia se ejecuta solo en cliente, usa `sessionStorage` para mostrarse una vez por sesión y permite omitirla con el botón accesible `Saltar intro`.
+
+La matriz binaria está implementada con canvas 2D para evitar miles de nodos DOM. Los componentes respetan `prefers-reduced-motion`: si el usuario reduce movimiento, se muestra una versión estática y la intro no ejecuta la lluvia completa.
+
 ## Rutas Principales
 
 - `/`: resumen ejecutivo de la empresa.
@@ -142,3 +148,4 @@ NEXT_PUBLIC_WHATSAPP_URL=
 - [Arquitectura](docs/ARCHITECTURE.md)
 - [Despliegue](docs/DEPLOYMENT.md)
 - [Roadmap](docs/ROADMAP.md)
+- [Checklist QA](docs/QA_CHECKLIST.md)

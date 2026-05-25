@@ -41,6 +41,7 @@ export function ServicesSection() {
               <ServiceCard
                 description={service.description}
                 icon={iconMap[service.icon as keyof typeof iconMap]}
+                signal={service.signal}
                 title={service.title}
               />
             </Reveal>
