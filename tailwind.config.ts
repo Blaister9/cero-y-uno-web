@@ -15,12 +15,14 @@ const config: Config = {
         coal: "#0B0D0E",
         graphite: "#14171A",
         steel: "#A7B0B8",
-        signal: "#55F0D4",
-        ember: "#F2B66D",
+        signal: "#8DB4FF",
+        deepblue: "#123A6F",
+        ember: "#D7B56D",
         porcelain: "#F7F8F4"
       },
       boxShadow: {
-        "inner-line": "inset 0 1px 0 rgba(255,255,255,0.08)"
+        "inner-line": "inset 0 1px 0 rgba(255,255,255,0.08)",
+        "premium": "0 24px 80px rgba(0,0,0,0.35)"
       }
     }
   },

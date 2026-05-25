@@ -1,96 +1,134 @@
-export const heroHighlights = [
-  "Software a medida",
-  "Automatización de procesos",
-  "Inteligencia aplicada"
-];
+export const heroContent = {
+  kicker: "Software, automatización e inteligencia aplicada",
+  brand: "Cero y Uno",
+  title: "Lo que otros imaginan, nosotros lo convertimos en software.",
+  subtitle:
+    "Desarrollamos plataformas, automatizaciones e integraciones que convierten procesos complejos en sistemas digitales funcionales, escalables y mantenibles.",
+  primaryCta: "Solicitar diagnóstico",
+  secondaryCta: "Conocer soluciones",
+  signals: ["Estrategia", "Arquitectura", "Ejecución"]
+};
 
-export const capabilities = [
+export const manifesto = {
+  eyebrow: "Manifiesto",
+  title: "Entre el cero y el uno existe todo lo que puede construirse.",
+  body:
+    "Toda solución digital nace de una decisión esencial: resolver o complicar, escalar o quedarse corta, operar o quedarse en idea. En Cero y Uno diseñamos software con enfoque estratégico, arquitectura sólida y ejecución real."
+};
+
+export const services = [
   {
-    title: "Desarrollo de software",
+    title: "Desarrollo de software a medida",
     description:
-      "Diseñamos y construimos plataformas web, sistemas internos y productos digitales pensados para operar en entornos reales.",
+      "Plataformas web, sistemas internos y productos digitales diseñados alrededor de procesos reales.",
     icon: "code"
   },
   {
-    title: "Automatización operativa",
+    title: "Automatización de procesos",
     description:
-      "Convertimos tareas repetitivas, aprobaciones y flujos manuales en procesos trazables, medibles y sostenibles.",
+      "Flujos, reglas, alertas y tareas conectadas para reducir trabajo manual y mejorar trazabilidad.",
     icon: "workflow"
   },
   {
-    title: "Inteligencia aplicada",
+    title: "Integraciones y APIs",
     description:
-      "Integramos modelos, asistentes y análisis inteligente donde aportan criterio, velocidad y mejores decisiones.",
+      "Conectamos sistemas, datos y herramientas para que la operación deje de depender de pasos aislados.",
+    icon: "plug"
+  },
+  {
+    title: "Power Platform y soluciones empresariales",
+    description:
+      "Aplicaciones, automatizaciones y tableros empresariales cuando el negocio necesita velocidad y control.",
+    icon: "building"
+  },
+  {
+    title: "Analítica e inteligencia aplicada",
+    description:
+      "Tableros, modelos y asistentes que convierten información operativa en mejores decisiones.",
     icon: "brain"
   },
   {
-    title: "Arquitectura y modernización",
+    title: "Modernización de sistemas existentes",
     description:
-      "Ordenamos sistemas, integraciones y datos para que el software evolucione sin frenar la operación.",
+      "Evolucionamos herramientas heredadas, integraciones frágiles y procesos que ya no soportan el crecimiento.",
     icon: "layers"
   }
 ];
 
-export const operatingSignals = [
-  "Procesos dispersos",
-  "Datos sin trazabilidad",
-  "Equipos dependientes de tareas manuales",
-  "Ideas bloqueadas por falta de ejecución técnica"
-];
+export const differential = {
+  eyebrow: "Diferencial",
+  title: "No entregamos pantallas. Entregamos sistemas que sostienen operación.",
+  pillars: [
+    {
+      title: "Estrategia",
+      description: "Entendemos el proceso antes de escribir código."
+    },
+    {
+      title: "Arquitectura",
+      description: "Construimos soluciones mantenibles y preparadas para crecer."
+    },
+    {
+      title: "Ejecución",
+      description: "Llevamos las ideas hasta producción, operación y mejora continua."
+    }
+  ]
+};
+
+export const impact = {
+  eyebrow: "Impacto",
+  title: "Convertimos desorden operativo en software funcional.",
+  beforeTitle: "Antes",
+  afterTitle: "Después",
+  before: [
+    "Procesos manuales",
+    "Hojas de cálculo dispersas",
+    "Correos como sistema de gestión",
+    "Datos duplicados",
+    "Trazabilidad débil",
+    "Sistemas desconectados"
+  ],
+  after: [
+    "Plataformas centralizadas",
+    "Automatización",
+    "Integraciones",
+    "Reportes",
+    "Control operativo",
+    "Datos listos para decidir"
+  ]
+};
 
 export const processSteps = [
   {
     label: "01",
-    title: "Entendemos la operación",
+    title: "Diagnóstico operativo",
     description:
-      "Mapeamos procesos, restricciones, usuarios y puntos de fricción antes de proponer tecnología."
+      "Leemos el proceso, sus restricciones, usuarios, datos y puntos de fricción antes de definir alcance."
   },
   {
     label: "02",
-    title: "Diseñamos la solución",
+    title: "Diseño de solución",
     description:
-      "Definimos arquitectura, alcance, experiencia y criterios de éxito para construir sin improvisación."
+      "Traducimos necesidades en arquitectura, experiencia, integraciones y criterios concretos de entrega."
   },
   {
     label: "03",
-    title: "Construimos por iteraciones",
+    title: "Construcción iterativa",
     description:
-      "Entregamos software funcional en ciclos controlados, con validación temprana y foco en valor operativo."
+      "Desarrollamos por ciclos, validamos temprano y priorizamos software funcional sobre documentación decorativa."
   },
   {
     label: "04",
-    title: "Acompañamos la adopción",
+    title: "Salida a operación",
     description:
-      "Ajustamos, documentamos y estabilizamos para que la solución se vuelva parte natural del negocio."
+      "Acompañamos estabilización, documentación y mejoras para que la solución se incorpore al negocio."
   }
 ];
 
-export const solutionAreas = [
-  {
-    title: "Portales internos",
-    description:
-      "Herramientas para equipos que necesitan operar, consultar y aprobar sin depender de hojas sueltas."
-  },
-  {
-    title: "Dashboards gerenciales",
-    description:
-      "Interfaces ejecutivas para leer el negocio con indicadores claros, fuentes conectadas y contexto accionable."
-  },
-  {
-    title: "Flujos automatizados",
-    description:
-      "Procesos con reglas, alertas, integraciones y seguimiento para reducir fricción diaria."
-  },
-  {
-    title: "Asistentes con IA",
-    description:
-      "Capacidades de inteligencia aplicada integradas a procesos, documentos, atención o análisis."
-  }
-];
-
-export const principles = [
-  "Software real antes que promesas abstractas.",
-  "Automatización con criterio operativo.",
-  "IA aplicada donde mejora decisiones, no donde solo decora.",
-  "Arquitectura suficiente para crecer sin rigidez innecesaria."
-];
+export const contactContent = {
+  eyebrow: "Siguiente paso",
+  title: "Hablemos del proceso que necesita convertirse en software.",
+  body:
+    "Cuéntanos qué operación quieres ordenar, automatizar o escalar. La primera conversación busca entender el problema, no venderte una herramienta innecesaria.",
+  primaryCta: "Solicitar diagnóstico",
+  secondaryCta: "Ver servicios"
+};

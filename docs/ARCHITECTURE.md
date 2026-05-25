@@ -15,13 +15,21 @@
 src/app
 ```
 
-Contiene el layout global, estilos globales y la composición de la página principal.
+Contiene el layout global, estilos globales, metadata y composición de la página principal.
 
 ```text
 src/sections
 ```
 
-Contiene las secciones principales del home. Cada sección debe ser independiente y consumir contenido desde `src/content` cuando aplique.
+Contiene las secciones principales del home:
+
+- Hero
+- Manifiesto
+- Servicios
+- Diferencial
+- Impacto
+- Proceso
+- Contacto
 
 ```text
 src/components
@@ -31,26 +39,26 @@ Contiene componentes reutilizables:
 
 - `layout`: header, footer y contenedores.
 - `motion`: wrappers de animación.
-- `ui`: tarjetas, headings y piezas de interfaz.
+- `ui`: tarjetas y headings.
 - `visual`: elementos visuales como la animación binaria.
 
 ```text
 src/content
 ```
 
-Contiene textos, listas y datos editables del sitio.
+Contiene textos, listas y datos editables del sitio. Las secciones consumen contenido desde aquí para evitar mezclar layout con copy.
 
 ```text
 src/config
 ```
 
-Contiene metadatos, navegación y datos públicos configurables.
+Contiene metadatos, navegación, email público, keywords y datos configurables.
 
 ```text
 src/lib
 ```
 
-Contiene utilidades compartidas y variantes de animacion.
+Contiene utilidades compartidas y variantes de animación.
 
 ## Restricciones
 
@@ -58,11 +66,27 @@ Contiene utilidades compartidas y variantes de animacion.
 - No hay autenticación.
 - No hay base de datos.
 - No hay APIs internas.
+- No hay analytics ni integraciones con claves.
 - La página no debe depender de servicios externos para compilar.
 
 ## Convenciones
 
 - Mantener `src/app/page.tsx` como composición de secciones.
 - Evitar lógica de negocio dentro de componentes visuales.
-- Preferir contenido estructurado para repetir bloques.
-- Usar componentes cliente solo cuando sean necesarios para animación o interacción.
+- Preferir contenido estructurado para listas y cards.
+- Usar componentes cliente solo cuando sean necesarios para estado, interacción o animación.
+- Respetar `prefers-reduced-motion`.
+
+## SEO
+
+La metadata vive en `src/app/layout.tsx` y usa valores de `src/config/site.ts`.
+
+Incluye:
+
+- title
+- description
+- keywords moderadas
+- robots básico
+- openGraph
+- twitter card
+- metadataBase configurable por entorno

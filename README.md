@@ -1,6 +1,8 @@
 # Cero y Uno Web
 
-Página corporativa profesional de Cero y Uno, una empresa enfocada en desarrollo de software, automatización e inteligencia aplicada.
+Página corporativa profesional de Cero y Uno, empresa de desarrollo de software, automatización e inteligencia aplicada.
+
+El sitio comunica una propuesta ejecutiva: convertir ideas, procesos complejos y caos operativo en sistemas digitales reales, funcionales, escalables y mantenibles.
 
 ## Stack
 
@@ -13,8 +15,8 @@ Página corporativa profesional de Cero y Uno, una empresa enfocada en desarroll
 
 ## Requisitos
 
-- Node.js 20 o superior
-- pnpm 9 o superior
+- Node.js 20 LTS
+- pnpm 9.15.4 o compatible
 
 ## Instalación
 
@@ -22,7 +24,13 @@ Página corporativa profesional de Cero y Uno, una empresa enfocada en desarroll
 pnpm install
 ```
 
-## Desarrollo
+Para validación en CI o entornos reproducibles:
+
+```bash
+pnpm install --frozen-lockfile
+```
+
+## Desarrollo Local
 
 ```bash
 pnpm dev
@@ -36,26 +44,69 @@ El sitio queda disponible en `http://localhost:3000`.
 pnpm build
 ```
 
-## Scripts
+## Validaciones
 
-- `pnpm dev`: inicia el servidor local de Next.js.
-- `pnpm build`: compila el proyecto para producción.
-- `pnpm start`: sirve la build de producción.
-- `pnpm lint`: ejecuta ESLint.
-- `pnpm typecheck`: ejecuta TypeScript sin emitir archivos.
+```bash
+pnpm typecheck
+pnpm lint
+pnpm build
+```
 
-## Estructura
+## Estructura Del Proyecto
 
 ```text
 src/
-  app/          App Router, layout global y página principal
-  components/   Componentes reutilizables de layout, UI y motion
+  app/          App Router, layout global, metadata y página principal
+  components/   Componentes reutilizables de layout, UI, motion y visuales
   config/       Configuración pública del sitio
   content/      Contenido editable del sitio
   lib/          Utilidades y variantes de animación
-  sections/     Secciones de la página principal
-docs/           Documentación técnica y de marca
+  sections/     Secciones independientes de la página principal
+docs/           Documentación técnica, marca y despliegue
 ```
+
+## Flujo Git
+
+- `main`: rama estable y candidata a producción.
+- `dev`: rama de integración.
+- `feature/*`: ramas de trabajo desde `dev`.
+
+Flujo recomendado:
+
+```bash
+git fetch --all --prune
+git checkout dev
+git pull origin dev
+git checkout -b feature/nombre-del-cambio
+```
+
+Abrir pull request desde `feature/*` hacia `dev`. No hacer merge directo a `main`.
+
+## Despliegue Sugerido En Vercel
+
+- Framework: Next.js.
+- Install Command: `pnpm install --frozen-lockfile`.
+- Build Command: `pnpm build`.
+- Output: default de Next.js.
+- Production Branch: `main`.
+- Preview Deployments: ramas y pull requests.
+
+## Variables
+
+Usar `.env.example` como referencia:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://replace-with-your-vercel-url.vercel.app
+NEXT_PUBLIC_CONTACT_EMAIL=contacto@ceroyuno.co
+```
+
+## Notas Para Próximos Cambios
+
+- Mantener el contenido editable en `src/content`.
+- Mantener navegación, email, keywords y metadatos base en `src/config`.
+- No agregar backend, autenticación ni base de datos sin autorización.
+- No inventar clientes, métricas, certificaciones, casos de éxito ni testimonios.
+- Antes de cerrar cualquier cambio, ejecutar `pnpm typecheck`, `pnpm lint` y `pnpm build`.
 
 ## Documentación
 
