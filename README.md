@@ -53,6 +53,14 @@ https://cero-y-uno-web.vercel.app
 
 Esta URL debe tratarse como productiva mientras no exista dominio propio.
 
+## Rutas Principales
+
+- `/`: resumen ejecutivo de la empresa.
+- `/servicios`: servicios técnicos con problema, entrega y resultado esperado.
+- `/soluciones`: escenarios de solución aplicables a clientes.
+- `/nosotros`: enfoque institucional y filosofía de trabajo.
+- `/contacto`: contacto sin formulario funcional ni backend.
+
 ## Build
 
 ```bash
@@ -72,6 +80,7 @@ pnpm build
 ```text
 src/
   app/          App Router, layout global, metadata y página principal
+  app/*/page.tsx Páginas corporativas internas
   components/   Componentes reutilizables de layout, UI, motion y visuales
   config/       Configuración pública del sitio
   content/      Contenido editable del sitio

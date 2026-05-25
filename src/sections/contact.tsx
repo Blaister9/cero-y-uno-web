@@ -1,4 +1,5 @@
 import { ArrowRight, Mail, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/motion/reveal";
@@ -8,6 +9,7 @@ import { contactContent } from "@/content/site";
 export function ContactSection() {
   const hasEmail = Boolean(siteConfig.contact.email);
   const hasWhatsapp = Boolean(siteConfig.contact.whatsappUrl);
+  const primaryHref = siteConfig.hasDirectContact ? siteConfig.primaryContactHref : "#canales";
 
   return (
     <section className="bg-ink py-24" id="contacto">
@@ -29,7 +31,7 @@ export function ContactSection() {
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
                 <a
                   className="inline-flex h-12 items-center justify-center gap-2 rounded bg-porcelain px-5 text-sm font-semibold text-ink transition hover:bg-white"
-                  href={siteConfig.primaryContactHref}
+                  href={primaryHref}
                 >
                   {contactContent.primaryCta}
                   {hasWhatsapp && !hasEmail ? (
@@ -38,16 +40,16 @@ export function ContactSection() {
                     <Mail aria-hidden="true" size={17} />
                   )}
                 </a>
-                <a
+                <Link
                   className="inline-flex h-12 items-center justify-center gap-2 rounded border border-white/15 bg-white/[0.04] px-5 text-sm font-semibold text-porcelain transition hover:border-signal/45 hover:bg-white/[0.07]"
-                  href="#servicios"
+                  href="/servicios"
                 >
                   {contactContent.secondaryCta}
                   <ArrowRight aria-hidden="true" size={17} />
-                </a>
+                </Link>
               </div>
 
-              <div className="rounded border border-white/10 bg-ink/55 p-4 lg:col-span-2">
+              <div className="rounded border border-white/10 bg-ink/55 p-4 lg:col-span-2" id="canales">
                 <p className="text-sm font-medium text-porcelain">Canal comercial</p>
                 {siteConfig.hasDirectContact ? (
                   <div className="mt-3 grid gap-2 text-sm leading-6 text-steel">
