@@ -106,27 +106,45 @@ export const impact = {
 export const processSteps = [
   {
     label: "01",
-    title: "Diagnóstico operativo",
+    title: "Diagnóstico",
     description:
-      "Leemos el proceso, sus restricciones, usuarios, datos y puntos de fricción antes de definir alcance."
+      "Leemos operación, usuarios, datos, restricciones y puntos de fricción antes de definir alcance."
   },
   {
     label: "02",
-    title: "Diseño de solución",
+    title: "Diseño",
     description:
-      "Traducimos necesidades en arquitectura, experiencia, integraciones y criterios concretos de entrega."
+      "Traducimos necesidades en experiencia, reglas, flujos e integraciones que el negocio pueda validar."
   },
   {
     label: "03",
-    title: "Construcción iterativa",
+    title: "Arquitectura",
     description:
-      "Desarrollamos por ciclos, validamos temprano y priorizamos software funcional sobre documentación decorativa."
+      "Definimos estructura técnica, datos, componentes y límites para que la solución pueda crecer."
   },
   {
     label: "04",
-    title: "Salida a operación",
+    title: "Desarrollo",
     description:
-      "Acompañamos estabilización, documentación y mejoras para que la solución se incorpore al negocio."
+      "Construimos por ciclos, validamos temprano y priorizamos software funcional sobre ruido."
+  },
+  {
+    label: "05",
+    title: "Pruebas",
+    description:
+      "Revisamos flujos críticos, estados, datos e integraciones antes de mover la solución a operación."
+  },
+  {
+    label: "06",
+    title: "Despliegue",
+    description:
+      "Preparamos salida controlada, documentación mínima y criterios claros para adopción del sistema."
+  },
+  {
+    label: "07",
+    title: "Evolución",
+    description:
+      "Acompañamos estabilización y mejora continua según uso real, operación y nuevas prioridades."
   }
 ];
 
