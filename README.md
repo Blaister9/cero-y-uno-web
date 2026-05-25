@@ -4,6 +4,13 @@ Página corporativa profesional de Cero y Uno, empresa de desarrollo de software
 
 El sitio comunica una propuesta ejecutiva: convertir ideas, procesos complejos y caos operativo en sistemas digitales reales, funcionales, escalables y mantenibles.
 
+## Estado Actual
+
+- Producción temporal en Vercel: https://cero-y-uno-web.vercel.app
+- Sin dominio propio todavía.
+- Sin backend, base de datos, autenticación ni formulario funcional.
+- Contacto directo configurable por variables públicas cuando exista correo o WhatsApp real.
+
 ## Stack
 
 - Next.js con App Router
@@ -40,9 +47,11 @@ El sitio queda disponible en `http://localhost:3000`.
 
 ## Producción
 
-El despliegue actual está publicado en:
+El despliegue actual está publicado con URL temporal de Vercel:
 
 https://cero-y-uno-web.vercel.app
+
+Esta URL debe tratarse como productiva mientras no exista dominio propio.
 
 ## Build
 
@@ -103,8 +112,11 @@ Usar `.env.example` como referencia:
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://cero-y-uno-web.vercel.app
-NEXT_PUBLIC_CONTACT_EMAIL=contacto@ceroyuno.co
+NEXT_PUBLIC_CONTACT_EMAIL=
+NEXT_PUBLIC_WHATSAPP_URL=
 ```
+
+`NEXT_PUBLIC_CONTACT_EMAIL` y `NEXT_PUBLIC_WHATSAPP_URL` deben permanecer vacíos hasta que exista un canal real aprobado. Si ambos están vacíos, los CTAs apuntan a la sección Contacto y no simulan envíos.
 
 ## Notas Para Próximos Cambios
 
@@ -112,6 +124,7 @@ NEXT_PUBLIC_CONTACT_EMAIL=contacto@ceroyuno.co
 - Mantener navegación, email, keywords y metadatos base en `src/config`.
 - No agregar backend, autenticación ni base de datos sin autorización.
 - No inventar clientes, métricas, certificaciones, casos de éxito ni testimonios.
+- No asumir dominio propio hasta que esté comprado y configurado.
 - Antes de cerrar cualquier cambio, ejecutar `pnpm typecheck`, `pnpm lint` y `pnpm build`.
 
 ## Documentación
@@ -119,3 +132,4 @@ NEXT_PUBLIC_CONTACT_EMAIL=contacto@ceroyuno.co
 - [Concepto de marca](docs/BRAND_CONCEPT.md)
 - [Arquitectura](docs/ARCHITECTURE.md)
 - [Despliegue](docs/DEPLOYMENT.md)
+- [Roadmap](docs/ROADMAP.md)
