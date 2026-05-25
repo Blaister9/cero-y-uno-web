@@ -21,37 +21,43 @@ export const services = [
     title: "Desarrollo de software a medida",
     description:
       "Plataformas web, sistemas internos y productos digitales diseñados alrededor de procesos reales.",
-    icon: "code"
+    icon: "code",
+    signal: "deployable"
   },
   {
     title: "Automatización de procesos",
     description:
       "Flujos, reglas, alertas y tareas conectadas para reducir trabajo manual y mejorar trazabilidad.",
-    icon: "workflow"
+    icon: "workflow",
+    signal: "automated"
   },
   {
     title: "Integraciones y APIs",
     description:
       "Conectamos sistemas, datos y herramientas para que la operación deje de depender de pasos aislados.",
-    icon: "plug"
+    icon: "plug",
+    signal: "integrated"
   },
   {
     title: "Power Platform y soluciones empresariales",
     description:
       "Aplicaciones, automatizaciones y tableros empresariales cuando el negocio necesita velocidad y control.",
-    icon: "building"
+    icon: "building",
+    signal: "enterprise-ready"
   },
   {
     title: "Analítica e inteligencia aplicada",
     description:
       "Tableros, modelos y asistentes que convierten información operativa en mejores decisiones.",
-    icon: "brain"
+    icon: "brain",
+    signal: "measurable"
   },
   {
     title: "Modernización de sistemas existentes",
     description:
       "Evolucionamos herramientas heredadas, integraciones frágiles y procesos que ya no soportan el crecimiento.",
-    icon: "layers"
+    icon: "layers",
+    signal: "scalable"
   }
 ];
 
