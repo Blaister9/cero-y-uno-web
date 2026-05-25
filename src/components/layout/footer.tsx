@@ -29,13 +29,19 @@ export function Footer() {
 
         <div>
           <p className="text-sm font-semibold text-porcelain">Contacto</p>
-          <a
-            className="mt-3 inline-flex w-fit items-center gap-2 text-sm text-steel transition hover:text-porcelain"
-            href={`mailto:${siteConfig.contactEmail}`}
-          >
-            <Mail aria-hidden="true" size={16} />
-            {siteConfig.contactEmail}
-          </a>
+          {siteConfig.contact.email ? (
+            <a
+              className="mt-3 inline-flex w-fit items-center gap-2 text-sm text-steel transition hover:text-porcelain"
+              href={`mailto:${siteConfig.contact.email}`}
+            >
+              <Mail aria-hidden="true" size={16} />
+              {siteConfig.contact.email}
+            </a>
+          ) : (
+            <p className="mt-3 text-sm leading-6 text-steel">
+              Canal comercial pendiente de configuración.
+            </p>
+          )}
         </div>
       </Container>
     </footer>
