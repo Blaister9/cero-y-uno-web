@@ -38,6 +38,12 @@ pnpm dev
 
 El sitio queda disponible en `http://localhost:3000`.
 
+## Producción
+
+El despliegue actual está publicado en:
+
+https://cero-y-uno-web.vercel.app
+
 ## Build
 
 ```bash
@@ -96,7 +102,7 @@ Abrir pull request desde `feature/*` hacia `dev`. No hacer merge directo a `main
 Usar `.env.example` como referencia:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://replace-with-your-vercel-url.vercel.app
+NEXT_PUBLIC_SITE_URL=https://cero-y-uno-web.vercel.app
 NEXT_PUBLIC_CONTACT_EMAIL=contacto@ceroyuno.co
 ```
 

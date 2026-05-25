@@ -5,11 +5,15 @@
 Copiar `.env.example` a `.env.local` cuando se necesite configurar el entorno local.
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://replace-with-your-vercel-url.vercel.app
+NEXT_PUBLIC_SITE_URL=https://cero-y-uno-web.vercel.app
 NEXT_PUBLIC_CONTACT_EMAIL=contacto@ceroyuno.co
 ```
 
-`NEXT_PUBLIC_SITE_URL` debe actualizarse cuando exista dominio propio o URL definitiva de Vercel.
+`NEXT_PUBLIC_SITE_URL` debe actualizarse cuando exista dominio propio. El despliegue actual usa `https://cero-y-uno-web.vercel.app`.
+
+## URL De Producción Actual
+
+https://cero-y-uno-web.vercel.app
 
 ## Validaciones Antes De Merge
 
