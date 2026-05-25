@@ -27,7 +27,7 @@ export function BinaryField() {
                   y: ["-14%", "12%", "-14%"]
                 }
           }
-          className="absolute top-0 flex flex-col gap-5 font-mono text-xs text-signal/28"
+          className="absolute top-0 flex flex-col gap-5 font-mono text-xs text-signal/25"
           initial={{ opacity: 0.08, y: "-18%" }}
           key={stream.seed}
           style={{ left: `${stream.left}%` }}
@@ -40,7 +40,7 @@ export function BinaryField() {
         >
           {Array.from({ length: 14 }, (_, row) => (
             <span
-              className={row % 6 === 0 ? "text-ember/38" : "text-signal/24"}
+              className={row % 6 === 0 ? "text-ember/40" : "text-signal/25"}
               key={`${stream.seed}-${row}`}
             >
               {(row + stream.seed) % 3 === 0 ? "1" : "0"}
