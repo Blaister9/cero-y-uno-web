@@ -1,0 +1,30 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/sections/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/content/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/config/**/*.{js,ts,jsx,tsx,mdx}"
+  ],
+  theme: {
+    extend: {
+      colors: {
+        ink: "#050505",
+        coal: "#0B0D0E",
+        graphite: "#14171A",
+        steel: "#A7B0B8",
+        signal: "#55F0D4",
+        ember: "#F2B66D",
+        porcelain: "#F7F8F4"
+      },
+      boxShadow: {
+        "inner-line": "inset 0 1px 0 rgba(255,255,255,0.08)"
+      }
+    }
+  },
+  plugins: []
+};
+
+export default config;
