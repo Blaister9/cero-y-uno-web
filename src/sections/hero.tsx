@@ -36,7 +36,7 @@ export function HeroSection() {
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a
                   className="inline-flex h-12 items-center justify-center gap-2 rounded bg-porcelain px-5 text-sm font-semibold text-ink transition hover:bg-white"
-                  href={`mailto:${siteConfig.contactEmail}`}
+                  href={siteConfig.primaryContactHref}
                 >
                   {heroContent.primaryCta}
                   <ArrowRight aria-hidden="true" size={17} />

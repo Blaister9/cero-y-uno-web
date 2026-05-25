@@ -1,4 +1,4 @@
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail, MessageCircle } from "lucide-react";
 
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/motion/reveal";
@@ -6,6 +6,9 @@ import { siteConfig } from "@/config/site";
 import { contactContent } from "@/content/site";
 
 export function ContactSection() {
+  const hasEmail = Boolean(siteConfig.contact.email);
+  const hasWhatsapp = Boolean(siteConfig.contact.whatsappUrl);
+
   return (
     <section className="bg-ink py-24" id="contacto">
       <Container>
@@ -26,10 +29,14 @@ export function ContactSection() {
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
                 <a
                   className="inline-flex h-12 items-center justify-center gap-2 rounded bg-porcelain px-5 text-sm font-semibold text-ink transition hover:bg-white"
-                  href={`mailto:${siteConfig.contactEmail}`}
+                  href={siteConfig.primaryContactHref}
                 >
                   {contactContent.primaryCta}
-                  <Mail aria-hidden="true" size={17} />
+                  {hasWhatsapp && !hasEmail ? (
+                    <MessageCircle aria-hidden="true" size={17} />
+                  ) : (
+                    <Mail aria-hidden="true" size={17} />
+                  )}
                 </a>
                 <a
                   className="inline-flex h-12 items-center justify-center gap-2 rounded border border-white/15 bg-white/[0.04] px-5 text-sm font-semibold text-porcelain transition hover:border-signal/45 hover:bg-white/[0.07]"
@@ -38,6 +45,34 @@ export function ContactSection() {
                   {contactContent.secondaryCta}
                   <ArrowRight aria-hidden="true" size={17} />
                 </a>
+              </div>
+
+              <div className="rounded border border-white/10 bg-ink/55 p-4 lg:col-span-2">
+                <p className="text-sm font-medium text-porcelain">Canal comercial</p>
+                {siteConfig.hasDirectContact ? (
+                  <div className="mt-3 grid gap-2 text-sm leading-6 text-steel">
+                    {siteConfig.contact.email ? (
+                      <a
+                        className="w-fit transition hover:text-porcelain"
+                        href={`mailto:${siteConfig.contact.email}`}
+                      >
+                        {siteConfig.contact.email}
+                      </a>
+                    ) : null}
+                    {siteConfig.contact.whatsappUrl ? (
+                      <a
+                        className="w-fit transition hover:text-porcelain"
+                        href={siteConfig.contact.whatsappUrl}
+                      >
+                        WhatsApp configurado
+                      </a>
+                    ) : null}
+                  </div>
+                ) : (
+                  <p className="mt-3 text-sm leading-6 text-steel">
+                    El sitio está listo para activar correo o WhatsApp cuando el canal comercial quede definido. Por ahora, esta sección funciona como punto de referencia para el contacto futuro sin simular formularios ni envíos.
+                  </p>
+                )}
               </div>
             </div>
           </div>

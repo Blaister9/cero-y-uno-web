@@ -37,7 +37,7 @@ export function Header() {
         <div className="hidden items-center gap-3 md:flex">
           <a
             className="inline-flex h-10 items-center gap-2 rounded border border-signal/45 bg-signal/10 px-4 text-sm font-medium text-porcelain transition hover:border-signal/75 hover:bg-signal/15"
-            href={`mailto:${siteConfig.contactEmail}`}
+            href={siteConfig.primaryContactHref}
           >
             Diagnóstico
             <ArrowRight aria-hidden="true" size={16} />
@@ -71,7 +71,7 @@ export function Header() {
               ))}
               <a
                 className="mt-2 inline-flex h-11 items-center justify-center gap-2 rounded bg-porcelain px-4 text-sm font-semibold text-ink"
-                href={`mailto:${siteConfig.contactEmail}`}
+                href={siteConfig.primaryContactHref}
                 onClick={() => setIsOpen(false)}
               >
                 Solicitar diagnóstico
