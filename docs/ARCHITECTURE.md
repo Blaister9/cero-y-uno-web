@@ -15,7 +15,15 @@
 src/app
 ```
 
-Contiene el layout global, estilos globales, metadata y composición de la página principal.
+Contiene el layout global, estilos globales, metadata y páginas del App Router.
+
+Rutas actuales:
+
+- `/`
+- `/servicios`
+- `/soluciones`
+- `/nosotros`
+- `/contacto`
 
 ```text
 src/sections
@@ -46,7 +54,7 @@ Contiene componentes reutilizables:
 src/content
 ```
 
-Contiene textos, listas y datos editables del sitio. Las secciones consumen contenido desde aquí para evitar mezclar layout con copy.
+Contiene textos, listas y datos editables del sitio. Las secciones y páginas consumen contenido desde aquí para evitar mezclar layout con copy.
 
 ```text
 src/config
@@ -72,6 +80,7 @@ Contiene utilidades compartidas y variantes de animación.
 ## Convenciones
 
 - Mantener `src/app/page.tsx` como composición de secciones.
+- Mantener páginas internas en `src/app/{ruta}/page.tsx`.
 - Evitar lógica de negocio dentro de componentes visuales.
 - Preferir contenido estructurado para listas y cards.
 - Usar componentes cliente solo cuando sean necesarios para estado, interacción o animación.

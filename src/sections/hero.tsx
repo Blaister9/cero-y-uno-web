@@ -1,4 +1,5 @@
 import { ArrowRight, Cpu, Layers3 } from "lucide-react";
+import Link from "next/link";
 
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/motion/reveal";
@@ -41,13 +42,13 @@ export function HeroSection() {
                   {heroContent.primaryCta}
                   <ArrowRight aria-hidden="true" size={17} />
                 </a>
-                <a
+                <Link
                   className="inline-flex h-12 items-center justify-center gap-2 rounded border border-white/15 bg-white/[0.035] px-5 text-sm font-semibold text-porcelain transition hover:border-signal/45 hover:bg-white/[0.055]"
-                  href="#servicios"
+                  href="/soluciones"
                 >
                   {heroContent.secondaryCta}
                   <Layers3 aria-hidden="true" size={17} />
-                </a>
+                </Link>
               </div>
             </div>
           </Reveal>
