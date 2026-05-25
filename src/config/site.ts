@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Cero y Uno",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://cero-y-uno-web.vercel.app",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contacto@ceroyuno.co",
   description:
     "Creamos software a medida, automatizaciones, integraciones y soluciones digitales para transformar procesos complejos en sistemas funcionales, escalables y mantenibles.",
