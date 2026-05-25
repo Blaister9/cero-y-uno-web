@@ -21,7 +21,7 @@ export const siteConfig = {
   contactEmail,
   whatsappUrl,
   hasDirectContact: Boolean(contactEmail || whatsappUrl),
-  primaryContactHref: contactEmail ? `mailto:${contactEmail}` : whatsappUrl || "#contacto",
+  primaryContactHref: contactEmail ? `mailto:${contactEmail}` : whatsappUrl || "/contacto",
   keywords: [
     "desarrollo de software",
     "automatización de procesos",
@@ -31,12 +31,11 @@ export const siteConfig = {
     "Power Platform"
   ],
   navItems: [
-    { label: "Manifiesto", href: "#manifiesto" },
-    { label: "Servicios", href: "#servicios" },
-    { label: "Diferencial", href: "#diferencial" },
-    { label: "Impacto", href: "#impacto" },
-    { label: "Proceso", href: "#proceso" },
-    { label: "Contacto", href: "#contacto" }
+    { label: "Inicio", href: "/" },
+    { label: "Servicios", href: "/servicios" },
+    { label: "Soluciones", href: "/soluciones" },
+    { label: "Nosotros", href: "/nosotros" },
+    { label: "Contacto", href: "/contacto" }
   ],
   footerServices: [
     "Software a medida",

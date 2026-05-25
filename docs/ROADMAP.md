@@ -28,7 +28,17 @@ Estado: en curso.
 - Evitar formularios falsos o CTAs que apunten a canales no confirmados.
 - Dejar la sección Contacto lista para activar canales reales en el futuro.
 
-## v3 - Dominio Propio Futuro
+## v3 - Estructura Corporativa Multipágina
+
+Estado: en curso.
+
+- Mantener home como resumen ejecutivo.
+- Crear páginas dedicadas para servicios, soluciones, nosotros y contacto.
+- Usar metadata propia por página.
+- Mantener contacto sin backend ni formulario simulado.
+- Conservar URL temporal de Vercel como producción mientras no exista dominio propio.
+
+## v4 - Dominio Propio Futuro
 
 Estado: pendiente.
 
@@ -37,7 +47,7 @@ Estado: pendiente.
 - Verificar metadata social, canonicalidad y previews.
 - Mantener Vercel como plataforma de despliegue salvo decisión distinta.
 
-## v4 - Formulario, Backend O CRM Futuro
+## v5 - Formulario, Backend O CRM Futuro
 
 Estado: pendiente.
 
