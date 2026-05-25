@@ -59,6 +59,12 @@ La home incluye una intro visual de lluvia binaria y formación de marca. La exp
 
 La matriz binaria está implementada con canvas 2D para evitar miles de nodos DOM. Los componentes respetan `prefers-reduced-motion`: si el usuario reduce movimiento, se muestra una versión estática y la intro no ejecuta la lluvia completa.
 
+## Interactive Scroll
+
+La home usa una narrativa de scroll sobria: identidad formada, módulos de servicio cargados, transformación de operación y pipeline de despliegue. Las interacciones se apoyan en Framer Motion con `transform` y `opacity`, sin scroll hijacking ni librerías externas.
+
+El proceso se presenta como pipeline visual: diagnóstico, diseño, arquitectura, desarrollo, pruebas, despliegue y evolución. En móviles se degrada a una lectura limpia por tarjetas.
+
 ## Rutas Principales
 
 - `/`: resumen ejecutivo de la empresa.

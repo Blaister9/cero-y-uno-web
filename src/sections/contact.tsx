@@ -20,6 +20,9 @@ export function ContactSection() {
             <div className="relative grid gap-10 lg:grid-cols-[1fr_0.55fr] lg:items-end">
               <div>
                 <p className="text-sm font-medium text-ember">{contactContent.eyebrow}</p>
+                <p className="mt-3 font-mono text-[0.68rem] uppercase tracking-[0.22em] text-signal">
+                  status: ready for deploy
+                </p>
                 <h2 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight text-porcelain md:text-5xl">
                   {contactContent.title}
                 </h2>

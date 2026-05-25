@@ -1,4 +1,5 @@
 import { BinaryIntro } from "@/components/experience/binary-intro";
+import { BinaryDivider } from "@/components/experience/binary-divider";
 import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/metadata";
 import { ContactSection } from "@/sections/contact";
@@ -20,10 +21,13 @@ export default function Home() {
     <main>
       <BinaryIntro />
       <HeroSection />
+      <BinaryDivider label="identity.formed" />
       <ManifestoSection />
       <ServicesSection />
+      <BinaryDivider label="modules.loaded" />
       <DifferentialSection />
       <ImpactSection />
+      <BinaryDivider label="operation.normalized" />
       <ProcessSection />
       <ContactSection />
     </main>
