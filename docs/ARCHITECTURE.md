@@ -96,8 +96,25 @@ Los componentes de `src/components/experience` elevan la home sin cambiar la arq
 - `binary-wordmark.tsx`: formación visual de `CERO Y UNO` con texto accesible para lectores de pantalla.
 - `code-terminal.tsx`: bloque decorativo de terminal con líneas de construcción del sistema.
 - `interactive-glow.tsx`: luz sutil guiada por cursor en desktop, desactivada para touch o reduced motion.
+- `scroll-reveal.tsx`: wrapper de aparición por scroll para narrativa progresiva sin bloquear scroll nativo.
+- `binary-divider.tsx`: separadores visuales de flujo entre secciones.
+- `process-pipeline.tsx`: pipeline animado para el proceso, con degradación limpia en móvil.
 
 La intro solo se monta en la ruta `/`. Las páginas internas mantienen navegación y contenido corporativo sin depender de la animación para comunicar información esencial.
+
+## Scroll Storytelling
+
+La home sigue esta secuencia narrativa:
+
+1. Caos binario inicial en hero.
+2. Formación de identidad con `CERO Y UNO`.
+3. Conversión de idea en sistema mediante terminal y señales técnicas.
+4. Servicios como módulos ejecutables.
+5. Impacto como transformación de desorden a operación.
+6. Proceso como pipeline de diagnóstico a evolución.
+7. Contacto como estado `ready for deploy`.
+
+Las animaciones deben limitarse a `opacity` y `transform`. No se usa scroll hijacking, Three.js, GSAP ni dependencias externas para scroll.
 
 ## SEO
 

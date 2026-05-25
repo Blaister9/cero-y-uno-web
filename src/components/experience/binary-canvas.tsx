@@ -10,9 +10,9 @@ type BinaryCanvasProps = {
 };
 
 const densityMap = {
-  low: 34,
-  medium: 26,
-  high: 20
+  low: 42,
+  medium: 32,
+  high: 24
 };
 
 export function BinaryCanvas({ className, density = "medium", mode = "ambient" }: BinaryCanvasProps) {
@@ -64,14 +64,14 @@ export function BinaryCanvas({ className, density = "medium", mode = "ambient" }
     const draw = (time: number) => {
       if (!isRunning) return;
 
-      const frameGap = mode === "intro" ? 38 : 56;
+      const frameGap = mode === "intro" ? 46 : 74;
       if (time - lastFrame < frameGap) {
         animationFrame = requestAnimationFrame(draw);
         return;
       }
       lastFrame = time;
 
-      context.fillStyle = mode === "intro" ? "rgba(5, 5, 5, 0.18)" : "rgba(5, 5, 5, 0.12)";
+      context.fillStyle = mode === "intro" ? "rgba(5, 5, 5, 0.2)" : "rgba(5, 5, 5, 0.16)";
       context.fillRect(0, 0, width, height);
       context.font = `${width < 640 ? densityMap[density] + 6 : densityMap[density]}px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`;
 
@@ -80,9 +80,9 @@ export function BinaryCanvas({ className, density = "medium", mode = "ambient" }
         const x = index * step;
         const char = Math.random() > 0.5 ? "1" : "0";
         const highlight = Math.random() > 0.92;
-        context.fillStyle = highlight ? "rgba(215, 181, 109, 0.72)" : "rgba(141, 180, 255, 0.36)";
+        context.fillStyle = highlight ? "rgba(215, 181, 109, 0.58)" : "rgba(141, 180, 255, 0.28)";
         context.fillText(char, x, y);
-        columns[index] = y > height + Math.random() * 180 ? Math.random() * -160 : y + (mode === "intro" ? 24 : 12);
+        columns[index] = y > height + Math.random() * 180 ? Math.random() * -160 : y + (mode === "intro" ? 18 : 8);
       });
 
       animationFrame = requestAnimationFrame(draw);

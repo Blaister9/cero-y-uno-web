@@ -26,7 +26,7 @@ export function BinaryIntro() {
     setIsVisible(true);
     const timer = setTimeout(() => {
       setIsExiting(true);
-    }, shouldReduceMotion ? 1200 : 3600);
+    }, shouldReduceMotion ? 1100 : 3300);
 
     return () => {
       clearTimeout(timer);
@@ -55,7 +55,7 @@ export function BinaryIntro() {
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
       {!shouldReduceMotion ? (
-        <BinaryCanvas className="absolute inset-0 h-full w-full" density="high" mode="intro" />
+        <BinaryCanvas className="absolute inset-0 h-full w-full" density="medium" mode="intro" />
       ) : (
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(18,58,111,0.35),rgba(5,5,5,1)_68%)]" />
       )}
@@ -69,7 +69,7 @@ export function BinaryIntro() {
         Saltar intro
       </button>
 
-      <div className="relative z-10 mx-auto grid max-w-5xl gap-8 px-5 text-center">
+      <div className="relative z-10 mx-auto grid max-w-5xl gap-10 px-5 text-center">
         <div className="mx-auto grid w-full max-w-xl gap-2 rounded border border-white/10 bg-ink/70 p-4 text-left font-mono text-xs text-steel shadow-premium backdrop-blur">
           {[
             "> booting cero_y_uno.system",
@@ -82,7 +82,7 @@ export function BinaryIntro() {
               animate={{ opacity: 1, x: 0 }}
               initial={shouldReduceMotion ? false : { opacity: 0, x: -12 }}
               key={line}
-              transition={{ delay: 0.2 + index * 0.18, duration: 0.35 }}
+              transition={{ delay: 0.18 + index * 0.2, duration: 0.42 }}
             >
               {line}
             </motion.p>
@@ -94,7 +94,7 @@ export function BinaryIntro() {
           animate={{ opacity: 1, y: 0 }}
           className="mx-auto max-w-3xl text-lg leading-8 text-steel md:text-2xl"
           initial={shouldReduceMotion ? false : { opacity: 0, y: 18 }}
-          transition={{ delay: 1.45, duration: 0.6 }}
+          transition={{ delay: 1.7, duration: 0.72 }}
         >
           Lo que otros imaginan, nosotros lo convertimos en software.
         </motion.p>
