@@ -1,20 +1,20 @@
-import { CapabilitiesSection } from "@/sections/capabilities";
 import { ContactSection } from "@/sections/contact";
+import { DifferentialSection } from "@/sections/differential";
 import { HeroSection } from "@/sections/hero";
-import { PrinciplesSection } from "@/sections/principles";
-import { ProblemSection } from "@/sections/problem";
+import { ImpactSection } from "@/sections/impact";
+import { ManifestoSection } from "@/sections/manifesto";
 import { ProcessSection } from "@/sections/process";
-import { SolutionsSection } from "@/sections/solutions";
+import { ServicesSection } from "@/sections/services";
 
 export default function Home() {
   return (
     <main>
       <HeroSection />
-      <CapabilitiesSection />
-      <ProblemSection />
+      <ManifestoSection />
+      <ServicesSection />
+      <DifferentialSection />
+      <ImpactSection />
       <ProcessSection />
-      <SolutionsSection />
-      <PrinciplesSection />
       <ContactSection />
     </main>
   );

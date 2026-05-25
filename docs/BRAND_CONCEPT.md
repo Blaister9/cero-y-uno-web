@@ -1,28 +1,38 @@
-# Concepto de marca
+# Concepto De Marca
 
-## Idea central
+## Idea Central
 
-Cero y Uno convierte ideas, procesos complejos y caos operativo en software real. La marca debe sentirse precisa, ejecutiva y técnicamente confiable.
+Cero y Uno convierte ideas, procesos complejos y caos operativo en sistemas digitales reales, funcionales, escalables y mantenibles.
 
-## Mensaje principal
+## Mensaje Principal
 
 Lo que otros imaginan, nosotros lo convertimos en software.
 
-## Mensaje secundario
+## Mensaje Secundario
 
 Desarrollo de software, automatización e inteligencia aplicada para transformar procesos complejos en soluciones reales.
 
-## Principios visuales
+## Principios Visuales
 
-- Oscuro, sobrio y premium.
-- Tecnología sin saturación visual.
-- Ceros y unos como lenguaje de transformación, no como cliché hacker.
-- Contraste alto, bordes finos, grillas discretas y movimiento controlado.
-- Uso de acentos fríos y cálidos para evitar una paleta monocromática.
+- Fondo oscuro premium.
+- Alto contraste.
+- Acentos azul profundo, blanco, gris metálico y dorado sutil.
+- Ceros y unos como lenguaje de precisión y construcción, no como cliché hacker.
+- Movimiento sobrio, elegante y no invasivo.
+- Interfaces aireadas, con jerarquía fuerte y lectura clara.
 
-## Tono editorial
+## Tono Editorial
 
-- Directo y gerencial.
-- Claro sobre resultados y capacidades.
-- Sin exageración publicitaria.
-- Enfocado en procesos, arquitectura, automatización, inteligencia aplicada y entrega.
+- Ejecutivo.
+- Claro.
+- Técnico sin ser pesado.
+- Comercial sin humo.
+- Seguro, sin prometer resultados inventados.
+
+## Evitar
+
+- Estética Matrix saturada.
+- Verde neón dominante.
+- Clientes, métricas o certificaciones inventadas.
+- Promesas infladas.
+- Copy genérico de plantilla.

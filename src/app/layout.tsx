@@ -10,17 +10,27 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Cero y Uno | Software, automatización e inteligencia aplicada",
+    default: "Cero y Uno | Desarrollo de software, automatización e inteligencia aplicada",
     template: "%s | Cero y Uno"
   },
   description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  robots: {
+    index: true,
+    follow: true
+  },
   openGraph: {
-    title: "Cero y Uno",
+    title: "Cero y Uno | Desarrollo de software, automatización e inteligencia aplicada",
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
     locale: "es_CO",
     type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cero y Uno | Desarrollo de software, automatización e inteligencia aplicada",
+    description: siteConfig.description
   }
 };
 
