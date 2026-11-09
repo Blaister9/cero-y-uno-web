@@ -1,4 +1,3 @@
-import { ExternalLink, Mail } from "lucide-react";
 import Link from "next/link";
 
 import { siteConfig } from "@/config/site";
@@ -7,6 +6,7 @@ import { Container } from "./container";
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const { email, emailHref, phone, phoneHref, address, mapHref } = siteConfig.contact;
 
   return (
     <footer className="border-t border-white/10 bg-ink py-10">
@@ -43,26 +43,17 @@ export function Footer() {
 
         <div>
           <p className="text-sm font-semibold text-porcelain">Contacto</p>
-          {siteConfig.contact.email ? (
-            <a
-              className="mt-3 inline-flex w-fit items-center gap-2 text-sm text-steel transition hover:text-porcelain"
-              href={`mailto:${siteConfig.contact.email}`}
-            >
-              <Mail aria-hidden="true" size={16} />
-              {siteConfig.contact.email}
+          <address className="mt-3 grid gap-2 text-sm not-italic leading-6 text-steel">
+            <a className="w-fit max-w-full break-words transition hover:text-porcelain" href={emailHref}>
+              {email}
             </a>
-          ) : (
-            <p className="mt-3 text-sm leading-6 text-steel">
-              Canal comercial pendiente de configuración.
-            </p>
-          )}
-          <a
-            className="mt-4 inline-flex w-fit items-center gap-2 text-xs text-steel/85 transition hover:text-porcelain"
-            href={siteConfig.productionUrl}
-          >
-            URL temporal productiva
-            <ExternalLink aria-hidden="true" size={14} />
-          </a>
+            <a className="w-fit transition hover:text-porcelain" href={phoneHref}>
+              {phone}
+            </a>
+            <a className="w-fit transition hover:text-porcelain" href={mapHref}>
+              {address}
+            </a>
+          </address>
         </div>
       </Container>
     </footer>

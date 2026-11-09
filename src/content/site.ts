@@ -152,7 +152,17 @@ export const contactContent = {
   eyebrow: "Siguiente paso",
   title: "Hablemos del proceso que necesita convertirse en software.",
   body:
-    "Cuéntanos qué operación quieres ordenar, automatizar o escalar. La primera conversación busca entender el problema, no venderte una herramienta innecesaria.",
+    "Cuéntanos qué operación quieres ordenar, automatizar o escalar. Empecemos por entender cómo funciona hoy y dónde podemos ayudarte.",
   primaryCta: "Solicitar diagnóstico",
   secondaryCta: "Ver servicios"
+};
+
+export const contactPageContent = {
+  eyebrow: "Contacto",
+  title: "Hablemos de tu operación",
+  description:
+    "Cuéntanos qué proceso quieres mejorar, dónde se atasca, qué herramientas usa tu equipo y qué resultado buscas. Con eso podemos orientar la primera conversación.",
+  emailAction: "Escríbenos",
+  phoneAction: "Llámanos",
+  mapAction: "Ver en el mapa"
 };
