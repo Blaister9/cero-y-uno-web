@@ -16,7 +16,7 @@ Los datos públicos de contacto se editan en `src/config/site.ts` y se incluyen 
 
 https://ceroyuno.com.co
 
-El alojamiento continúa en el proyecto `cero-y-uno-web` de Vercel. El registro del dominio y el DNS se administran en Namecheap. El buzón previsto es `contacto@ceroyuno.com.co` en Private Email; el titular debe terminar de crearlo con su contraseña antes de sustituir el correo actual en `src/config/site.ts`.
+El alojamiento continúa en el proyecto `cero-y-uno-web` de Vercel. El registro del dominio y el DNS se administran en Namecheap. El buzón `contacto@ceroyuno.com.co` está activo en Private Email, con 5 GB, y es el correo público definido en `src/config/site.ts`.
 
 ## Validaciones Antes De Merge
 
@@ -81,11 +81,11 @@ Los valores de la web proceden del panel del proyecto en Vercel; no son valores 
 
 Después de un cambio, comprobar HTTPS, redirecciones con rutas internas, los cinco canonical, `/robots.txt`, `/sitemap.xml`, `/opengraph-image` y el enlace `mailto:`. La propagación DNS y la emisión del certificado son independientes de una compilación correcta.
 
-### Activación Pendiente Del Correo Y RelateSEO
+### Estado Del Correo Y RelateSEO
 
-- Terminar la creación de `contacto` desde Private Email con los 5 GB incluidos. La contraseña la introduce y guarda el titular; no se almacena en este repositorio.
-- Verificar recepción y envío, incluyendo SPF/DKIM/DMARC, y después publicar la nueva dirección de contacto.
-- RelateSEO ya tiene un proyecto para `ceroyuno.com.co`, con nombre y URL introducidos. El asistente requiere confirmar dirección comercial, código postal y modalidad de atención; no reutilizar los datos personales del registrante como datos del negocio.
+- El titular completó la creación del buzón; el 10 de noviembre de 2026 se comprobó el estado `ON` y la suscripción `ACTIVE`. La contraseña no se almacena en este repositorio.
+- MX, SPF, DKIM y DMARC están publicados. Queda pendiente comprobar recepción y envío de mensajes reales, incluyendo los resultados de autenticación en sus cabeceras; el estado del buzón y el DNS no sustituyen esta prueba.
+- RelateSEO ya tiene un proyecto para `ceroyuno.com.co`, con nombre y URL introducidos. El titular confirmó la dirección comercial `Carrera 72BIS # 25B-50, Bogotá`; faltan el código postal y la modalidad de atención para continuar el asistente. No reutilizar los datos personales del registrante como datos del negocio.
 
 ## Backend Futuro
 
