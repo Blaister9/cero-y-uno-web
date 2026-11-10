@@ -7,7 +7,7 @@ El sitio comunica una propuesta ejecutiva: convertir ideas, procesos complejos y
 ## Estado Actual
 
 - Dominio de producción: https://ceroyuno.com.co, alojado en Vercel.
-- Correo corporativo previsto: contacto@ceroyuno.com.co en Namecheap Private Email; falta completar la creación del buzón. La web conserva el correo actual hasta entonces.
+- Correo corporativo: contacto@ceroyuno.com.co en Namecheap Private Email. Buzón activo con 5 GB y registros de correo configurados; queda pendiente la prueba de envío y recepción.
 - Sin backend, base de datos, autenticación ni formulario funcional.
 - Contacto directo por correo y teléfono, con dirección y enlace al mapa.
 
