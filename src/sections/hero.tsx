@@ -19,7 +19,7 @@ export function HeroSection() {
 
       <Container className="relative grid items-center gap-12 py-14 sm:py-20 lg:grid-cols-[1.5fr_0.75fr]">
         <div>
-          <p className="font-mono text-xs font-semibold uppercase tracking-[0.23em] text-matrix">
+          <p className="text-xs font-semibold uppercase tracking-[0.23em] text-matrix">
             {heroContent.kicker}
           </p>
           <h1

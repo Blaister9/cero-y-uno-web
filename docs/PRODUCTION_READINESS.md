@@ -4,7 +4,7 @@
 
 El sitio ya está publicado en <https://cero-y-uno-web.vercel.app>. Las cinco páginas principales funcionan y el proyecto compila. La recomendación es cerrar primero seguridad de dependencias, consistencia del entorno y protección de la publicación antes de promover una nueva versión comercial.
 
-Base revisada: `main` en `2b8a0b6` y `dev` en `18c2de4`, con el mismo contenido. Rama local de trabajo: `feature/production-readiness-review`, creada desde `origin/dev`. No se han hecho cambios en Vercel ni en las ramas remotas.
+Base de la auditoría inicial: `main` en `2b8a0b6` y `dev` en `18c2de4`, con el mismo contenido. La corrección de dependencias se integró mediante los PR [17](https://github.com/Blaister9/cero-y-uno-web/pull/17) y [18](https://github.com/Blaister9/cero-y-uno-web/pull/18). Producción quedó en `72bd6e4`, con CI y despliegue Vercel correctos; se verificaron las cinco rutas públicas, imagen OG, icono, selector y contacto.
 
 ## Lista ordenada de trabajo
 
@@ -12,7 +12,7 @@ P1: resolver antes de aprobar la siguiente publicación. P2: defecto o mejora im
 
 | Orden | Prioridad | Pendiente | Evidencia | Criterio de cierre | Estado |
 | --- | --- | --- | --- | --- | --- |
-| 1 | P1 | Actualizar dependencias y resolver alertas de seguridad | Lockfile inicial con Next.js 15.5.18 y sharp 0.34.5; auditoría de producción inicial: 3 críticas, 12 altas y 9 moderadas | Actualización compatible, revisión de alertas residuales, instalación reproducible, tipos, lint, build y revisión del preview | Corrección local; falta promoción y preview |
+| 1 | P1 | Actualizar dependencias y resolver alertas de seguridad | Lockfile inicial con Next.js 15.5.18 y sharp 0.34.5; auditoría de producción inicial: 3 críticas, 12 altas y 9 moderadas | Actualización compatible, revisión de alertas residuales, instalación reproducible, tipos, lint, build y revisión del preview | Publicado y verificado; 0 alertas en producción. Resta seguimiento de 1 moderada en herramientas de desarrollo |
 | 2 | P1 | Unificar Node en una versión LTS soportada | `.nvmrc` fija 20; CI la consume; README pide Node 20; `package.json` no declara `engines.node` | Fijar una versión soportada, por ejemplo 24.x, en repositorio y Vercel; CI y preview aprobados con esa versión | Pendiente |
 | 3 | P1 | Proteger ramas y exigir validaciones para publicar | API pública de GitHub informa `protected: false` para `main` y `dev`; CI ejecuta tipos, lint y build, sin auditoría ni prueba de navegación | PR obligatorio, impedir push directo a main, checks obligatorios; auditoría de seguridad y smoke de rutas/CTA/menú/selector en CI; verificar qué commit se promueve en Vercel | Pendiente |
 | 4 | P2 | Entregar el contenido principal visible antes de hidratar | `Reveal` usa `initial="hidden"`; el HTML servido de `/servicios` contiene `opacity:0;transform:translateY(24px)` alrededor del titular y CTA | El contenido de servicios, soluciones, nosotros y CTA de home sigue visible si falla o se retrasa JavaScript; animación como mejora progresiva | Pendiente |
@@ -68,6 +68,8 @@ Dominio propio, correo corporativo, formulario/CRM y analítica son decisiones p
 ## Registro de avance
 
 - 2026-11-10: revisión inicial terminada y punto 1 implementado en rama local. La publicación y el merge a main quedan fuera de este cambio.
+- 2026-11-10, después de la aprobación del usuario: punto 1 publicado mediante PR 17 y 18. CI y Vercel correctos; revisión funcional realizada sobre producción. El preview de Vercel requiere autenticación y no se considera revisado visualmente.
+- 2026-11-10: siguiente mejora de presentación en `feature/portfolio-typography`: Manrope local, jerarquía del portafolio e índice de recorridos adaptable; scrollytelling conservado. Decisión de dominio en pausa por solicitud del usuario.
 
 ### Punto 1 — actualización local de dependencias
 
