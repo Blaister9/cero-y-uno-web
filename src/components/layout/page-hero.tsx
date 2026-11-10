@@ -19,7 +19,7 @@ export function PageHero({ eyebrow, title, description, children }: PageHeroProp
       <Container className="relative z-10 py-16 md:py-24">
         <Reveal>
           <div className="max-w-4xl">
-            <p className="font-mono text-sm tracking-[0.28em] text-ember uppercase">{eyebrow}</p>
+            <p className="text-sm tracking-[0.28em] text-ember uppercase">{eyebrow}</p>
             <h1 className="mt-5 text-4xl font-semibold leading-[1.05] text-porcelain md:text-6xl">
               {title}
             </h1>

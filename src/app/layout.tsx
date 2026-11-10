@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import type { ReactNode } from "react";
 
 import { Footer } from "@/components/layout/footer";
@@ -6,6 +7,14 @@ import { Header } from "@/components/layout/header";
 import { siteConfig } from "@/config/site";
 
 import "./globals.css";
+
+const manrope = localFont({
+  src: "./fonts/manrope-latin-variable.woff2",
+  variable: "--font-manrope",
+  weight: "200 800",
+  display: "swap",
+  fallback: ["Arial", "sans-serif"]
+});
 
 const ogImageUrl = new URL("/opengraph-image", siteConfig.url).toString();
 
@@ -54,7 +63,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html className={manrope.variable} lang="es">
       <body>
         <Header />
         {children}

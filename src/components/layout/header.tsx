@@ -15,7 +15,7 @@ export function Header() {
     <header className="glass-nav fixed left-0 right-0 top-0 z-50 border-b border-white/15">
       <Container className="flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3" aria-label="Cero y Uno inicio">
-          <span className="grid h-9 w-9 place-items-center rounded border border-white/15 bg-deepblue/35 font-mono text-sm text-signal shadow-inner-line">
+          <span className="grid h-9 w-9 place-items-center rounded border border-white/15 bg-deepblue/35 text-sm text-signal shadow-inner-line">
             01
           </span>
           <span className="text-sm font-semibold tracking-[0.18em] text-porcelain uppercase">

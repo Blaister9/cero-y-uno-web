@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-manrope)"]
+      },
       colors: {
         ink: "#050505",
         coal: "#0B0D0E",
