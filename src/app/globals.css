@@ -1,3 +1,5 @@
+@import "../lib/solution-motion.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -67,6 +69,24 @@ a {
 
 .services-hero {
   background-image: radial-gradient(ellipse at 85% 100%, rgb(22 61 41 / 0.32), transparent 60%);
+}
+
+.solutions-hero {
+  background-image: radial-gradient(ellipse at 90% 45%, rgb(22 61 41 / 0.3), transparent 55%);
+}
+
+.solution-panel + .solution-panel { margin-top: 3rem; }
+
+@supports selector(:has(*)) {
+  .solution-panel { display: none; }
+  .solution-panel + .solution-panel { margin-top: 0; }
+
+  .solution-explorer:has(#choose-plataformas-internas:checked) #scenario-plataformas-internas,
+  .solution-explorer:has(#choose-portales-corporativos:checked) #scenario-portales-corporativos,
+  .solution-explorer:has(#choose-automatizacion-operativa:checked) #scenario-automatizacion-operativa,
+  .solution-explorer:has(#choose-integracion-de-sistemas:checked) #scenario-integracion-de-sistemas,
+  .solution-explorer:has(#choose-tableros-gerenciales:checked) #scenario-tableros-gerenciales,
+  .solution-explorer:has(#choose-ia-aplicada:checked) #scenario-ia-aplicada { display: block; }
 }
 
 :focus-visible {
