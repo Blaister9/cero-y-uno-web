@@ -39,7 +39,7 @@ export function CaseStory({ blockchainDemo, chapters, example, financialDemo, in
             key={chapter.title}
           >
             <div>
-              <p className="mb-3 text-xs tracking-[0.22em] text-signal" aria-hidden="true">0{index + 1}</p>
+              <p className="mb-3 text-xs tracking-[0.22em] text-matrix" aria-hidden="true">0{index + 1}</p>
               <h4 className="text-balance text-2xl font-semibold leading-tight text-porcelain sm:text-3xl">
                 {chapter.title}
               </h4>
@@ -80,8 +80,8 @@ function ConversationExample({ example }: { example: CaseExample }) {
 
 function ChatBubble({ label, text, visitor = false }: { label: string; text: string; visitor?: boolean }) {
   return (
-    <div className={visitor ? "ml-auto w-fit max-w-[94%] rounded-lg border border-signal/25 bg-deepblue/35 px-3 py-2" : "mr-auto w-fit max-w-[94%] rounded-lg border border-white/10 bg-white/5 px-3 py-2"}>
-      <p className="text-xs font-medium text-signal">{label}</p>
+    <div className={visitor ? "ml-auto w-fit max-w-[94%] rounded-lg border border-matrix/25 bg-matrixdeep/35 px-3 py-2" : "mr-auto w-fit max-w-[94%] rounded-lg border border-white/10 bg-white/5 px-3 py-2"}>
+      <p className="text-xs font-medium text-matrix">{label}</p>
       <p className="mt-1 text-sm leading-5 text-porcelain">{text}</p>
     </div>
   );
@@ -109,7 +109,7 @@ function CaseScene({ example, progress }: { example: CaseExample; progress: Moti
     <div className="sticky top-[clamp(5rem,13svh,8rem)]">
       <div className="glass-panel relative isolate overflow-hidden rounded-xl border border-white/15 shadow-premium">
         <motion.div
-          className="pointer-events-none absolute -inset-y-12 inset-x-0 -z-10 bg-[radial-gradient(ellipse_at_26%_38%,rgba(18,58,111,0.4),transparent_65%),radial-gradient(ellipse_at_88%_76%,rgba(141,180,255,0.12),transparent_55%)]"
+          className="pointer-events-none absolute -inset-y-12 inset-x-0 -z-10 bg-[radial-gradient(ellipse_at_26%_38%,rgba(22,61,41,0.4),transparent_65%),radial-gradient(ellipse_at_88%_76%,rgba(168,237,190,0.12),transparent_55%)]"
           style={{ y: backdropY }}
         />
         <div className="flex items-center justify-between gap-3 border-b border-white/10 px-5 py-4">
@@ -120,7 +120,7 @@ function CaseScene({ example, progress }: { example: CaseExample; progress: Moti
         <div className="relative grid grid-cols-[minmax(0,1fr)_1.75rem_minmax(0,1fr)] items-start px-4 pb-7 pt-8 xl:grid-cols-[minmax(0,1fr)_3rem_minmax(0,1fr)] xl:px-6">
           <motion.div className="rounded-lg border border-white/15 bg-ink/[0.92] shadow-premium" style={{ y: visitorY }}>
             <div className="flex items-center gap-2 border-b border-white/10 px-3 py-3 text-sm text-porcelain">
-              <MessageSquare className="shrink-0 text-signal" size={15} />
+              <MessageSquare className="shrink-0 text-matrix" size={15} />
               Chat del portal
             </div>
             <div className="grid gap-3 p-3 xl:p-4">
@@ -135,30 +135,30 @@ function CaseScene({ example, progress }: { example: CaseExample; progress: Moti
             </div>
           </motion.div>
 
-          <div className="relative mt-28 grid h-10 place-items-center text-signal/45">
+          <div className="relative mt-28 grid h-10 place-items-center text-matrix/45">
             <ArrowRight size={16} />
-            <motion.div className="absolute top-3 h-1.5 w-1.5 rounded-full bg-signal shadow-[0_0_10px_#8db4ff]" style={{ x: requestX, opacity: requestDot }} />
+            <motion.div className="absolute top-3 h-1.5 w-1.5 rounded-full bg-matrix shadow-[0_0_10px_#A8EDBE]" style={{ x: requestX, opacity: requestDot }} />
             <motion.div className="absolute bottom-2 h-1.5 w-1.5 rounded-full bg-matrix shadow-[0_0_10px_#a8edbe]" style={{ x: responseX, opacity: responseDot }} />
           </div>
 
           <div className="relative">
             <motion.div className="rounded-lg border border-white/15 bg-ink/[0.92] shadow-premium" style={{ opacity: deskOpacity, y: deskY }}>
               <div className="flex items-center gap-2 border-b border-white/10 px-3 py-3 text-sm text-porcelain">
-                <Monitor className="shrink-0 text-signal" size={15} />
+                <Monitor className="shrink-0 text-matrix" size={15} />
                 Consola del agente
               </div>
               <div className="grid gap-3 p-3 xl:p-4">
                 <p className="text-xs text-steel">Cola de consultas</p>
-                <motion.div className="rounded border border-signal/25 bg-deepblue/30 p-3" style={{ opacity: request }}>
+                <motion.div className="rounded border border-matrix/25 bg-matrixdeep/30 p-3" style={{ opacity: request }}>
                   <p className="text-sm font-medium leading-5 text-porcelain">{example.topic}</p>
                   <div className="relative mt-2 h-5 text-xs leading-5">
-                    <motion.span className="absolute inset-0 text-ember" style={{ opacity: waiting }}>En espera</motion.span>
-                    <motion.span className="absolute inset-0 text-signal" style={{ opacity: active }}>En atención</motion.span>
+                    <motion.span className="absolute inset-0 text-warning" style={{ opacity: waiting }}>En espera</motion.span>
+                    <motion.span className="absolute inset-0 text-matrix" style={{ opacity: active }}>En atención</motion.span>
                     <motion.span className="absolute inset-0 text-matrix" style={{ opacity: closed }}>Cerrada</motion.span>
                   </div>
                 </motion.div>
                 <motion.div className="flex items-start gap-2 text-xs leading-5 text-steel" style={{ opacity: response }}>
-                  <Send className="mt-0.5 shrink-0 text-signal" size={13} />
+                  <Send className="mt-0.5 shrink-0 text-matrix" size={13} />
                   Respuesta enviada al portal
                 </motion.div>
               </div>
@@ -171,9 +171,9 @@ function CaseScene({ example, progress }: { example: CaseExample; progress: Moti
         </div>
 
         <div className="border-t border-white/10 px-5 py-3">
-          <p className="flex items-center gap-2 text-xs text-steel"><Radio className="text-signal" size={13} />{example.caption}</p>
+          <p className="flex items-center gap-2 text-xs text-steel"><Radio className="text-matrix" size={13} />{example.caption}</p>
         </div>
-        <motion.div className="h-0.5 origin-left bg-signal/70" style={{ scaleX: progress }} />
+        <motion.div className="h-0.5 origin-left bg-matrix/70" style={{ scaleX: progress }} />
       </div>
     </div>
   );

@@ -11,11 +11,11 @@ export function ContactSection() {
     <section className="bg-ink py-24" id="contacto">
       <Container>
         <Reveal>
-          <div className="relative overflow-hidden rounded border border-white/10 bg-[linear-gradient(135deg,rgba(18,58,111,0.42),rgba(255,255,255,0.035)_48%,rgba(215,181,109,0.14))] p-6 shadow-premium md:p-10">
+          <div className="relative overflow-hidden rounded border border-white/10 bg-[linear-gradient(135deg,rgba(22,61,41,0.42),rgba(255,255,255,0.035)_48%,rgba(168,237,190,0.14))] p-6 shadow-premium md:p-10">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] opacity-45" />
             <div className="relative grid gap-10 lg:grid-cols-[1fr_0.55fr] lg:items-end">
               <div>
-                <p className="text-sm font-medium text-ember">{contactContent.eyebrow}</p>
+                <p className="text-sm font-medium text-matrix">{contactContent.eyebrow}</p>
                 <h2 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight text-porcelain md:text-5xl">
                   {contactContent.title}
                 </h2>
@@ -26,14 +26,14 @@ export function ContactSection() {
 
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
                 <Link
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded bg-porcelain px-5 text-sm font-semibold text-ink transition hover:bg-white"
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded bg-matrix px-5 text-sm font-semibold text-ink transition hover:bg-porcelain"
                   href={siteConfig.primaryContactHref}
                 >
                   {contactContent.primaryCta}
                   <ArrowRight aria-hidden="true" size={17} />
                 </Link>
                 <Link
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded border border-white/15 bg-white/[0.04] px-5 text-sm font-semibold text-porcelain transition hover:border-signal/45 hover:bg-white/[0.07]"
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded border border-white/15 bg-white/[0.04] px-5 text-sm font-semibold text-porcelain transition hover:border-matrix/45 hover:bg-white/[0.07]"
                   href="/servicios"
                 >
                   {contactContent.secondaryCta}
