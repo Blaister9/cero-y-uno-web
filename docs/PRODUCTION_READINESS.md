@@ -67,6 +67,9 @@ Dominio propio, correo corporativo, formulario/CRM y analítica son decisiones p
 
 ## Registro de avance
 
+- 2026-11-10: RelateSEO configurado con ambas modalidades de atención, dirección y código postal `110931`, seguimiento local de Bogotá, ocho palabras clave y categorías de software/consultoría informática. Consulta autorizada enviada a soporte por la URL HTTP bloqueada; HTTPS y su redirección funcionan en la web. Search Console pendiente de verificación de propiedad y envío del sitemap.
+- En `feature/search-identity`: JSON-LD de `WebSite` y `Organization` en la portada para identificar la marca y su dominio. Comprobación pública de las cinco rutas: HTTP 200, canonical correcto, `index, follow`, sin cabecera `noindex`; robots y sitemap accesibles. Las consultas públicas no devolvieron resultados del dominio; sin inspección en Search Console no se da por confirmado el estado de indexación de Google.
+
 - 2026-11-10: publicación del dominio completada mediante PR #27 y #28; CI y Vercel correctos. Las cinco rutas públicas responden 200 con el canonical del dominio nuevo; robots, sitemap e imagen social verificados en producción. `www` y la dirección anterior de Vercel redirigen al dominio principal conservando ruta y parámetros.
 - 2026-11-10: el titular creó `contacto@ceroyuno.com.co`; Namecheap confirma buzón `ON`, suscripción `ACTIVE` y 5 GB. `feature/corporate-email` sustituye el Gmail público por el correo corporativo. La prueba de envío y recepción sigue pendiente. Dirección comercial de Bogotá confirmada para RelateSEO; faltan código postal y modalidad de atención.
 
