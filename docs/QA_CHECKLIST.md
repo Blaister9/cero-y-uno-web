@@ -3,7 +3,7 @@
 ## Experiencia Interactiva Binaria
 
 - Abrir `/` y comprobar que el titular, el botón principal y la lluvia verde se ven en la primera pantalla.
-- Confirmar que la terminal acompaña al mensaje en escritorio y que en móvil se priorizan el texto y los botones.
+- Confirmar que la cabecera conserva Manrope y verde matriz; en móvil se priorizan el texto y los botones.
 - Comprobar el patrón fijo con `prefers-reduced-motion` y tras redimensionar la ventana.
 - Verificar que el canvas pausa al bajar a Proceso o cambiar de pestaña y vuelve a dibujar al regresar.
 
@@ -27,11 +27,21 @@
 - Confirmar que los botones de diagnóstico llevan a `/contacto#canales` y que el encabezado fijo deja visible el bloque.
 - Verificar correo, teléfono y enlace al mapa en Contacto y en el pie de página.
 
+## Soluciones
+
+- Seleccionar los seis escenarios: solo aparece el panel correspondiente y su servicio asociado.
+- Usar Tab para llegar al selector y las flechas para cambiar de opción; comprobar foco visible.
+- Repetir la selección sin scripts: la página y sus ejemplos siguen funcionando.
+- Comprobar que los ejemplos se identifican como ilustrativos y no aparentan datos de clientes.
+- Validar el enlace a Servicios: el desplegable asociado queda abierto bajo el encabezado.
+- Validar «Hablemos de tu caso» hacia `/contacto#canales` y portafolio hacia `/#proceso`.
+- Revisar movimiento reducido: el contenido permanece visible y se desactiva la animación de entrada.
+
 ## Responsive
 
 - Probar 375px, 768px, 1024px y 1440px.
 - Confirmar que no existe overflow horizontal.
-- Confirmar que el hero, CTA, tarjetas y terminal decorativa son legibles.
+- Confirmar que las cabeceras, CTA, selectores y ejemplos son legibles.
 - Confirmar que la animación no tapa contenido crítico.
 - Confirmar que el caso no genera scroll horizontal en móvil.
 - Confirmar que el scroll en 375px se mantiene fluido.
