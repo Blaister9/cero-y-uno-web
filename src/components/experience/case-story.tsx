@@ -4,15 +4,25 @@ import { ArrowRight, Check, MessageSquare, Monitor, Radio, Send } from "lucide-r
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { useRef } from "react";
 
-import type { StoryChapter, WorkflowBeat } from "@/content/project-stories";
+import type { FinancialDemo, StoryChapter, WorkflowBeat } from "@/content/project-stories";
 import type { serviceCase } from "@/content/service-case";
 
-type CaseExample = typeof serviceCase.example;
-type CaseStoryProps = { chapters: StoryChapter[]; example?: CaseExample; workflow?: WorkflowBeat[] };
+import { FinancialScene, FinancialStill } from "./financial-scene";
 
-export function CaseStory({ chapters, example, workflow }: CaseStoryProps) {
+type CaseExample = typeof serviceCase.example;
+type CaseStoryProps = {
+  chapters: StoryChapter[];
+  example?: CaseExample;
+  financialDemo?: FinancialDemo;
+  workflow?: WorkflowBeat[];
+};
+
+export function CaseStory({ chapters, example, financialDemo, workflow }: CaseStoryProps) {
   const trackRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: trackRef, offset: ["start center", "end center"] });
+  const { scrollYProgress } = useScroll({
+    target: trackRef,
+    offset: ["start center", financialDemo ? "end 76%" : "end center"]
+  });
 
   return (
     <div className="mt-12 lg:grid lg:grid-cols-[minmax(0,0.76fr)_minmax(0,1.24fr)] lg:gap-12 motion-reduce:lg:block" ref={trackRef}>
@@ -30,6 +40,7 @@ export function CaseStory({ chapters, example, workflow }: CaseStoryProps) {
               <p className="mt-4 text-base leading-7 text-steel lg:text-lg lg:leading-8">{chapter.body}</p>
               {chapter.detail && <p className="mt-4 text-sm leading-6 text-steel">{chapter.detail}</p>}
               {chapter.showExample && example && <ConversationExample example={example} />}
+              {chapter.showExample && financialDemo && <FinancialStill demo={financialDemo} />}
               {workflow?.[index] && (
                 <p className="glass-panel mt-4 rounded-lg border border-white/10 px-4 py-3 text-sm text-steel lg:hidden motion-reduce:lg:block">
                   <span className="block font-medium text-porcelain">{workflow[index].title}</span>
@@ -43,6 +54,7 @@ export function CaseStory({ chapters, example, workflow }: CaseStoryProps) {
 
       <div aria-hidden="true" className="hidden lg:block motion-reduce:lg:hidden">
         {example && <CaseScene example={example} progress={scrollYProgress} />}
+        {financialDemo && <FinancialScene demo={financialDemo} progress={scrollYProgress} />}
         {workflow && <WorkflowScene beats={workflow} progress={scrollYProgress} />}
       </div>
     </div>

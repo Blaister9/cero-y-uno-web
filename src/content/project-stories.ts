@@ -9,6 +9,11 @@ export type StoryChapter = {
 
 export type WorkflowBeat = { title: string; detail: string };
 
+export type FinancialDemo = {
+  caption: string;
+  fields: { label: string; value: string }[];
+};
+
 type ProjectStory = {
   id: string;
   label: string;
@@ -17,6 +22,7 @@ type ProjectStory = {
   description: string;
   chapters: StoryChapter[];
   example?: typeof serviceCase.example;
+  financialDemo?: FinancialDemo;
   workflow?: WorkflowBeat[];
 };
 
@@ -26,18 +32,21 @@ export const projectStories: ProjectStory[] = [
     id: "rpa",
     label: "Automatización financiera",
     kind: "Proyecto",
-    title: "Del trabajo manual a la causación automatizada",
-    description: "Para una empresa en Chile programamos un bot RPA que ejecutaba la causación y otras tareas del proceso financiero. El diagrama muestra esa parte del proyecto.",
+    title: "Del documento al registro contable",
+    description: "Para una empresa en Chile programamos un bot que ejecutaba la causación y otras tareas financieras. Aquí seguimos un documento ficticio para ver en qué parte del trabajo intervenía el bot.",
     chapters: [
-      { title: "Una tarea del proceso financiero", body: "La causación era uno de los pasos que la empresa quería automatizar." },
-      { title: "El bot toma la secuencia", body: "Programamos el orden de las acciones para que el bot ejecutara la tarea de principio a fin." },
-      { title: "El registro queda hecho", body: "La causación quedó a cargo del bot, junto con otras tareas del proceso financiero." }
+      { title: "El documento está listo. Falta registrarlo.", body: "El dato ya existe en un documento. Para que quede en contabilidad, alguien tiene que llevarlo al registro. Esa era una de las tareas que la empresa quería pasarle al bot." },
+      { title: "El bot sigue los pasos", body: "Programamos la secuencia para que el bot hiciera el registro. En esta recreación lo ves tomar la referencia, el concepto y el importe del documento." },
+      { title: "Los datos quedan en contabilidad", body: "La referencia, el concepto y el importe aparecen en el registro de causación. Este era uno de los pasos del proceso financiero que quedó a cargo del bot.", showExample: true }
     ],
-    workflow: [
-      { title: "Causación", detail: "Tarea del proceso financiero" },
-      { title: "Bot RPA", detail: "Ejecuta la secuencia programada" },
-      { title: "Registro", detail: "La causación queda registrada" }
-    ]
+    financialDemo: {
+      caption: "Recreación del flujo con datos ficticios",
+      fields: [
+        { label: "Referencia", value: "DEMO-014" },
+        { label: "Concepto", value: "Compra de insumos" },
+        { label: "Importe", value: "150.000 CLP" }
+      ]
+    }
   },
   {
     id: "power-platform",

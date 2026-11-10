@@ -44,7 +44,7 @@ export function ProjectPicker() {
         <p className="text-sm text-signal">{story.kind} · {story.label}</p>
         <h3 className="mt-3 text-balance text-3xl font-semibold leading-tight text-porcelain md:text-5xl" id="proyecto-titulo">{story.title}</h3>
         <p className="mt-4 max-w-3xl text-base leading-7 text-steel md:text-lg">{story.description}</p>
-        <CaseStory chapters={story.chapters} example={story.example} key={story.id} workflow={story.workflow} />
+        <CaseStory chapters={story.chapters} example={story.example} financialDemo={story.financialDemo} key={story.id} workflow={story.workflow} />
       </article>
     </>
   );
