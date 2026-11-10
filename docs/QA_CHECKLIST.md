@@ -23,7 +23,8 @@
 - Confirmar que Servicios se percibe como módulos cargados sin depender solo de hover.
 - Confirmar que Impacto comunica transformación de `Antes` a `Después`.
 - Confirmar que Proceso se presenta como pipeline: diagnóstico, diseño, arquitectura, desarrollo, pruebas, despliegue y evolución.
-- Confirmar que Contacto cierra con estado `ready for deploy` sin formulario falso.
+- Confirmar que los botones de diagnóstico llevan a `/contacto#canales` y que el encabezado fijo deja visible el bloque.
+- Verificar correo, teléfono y enlace al mapa en Contacto y en el pie de página.
 
 ## Responsive
 

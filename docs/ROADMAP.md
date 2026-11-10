@@ -20,13 +20,11 @@ Estado: completado.
 
 ## v2 - Preparación Comercial Sin Dominio Propio
 
-Estado: en curso.
+Estado: en revisión.
 
-- Tratar `https://cero-y-uno-web.vercel.app` como URL productiva temporal.
-- Centralizar configuración comercial en `src/config/site.ts`.
-- Mantener correo, WhatsApp y redes sociales como canales opcionales explícitos.
-- Evitar formularios falsos o CTAs que apunten a canales no confirmados.
-- Dejar la sección Contacto lista para activar canales reales en el futuro.
+- Centralizar correo, teléfono y dirección en `src/config/site.ts`.
+- Unificar los botones de diagnóstico en `/contacto#canales`.
+- Mostrar los canales directos en Contacto y en el pie de página.
 
 ## v3 - Estructura Corporativa Multipágina
 

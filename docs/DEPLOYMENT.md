@@ -6,12 +6,11 @@ Copiar `.env.example` a `.env.local` cuando se necesite configurar el entorno lo
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://cero-y-uno-web.vercel.app
-NEXT_PUBLIC_CONTACT_EMAIL=contacto@ceroyuno.co
 ```
 
 `NEXT_PUBLIC_SITE_URL` debe apuntar a `https://cero-y-uno-web.vercel.app` mientras no exista dominio propio. Cuando el dominio propio exista, se actualiza esta variable y se valida metadata social.
 
-`NEXT_PUBLIC_CONTACT_EMAIL` y `NEXT_PUBLIC_WHATSAPP_URL` son opcionales. No deben llenarse con datos inventados.
+Los datos públicos de contacto se editan en `src/config/site.ts` y se incluyen en el build.
 
 ## URL De Producción Actual
 

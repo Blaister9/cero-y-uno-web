@@ -9,7 +9,7 @@ El sitio comunica una propuesta ejecutiva: convertir ideas, procesos complejos y
 - Producción temporal en Vercel: https://cero-y-uno-web.vercel.app
 - Sin dominio propio todavía.
 - Sin backend, base de datos, autenticación ni formulario funcional.
-- Contacto directo configurable por variables públicas cuando exista correo o WhatsApp real.
+- Contacto directo por correo y teléfono, con dirección y enlace al mapa.
 
 ## Stack
 
@@ -71,7 +71,7 @@ El proceso se presenta como pipeline visual: diagnóstico, diseño, arquitectura
 - `/servicios`: servicios técnicos con problema, entrega y resultado esperado.
 - `/soluciones`: escenarios de solución aplicables a clientes.
 - `/nosotros`: enfoque institucional y filosofía de trabajo.
-- `/contacto`: contacto sin formulario funcional ni backend.
+- `/contacto#canales`: correo, teléfono y ubicación para iniciar una conversación.
 
 ## Build
 
@@ -133,11 +133,9 @@ Usar `.env.example` como referencia:
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://cero-y-uno-web.vercel.app
-NEXT_PUBLIC_CONTACT_EMAIL=
-NEXT_PUBLIC_WHATSAPP_URL=
 ```
 
-`NEXT_PUBLIC_CONTACT_EMAIL` y `NEXT_PUBLIC_WHATSAPP_URL` deben permanecer vacíos hasta que exista un canal real aprobado. Si ambos están vacíos, los CTAs apuntan a la sección Contacto y no simulan envíos.
+Los datos públicos de contacto se editan en `src/config/site.ts`. Los botones de diagnóstico llevan a `/contacto#canales`.
 
 ## Notas Para Próximos Cambios
 
