@@ -30,6 +30,13 @@ Desarrollo de software, automatización e inteligencia aplicada para transformar
 - Texto de lectura: 400; etiquetas y navegación: 500; títulos y acciones: 600. El titular grande del portafolio usa 500 para conservar una textura más ligera.
 - Espaciado de títulos: −0,04 em; titulares grandes: hasta −0,065 em. Párrafos con interlineado de 1,75 aproximadamente.
 - Monoespaciada solo para código, hashes, referencias técnicas y la trama binaria. No usarla en etiquetas comerciales.
+- La imagen de compartir también usa Manrope (400 y 700). Los TTF locales se leen al generar esa imagen; el navegador continúa cargando únicamente el WOFF2 variable.
+
+## Paleta en evaluación
+
+La combinación de azul, verde y dorado sigue pendiente de definición con el equipo. La recomendación es fondo grafito `#0B0D0E`, títulos blanco cálido `#F7F8F4`, texto secundario `#A7B0B8` y un único acento azul `#8DB4FF` para acciones, selección y detalles de marca. Es la evolución más cercana al portafolio actual.
+
+Alternativas para comparar sobre la misma composición: salvia `#A8C8B5` o cobre `#D4A583`. Son propuestas, todavía no una sustitución global de los colores. Los colores de estado de las demos deben conservar un significado funcional y acompañarse de texto.
 
 ## Frases para explorar con el equipo
 
