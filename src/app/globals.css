@@ -41,7 +41,9 @@ body {
   transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
 }
 
-.portfolio-choice[aria-pressed="true"] {
+.portfolio-choice[aria-pressed="true"],
+.portfolio-choice[aria-pressed="true"]:hover,
+.portfolio-choice[aria-pressed="true"]:focus-visible {
   background-color: theme("colors.matrix");
   border-color: theme("colors.matrix");
   color: theme("colors.ink");
