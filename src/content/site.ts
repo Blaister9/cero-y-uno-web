@@ -15,6 +15,15 @@ export const manifesto = {
     "Una aprobación por correo, un dato que alguien vuelve a copiar o un reporte que se arma a mano. Antes de escoger una herramienta, vemos quién hace ese trabajo y qué necesita al terminar."
 };
 
+export const portfolioContent = {
+  eyebrow: "Portafolio / trabajo en acción",
+  title: "El software,",
+  titleAccent: "por dentro.",
+  description: "De una consulta sin respuesta a un pedido confirmado. Sigue el recorrido de cada proceso y mira dónde interviene el software.",
+  selectionLabel: "Elige un recorrido",
+  storyLabel: "Ahora estás explorando"
+};
+
 export const contactContent = {
   eyebrow: "Siguiente paso",
   title: "Hablemos del proceso que necesita convertirse en software.",

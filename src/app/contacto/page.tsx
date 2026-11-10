@@ -25,7 +25,7 @@ export default function ContactoPage() {
     <main className="bg-ink bg-[radial-gradient(ellipse_at_72%_12%,rgba(18,58,111,0.32),transparent_65%)] pb-16 pt-28 md:pb-24 md:pt-36">
       <Container>
         <section aria-labelledby="contacto-titulo" className="scroll-mt-24" id="canales">
-          <p className="font-mono text-sm uppercase tracking-[0.28em] text-ember">{eyebrow}</p>
+          <p className="text-sm uppercase tracking-[0.28em] text-ember">{eyebrow}</p>
           <h1 className="mt-4 text-4xl font-semibold leading-tight text-porcelain md:text-6xl" id="contacto-titulo">
             {title}
           </h1>

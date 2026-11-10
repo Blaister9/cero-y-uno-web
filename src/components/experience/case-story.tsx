@@ -39,7 +39,7 @@ export function CaseStory({ blockchainDemo, chapters, example, financialDemo, in
             key={chapter.title}
           >
             <div>
-              <p className="mb-3 font-mono text-xs tracking-[0.22em] text-signal" aria-hidden="true">0{index + 1}</p>
+              <p className="mb-3 text-xs tracking-[0.22em] text-signal" aria-hidden="true">0{index + 1}</p>
               <h4 className="text-balance text-2xl font-semibold leading-tight text-porcelain sm:text-3xl">
                 {chapter.title}
               </h4>

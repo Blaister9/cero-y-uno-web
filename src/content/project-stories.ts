@@ -36,6 +36,7 @@ export type IntegrationDemo = {
 type ProjectStory = {
   id: string;
   label: string;
+  summary: string;
   kind: "Proyecto" | "Ejemplo";
   title: string;
   description: string;
@@ -47,10 +48,11 @@ type ProjectStory = {
 };
 
 export const projectStories: ProjectStory[] = [
-  { ...serviceCase, id: "atencion", label: "Atención en tiempo real", kind: "Proyecto" },
+  { ...serviceCase, id: "atencion", label: "Atención en tiempo real", summary: "De la consulta a la respuesta.", kind: "Proyecto" },
   {
     id: "rpa",
     label: "Automatización financiera",
+    summary: "Del documento al registro.",
     kind: "Proyecto",
     title: "Del documento al registro contable",
     description: "Para una empresa en Chile programamos un bot que ejecutaba la causación y otras tareas financieras. Aquí seguimos un documento ficticio para ver en qué parte del trabajo intervenía el bot.",
@@ -72,6 +74,7 @@ export const projectStories: ProjectStory[] = [
   {
     id: "power-platform",
     label: "Power Platform",
+    summary: "De la solicitud a la aprobación.",
     kind: "Ejemplo",
     title: "Una solicitud de compra, de principio a fin",
     description: "Un equipo necesita reponer material de oficina. Sigamos una solicitud ficticia para ver cómo se registra, quién la aprueba y qué aparece en el informe después.",
@@ -94,6 +97,7 @@ export const projectStories: ProjectStory[] = [
   {
     id: "blockchain",
     label: "Blockchain",
+    summary: "Del archivo a su verificación.",
     kind: "Ejemplo",
     title: "¿Es el mismo documento que se registró?",
     description: "Dos personas comparten un acuerdo de entrega. Más adelante, quien recibe una copia quiere comprobar si conserva el mismo contenido. La prueba empieza con una huella del archivo.",
@@ -107,6 +111,7 @@ export const projectStories: ProjectStory[] = [
   {
     id: "integraciones",
     label: "Integraciones y APIs",
+    summary: "Del pedido a la reserva.",
     kind: "Ejemplo",
     title: "El pedido entró. ¿Quedó reservado?",
     description: "Alguien compra dos lámparas en la tienda. Quedan ocho en inventario. Sigamos el pedido para ver cómo se apartan las dos unidades y qué pasa cuando la confirmación se pierde en el camino.",
