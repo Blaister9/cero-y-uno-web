@@ -10,17 +10,20 @@
 ## Navegación
 
 - Validar enlaces del header hacia `/`, `/servicios`, `/soluciones`, `/nosotros` y `/contacto`.
-- Validar que «Ver cómo trabajamos» lleva a `/#proceso`.
+- Validar que «Ver proyectos» lleva a `/#proceso` y que cada tarjeta de servicio abre su detalle.
 - Validar que el menú móvil abre, cierra y no genera overflow horizontal.
 
 ## Scroll Storytelling
 
 - Hacer scroll completo de arriba abajo en `/` y confirmar que la narrativa fluye sin saltos bruscos.
 - Hacer scroll de abajo arriba y confirmar que el contenido permanece disponible y legible.
-- Confirmar que los divisores binarios no tapan contenido ni capturan interacción.
-- Confirmar que Servicios se percibe como módulos cargados sin depender solo de hover.
-- Confirmar que Impacto comunica transformación de `Antes` a `Después`.
-- Confirmar que Proceso se presenta como pipeline: diagnóstico, diseño, arquitectura, desarrollo, pruebas, despliegue y evolución.
+- Seleccionar los cinco proyectos y ejemplos con mouse y teclado. En móvil, comprobar el desplazamiento horizontal del selector.
+- Confirmar que el scroll mueve la consulta hacia la consola, trae la respuesta y muestra el cierre. Al subir, la escena debe retroceder a la posición correspondiente.
+- En Automatización financiera, comprobar que la lectura resalta un campo a la vez, que cada dato cruza antes de aparecer en el registro y que la confirmación se ve completa. Al subir, el recorrido debe revertirse.
+- En Power Platform, comprobar que la misma solicitud llega a la bandeja, que la decisión cambia su estado en Dataverse y que el informe cambia sus conteos después.
+- En Blockchain, comprobar que se registra la huella del original, que la copia coincide y que al cambiar la fecha aparece otra huella mientras la registrada se conserva.
+- En Integraciones y APIs, comprobar que el aviso y la solicitud llegan en orden. El inventario debe reservar dos unidades antes del aviso de espera agotada. El reintento debe conservar la clave, la referencia de la reserva y las cantidades.
+- Confirmar que el ejemplo fijo y los cuatro capítulos se leen en orden en móvil y con movimiento reducido.
 - Confirmar que los botones de diagnóstico llevan a `/contacto#canales` y que el encabezado fijo deja visible el bloque.
 - Verificar correo, teléfono y enlace al mapa en Contacto y en el pie de página.
 
@@ -30,7 +33,7 @@
 - Confirmar que no existe overflow horizontal.
 - Confirmar que el hero, CTA, tarjetas y terminal decorativa son legibles.
 - Confirmar que la animación no tapa contenido crítico.
-- Confirmar que el pipeline no genera scroll horizontal en móvil.
+- Confirmar que el caso no genera scroll horizontal en móvil.
 - Confirmar que el scroll en 375px se mantiene fluido.
 
 ## Accesibilidad

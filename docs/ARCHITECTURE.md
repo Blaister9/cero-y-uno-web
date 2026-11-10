@@ -34,9 +34,7 @@ Contiene las secciones principales del home:
 - Hero
 - Manifiesto
 - Servicios
-- Diferencial
-- Impacto
-- Proceso
+- Portafolio de proyectos y ejemplos
 - Contacto
 
 ```text
@@ -46,7 +44,7 @@ src/components
 Contiene componentes reutilizables:
 
 - `layout`: header, footer y contenedores.
-- `experience`: canvas, terminal decorativa, separadores y apariciones por scroll.
+- `experience`: canvas, terminal decorativa, selector de proyectos y escenas ligadas al scroll.
 - `motion`: wrappers de animación.
 - `ui`: tarjetas y headings.
 - `visual`: elementos visuales como la animación binaria.
@@ -93,9 +91,8 @@ Los componentes de `src/components/experience` elevan la home sin cambiar la arq
 
 - `binary-canvas.tsx` renderiza un patrón fijo en SVG y anima la lluvia con canvas 2D. `IntersectionObserver` y la visibilidad de la pestaña controlan el ciclo de dibujo. El patrón fijo cubre la carga inicial y el movimiento reducido.
 - `code-terminal.tsx` muestra una terminal decorativa en escritorio.
-- `scroll-reveal.tsx`: wrapper de aparición por scroll para narrativa progresiva sin bloquear scroll nativo.
-- `binary-divider.tsx`: separadores visuales de flujo entre secciones.
-- `process-pipeline.tsx`: pipeline animado para el proceso, con degradación limpia en móvil.
+- `project-picker.tsx` permite elegir un proyecto o ejemplo.
+- `case-story.tsx` usa el progreso de scroll de Framer Motion para avanzar la escena fija del proyecto elegido. El contenido fijo cubre la lectura móvil y el movimiento reducido.
 
 El hero renderiza su contenido y sus enlaces desde el servidor. El canvas decora el fondo en la ruta `/`.
 
@@ -104,10 +101,9 @@ El hero renderiza su contenido y sus enlaces desde el servidor. El canvas decora
 La home sigue esta secuencia narrativa:
 
 1. Propuesta principal con lluvia binaria de fondo y terminal secundaria.
-2. Servicios como módulos ejecutables.
-3. Impacto como transformación de desorden a operación.
-4. Proceso como pipeline de diagnóstico a evolución.
-5. Contacto mediante los canales comerciales.
+2. Servicios con acceso al detalle de cada uno.
+3. Portafolio con dos proyectos y tres ejemplos. El bloque conserva las anclas `#proceso` y `#impacto`.
+4. Contacto mediante los canales comerciales.
 
 Las animaciones deben limitarse a `opacity` y `transform`. No se usa scroll hijacking, Three.js, GSAP ni dependencias externas para scroll.
 

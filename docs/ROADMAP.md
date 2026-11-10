@@ -54,3 +54,7 @@ Estado: pendiente.
 - Agregar protección anti-spam, validación y manejo de errores.
 - Implementar analítica solo con claves reales y aprobación previa.
 - No inventar automatizaciones ni integraciones antes de definir operación comercial.
+
+## Pendientes menores
+
+- **Criticidad baja.** Definir una paleta de marca y revisar cómo conviven el verde del hero y el azul corporativo en botones y acentos.

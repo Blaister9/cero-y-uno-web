@@ -7,11 +7,11 @@ import {
   Workflow
 } from "lucide-react";
 
-import { ScrollReveal } from "@/components/experience/scroll-reveal";
 import { Container } from "@/components/layout/container";
+import { SectionAccent } from "@/components/experience/section-accent";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ServiceCard } from "@/components/ui/service-card";
-import { services } from "@/content/site";
+import { servicesPage } from "@/content/services";
 
 const iconMap = {
   brain: BrainCircuit,
@@ -24,32 +24,22 @@ const iconMap = {
 
 export function ServicesSection() {
   return (
-    <section className="bg-ink py-24" id="servicios">
+    <section className="scroll-mt-16 bg-ink bg-[radial-gradient(ellipse_at_80%_35%,rgba(18,58,111,0.22),transparent_65%)] py-20 md:py-24" id="servicios">
       <Container>
-        <ScrollReveal>
-          <SectionHeading
-            eyebrow="Servicios"
-            title="Capacidades técnicas para convertir procesos en sistemas."
-          >
-            Diseñamos y construimos soluciones que conectan operación, datos y decisión sin agregar complejidad innecesaria.
-          </SectionHeading>
-        </ScrollReveal>
-
-        <div className="mt-6 flex items-center gap-3 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-steel">
-          <span className="h-px flex-1 bg-gradient-to-r from-signal/45 to-transparent" />
-          <span>modules.ready</span>
-        </div>
+        <SectionHeading eyebrow="Servicios" title="¿Qué necesita resolver tu equipo?">
+          Explora los servicios según el trabajo que necesitas hacer.
+        </SectionHeading>
+        <SectionAccent />
 
         <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          {services.map((service, index) => (
-            <ScrollReveal delay={index * 0.045} distance={26} key={service.title}>
-              <ServiceCard
-                description={service.description}
-                icon={iconMap[service.icon as keyof typeof iconMap]}
-                signal={service.signal}
-                title={service.title}
-              />
-            </ScrollReveal>
+          {servicesPage.items.map((service) => (
+            <ServiceCard
+              description={service.summary}
+              href={`/servicios#${service.id}`}
+              icon={iconMap[service.icon]}
+              key={service.id}
+              title={service.title}
+            />
           ))}
         </div>
       </Container>
