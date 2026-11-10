@@ -2,7 +2,6 @@ import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/metadata";
 import { ContactSection } from "@/sections/contact";
 import { HeroSection } from "@/sections/hero";
-import { ManifestoSection } from "@/sections/manifesto";
 import { ProcessSection } from "@/sections/process";
 import { ServicesSection } from "@/sections/services";
 
@@ -16,7 +15,6 @@ export default function Home() {
   return (
     <main>
       <HeroSection />
-      <ManifestoSection />
       <ServicesSection />
       <ProcessSection />
       <ContactSection />
