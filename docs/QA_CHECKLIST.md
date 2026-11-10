@@ -2,17 +2,15 @@
 
 ## Experiencia Interactiva Binaria
 
-- Abrir `/` en una sesión nueva y confirmar que aparece la intro.
-- Confirmar que el botón `Saltar intro` es visible, enfocable con teclado y cierra la intro.
-- Recargar `/` dentro de la misma sesión y confirmar que la intro no se repite por `sessionStorage`.
-- Limpiar `sessionStorage` y confirmar que la intro vuelve a mostrarse.
-- Activar `prefers-reduced-motion` y confirmar que se muestra una versión estática sin lluvia completa.
-- Confirmar que la intro desaparece con transición suave y no deja el contenido bloqueado.
+- Abrir `/` y comprobar que el titular, el botón principal y la lluvia verde se ven en la primera pantalla.
+- Confirmar que la terminal acompaña al mensaje en escritorio y que en móvil se priorizan el texto y los botones.
+- Comprobar el patrón fijo con `prefers-reduced-motion` y tras redimensionar la ventana.
+- Verificar que el canvas pausa al bajar a Proceso o cambiar de pestaña y vuelve a dibujar al regresar.
 
 ## Navegación
 
 - Validar enlaces del header hacia `/`, `/servicios`, `/soluciones`, `/nosotros` y `/contacto`.
-- Validar CTAs principales de la home.
+- Validar que «Ver cómo trabajamos» lleva a `/#proceso`.
 - Validar que el menú móvil abre, cierra y no genera overflow horizontal.
 
 ## Scroll Storytelling
@@ -37,10 +35,10 @@
 
 ## Accesibilidad
 
-- Confirmar foco visible en navegación, CTAs y `Saltar intro`.
+- Confirmar foco visible en navegación y CTAs.
 - Confirmar contraste suficiente sobre fondo oscuro.
 - Confirmar que la información principal no depende solo de animaciones.
-- Confirmar que `prefers-reduced-motion` reduce intro, canvas y animaciones por scroll.
+- Confirmar que `prefers-reduced-motion` muestra el fondo fijo y reduce las animaciones por scroll.
 - Confirmar que la consola del navegador no registra errores.
 
 ## Validaciones

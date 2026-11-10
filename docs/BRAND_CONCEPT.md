@@ -6,7 +6,7 @@ Cero y Uno convierte ideas, procesos complejos y caos operativo en sistemas digi
 
 ## Mensaje Principal
 
-Lo que otros imaginan, nosotros lo convertimos en software.
+Construimos software a medida para operaciones complejas.
 
 ## Mensaje Secundario
 
@@ -16,7 +16,8 @@ Desarrollo de software, automatización e inteligencia aplicada para transformar
 
 - Fondo oscuro premium.
 - Alto contraste.
-- Acentos azul profundo, blanco, gris metálico y dorado sutil.
+- Blanco y gris metálico para el contenido. Verde suave para la lluvia binaria y la acción principal del hero.
+- Azul profundo y dorado sutil en las secciones corporativas.
 - Ceros y unos como lenguaje de precisión y construcción, no como cliché hacker.
 - Movimiento sobrio, elegante y no invasivo.
 - Interfaces aireadas, con jerarquía fuerte y lectura clara.
