@@ -1,7 +1,6 @@
 const productionUrl = "https://ceroyuno.com.co";
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-// Switch to contacto@ceroyuno.com.co after the purchased mailbox is created.
-const contactEmail = "ceroyunosas@gmail.com";
+const contactEmail = "contacto@ceroyuno.com.co";
 const contactPhone = "+57 305 328 8831";
 const contactAddress = "Carrera 72BIS # 25B-50, Bogotá";
 
