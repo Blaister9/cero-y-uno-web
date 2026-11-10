@@ -1,5 +1,4 @@
 export const serviceCase = {
-  eyebrow: "Cómo trabajamos",
   title: "¿Dónde quedó mi consulta?",
   description:
     "Una persona escribe desde el portal. Al otro lado, alguien tiene que leer el mensaje, responder y dejar un registro. Así probamos ese recorrido en un prototipo de atención en tiempo real.",

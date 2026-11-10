@@ -9,7 +9,7 @@ export function Footer() {
   const { email, emailHref, phone, phoneHref, address, mapHref } = siteConfig.contact;
 
   return (
-    <footer className="border-t border-white/10 bg-ink py-10">
+    <footer className="glass-panel border-t border-white/15 py-10">
       <Container className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.1fr_0.65fr_0.75fr_0.8fr]">
         <div>
           <p className="text-sm font-semibold tracking-[0.18em] text-porcelain uppercase">Cero y Uno</p>

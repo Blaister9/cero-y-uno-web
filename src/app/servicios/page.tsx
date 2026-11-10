@@ -34,7 +34,7 @@ export default function ServiciosPage() {
 
       <FeatureGrid columns="two">
         {servicesPage.items.map((service, index) => (
-          <ValueCard eyebrow={`Servicio 0${index + 1}`} key={service.title} title={service.title}>
+          <ValueCard eyebrow={`Servicio 0${index + 1}`} id={service.id} key={service.id} title={service.title}>
             <div className="grid gap-4">
               <ServiceDetail label="Problema que resuelve" text={service.problem} />
               <ServiceDetail label="Qué entrega Cero y Uno" text={service.delivery} />

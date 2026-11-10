@@ -4,12 +4,13 @@ import { ArrowRight, Check, MessageSquare, Monitor, Radio, Send } from "lucide-r
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { useRef } from "react";
 
+import type { StoryChapter, WorkflowBeat } from "@/content/project-stories";
 import type { serviceCase } from "@/content/service-case";
 
-type CaseStoryProps = Pick<typeof serviceCase, "chapters" | "example">;
-type CaseExample = CaseStoryProps["example"];
+type CaseExample = typeof serviceCase.example;
+type CaseStoryProps = { chapters: StoryChapter[]; example?: CaseExample; workflow?: WorkflowBeat[] };
 
-export function CaseStory({ chapters, example }: CaseStoryProps) {
+export function CaseStory({ chapters, example, workflow }: CaseStoryProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: trackRef, offset: ["start center", "end center"] });
 
@@ -23,21 +24,61 @@ export function CaseStory({ chapters, example }: CaseStoryProps) {
           >
             <div>
               <p className="mb-3 font-mono text-xs tracking-[0.22em] text-signal" aria-hidden="true">0{index + 1}</p>
-              <h3 className="text-balance text-2xl font-semibold leading-tight text-porcelain sm:text-3xl">
+              <h4 className="text-balance text-2xl font-semibold leading-tight text-porcelain sm:text-3xl">
                 {chapter.title}
-              </h3>
+              </h4>
               <p className="mt-4 text-base leading-7 text-steel lg:text-lg lg:leading-8">{chapter.body}</p>
               {chapter.detail && <p className="mt-4 text-sm leading-6 text-steel">{chapter.detail}</p>}
-              {chapter.showExample && <ConversationExample example={example} />}
+              {chapter.showExample && example && <ConversationExample example={example} />}
+              {workflow?.[index] && (
+                <p className="glass-panel mt-4 rounded-lg border border-white/10 px-4 py-3 text-sm text-steel lg:hidden motion-reduce:lg:block">
+                  <span className="block font-medium text-porcelain">{workflow[index].title}</span>
+                  {workflow[index].detail}
+                </p>
+              )}
             </div>
           </li>
         ))}
       </ol>
 
       <div aria-hidden="true" className="hidden lg:block motion-reduce:lg:hidden">
-        <CaseScene example={example} progress={scrollYProgress} />
+        {example && <CaseScene example={example} progress={scrollYProgress} />}
+        {workflow && <WorkflowScene beats={workflow} progress={scrollYProgress} />}
       </div>
     </div>
+  );
+}
+
+function WorkflowScene({ beats, progress }: { beats: WorkflowBeat[]; progress: MotionValue<number> }) {
+  const backdropY = useTransform(progress, [0, 1], [-22, 28]);
+  return (
+    <div className="sticky top-28">
+      <div className="glass-panel relative isolate overflow-hidden rounded-2xl border border-white/15 p-6 shadow-premium xl:p-8">
+        <motion.div className="pointer-events-none absolute -inset-y-8 inset-x-0 -z-10 bg-[radial-gradient(ellipse_at_30%_30%,rgba(18,58,111,0.34),transparent_70%)]" style={{ y: backdropY }} />
+        <p className="mb-5 text-xs font-medium uppercase tracking-[0.14em] text-signal">Flujo ilustrado</p>
+        <div className="relative grid gap-3">
+          {beats.map((beat, index) => <WorkflowNode beat={beat} index={index} key={beat.title} progress={progress} />)}
+        </div>
+        <div className="mt-6 h-0.5 rounded-full bg-white/10">
+          <motion.div className="h-full origin-left rounded-full bg-signal" style={{ scaleX: progress }} />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function WorkflowNode({ beat, index, progress }: { beat: WorkflowBeat; index: number; progress: MotionValue<number> }) {
+  const start = index * 0.31;
+  const opacity = useTransform(progress, [start, start + 0.14], [0.35, 1]);
+  const x = useTransform(progress, [start, start + 0.14], [12, 0]);
+  return (
+    <motion.div className="flex items-center gap-4 rounded-xl border border-signal/20 bg-ink/70 p-4" style={{ opacity, x }}>
+      <span className="grid size-9 shrink-0 place-items-center rounded-full border border-signal/25 bg-deepblue/35 font-mono text-xs text-signal">0{index + 1}</span>
+      <div>
+        <p className="text-base font-medium text-porcelain">{beat.title}</p>
+        <p className="mt-1 text-sm leading-6 text-steel">{beat.detail}</p>
+      </div>
+    </motion.div>
   );
 }
 
@@ -82,7 +123,7 @@ function CaseScene({ example, progress }: { example: CaseExample; progress: Moti
 
   return (
     <div className="sticky top-[clamp(5rem,13svh,8rem)]">
-      <div className="relative isolate overflow-hidden rounded-xl border border-white/10 bg-[#090e13] shadow-premium">
+      <div className="glass-panel relative isolate overflow-hidden rounded-xl border border-white/15 shadow-premium">
         <motion.div
           className="pointer-events-none absolute -inset-y-12 inset-x-0 -z-10 bg-[radial-gradient(ellipse_at_26%_38%,rgba(18,58,111,0.4),transparent_65%),radial-gradient(ellipse_at_88%_76%,rgba(141,180,255,0.12),transparent_55%)]"
           style={{ y: backdropY }}

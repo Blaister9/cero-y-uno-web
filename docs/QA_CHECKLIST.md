@@ -10,15 +10,14 @@
 ## Navegación
 
 - Validar enlaces del header hacia `/`, `/servicios`, `/soluciones`, `/nosotros` y `/contacto`.
-- Validar que «Ver cómo trabajamos» lleva a `/#proceso`.
+- Validar que «Ver proyectos» lleva a `/#proceso` y que cada tarjeta de servicio abre su detalle.
 - Validar que el menú móvil abre, cierra y no genera overflow horizontal.
 
 ## Scroll Storytelling
 
 - Hacer scroll completo de arriba abajo en `/` y confirmar que la narrativa fluye sin saltos bruscos.
 - Hacer scroll de abajo arriba y confirmar que el contenido permanece disponible y legible.
-- Confirmar que los divisores binarios no tapan contenido ni capturan interacción.
-- Confirmar que Servicios se percibe como módulos cargados sin depender solo de hover.
+- Seleccionar los cinco proyectos y ejemplos con mouse y teclado. En móvil, comprobar el desplazamiento horizontal del selector.
 - Confirmar que el scroll mueve la consulta hacia la consola, trae la respuesta y muestra el cierre. Al subir, la escena debe retroceder a la posición correspondiente.
 - Confirmar que el ejemplo fijo y los cuatro capítulos se leen en orden en móvil y con movimiento reducido.
 - Confirmar que los botones de diagnóstico llevan a `/contacto#canales` y que el encabezado fijo deja visible el bloque.

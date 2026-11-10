@@ -61,9 +61,9 @@ El canvas 2D anima la lluvia mientras el hero está a la vista y la pestaña est
 
 ## Interactive Scroll
 
-La home pasa de la propuesta principal a los servicios y al caso de un prototipo de atención en tiempo real.
+La home pasa de la propuesta principal a los servicios y a un portafolio de proyectos y ejemplos.
 
-En escritorio, la posición del scroll mueve la consulta del portal a la consola, trae la respuesta y muestra el cierre. En móvil y con movimiento reducido, el caso se lee en orden con un ejemplo fijo. Los textos están en `src/content/service-case.ts`.
+En escritorio, el scroll hace avanzar la escena del proyecto seleccionado. En móvil y con movimiento reducido, el contenido se lee en orden con ilustraciones fijas. El portafolio se edita en `src/content/project-stories.ts` y `src/content/service-case.ts`.
 
 ## Rutas Principales
 

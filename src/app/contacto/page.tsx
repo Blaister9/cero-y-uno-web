@@ -35,7 +35,7 @@ export default function ContactoPage() {
             {channels.map(({ label, detail, href, icon: Icon }) => (
               <li key={href}>
                 <a
-                  className="flex h-full items-start gap-3 rounded border border-white/15 bg-white/[0.04] p-4 transition hover:border-signal/45 hover:bg-white/[0.07]"
+                  className="glass-panel flex h-full items-start gap-3 rounded-xl border border-white/15 p-4 transition hover:border-signal/45"
                   href={href}
                 >
                   <Icon aria-hidden="true" className="mt-0.5 shrink-0 text-signal" size={18} />

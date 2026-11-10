@@ -12,7 +12,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-ink/80 backdrop-blur-xl">
+    <header className="glass-nav fixed left-0 right-0 top-0 z-50 border-b border-white/15">
       <Container className="flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3" aria-label="Cero y Uno inicio">
           <span className="grid h-9 w-9 place-items-center rounded border border-white/15 bg-deepblue/35 font-mono text-sm text-signal shadow-inner-line">
@@ -57,7 +57,7 @@ export function Header() {
       </Container>
 
       {isOpen ? (
-        <div className="border-t border-white/10 bg-ink/[0.96] lg:hidden">
+        <div className="glass-panel border-t border-white/15 lg:hidden">
           <Container className="py-4">
             <nav className="grid gap-2" aria-label="Navegación móvil">
               {siteConfig.navItems.map((item) => (
