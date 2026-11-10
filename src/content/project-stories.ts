@@ -14,6 +14,16 @@ export type FinancialDemo = {
   fields: { label: string; value: string }[];
 };
 
+export type PurchaseDemo = {
+  caption: string;
+  reference: string;
+  item: string;
+  quantity: string;
+  team: string;
+  pending: number;
+  approved: number;
+};
+
 type ProjectStory = {
   id: string;
   label: string;
@@ -23,6 +33,7 @@ type ProjectStory = {
   chapters: StoryChapter[];
   example?: typeof serviceCase.example;
   financialDemo?: FinancialDemo;
+  purchaseDemo?: PurchaseDemo;
   workflow?: WorkflowBeat[];
 };
 
@@ -54,17 +65,22 @@ export const projectStories: ProjectStory[] = [
     label: "Power Platform",
     kind: "Ejemplo",
     title: "Una solicitud de compra, de principio a fin",
-    description: "Un ejemplo de cómo combinar aplicaciones, flujos, datos y reportes cuando un equipo lleva sus solicitudes por correo.",
+    description: "Un equipo necesita reponer material de oficina. Sigamos una solicitud ficticia para ver cómo se registra, quién la aprueba y qué aparece en el informe después.",
     chapters: [
-      { title: "La solicitud queda en un solo lugar", body: "Una persona registra lo que necesita en una app de Power Apps. La solicitud queda guardada en Dataverse con sus datos y su estado.", detail: "Si también participan proveedores, Power Pages puede ofrecerles un portal de entrada." },
-      { title: "La aprobación llega a quien corresponde", body: "Power Automate envía la solicitud a la persona que debe decidir. Al responder, el flujo actualiza el estado en el mismo registro." },
-      { title: "El equipo puede ver qué falta", body: "Un tablero en Power BI muestra qué solicitudes siguen pendientes y cuáles ya se resolvieron. El equipo puede consultar el estado desde la aplicación.", detail: "Copilot Studio podría añadir un asistente para orientar a quien no sabe cómo radicar una solicitud." }
+      { title: "La compra empieza en una app", body: "El equipo de Operaciones indica qué necesita y en qué cantidad. Al enviar el formulario de Power Apps, Dataverse guarda la solicitud con una referencia.", detail: "Si también participan proveedores, Power Pages puede ofrecerles un portal de entrada." },
+      { title: "La solicitud llega a quien decide", body: "Power Automate lleva la solicitud a la bandeja de la persona responsable de compras. Allí puede ver qué pidió el equipo y cuánto necesita." },
+      { title: "La decisión queda en la misma solicitud", body: "La persona responsable aprueba la compra. El flujo guarda la decisión en Dataverse y quien hizo la solicitud puede consultar el nuevo estado desde la app." },
+      { title: "El informe recoge el cambio", body: "Al actualizar el informe de Power BI, la solicitud pasa de pendientes a aprobadas. El equipo puede ver cuáles siguen por resolver.", detail: "Copilot Studio podría añadir un asistente para orientar a quien necesita radicar una solicitud.", showExample: true }
     ],
-    workflow: [
-      { title: "Power Apps + Dataverse", detail: "Solicitud registrada" },
-      { title: "Power Automate", detail: "Aprobación y cambio de estado" },
-      { title: "Power BI", detail: "Vista de pendientes y resueltas" }
-    ]
+    purchaseDemo: {
+      caption: "Ejemplo de una solicitud con datos ficticios",
+      reference: "COMPRA-007",
+      item: "Material de oficina",
+      quantity: "12 cajas",
+      team: "Operaciones",
+      pending: 3,
+      approved: 5
+    }
   },
   {
     id: "blockchain",

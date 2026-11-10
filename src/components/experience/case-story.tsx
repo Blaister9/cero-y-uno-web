@@ -4,24 +4,26 @@ import { ArrowRight, Check, MessageSquare, Monitor, Radio, Send } from "lucide-r
 import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { useRef } from "react";
 
-import type { FinancialDemo, StoryChapter, WorkflowBeat } from "@/content/project-stories";
+import type { FinancialDemo, PurchaseDemo, StoryChapter, WorkflowBeat } from "@/content/project-stories";
 import type { serviceCase } from "@/content/service-case";
 
 import { FinancialScene, FinancialStill } from "./financial-scene";
+import { PowerPlatformScene, PowerPlatformStill } from "./power-platform-scene";
 
 type CaseExample = typeof serviceCase.example;
 type CaseStoryProps = {
   chapters: StoryChapter[];
   example?: CaseExample;
   financialDemo?: FinancialDemo;
+  purchaseDemo?: PurchaseDemo;
   workflow?: WorkflowBeat[];
 };
 
-export function CaseStory({ chapters, example, financialDemo, workflow }: CaseStoryProps) {
+export function CaseStory({ chapters, example, financialDemo, purchaseDemo, workflow }: CaseStoryProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: trackRef,
-    offset: ["start center", financialDemo ? "end 76%" : "end center"]
+    offset: ["start center", financialDemo || purchaseDemo ? "end 76%" : "end center"]
   });
 
   return (
@@ -41,6 +43,7 @@ export function CaseStory({ chapters, example, financialDemo, workflow }: CaseSt
               {chapter.detail && <p className="mt-4 text-sm leading-6 text-steel">{chapter.detail}</p>}
               {chapter.showExample && example && <ConversationExample example={example} />}
               {chapter.showExample && financialDemo && <FinancialStill demo={financialDemo} />}
+              {chapter.showExample && purchaseDemo && <PowerPlatformStill demo={purchaseDemo} />}
               {workflow?.[index] && (
                 <p className="glass-panel mt-4 rounded-lg border border-white/10 px-4 py-3 text-sm text-steel lg:hidden motion-reduce:lg:block">
                   <span className="block font-medium text-porcelain">{workflow[index].title}</span>
@@ -55,6 +58,7 @@ export function CaseStory({ chapters, example, financialDemo, workflow }: CaseSt
       <div aria-hidden="true" className="hidden lg:block motion-reduce:lg:hidden">
         {example && <CaseScene example={example} progress={scrollYProgress} />}
         {financialDemo && <FinancialScene demo={financialDemo} progress={scrollYProgress} />}
+        {purchaseDemo && <PowerPlatformScene demo={purchaseDemo} progress={scrollYProgress} />}
         {workflow && <WorkflowScene beats={workflow} progress={scrollYProgress} />}
       </div>
     </div>

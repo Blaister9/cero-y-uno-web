@@ -6,6 +6,13 @@ export const financialScroll = {
   confirmation: [0.8, 0.88]
 };
 
+export const purchaseScroll = {
+  form: [0.1, 0.25],
+  handoff: [0.28, 0.47],
+  decision: [0.57, 0.69],
+  report: [0.78, 0.9]
+};
+
 export const fadeUp: Variants = {
   hidden: {
     opacity: 0,
