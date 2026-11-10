@@ -19,8 +19,8 @@
 - Hacer scroll de abajo arriba y confirmar que el contenido permanece disponible y legible.
 - Confirmar que los divisores binarios no tapan contenido ni capturan interacción.
 - Confirmar que Servicios se percibe como módulos cargados sin depender solo de hover.
-- Confirmar que Impacto comunica transformación de `Antes` a `Después`.
-- Confirmar que Proceso se presenta como pipeline: diagnóstico, diseño, arquitectura, desarrollo, pruebas, despliegue y evolución.
+- Confirmar que el panel del caso acompaña los cuatro capítulos al bajar y al volver hacia arriba en escritorio.
+- Confirmar que el ejemplo de conversación y los cuatro capítulos se leen en orden en móvil.
 - Confirmar que los botones de diagnóstico llevan a `/contacto#canales` y que el encabezado fijo deja visible el bloque.
 - Verificar correo, teléfono y enlace al mapa en Contacto y en el pie de página.
 
@@ -30,7 +30,7 @@
 - Confirmar que no existe overflow horizontal.
 - Confirmar que el hero, CTA, tarjetas y terminal decorativa son legibles.
 - Confirmar que la animación no tapa contenido crítico.
-- Confirmar que el pipeline no genera scroll horizontal en móvil.
+- Confirmar que el caso no genera scroll horizontal en móvil.
 - Confirmar que el scroll en 375px se mantiene fluido.
 
 ## Accesibilidad

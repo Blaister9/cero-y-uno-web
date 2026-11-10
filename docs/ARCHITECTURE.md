@@ -35,8 +35,7 @@ Contiene las secciones principales del home:
 - Manifiesto
 - Servicios
 - Diferencial
-- Impacto
-- Proceso
+- Proceso y caso de prototipo
 - Contacto
 
 ```text
@@ -95,7 +94,7 @@ Los componentes de `src/components/experience` elevan la home sin cambiar la arq
 - `code-terminal.tsx` muestra una terminal decorativa en escritorio.
 - `scroll-reveal.tsx`: wrapper de aparición por scroll para narrativa progresiva sin bloquear scroll nativo.
 - `binary-divider.tsx`: separadores visuales de flujo entre secciones.
-- `process-pipeline.tsx`: pipeline animado para el proceso, con degradación limpia en móvil.
+- `case-story.tsx` mantiene los cuatro capítulos en el flujo y actualiza el panel decorativo de escritorio con `IntersectionObserver`.
 
 El hero renderiza su contenido y sus enlaces desde el servidor. El canvas decora el fondo en la ruta `/`.
 
@@ -105,9 +104,8 @@ La home sigue esta secuencia narrativa:
 
 1. Propuesta principal con lluvia binaria de fondo y terminal secundaria.
 2. Servicios como módulos ejecutables.
-3. Impacto como transformación de desorden a operación.
-4. Proceso como pipeline de diagnóstico a evolución.
-5. Contacto mediante los canales comerciales.
+3. Caso de atención en tiempo real en cuatro momentos. El bloque de Proceso conserva el ancla `#impacto` en su encabezado.
+4. Contacto mediante los canales comerciales.
 
 Las animaciones deben limitarse a `opacity` y `transform`. No se usa scroll hijacking, Three.js, GSAP ni dependencias externas para scroll.
 

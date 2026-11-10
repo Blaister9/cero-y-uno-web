@@ -61,9 +61,9 @@ El canvas 2D anima la lluvia mientras el hero está a la vista y la pestaña est
 
 ## Interactive Scroll
 
-La home pasa de la propuesta principal a los servicios, el antes y después y el proceso de trabajo. Las apariciones se apoyan en Framer Motion con `transform` y `opacity` y conservan el desplazamiento del navegador.
+La home pasa de la propuesta principal a los servicios y al caso de un prototipo de atención en tiempo real.
 
-El proceso se presenta como pipeline visual: diagnóstico, diseño, arquitectura, desarrollo, pruebas, despliegue y evolución. En móviles se degrada a una lectura limpia por tarjetas.
+El caso reúne problema, decisión, construcción y evolución. El panel de escritorio acompaña el scroll y en móvil se leen los cuatro momentos en orden. Los textos del caso están en `src/content/service-case.ts`.
 
 ## Rutas Principales
 
