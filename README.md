@@ -22,7 +22,7 @@ El sitio comunica una propuesta ejecutiva: convertir ideas, procesos complejos y
 
 ## Requisitos
 
-- Node.js 20 LTS
+- Node.js 24 LTS (misma versión principal en desarrollo, CI y Vercel)
 - pnpm 9.15.4 o compatible
 
 ## Instalación

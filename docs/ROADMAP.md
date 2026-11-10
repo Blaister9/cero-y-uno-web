@@ -28,17 +28,17 @@ Estado: completado.
 
 ## v3 - Estructura Corporativa Multipágina
 
-Estado: en curso.
+Estado: completado. Las mejoras de cada página continúan de forma incremental.
 
 - Mantener home como resumen ejecutivo.
 - Crear páginas dedicadas para servicios, soluciones, nosotros y contacto.
 - Usar metadata propia por página.
 - Mantener contacto sin backend ni formulario simulado.
-- Conservar URL temporal de Vercel como producción mientras no exista dominio propio.
+- Mantener `https://ceroyuno.com.co` como dominio canónico.
 
-## v4 - Dominio Propio Futuro
+## v4 - Dominio Propio Y Correo
 
-Estado: pendiente.
+Estado: completado para publicación; prueba de envío y recepción de correo pendiente.
 
 - Comprar y conectar dominio propio.
 - Actualizar `NEXT_PUBLIC_SITE_URL`.
@@ -55,6 +55,9 @@ Estado: pendiente.
 - Implementar analítica solo con claves reales y aprobación previa.
 - No inventar automatizaciones ni integraciones antes de definir operación comercial.
 
-## Pendientes menores
+## Próximas prioridades
 
-- **Criticidad baja.** Definir una paleta de marca y revisar cómo conviven el verde del hero y el azul corporativo en botones y acentos.
+- Proteger `main` y `dev`, exigir CI y ampliar las comprobaciones de publicación.
+- Completar navegación accesible y contenido visible sin JavaScript en Nosotros y CTA de home.
+- Revisar Nosotros y Contacto con la identidad ya definida: Manrope y verde matriz.
+- Mantener el detalle y la evidencia de cierre en `PRODUCTION_READINESS.md`.
