@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
 import { heroContent } from "@/content/site";
+import { siteConfig } from "@/config/site";
 
 export const runtime = "nodejs";
 export const alt = "Cero y Uno - Desarrollo de software, automatización e inteligencia aplicada";
@@ -64,7 +65,7 @@ export default async function OpenGraphImage() {
           }}
         >
           <span>01 / estrategia / arquitectura / ejecución</span>
-          <span>cero-y-uno-web.vercel.app</span>
+          <span>{new URL(siteConfig.url).hostname}</span>
         </div>
       </div>
     ),
