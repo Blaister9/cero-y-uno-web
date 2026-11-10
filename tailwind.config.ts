@@ -14,13 +14,12 @@ const config: Config = {
         sans: ["var(--font-manrope)"]
       },
       colors: {
-        ink: "#050505",
-        coal: "#0B0D0E",
+        ink: "#0B0D0E",
+        coal: "#0F1213",
         graphite: "#14171A",
         steel: "#A7B0B8",
-        signal: "#8DB4FF",
-        deepblue: "#123A6F",
-        ember: "#D7B56D",
+        matrixdeep: "#163D29",
+        warning: "#D7B56D",
         matrix: "#A8EDBE",
         porcelain: "#F7F8F4"
       },

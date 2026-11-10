@@ -23,7 +23,7 @@ export default async function OpenGraphImage() {
       <div
         style={{
           alignItems: "stretch",
-          background: "#050505",
+          background: "#0B0D0E",
           color: "#F7F8F4",
           display: "flex",
           flexDirection: "column",
@@ -36,7 +36,7 @@ export default async function OpenGraphImage() {
       >
         <div
           style={{
-            color: "#D7B56D",
+            color: "#A8EDBE",
             fontSize: 30,
             letterSpacing: 8,
             textTransform: "uppercase"

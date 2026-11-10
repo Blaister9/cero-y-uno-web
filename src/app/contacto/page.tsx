@@ -22,10 +22,10 @@ export default function ContactoPage() {
   ];
 
   return (
-    <main className="bg-ink bg-[radial-gradient(ellipse_at_72%_12%,rgba(18,58,111,0.32),transparent_65%)] pb-16 pt-28 md:pb-24 md:pt-36">
+    <main className="bg-ink bg-[radial-gradient(ellipse_at_72%_12%,rgba(22,61,41,0.32),transparent_65%)] pb-16 pt-28 md:pb-24 md:pt-36">
       <Container>
         <section aria-labelledby="contacto-titulo" className="scroll-mt-24" id="canales">
-          <p className="text-sm uppercase tracking-[0.28em] text-ember">{eyebrow}</p>
+          <p className="text-sm uppercase tracking-[0.28em] text-matrix">{eyebrow}</p>
           <h1 className="mt-4 text-4xl font-semibold leading-tight text-porcelain md:text-6xl" id="contacto-titulo">
             {title}
           </h1>
@@ -35,10 +35,10 @@ export default function ContactoPage() {
             {channels.map(({ label, detail, href, icon: Icon }) => (
               <li key={href}>
                 <a
-                  className="glass-panel flex h-full items-start gap-3 rounded-xl border border-white/15 p-4 transition hover:border-signal/45"
+                  className="glass-panel flex h-full items-start gap-3 rounded-xl border border-white/15 p-4 transition hover:border-matrix/45"
                   href={href}
                 >
-                  <Icon aria-hidden="true" className="mt-0.5 shrink-0 text-signal" size={18} />
+                  <Icon aria-hidden="true" className="mt-0.5 shrink-0 text-matrix" size={18} />
                   <span className="min-w-0">
                     <span className="block text-sm font-semibold text-porcelain">{label}</span>
                     <span className="mt-1 block break-words text-sm leading-6 text-steel">{detail}</span>

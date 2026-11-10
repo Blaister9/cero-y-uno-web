@@ -12,7 +12,7 @@ export function HeroSection() {
       <BinaryCanvas className="pointer-events-none absolute inset-0" />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(5,9,7,0.93),rgba(5,9,7,0.70)_70%,rgba(5,9,7,0.48))] lg:bg-[linear-gradient(90deg,rgba(5,9,7,0.94),rgba(5,9,7,0.75)_44%,rgba(5,9,7,0.14)_100%)]"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(11,13,14,0.93),rgba(11,13,14,0.70)_70%,rgba(11,13,14,0.48))] lg:bg-[linear-gradient(90deg,rgba(11,13,14,0.94),rgba(11,13,14,0.75)_44%,rgba(11,13,14,0.14)_100%)]"
       />
       <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink to-transparent" />
 

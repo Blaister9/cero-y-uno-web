@@ -23,7 +23,7 @@ export default function SolucionesPage() {
         title={solutionsPage.title}
       >
         <Link
-          className="inline-flex h-12 items-center justify-center gap-2 rounded bg-porcelain px-5 text-sm font-semibold text-ink transition hover:bg-white"
+          className="inline-flex h-12 items-center justify-center gap-2 rounded bg-matrix px-5 text-sm font-semibold text-ink transition hover:bg-porcelain"
           href="/servicios"
         >
           Ver servicios

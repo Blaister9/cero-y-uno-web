@@ -42,7 +42,7 @@ export function BinaryCanvas({ className }: { className?: string }) {
 
     const draw = () => {
       context.globalAlpha = 1;
-      context.fillStyle = "#050a07";
+      context.fillStyle = "#0B0D0E";
       context.fillRect(0, 0, width, height);
 
       for (const stream of streams) {
@@ -134,7 +134,7 @@ export function BinaryCanvas({ className }: { className?: string }) {
 
   return (
     <div aria-hidden="true" className={className}>
-      <svg className="absolute inset-0 size-full bg-[#050a07] font-mono" focusable="false">
+      <svg className="absolute inset-0 size-full bg-[#0B0D0E] font-mono" focusable="false">
         <defs>
           <pattern height="268" id={patternId} patternUnits="userSpaceOnUse" width="242">
             {stillStreams.map(({ x, y, bits }) => (

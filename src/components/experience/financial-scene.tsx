@@ -23,7 +23,7 @@ export function FinancialScene({ demo, progress }: { demo: FinancialDemo; progre
     <div className="sticky top-[clamp(5rem,12svh,7rem)]" data-financial-scene>
       <div className="glass-panel relative isolate overflow-hidden rounded-2xl border border-white/15 shadow-premium">
         <motion.div
-          className="pointer-events-none absolute -inset-14 -z-10 bg-[radial-gradient(ellipse_at_22%_28%,rgba(18,58,111,0.55),transparent_57%),radial-gradient(ellipse_at_92%_88%,rgba(168,237,190,0.14),transparent_45%)]"
+          className="pointer-events-none absolute -inset-14 -z-10 bg-[radial-gradient(ellipse_at_22%_28%,rgba(22,61,41,0.55),transparent_57%),radial-gradient(ellipse_at_92%_88%,rgba(168,237,190,0.14),transparent_45%)]"
           style={{ x: backdropX, y: backdropY }}
         />
         <header className="flex items-center justify-between gap-3 border-b border-white/10 px-5 py-4">
@@ -34,15 +34,15 @@ export function FinancialScene({ demo, progress }: { demo: FinancialDemo; progre
         <div className="px-4 pb-5 pt-5 xl:px-6">
           <div className={laneGrid}>
             <div className="flex items-center gap-2 rounded-t-xl border border-white/15 bg-ink/80 px-3 py-3 text-sm font-medium text-porcelain">
-              <FileText className="shrink-0 text-signal" size={17} />
+              <FileText className="shrink-0 text-matrix" size={17} />
               Documento de entrada
             </div>
-            <div className="relative isolate mx-auto grid size-9 self-center place-items-center overflow-hidden rounded-full border border-signal/30 bg-graphite text-signal xl:size-11">
-              <motion.div className="absolute inset-0 -z-10 bg-deepblue/80" style={{ opacity: botGlow }} />
+            <div className="relative isolate mx-auto grid size-9 self-center place-items-center overflow-hidden rounded-full border border-matrix/30 bg-graphite text-matrix xl:size-11">
+              <motion.div className="absolute inset-0 -z-10 bg-matrixdeep/80" style={{ opacity: botGlow }} />
               <Bot size={20} />
             </div>
             <div className="flex items-center gap-2 rounded-t-xl border border-white/15 bg-ink/80 px-3 py-3 text-sm font-medium text-porcelain">
-              <BookOpen className="shrink-0 text-signal" size={17} />
+              <BookOpen className="shrink-0 text-matrix" size={17} />
               Registro contable
             </div>
           </div>
@@ -53,11 +53,11 @@ export function FinancialScene({ demo, progress }: { demo: FinancialDemo; progre
 
           <div className={laneGrid}>
             <div className="rounded-b-xl border-x border-b border-white/15 bg-ink/80 px-3 py-2 text-xs text-steel">Documento de ejemplo</div>
-            <span className="self-center text-center text-[0.65rem] font-semibold tracking-wide text-signal">RPA</span>
+            <span className="self-center text-center text-[0.65rem] font-semibold tracking-wide text-matrix">RPA</span>
             <div className="relative overflow-hidden rounded-b-xl border-x border-b border-white/15 bg-ink/80 px-3 py-2 text-xs text-steel">
               <motion.span style={{ opacity: pending }}>Pendiente de registro</motion.span>
-              <motion.span className="absolute inset-x-3 top-2 text-signal" style={{ opacity: reading }}>Leyendo el documento</motion.span>
-              <motion.span className="absolute inset-x-3 top-2 text-signal" style={{ opacity: transferring }}>Completando el registro</motion.span>
+              <motion.span className="absolute inset-x-3 top-2 text-matrix" style={{ opacity: reading }}>Leyendo el documento</motion.span>
+              <motion.span className="absolute inset-x-3 top-2 text-matrix" style={{ opacity: transferring }}>Completando el registro</motion.span>
               <motion.span className="absolute inset-x-3 top-2 flex items-center gap-1.5 font-medium text-matrix" style={{ opacity: confirmed }}>
                 <Check className="shrink-0" size={13} /> Registro completo
               </motion.span>
@@ -81,7 +81,7 @@ export function FinancialScene({ demo, progress }: { demo: FinancialDemo; progre
             <span className="text-xs text-steel">Datos de ejemplo</span>
           </motion.div>
         </div>
-        <motion.div className="h-0.5 origin-left bg-signal/70" style={{ scaleX: progress }} />
+        <motion.div className="h-0.5 origin-left bg-matrix/70" style={{ scaleX: progress }} />
       </div>
     </div>
   );
@@ -107,20 +107,20 @@ function FinancialLane({ field, index, count, progress }: { field: FinancialDemo
   return (
     <div className={laneGrid}>
       <div className="relative isolate min-w-0 overflow-hidden border-x border-b border-white/15 bg-ink/80 px-3 py-2.5">
-        <motion.div className="pointer-events-none absolute inset-0 -z-10 bg-deepblue/60" style={{ opacity: scan }} />
-        <motion.div className="pointer-events-none absolute inset-x-0 h-px bg-signal shadow-[0_0_12px_#8db4ff]" data-financial-scan style={{ opacity: scan, top: scanY }} />
+        <motion.div className="pointer-events-none absolute inset-0 -z-10 bg-matrixdeep/60" style={{ opacity: scan }} />
+        <motion.div className="pointer-events-none absolute inset-x-0 h-px bg-matrix shadow-[0_0_12px_#A8EDBE]" data-financial-scan style={{ opacity: scan, top: scanY }} />
         <div className="flex items-center justify-between gap-2 text-xs text-steel">
           {field.label}
-          <motion.span className="text-signal" style={{ opacity: readCheck }}><ScanLine size={13} /></motion.span>
+          <motion.span className="text-matrix" style={{ opacity: readCheck }}><ScanLine size={13} /></motion.span>
         </div>
         <p className="mt-0.5 break-words text-sm font-medium tabular-nums text-porcelain">{field.value}</p>
       </div>
 
       <div className="relative z-10 self-center">
         <div className="h-px bg-white/15" />
-        <motion.div className="absolute inset-x-0 top-0 h-px origin-left bg-signal" style={{ scaleX: fill }} />
+        <motion.div className="absolute inset-x-0 top-0 h-px origin-left bg-matrix" style={{ scaleX: fill }} />
         <motion.span
-          className="absolute top-1/2 w-max max-w-36 -translate-x-1/2 -translate-y-1/2 truncate rounded-full border border-signal/60 bg-[#15263b] px-2.5 py-1 text-[0.65rem] font-medium text-porcelain shadow-[0_0_16px_#284f80]"
+          className="absolute top-1/2 w-max max-w-36 -translate-x-1/2 -translate-y-1/2 truncate rounded-full border border-matrix/60 bg-[#152B20] px-2.5 py-1 text-[0.65rem] font-medium text-porcelain shadow-[0_0_16px_#285E3D]"
           data-financial-packet
           style={{ left: packetX, opacity: packetOpacity }}
         >
@@ -149,7 +149,7 @@ export function FinancialStill({ demo }: { demo: FinancialDemo }) {
       <figure className="glass-panel mt-6 rounded-xl border border-white/15 p-4">
         <figcaption className="text-xs text-steel">{demo.caption}</figcaption>
         <p className="mt-3 flex flex-wrap items-center gap-2 text-sm font-medium text-porcelain">
-          Documento <ArrowRight aria-hidden="true" className="text-signal" size={14} /> Bot RPA <ArrowRight aria-hidden="true" className="text-signal" size={14} /> Causación registrada
+          Documento <ArrowRight aria-hidden="true" className="text-matrix" size={14} /> Bot RPA <ArrowRight aria-hidden="true" className="text-matrix" size={14} /> Causación registrada
         </p>
         <dl className="mt-3 divide-y divide-white/10">
           {demo.fields.map(({ label, value }) => (
