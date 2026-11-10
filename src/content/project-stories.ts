@@ -35,9 +35,10 @@ export const projectStories: ProjectStory[] = [
     title: "Del documento al registro contable",
     description: "Para una empresa en Chile programamos un bot que ejecutaba la causación y otras tareas financieras. Aquí seguimos un documento ficticio para ver en qué parte del trabajo intervenía el bot.",
     chapters: [
-      { title: "El documento está listo. Falta registrarlo.", body: "El dato ya existe en un documento. Para que quede en contabilidad, alguien tiene que llevarlo al registro. Esa era una de las tareas que la empresa quería pasarle al bot." },
-      { title: "El bot sigue los pasos", body: "Programamos la secuencia para que el bot hiciera el registro. En esta recreación lo ves tomar la referencia, el concepto y el importe del documento." },
-      { title: "Los datos quedan en contabilidad", body: "La referencia, el concepto y el importe aparecen en el registro de causación. Este era uno de los pasos del proceso financiero que quedó a cargo del bot.", showExample: true }
+      { title: "Hay un documento por registrar", body: "El documento tiene la información de la compra. El registro contable sigue vacío. Pasar esos datos de un lado al otro era una de las tareas que la empresa quería automatizar." },
+      { title: "El bot lee el documento", body: "Sigue la línea que recorre el documento. En esta recreación, el bot toma tres datos en orden: la referencia, el concepto y el importe." },
+      { title: "Cada dato llega a su campo", body: "La referencia viaja primero. Luego pasan el concepto y el importe. A medida que llegan, puedes comparar lo que decía el documento con lo que quedó en el registro." },
+      { title: "Así queda la causación", body: "Los tres campos ya están completos y aparece la confirmación. La causación era uno de los pasos del proceso financiero que quedó a cargo del bot.", showExample: true }
     ],
     financialDemo: {
       caption: "Recreación del flujo con datos ficticios",

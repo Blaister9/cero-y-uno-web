@@ -19,7 +19,7 @@
 - Hacer scroll de abajo arriba y confirmar que el contenido permanece disponible y legible.
 - Seleccionar los cinco proyectos y ejemplos con mouse y teclado. En móvil, comprobar el desplazamiento horizontal del selector.
 - Confirmar que el scroll mueve la consulta hacia la consola, trae la respuesta y muestra el cierre. Al subir, la escena debe retroceder a la posición correspondiente.
-- En Automatización financiera, comprobar la lectura del documento, el traslado de los datos y la confirmación. Al subir, los campos deben volver a su estado anterior.
+- En Automatización financiera, comprobar que la lectura resalta un campo a la vez, que cada dato cruza antes de aparecer en el registro y que la confirmación se ve completa. Al subir, el recorrido debe revertirse.
 - Confirmar que el ejemplo fijo y los cuatro capítulos se leen en orden en móvil y con movimiento reducido.
 - Confirmar que los botones de diagnóstico llevan a `/contacto#canales` y que el encabezado fijo deja visible el bloque.
 - Verificar correo, teléfono y enlace al mapa en Contacto y en el pie de página.

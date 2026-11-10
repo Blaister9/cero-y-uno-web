@@ -1,9 +1,9 @@
 import type { Variants } from "framer-motion";
 
 export const financialScroll = {
-  scan: [0.31, 0.54],
-  transfer: [0.48, 0.72],
-  confirmation: [0.75, 0.86]
+  scan: [0.22, 0.49],
+  transfer: [0.49, 0.78],
+  confirmation: [0.8, 0.88]
 };
 
 export const fadeUp: Variants = {
