@@ -1,20 +1,19 @@
-import { ProcessPipeline } from "@/components/experience/process-pipeline";
-import { ScrollReveal } from "@/components/experience/scroll-reveal";
+import { ProjectPicker } from "@/components/experience/project-picker";
 import { Container } from "@/components/layout/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { processSteps } from "@/content/site";
+import { blockchainDemo } from "@/content/blockchain-demo";
 
 export function ProcessSection() {
   return (
-    <section className="border-t border-white/10 bg-graphite py-24" id="proceso">
+    <section className="scroll-mt-16 border-t border-white/10 bg-graphite py-24" id="proceso">
       <Container>
-        <ScrollReveal>
-          <SectionHeading eyebrow="Proceso" title="De necesidad ambigua a software operando.">
-            Un pipeline claro para diagnosticar, diseñar, construir, probar, desplegar y evolucionar soluciones sin perder el foco del negocio.
+        <div className="scroll-mt-24" id="impacto">
+          <SectionHeading eyebrow="Portafolio" title="Proyectos y ejemplos">
+            Elige un proyecto o un ejemplo y sigue el flujo paso a paso.
           </SectionHeading>
-        </ScrollReveal>
+        </div>
 
-        <ProcessPipeline steps={processSteps} />
+        <ProjectPicker blockchainDemo={blockchainDemo} />
       </Container>
     </section>
   );

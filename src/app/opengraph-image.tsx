@@ -1,5 +1,7 @@
 import { ImageResponse } from "next/og";
 
+import { heroContent } from "@/content/site";
+
 export const runtime = "edge";
 export const alt = "Cero y Uno - Desarrollo de software, automatización e inteligencia aplicada";
 export const size = {
@@ -37,7 +39,7 @@ export default function OpenGraphImage() {
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
           <div style={{ fontSize: 76, fontWeight: 700, lineHeight: 1.05, maxWidth: 950 }}>
-            Lo que otros imaginan, nosotros lo convertimos en software.
+            {heroContent.title}
           </div>
           <div style={{ color: "#A7B0B8", fontSize: 34, lineHeight: 1.35, maxWidth: 900 }}>
             Software, automatización e inteligencia aplicada para procesos complejos.
@@ -47,7 +49,7 @@ export default function OpenGraphImage() {
           style={{
             alignItems: "center",
             borderTop: "1px solid rgba(255,255,255,0.16)",
-            color: "#8DB4FF",
+            color: "#A8EDBE",
             display: "flex",
             fontSize: 28,
             justifyContent: "space-between",

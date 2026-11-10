@@ -9,7 +9,7 @@ El sitio comunica una propuesta ejecutiva: convertir ideas, procesos complejos y
 - Producción temporal en Vercel: https://cero-y-uno-web.vercel.app
 - Sin dominio propio todavía.
 - Sin backend, base de datos, autenticación ni formulario funcional.
-- Contacto directo configurable por variables públicas cuando exista correo o WhatsApp real.
+- Contacto directo por correo y teléfono, con dirección y enlace al mapa.
 
 ## Stack
 
@@ -55,15 +55,15 @@ Esta URL debe tratarse como productiva mientras no exista dominio propio.
 
 ## Experiencia Interactiva Binaria
 
-La home incluye una intro visual de lluvia binaria y formación de marca. La experiencia se ejecuta solo en cliente, usa `sessionStorage` para mostrarse una vez por sesión y permite omitirla con el botón accesible `Saltar intro`.
+El primer pantallazo combina el mensaje principal con lluvia binaria verde. El titular, los botones y el fondo estático se sirven desde la primera carga.
 
-La matriz binaria está implementada con canvas 2D para evitar miles de nodos DOM. Los componentes respetan `prefers-reduced-motion`: si el usuario reduce movimiento, se muestra una versión estática y la intro no ejecuta la lluvia completa.
+El canvas 2D anima la lluvia mientras el hero está a la vista y la pestaña está activa. Con `prefers-reduced-motion`, permanece el patrón estático.
 
 ## Interactive Scroll
 
-La home usa una narrativa de scroll sobria: identidad formada, módulos de servicio cargados, transformación de operación y pipeline de despliegue. Las interacciones se apoyan en Framer Motion con `transform` y `opacity`, sin scroll hijacking ni librerías externas.
+La home pasa de la propuesta principal a los servicios y a un portafolio de proyectos y ejemplos.
 
-El proceso se presenta como pipeline visual: diagnóstico, diseño, arquitectura, desarrollo, pruebas, despliegue y evolución. En móviles se degrada a una lectura limpia por tarjetas.
+En escritorio, el scroll hace avanzar la escena del proyecto seleccionado. En móvil y con movimiento reducido, el contenido se lee en orden con ilustraciones fijas. El portafolio se edita en `src/content/project-stories.ts` y `src/content/service-case.ts`.
 
 ## Rutas Principales
 
@@ -71,7 +71,7 @@ El proceso se presenta como pipeline visual: diagnóstico, diseño, arquitectura
 - `/servicios`: servicios técnicos con problema, entrega y resultado esperado.
 - `/soluciones`: escenarios de solución aplicables a clientes.
 - `/nosotros`: enfoque institucional y filosofía de trabajo.
-- `/contacto`: contacto sin formulario funcional ni backend.
+- `/contacto#canales`: correo, teléfono y ubicación para iniciar una conversación.
 
 ## Build
 
@@ -133,11 +133,9 @@ Usar `.env.example` como referencia:
 
 ```bash
 NEXT_PUBLIC_SITE_URL=https://cero-y-uno-web.vercel.app
-NEXT_PUBLIC_CONTACT_EMAIL=
-NEXT_PUBLIC_WHATSAPP_URL=
 ```
 
-`NEXT_PUBLIC_CONTACT_EMAIL` y `NEXT_PUBLIC_WHATSAPP_URL` deben permanecer vacíos hasta que exista un canal real aprobado. Si ambos están vacíos, los CTAs apuntan a la sección Contacto y no simulan envíos.
+Los datos públicos de contacto se editan en `src/config/site.ts`. Los botones de diagnóstico llevan a `/contacto#canales`.
 
 ## Notas Para Próximos Cambios
 

@@ -1,27 +1,24 @@
 const productionUrl = "https://cero-y-uno-web.vercel.app";
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-const configuredContactEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim();
-const configuredWhatsappUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL?.trim();
-
-const contactEmail = configuredContactEmail || null;
-const whatsappUrl = configuredWhatsappUrl || null;
+const contactEmail = "ceroyunosas@gmail.com";
+const contactPhone = "+57 305 328 8831";
+const contactAddress = "Carrera 72BIS # 25B-50, Bogotá";
 
 export const siteConfig = {
   name: "Cero y Uno",
   slogan: "Lo que otros imaginan, nosotros lo convertimos en software.",
   url: configuredSiteUrl || productionUrl,
-  productionUrl,
   description:
     "Creamos software a medida, automatizaciones, integraciones y soluciones digitales para transformar procesos complejos en sistemas funcionales, escalables y mantenibles.",
   contact: {
     email: contactEmail,
-    whatsappUrl,
-    socialLinks: [] as Array<{ label: string; href: string }>
+    emailHref: `mailto:${contactEmail}`,
+    phone: contactPhone,
+    phoneHref: `tel:${contactPhone.replaceAll(" ", "")}`,
+    address: contactAddress,
+    mapHref: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contactAddress)}`
   },
-  contactEmail,
-  whatsappUrl,
-  hasDirectContact: Boolean(contactEmail || whatsappUrl),
-  primaryContactHref: contactEmail ? `mailto:${contactEmail}` : whatsappUrl || "/contacto",
+  primaryContactHref: "/contacto#canales",
   keywords: [
     "desarrollo de software",
     "automatización de procesos",

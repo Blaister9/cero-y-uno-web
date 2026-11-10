@@ -4,6 +4,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/layout/page-hero";
 import { FeatureGrid } from "@/components/ui/feature-grid";
 import { ValueCard } from "@/components/ui/value-card";
+import { siteConfig } from "@/config/site";
 import { servicesPage } from "@/content/services";
 import { createPageMetadata } from "@/lib/metadata";
 
@@ -24,7 +25,7 @@ export default function ServiciosPage() {
       >
         <Link
           className="inline-flex h-12 items-center justify-center gap-2 rounded bg-porcelain px-5 text-sm font-semibold text-ink transition hover:bg-white"
-          href="/contacto"
+          href={siteConfig.primaryContactHref}
         >
           Solicitar diagnóstico
           <ArrowRight aria-hidden="true" size={17} />
@@ -33,7 +34,7 @@ export default function ServiciosPage() {
 
       <FeatureGrid columns="two">
         {servicesPage.items.map((service, index) => (
-          <ValueCard eyebrow={`Servicio 0${index + 1}`} key={service.title} title={service.title}>
+          <ValueCard eyebrow={`Servicio 0${index + 1}`} id={service.id} key={service.id} title={service.title}>
             <div className="grid gap-4">
               <ServiceDetail label="Problema que resuelve" text={service.problem} />
               <ServiceDetail label="Qué entrega Cero y Uno" text={service.delivery} />
