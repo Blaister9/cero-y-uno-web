@@ -30,6 +30,7 @@ pnpm build
 ## Despliegue Recomendado En Vercel
 
 - Framework: Next.js.
+- Node.js: `24.x`, fijado en `package.json` (`engines.node`) y `.nvmrc`. Vercel aplica la versión de `engines.node`; CI consume `.nvmrc`.
 - Install Command: `pnpm install --frozen-lockfile`.
 - Build Command: `pnpm build`.
 - Output: default de Next.js.
