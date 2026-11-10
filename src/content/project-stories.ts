@@ -7,8 +7,6 @@ export type StoryChapter = {
   showExample?: boolean;
 };
 
-export type WorkflowBeat = { title: string; detail: string };
-
 export type FinancialDemo = {
   caption: string;
   fields: { label: string; value: string }[];
@@ -24,6 +22,17 @@ export type PurchaseDemo = {
   approved: number;
 };
 
+export type IntegrationDemo = {
+  caption: string;
+  order: string;
+  item: string;
+  sku: string;
+  quantity: number;
+  stock: number;
+  reservationKey: string;
+  reservation: string;
+};
+
 type ProjectStory = {
   id: string;
   label: string;
@@ -33,8 +42,8 @@ type ProjectStory = {
   chapters: StoryChapter[];
   example?: typeof serviceCase.example;
   financialDemo?: FinancialDemo;
+  integrationDemo?: IntegrationDemo;
   purchaseDemo?: PurchaseDemo;
-  workflow?: WorkflowBeat[];
 };
 
 export const projectStories: ProjectStory[] = [
@@ -99,17 +108,23 @@ export const projectStories: ProjectStory[] = [
     id: "integraciones",
     label: "Integraciones y APIs",
     kind: "Ejemplo",
-    title: "Un pedido que llega al inventario",
-    description: "Un ejemplo para un equipo que recibe pedidos en un sistema y vuelve a digitarlos en otro.",
+    title: "El pedido entró. ¿Quedó reservado?",
+    description: "Alguien compra dos lámparas en la tienda. Quedan ocho en inventario. Sigamos el pedido para ver cómo se apartan las dos unidades y qué pasa cuando la confirmación se pierde en el camino.",
     chapters: [
-      { title: "La tienda confirma el pedido", body: "Cuando se confirma el pedido, la tienda envía un aviso a la integración con el identificador y los artículos." },
-      { title: "Inventario recibe la solicitud", body: "La integración consulta la API de inventario y registra la respuesta. El identificador permite reconocer el mismo pedido si el aviso llega otra vez." },
-      { title: "El equipo ve qué ocurrió", body: "Si la comunicación falla, la integración deja el pedido pendiente y registra el error para revisarlo o reintentar el envío." }
+      { title: "La tienda avisa que hubo una compra", body: "Al confirmar el pedido, la tienda envía un aviso automático, llamado webhook. En él van la referencia del pedido, el código de la lámpara y las dos unidades." },
+      { title: "La integración pide apartar las lámparas", body: "La integración toma esos datos y los envía a la API de inventario como una solicitud de reserva. Le asigna una clave que guardará por si necesita volver a enviarla." },
+      { title: "El inventario reserva. La respuesta se pierde", body: "Quedan seis lámparas disponibles y dos apartadas. Como la confirmación nunca llega, la integración deja la reserva por confirmar y registra que se agotó el tiempo de espera." },
+      { title: "El segundo intento recupera la confirmación", body: "La integración usa la misma clave para el reintento. La API reconoce la solicitud y devuelve la referencia de la reserva que ya existe. Así se confirma que las dos lámparas siguen apartadas para ese pedido.", showExample: true }
     ],
-    workflow: [
-      { title: "Tienda", detail: "Pedido confirmado" },
-      { title: "Integración", detail: "Envía el pedido a la API" },
-      { title: "Inventario", detail: "Devuelve el resultado" }
-    ]
+    integrationDemo: {
+      caption: "Ejemplo con un pedido y existencias ficticias",
+      order: "PED-042",
+      item: "Lámpara de escritorio",
+      sku: "LUM-12",
+      quantity: 2,
+      stock: 8,
+      reservationKey: "reserva-PED-042",
+      reservation: "RES-042"
+    }
   }
 ];

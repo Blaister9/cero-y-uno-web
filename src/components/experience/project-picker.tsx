@@ -50,9 +50,9 @@ export function ProjectPicker({ blockchainDemo }: { blockchainDemo: BlockchainDe
           chapters={story.chapters}
           example={story.example}
           financialDemo={story.financialDemo}
+          integrationDemo={story.integrationDemo}
           key={story.id}
           purchaseDemo={story.purchaseDemo}
-          workflow={story.workflow}
         />
       </article>
     </>

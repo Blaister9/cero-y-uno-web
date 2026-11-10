@@ -5,11 +5,12 @@ import { motion, useScroll, useTransform, type MotionValue } from "framer-motion
 import { useRef } from "react";
 
 import type { BlockchainDemo } from "@/content/blockchain-demo";
-import type { FinancialDemo, PurchaseDemo, StoryChapter, WorkflowBeat } from "@/content/project-stories";
+import type { FinancialDemo, IntegrationDemo, PurchaseDemo, StoryChapter } from "@/content/project-stories";
 import type { serviceCase } from "@/content/service-case";
 
 import { BlockchainScene, BlockchainStill } from "./blockchain-scene";
 import { FinancialScene, FinancialStill } from "./financial-scene";
+import { IntegrationScene, IntegrationStill } from "./integration-scene";
 import { PowerPlatformScene, PowerPlatformStill } from "./power-platform-scene";
 
 type CaseExample = typeof serviceCase.example;
@@ -18,15 +19,15 @@ type CaseStoryProps = {
   chapters: StoryChapter[];
   example?: CaseExample;
   financialDemo?: FinancialDemo;
+  integrationDemo?: IntegrationDemo;
   purchaseDemo?: PurchaseDemo;
-  workflow?: WorkflowBeat[];
 };
 
-export function CaseStory({ blockchainDemo, chapters, example, financialDemo, purchaseDemo, workflow }: CaseStoryProps) {
+export function CaseStory({ blockchainDemo, chapters, example, financialDemo, integrationDemo, purchaseDemo }: CaseStoryProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: trackRef,
-    offset: ["start center", financialDemo || purchaseDemo || blockchainDemo ? "end 76%" : "end center"]
+    offset: ["start center", example ? "end center" : "end 76%"]
   });
 
   return (
@@ -48,12 +49,7 @@ export function CaseStory({ blockchainDemo, chapters, example, financialDemo, pu
               {chapter.showExample && financialDemo && <FinancialStill demo={financialDemo} />}
               {chapter.showExample && purchaseDemo && <PowerPlatformStill demo={purchaseDemo} />}
               {chapter.showExample && blockchainDemo && <BlockchainStill demo={blockchainDemo} />}
-              {workflow?.[index] && (
-                <p className="glass-panel mt-4 rounded-lg border border-white/10 px-4 py-3 text-sm text-steel lg:hidden motion-reduce:lg:block">
-                  <span className="block font-medium text-porcelain">{workflow[index].title}</span>
-                  {workflow[index].detail}
-                </p>
-              )}
+              {chapter.showExample && integrationDemo && <IntegrationStill demo={integrationDemo} />}
             </div>
           </li>
         ))}
@@ -64,42 +60,9 @@ export function CaseStory({ blockchainDemo, chapters, example, financialDemo, pu
         {financialDemo && <FinancialScene demo={financialDemo} progress={scrollYProgress} />}
         {purchaseDemo && <PowerPlatformScene demo={purchaseDemo} progress={scrollYProgress} />}
         {blockchainDemo && <BlockchainScene demo={blockchainDemo} progress={scrollYProgress} />}
-        {workflow && <WorkflowScene beats={workflow} progress={scrollYProgress} />}
+        {integrationDemo && <IntegrationScene demo={integrationDemo} progress={scrollYProgress} />}
       </div>
     </div>
-  );
-}
-
-function WorkflowScene({ beats, progress }: { beats: WorkflowBeat[]; progress: MotionValue<number> }) {
-  const backdropY = useTransform(progress, [0, 1], [-22, 28]);
-  return (
-    <div className="sticky top-28">
-      <div className="glass-panel relative isolate overflow-hidden rounded-2xl border border-white/15 p-6 shadow-premium xl:p-8">
-        <motion.div className="pointer-events-none absolute -inset-y-8 inset-x-0 -z-10 bg-[radial-gradient(ellipse_at_30%_30%,rgba(18,58,111,0.34),transparent_70%)]" style={{ y: backdropY }} />
-        <p className="mb-5 text-xs font-medium uppercase tracking-[0.14em] text-signal">Flujo ilustrado</p>
-        <div className="relative grid gap-3">
-          {beats.map((beat, index) => <WorkflowNode beat={beat} index={index} key={beat.title} progress={progress} />)}
-        </div>
-        <div className="mt-6 h-0.5 rounded-full bg-white/10">
-          <motion.div className="h-full origin-left rounded-full bg-signal" style={{ scaleX: progress }} />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function WorkflowNode({ beat, index, progress }: { beat: WorkflowBeat; index: number; progress: MotionValue<number> }) {
-  const start = index * 0.31;
-  const opacity = useTransform(progress, [start, start + 0.14], [0.35, 1]);
-  const x = useTransform(progress, [start, start + 0.14], [12, 0]);
-  return (
-    <motion.div className="flex items-center gap-4 rounded-xl border border-signal/20 bg-ink/70 p-4" style={{ opacity, x }}>
-      <span className="grid size-9 shrink-0 place-items-center rounded-full border border-signal/25 bg-deepblue/35 font-mono text-xs text-signal">0{index + 1}</span>
-      <div>
-        <p className="text-base font-medium text-porcelain">{beat.title}</p>
-        <p className="mt-1 text-sm leading-6 text-steel">{beat.detail}</p>
-      </div>
-    </motion.div>
   );
 }
 

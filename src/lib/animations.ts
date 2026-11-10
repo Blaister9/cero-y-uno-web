@@ -20,6 +20,14 @@ export const blockchainScroll = {
   change: [0.76, 0.85]
 };
 
+export const integrationScroll = {
+  webhook: [0.09, 0.24],
+  request: [0.31, 0.50],
+  lost: [0.53, 0.62],
+  retry: [0.76, 0.85],
+  response: [0.86, 0.92]
+} as const;
+
 export const fadeUp: Variants = {
   hidden: {
     opacity: 0,
