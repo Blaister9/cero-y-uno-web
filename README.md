@@ -6,8 +6,8 @@ El sitio comunica una propuesta ejecutiva: convertir ideas, procesos complejos y
 
 ## Estado Actual
 
-- Producción temporal en Vercel: https://cero-y-uno-web.vercel.app
-- Sin dominio propio todavía.
+- Dominio de producción: https://ceroyuno.com.co, alojado en Vercel.
+- Correo corporativo previsto: contacto@ceroyuno.com.co en Namecheap Private Email; falta completar la creación del buzón. La web conserva el correo actual hasta entonces.
 - Sin backend, base de datos, autenticación ni formulario funcional.
 - Contacto directo por correo y teléfono, con dirección y enlace al mapa.
 
@@ -47,11 +47,11 @@ El sitio queda disponible en `http://localhost:3000`.
 
 ## Producción
 
-El despliegue actual está publicado con URL temporal de Vercel:
+El despliegue de producción utiliza el dominio propio:
 
-https://cero-y-uno-web.vercel.app
+https://ceroyuno.com.co
 
-Esta URL debe tratarse como productiva mientras no exista dominio propio.
+Los DNS se administran en Namecheap. La variante `www` redirige al dominio principal. Los metadatos canónicos, la imagen social, `/robots.txt` y `/sitemap.xml` utilizan esta misma URL.
 
 ## Experiencia Interactiva Binaria
 
@@ -132,7 +132,7 @@ Abrir pull request desde `feature/*` hacia `dev`. No hacer merge directo a `main
 Usar `.env.example` como referencia:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://cero-y-uno-web.vercel.app
+NEXT_PUBLIC_SITE_URL=https://ceroyuno.com.co
 ```
 
 Los datos públicos de contacto se editan en `src/config/site.ts`. Los botones de diagnóstico llevan a `/contacto#canales`.
@@ -143,7 +143,7 @@ Los datos públicos de contacto se editan en `src/config/site.ts`. Los botones d
 - Mantener navegación, email, keywords y metadatos base en `src/config`.
 - No agregar backend, autenticación ni base de datos sin autorización.
 - No inventar clientes, métricas, certificaciones, casos de éxito ni testimonios.
-- No asumir dominio propio hasta que esté comprado y configurado.
+- Conservar el dominio canónico y los registros de Private Email al modificar el alojamiento.
 - Antes de cerrar cualquier cambio, ejecutar `pnpm typecheck`, `pnpm lint` y `pnpm build`.
 
 ## Documentación
