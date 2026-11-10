@@ -153,3 +153,4 @@ Los datos públicos de contacto se editan en `src/config/site.ts`. Los botones d
 - [Despliegue](docs/DEPLOYMENT.md)
 - [Roadmap](docs/ROADMAP.md)
 - [Checklist QA](docs/QA_CHECKLIST.md)
+- [Pendientes para producción y avance de correcciones](docs/PRODUCTION_READINESS.md)
