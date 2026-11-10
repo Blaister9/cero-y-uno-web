@@ -3,16 +3,7 @@ export const heroContent = {
   title: "Construimos software a medida para operaciones complejas",
   subtitle:
     "Diseñamos plataformas, automatizaciones e integraciones para conectar tus sistemas y dar trazabilidad a la operación.",
-  primaryCta: "Solicitar diagnóstico",
-  secondaryCta: "Ver proyectos",
-  terminalLines: ["plataformas a medida", "automatización de procesos", "integraciones y APIs"]
-};
-
-export const manifesto = {
-  eyebrow: "Nuestro punto de partida",
-  title: "Empezamos por la tarea que ya existe",
-  body:
-    "Una aprobación por correo, un dato que alguien vuelve a copiar o un reporte que se arma a mano. Antes de escoger una herramienta, vemos quién hace ese trabajo y qué necesita al terminar."
+  primaryCta: "Solicitar diagnóstico"
 };
 
 export const portfolioContent = {

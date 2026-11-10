@@ -1,15 +1,14 @@
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 import { BinaryCanvas } from "@/components/experience/binary-canvas";
-import { CodeTerminal } from "@/components/experience/code-terminal";
 import { Container } from "@/components/layout/container";
 import { siteConfig } from "@/config/site";
 import { heroContent } from "@/content/site";
 
 export function HeroSection() {
   return (
-    <section aria-labelledby="inicio-titulo" className="relative isolate flex min-h-[min(100svh,50rem)] items-center overflow-hidden bg-ink pt-16">
+    <section aria-labelledby="inicio-titulo" className="relative isolate flex min-h-[min(90svh,44rem)] items-center overflow-hidden bg-ink pt-16">
       <BinaryCanvas className="pointer-events-none absolute inset-0" />
       <div
         aria-hidden="true"
@@ -17,8 +16,8 @@ export function HeroSection() {
       />
       <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-ink to-transparent" />
 
-      <Container className="relative grid items-center gap-12 py-14 sm:py-20 lg:grid-cols-[1.5fr_0.75fr]">
-        <div>
+      <Container className="relative py-14 sm:py-20">
+        <div className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.23em] text-matrix">
             {heroContent.kicker}
           </p>
@@ -40,17 +39,8 @@ export function HeroSection() {
               {heroContent.primaryCta}
               <ArrowRight aria-hidden="true" size={17} />
             </Link>
-            <Link
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded border border-matrix/25 bg-ink/55 px-5 py-3 text-sm font-semibold text-porcelain transition hover:border-matrix/55 hover:bg-matrix/10"
-              href="#proceso"
-            >
-              {heroContent.secondaryCta}
-              <ArrowDown aria-hidden="true" size={16} />
-            </Link>
           </div>
         </div>
-
-        <CodeTerminal className="hidden w-full max-w-xs justify-self-end lg:block" lines={heroContent.terminalLines} />
       </Container>
     </section>
   );

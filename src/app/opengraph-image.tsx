@@ -1,8 +1,10 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 import { heroContent } from "@/content/site";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 export const alt = "Cero y Uno - Desarrollo de software, automatización e inteligencia aplicada";
 export const size = {
   width: 1200,
@@ -10,7 +12,12 @@ export const size = {
 };
 export const contentType = "image/png";
 
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
+  const [regular, bold] = await Promise.all([
+    readFile(join(process.cwd(), "src/app/fonts/manrope-400.ttf")),
+    readFile(join(process.cwd(), "src/app/fonts/manrope-700.ttf"))
+  ]);
+
   return new ImageResponse(
     (
       <div
@@ -20,7 +27,7 @@ export default function OpenGraphImage() {
           color: "#F7F8F4",
           display: "flex",
           flexDirection: "column",
-          fontFamily: "Arial, sans-serif",
+          fontFamily: "Manrope",
           height: "100%",
           justifyContent: "space-between",
           padding: 72,
@@ -61,6 +68,12 @@ export default function OpenGraphImage() {
         </div>
       </div>
     ),
-    size
+    {
+      ...size,
+      fonts: [
+        { name: "Manrope", data: regular, style: "normal", weight: 400 },
+        { name: "Manrope", data: bold, style: "normal", weight: 700 }
+      ]
+    }
   );
 }
