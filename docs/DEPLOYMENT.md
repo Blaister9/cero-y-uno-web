@@ -76,6 +76,7 @@ Configuración aplicada el 10 de noviembre de 2026:
 | Mail Settings | Private Email; conservar MX y SPF automáticos |
 | DKIM | TXT en `privateemail._domainkey`; clave pública de la suscripción Private Email, comprobada en DNS |
 | DMARC | TXT en `_dmarc`: `v=DMARC1; p=quarantine; adkim=r; aspf=r` |
+| Google Search Console | TXT en `@` generado por Google para la cuenta propietaria autorizada; conservarlo para mantener la verificación |
 
 Los valores de la web proceden del panel del proyecto en Vercel; no son valores universales para otros proyectos. Se sustituyeron el CNAME de parking y la redirección HTTP inicial de Namecheap. No cambiar los nameservers ni aplicar una plantilla que borre los registros de correo.
 
@@ -92,7 +93,9 @@ Después de un cambio, comprobar HTTPS, redirecciones con rutas internas, los ci
 
 - La portada entrega JSON-LD `WebSite` y `Organization` desde el servidor, con nombre, dominio y contacto de `src/config/site.ts`. No añade horarios, reseñas, redes sociales ni otros datos sin confirmar.
 - Las cinco páginas públicas permiten indexación y tienen canonical propio. El sitemap y robots son accesibles; esto no demuestra que Google ya las haya indexado ni garantiza posiciones.
-- Google Search Console: propiedad de dominio preparada, pendiente de confirmar la cuenta propietaria y completar la verificación DNS. Después, enviar `https://ceroyuno.com.co/sitemap.xml` e inspeccionar la portada. No guardar credenciales ni registros de verificación de cuentas en el repositorio.
+- Google Search Console: propiedad de dominio `ceroyuno.com.co` verificada mediante DNS el 10 de noviembre de 2026 con la cuenta propietaria autorizada por el titular. El TXT se comprobó en ambos nameservers y Google confirmó la propiedad. No guardar credenciales ni tokens de verificación en el repositorio.
+- `https://ceroyuno.com.co/sitemap.xml` enviado y procesado correctamente por Google: cinco páginas descubiertas. La primera lectura mostró un fallo transitorio que se resolvió durante la misma revisión.
+- La inspección de `https://ceroyuno.com.co/` mostró «Descubierta: actualmente sin indexar». La solicitud de indexación fue aceptada y la URL quedó en la cola de rastreo prioritaria. Esto no significa que ya esté indexada; comprobar la evolución en el informe de páginas y la inspección de URL.
 - La indexación puede tardar días o semanas. Consultar el estado en Search Console; repetir solicitudes no acelera el rastreo. Referencia: https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl
 
 ## Backend Futuro
