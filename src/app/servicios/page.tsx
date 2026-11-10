@@ -24,7 +24,7 @@ export default function ServiciosPage() {
         title={servicesPage.title}
       >
         <Link
-          className="inline-flex h-12 items-center justify-center gap-2 rounded bg-porcelain px-5 text-sm font-semibold text-ink transition hover:bg-white"
+          className="inline-flex h-12 items-center justify-center gap-2 rounded bg-matrix px-5 text-sm font-semibold text-ink transition hover:bg-porcelain"
           href={siteConfig.primaryContactHref}
         >
           Solicitar diagnóstico
@@ -50,7 +50,7 @@ export default function ServiciosPage() {
 function ServiceDetail({ label, text }: { label: string; text: string }) {
   return (
     <div>
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-signal">{label}</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-matrix">{label}</p>
       <p className="mt-2 text-sm leading-7 text-steel">{text}</p>
     </div>
   );

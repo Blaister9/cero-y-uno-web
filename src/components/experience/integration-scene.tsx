@@ -11,7 +11,7 @@ const { webhook, request, lost, retry, response } = integrationScroll;
 export function IntegrationScene({ demo, progress }: { demo: IntegrationDemo; progress: MotionValue<number> }) {
   const backdropY = useTransform(progress, [0, 1], [-28, 34]);
   const keyOpacity = useTransform(progress, [webhook[1], request[0]], [0, 1]);
-  const reservedColor = useTransform(progress, [request[1] - 0.001, request[1] + 0.025], ["#172431", "#5c9e7d"]);
+  const reservedColor = useTransform(progress, [request[1] - 0.001, request[1] + 0.025], ["#1B2922", "#5c9e7d"]);
   const available = useTransform(progress, (position) => position < request[1] ? demo.stock : demo.stock - demo.quantity);
   const reserved = useTransform(progress, (position) => position < request[1] ? 0 : demo.quantity);
   const reservation = useTransform(progress, (position) => position < request[1] ? "Sin reserva" : demo.reservation);
@@ -27,26 +27,26 @@ export function IntegrationScene({ demo, progress }: { demo: IntegrationDemo; pr
   const traceColor = useTransform(progress, (position) => {
     if (position >= response[1]) return "#a8edbe";
     if (position >= lost[1]) return "#d7b56d";
-    return "#8db4ff";
+    return "#A8EDBE";
   });
 
   return (
     <div className="sticky top-[clamp(5rem,12svh,7rem)]" data-integration-scene>
       <div className="glass-panel relative isolate overflow-hidden rounded-2xl border border-white/15 shadow-premium">
         <motion.div
-          className="pointer-events-none absolute -inset-12 -z-10 bg-[radial-gradient(ellipse_at_27%_28%,rgba(18,58,111,0.48),transparent_63%),radial-gradient(ellipse_at_92%_85%,rgba(168,237,190,0.14),transparent_58%)]"
+          className="pointer-events-none absolute -inset-12 -z-10 bg-[radial-gradient(ellipse_at_27%_28%,rgba(22,61,41,0.48),transparent_63%),radial-gradient(ellipse_at_92%_85%,rgba(168,237,190,0.14),transparent_58%)]"
           style={{ y: backdropY }}
         />
         <header className="flex items-center justify-between gap-3 border-b border-white/10 px-5 py-3.5">
           <p className="font-medium text-porcelain">Del pedido a la reserva</p>
-          <span className="rounded-full border border-white/15 px-2.5 py-1 font-mono text-xs text-signal">{demo.order}</span>
+          <span className="rounded-full border border-white/15 px-2.5 py-1 font-mono text-xs text-matrix">{demo.order}</span>
         </header>
 
         <div className="relative mx-4 grid h-14 items-end">
-          <div className="absolute inset-x-[16.6667%] bottom-2 h-px bg-signal/35">
-            <span className="absolute left-0 top-0 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-signal bg-ink" />
-            <span className="absolute left-1/2 top-0 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-signal bg-ink" />
-            <span className="absolute right-0 top-0 size-2 translate-x-1/2 -translate-y-1/2 rounded-full border border-signal bg-ink" />
+          <div className="absolute inset-x-[16.6667%] bottom-2 h-px bg-matrix/35">
+            <span className="absolute left-0 top-0 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-matrix bg-ink" />
+            <span className="absolute left-1/2 top-0 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-matrix bg-ink" />
+            <span className="absolute right-0 top-0 size-2 translate-x-1/2 -translate-y-1/2 rounded-full border border-matrix bg-ink" />
             <DeliveryPacket from={0} label="Webhook" progress={progress} range={webhook} to={50} />
             <DeliveryPacket from={50} label="Reservar" progress={progress} range={request} to={100} />
             <DeliveryPacket from={100} label="Respuesta perdida" progress={progress} range={lost} to={74} tone="amber" />
@@ -57,25 +57,25 @@ export function IntegrationScene({ demo, progress }: { demo: IntegrationDemo; pr
 
         <div className="mx-4 mb-4 grid grid-cols-3 gap-2 pt-1 xl:gap-3">
           <div className="rounded-xl border border-white/15 bg-ink/80 p-3">
-            <p className="flex items-center gap-2 text-xs font-medium text-steel"><Store className="shrink-0 text-signal" size={15} /> Tienda</p>
+            <p className="flex items-center gap-2 text-xs font-medium text-steel"><Store className="shrink-0 text-matrix" size={15} /> Tienda</p>
             <p className="mt-3 text-sm font-medium leading-5 text-porcelain">{demo.item}</p>
             <p className="mt-1 text-xs leading-5 text-steel">{demo.sku} · {demo.quantity} unidades</p>
           </div>
 
           <div className="rounded-xl border border-white/15 bg-ink/80 p-3">
-            <p className="flex items-center gap-2 text-xs font-medium text-steel"><Cable className="shrink-0 text-signal" size={15} /> Integración</p>
+            <p className="flex items-center gap-2 text-xs font-medium text-steel"><Cable className="shrink-0 text-matrix" size={15} /> Integración</p>
             <motion.div className="mt-3" style={{ opacity: keyOpacity }}>
               <p className="text-xs text-steel">Clave de reserva</p>
-              <code className="mt-1 block break-all text-xs leading-5 text-signal" data-integration-key>{demo.reservationKey}</code>
+              <code className="mt-1 block break-all text-xs leading-5 text-matrix" data-integration-key>{demo.reservationKey}</code>
             </motion.div>
           </div>
 
           <div className="rounded-xl border border-white/15 bg-ink/80 p-3">
-            <p className="flex items-center gap-2 text-xs font-medium text-steel"><Warehouse className="shrink-0 text-signal" size={15} /> Inventario</p>
+            <p className="flex items-center gap-2 text-xs font-medium text-steel"><Warehouse className="shrink-0 text-matrix" size={15} /> Inventario</p>
             <div className="mt-3 grid grid-cols-4 gap-1 xl:grid-cols-8">
               {Array.from({ length: demo.stock }, (_, index) => (
                 <motion.span
-                  className="h-2.5 rounded-sm bg-[#172431]"
+                  className="h-2.5 rounded-sm bg-[#1B2922]"
                   key={index}
                   style={{ backgroundColor: index >= demo.stock - demo.quantity ? reservedColor : undefined }}
                 />
@@ -97,19 +97,19 @@ export function IntegrationScene({ demo, progress }: { demo: IntegrationDemo; pr
           </motion.div>
         </div>
         <p className="border-t border-white/10 px-5 py-2.5 text-xs text-steel">{demo.caption}</p>
-        <motion.div className="h-0.5 origin-left bg-signal/70" style={{ scaleX: progress }} />
+        <motion.div className="h-0.5 origin-left bg-matrix/70" style={{ scaleX: progress }} />
       </div>
     </div>
   );
 }
 
 const packetTone = {
-  blue: "border-signal/40 text-signal",
-  amber: "border-ember/40 text-ember",
+  brand: "border-matrix/40 text-matrix",
+  amber: "border-warning/40 text-warning",
   mint: "border-matrix/40 text-matrix"
 };
 
-function DeliveryPacket({ from, label, progress, range: [start, end], to, tone = "blue" }: {
+function DeliveryPacket({ from, label, progress, range: [start, end], to, tone = "brand" }: {
   from: number;
   label: string;
   progress: MotionValue<number>;
@@ -142,7 +142,7 @@ export function IntegrationStill({ demo }: { demo: IntegrationDemo }) {
         </div>
         <div className="py-2">
           <dt className="font-medium text-porcelain">Primer envío y reintento</dt>
-          <dd className="mt-1 text-steel">Ambos usan la clave <code className="break-all text-signal">{demo.reservationKey}</code>.</dd>
+          <dd className="mt-1 text-steel">Ambos usan la clave <code className="break-all text-matrix">{demo.reservationKey}</code>.</dd>
         </div>
         <div className="py-2">
           <dt className="font-medium text-matrix">Una sola reserva · {demo.reservation}</dt>

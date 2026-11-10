@@ -16,8 +16,8 @@ Desarrollo de software, automatización e inteligencia aplicada para transformar
 
 - Fondo oscuro premium.
 - Alto contraste.
-- Blanco y gris metálico para el contenido. Verde suave para la lluvia binaria y la acción principal del hero.
-- Azul profundo y dorado sutil en las secciones corporativas.
+- Grafito, blanco cálido y gris metálico para el contenido.
+- Verde matriz como único acento de marca: acciones, enlaces, selección, foco e iconos. Usar tonos profundos de ese verde en fondos y efectos sutiles.
 - Ceros y unos como lenguaje de precisión y construcción, no como cliché hacker.
 - Movimiento sobrio, elegante y no invasivo.
 - Interfaces aireadas, con jerarquía fuerte y lectura clara.
@@ -32,11 +32,23 @@ Desarrollo de software, automatización e inteligencia aplicada para transformar
 - Monoespaciada solo para código, hashes, referencias técnicas y la trama binaria. No usarla en etiquetas comerciales.
 - La imagen de compartir también usa Manrope (400 y 700). Los TTF locales se leen al generar esa imagen; el navegador continúa cargando únicamente el WOFF2 variable.
 
-## Paleta en evaluación
+## Paleta aprobada
 
-La combinación de azul, verde y dorado sigue pendiente de definición con el equipo. La recomendación es fondo grafito `#0B0D0E`, títulos blanco cálido `#F7F8F4`, texto secundario `#A7B0B8` y un único acento azul `#8DB4FF` para acciones, selección y detalles de marca. Es la evolución más cercana al portafolio actual.
+Se adopta el verde matriz existente como único acento de marca, sobre la base de grafito y blanco cálido.
 
-Alternativas para comparar sobre la misma composición: salvia `#A8C8B5` o cobre `#D4A583`. Son propuestas, todavía no una sustitución global de los colores. Los colores de estado de las demos deben conservar un significado funcional y acompañarse de texto.
+| Uso | Color | Token |
+| --- | --- | --- |
+| Fondo principal | `#0B0D0E` | `ink` |
+| Fondo de sección | `#0F1213` | `coal` |
+| Superficies elevadas | `#14171A` | `graphite` |
+| Títulos y texto principal | `#F7F8F4` | `porcelain` |
+| Texto secundario | `#A7B0B8` | `steel` |
+| Acciones, enlaces, selección y foco | `#A8EDBE` | `matrix` |
+| Fondos y gradientes del acento | `#163D29` | `matrixdeep` |
+
+Los botones principales y las opciones seleccionadas usan verde matriz con texto grafito. El fondo oscuro mantiene el mayor peso visual; los títulos largos permanecen en blanco y el verde señala acciones o detalles concretos. La lluvia binaria conserva variaciones de luminosidad dentro del verde.
+
+El azul y el dorado decorativo se retiran de las páginas, favicon e imagen al compartir. El ámbar `#D7B56D` (`warning`) queda exclusivamente para estados funcionales de espera, reintento o diferencia en las demos, acompañados de texto o iconos. No se usa como acento comercial.
 
 ## Frases para explorar con el equipo
 

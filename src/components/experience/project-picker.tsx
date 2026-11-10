@@ -27,7 +27,7 @@ export function ProjectPicker({ blockchainDemo }: { blockchainDemo: BlockchainDe
             <button
               aria-controls="proyecto-actual"
               aria-pressed={isSelected}
-              className="portfolio-choice relative flex min-h-20 items-center gap-4 border border-white/15 bg-white/[0.015] p-4 text-left text-porcelain hover:border-signal/60 hover:bg-white/[0.05] focus-visible:z-10 sm:min-h-36 sm:flex-col sm:items-start sm:gap-0 sm:last:col-span-2 lg:min-h-52 lg:p-5 lg:last:col-span-1"
+              className="portfolio-choice relative flex min-h-20 items-center gap-4 border border-white/15 bg-white/[0.015] p-4 text-left text-porcelain hover:border-matrix/60 hover:bg-white/[0.05] focus-visible:z-10 sm:min-h-36 sm:flex-col sm:items-start sm:gap-0 sm:last:col-span-2 lg:min-h-52 lg:p-5 lg:last:col-span-1"
               key={id}
               onClick={() => setSelected(index)}
               type="button"
@@ -50,8 +50,8 @@ export function ProjectPicker({ blockchainDemo }: { blockchainDemo: BlockchainDe
       <article aria-labelledby="proyecto-titulo" className="mt-12 scroll-mt-24 md:mt-16" id="proyecto-actual">
         <div className="grid gap-5 border-t border-white/15 pt-7 md:grid-cols-[10rem_minmax(0,1fr)] md:gap-10 md:pt-9">
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.12em] text-steel">{story.kind} <span className="ml-1 text-signal">/ 0{selected + 1}</span></p>
-            <p className="mt-2 text-sm font-medium text-signal">{story.label}</p>
+            <p className="text-xs font-medium uppercase tracking-[0.12em] text-steel">{story.kind} <span className="ml-1 text-matrix">/ 0{selected + 1}</span></p>
+            <p className="mt-2 text-sm font-medium text-matrix">{story.label}</p>
           </div>
           <div>
             <h3 className="max-w-[26ch] text-balance text-3xl font-semibold leading-[1.12] text-porcelain md:text-[2.75rem]" id="proyecto-titulo">{story.title}</h3>

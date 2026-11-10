@@ -24,7 +24,7 @@ const iconMap = {
 
 export function ServicesSection() {
   return (
-    <section className="scroll-mt-16 bg-ink bg-[radial-gradient(ellipse_at_80%_35%,rgba(18,58,111,0.22),transparent_65%)] py-20 md:py-24" id="servicios">
+    <section className="scroll-mt-16 bg-ink bg-[radial-gradient(ellipse_at_80%_35%,rgba(22,61,41,0.22),transparent_65%)] py-20 md:py-24" id="servicios">
       <Container>
         <SectionHeading eyebrow="Servicios" title="¿Qué necesita resolver tu equipo?">
           Explora los servicios según el trabajo que necesitas hacer.
