@@ -94,7 +94,7 @@ Los componentes de `src/components/experience` elevan la home sin cambiar la arq
 - `code-terminal.tsx` muestra una terminal decorativa en escritorio.
 - `scroll-reveal.tsx`: wrapper de aparición por scroll para narrativa progresiva sin bloquear scroll nativo.
 - `binary-divider.tsx`: separadores visuales de flujo entre secciones.
-- `case-story.tsx` mantiene los cuatro capítulos en el flujo y actualiza el panel decorativo de escritorio con `IntersectionObserver`.
+- `case-story.tsx` usa el progreso de scroll de Framer Motion para mover la escena fija del chat y la consola. El texto y el ejemplo fijo cubren la lectura móvil y el movimiento reducido.
 
 El hero renderiza su contenido y sus enlaces desde el servidor. El canvas decora el fondo en la ruta `/`.
 

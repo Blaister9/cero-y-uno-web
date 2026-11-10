@@ -1,72 +1,36 @@
 export const serviceCase = {
-  eyebrow: "Cómo trabajamos · Caso de prototipo",
-  title: "Del primer mensaje al cierre",
+  eyebrow: "Cómo trabajamos",
+  title: "¿Dónde quedó mi consulta?",
   description:
-    "Construimos un prototipo de atención en tiempo real para una organización. El reto era integrar el chat a su portal y poder seguir cada conversación desde que llegaba hasta que se cerraba.",
+    "Una persona escribe desde el portal. Al otro lado, alguien tiene que leer el mensaje, responder y dejar un registro. Así probamos ese recorrido en un prototipo de atención en tiempo real.",
   example: {
-    caption: "Ejemplo ilustrativo de la conversación",
-    messages: [
-      { speaker: "Visitante", text: "Hola, necesito orientación sobre un trámite." },
-      { speaker: "Agente", text: "Hola. Puedo orientarte sobre los pasos para iniciarlo." }
-    ]
+    caption: "Recreación de una consulta en la demo",
+    topic: "Seguimiento de trámite",
+    visitor: "Hola, ¿dónde puedo consultar el estado de mi trámite?",
+    agent: "Con el número de radicado puedes consultar el estado. Te indico dónde hacerlo."
   },
   chapters: [
     {
-      stage: "El problema",
-      title: "El historial quedaba fuera de la operación",
+      title: "El chat estaba en el portal",
       body:
-        "La atención comenzaba en un chat de terceros. La organización necesitaba consultar el historial y reconstruir cuándo entraba una conversación, cuándo se respondía y cómo se cerraba desde un sistema bajo su control.",
-      scene: {
-        title: "El punto de partida",
-        rows: [
-          { label: "Entrada", value: "Chat de terceros" },
-          { label: "Historial", value: "Almacenamiento externo" },
-          { label: "Seguimiento", value: "Dependía del canal externo" }
-        ]
-      }
+        "La gente ya podía escribir desde la página. El historial quedaba en la plataforma del proveedor. La organización quería tenerlo en un sistema propio y poder revisar qué había pasado con cada consulta."
     },
     {
-      stage: "La decisión",
-      title: "Dos interfaces, una conversación",
+      title: "Alguien tiene que ver el mensaje",
       body:
-        "Separamos el chat embebible de la consola interna. Así podíamos integrarlo al portal existente y darle al agente una cola con estados para saber qué consultas esperaban respuesta, cuáles estaban activas y cuáles habían cerrado.",
-      scene: {
-        title: "El flujo diseñado",
-        rows: [
-          { label: "Visitante", value: "Chat integrado al portal" },
-          { label: "Agente", value: "Cola y consola interna" },
-          { label: "Conexión", value: "Eventos en tiempo real" }
-        ]
-      }
+        "Hicimos dos pantallas para la misma conversación. La persona escribe en el chat del portal. El agente ve llegar la consulta a su cola y puede distinguir las que esperan respuesta de las que ya está atendiendo."
     },
     {
-      stage: "La construcción",
-      title: "El mensaje llega y la respuesta vuelve",
+      title: "La respuesta aparece en el chat",
       body:
-        "Conectamos el widget y la consola con SignalR y guardamos el historial en PostgreSQL. Una consulta aparece en la cola, el agente responde y el visitante recibe el mensaje sin recargar. Al cerrar, el chat muestra el aviso y bloquea nuevos envíos. Las pruebas de integración cubrieron el intercambio, el cierre y la recuperación del historial.",
-      showExample: true,
-      scene: {
-        title: "Una conversación en marcha",
-        rows: [
-          { label: "En espera", value: "La consulta entra en la cola" },
-          { label: "En atención", value: "El agente envía la respuesta" },
-          { label: "Cerrada", value: "El chat avisa y conserva el historial" }
-        ]
-      }
+        "El agente abre la consulta y responde. Probamos que el mensaje apareciera en el portal sin recargar la página y que el historial se pudiera recuperar. Al cerrar, el chat muestra un aviso y deja de aceptar mensajes.",
+      detail: "SignalR conecta las dos pantallas. PostgreSQL guarda los mensajes y el estado de la conversación.",
+      showExample: true
     },
     {
-      stage: "La evolución",
-      title: "Más contexto al entrar y al cerrar",
+      title: "La conversación ya terminó. ¿Y ahora?",
       body:
-        "La primera demo validó el intercambio de mensajes. La siguiente revisión se centró en qué necesitaba saber cada persona durante la atención. Agregamos el motivo de consulta en la cola, avisos de espera y reconexión, y la opción de valorar la atención o descargar la transcripción al cierre.",
-      scene: {
-        title: "Lo que incorporó la demo",
-        rows: [
-          { label: "Inicio", value: "Motivo visible en la cola" },
-          { label: "Durante", value: "Estados de espera y reconexión" },
-          { label: "Cierre", value: "Encuesta y transcripción" }
-        ]
-      }
+        "Después de probar el intercambio, nos ocupamos de la espera y del cierre. En la siguiente demo el agente ya veía el tema de la consulta. La persona podía saber si el chat se estaba reconectando, valorar la atención y descargar su conversación."
     }
   ]
 };

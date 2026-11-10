@@ -19,8 +19,8 @@
 - Hacer scroll de abajo arriba y confirmar que el contenido permanece disponible y legible.
 - Confirmar que los divisores binarios no tapan contenido ni capturan interacción.
 - Confirmar que Servicios se percibe como módulos cargados sin depender solo de hover.
-- Confirmar que el panel del caso acompaña los cuatro capítulos al bajar y al volver hacia arriba en escritorio.
-- Confirmar que el ejemplo de conversación y los cuatro capítulos se leen en orden en móvil.
+- Confirmar que el scroll mueve la consulta hacia la consola, trae la respuesta y muestra el cierre. Al subir, la escena debe retroceder a la posición correspondiente.
+- Confirmar que el ejemplo fijo y los cuatro capítulos se leen en orden en móvil y con movimiento reducido.
 - Confirmar que los botones de diagnóstico llevan a `/contacto#canales` y que el encabezado fijo deja visible el bloque.
 - Verificar correo, teléfono y enlace al mapa en Contacto y en el pie de página.
 

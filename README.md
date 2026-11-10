@@ -63,7 +63,7 @@ El canvas 2D anima la lluvia mientras el hero está a la vista y la pestaña est
 
 La home pasa de la propuesta principal a los servicios y al caso de un prototipo de atención en tiempo real.
 
-El caso reúne problema, decisión, construcción y evolución. El panel de escritorio acompaña el scroll y en móvil se leen los cuatro momentos en orden. Los textos del caso están en `src/content/service-case.ts`.
+En escritorio, la posición del scroll mueve la consulta del portal a la consola, trae la respuesta y muestra el cierre. En móvil y con movimiento reducido, el caso se lee en orden con un ejemplo fijo. Los textos están en `src/content/service-case.ts`.
 
 ## Rutas Principales
 
