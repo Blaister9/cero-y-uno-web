@@ -1,3 +1,4 @@
+import { SiteStructuredData } from "@/components/seo/site-structured-data";
 import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/metadata";
 import { ContactSection } from "@/sections/contact";
@@ -14,6 +15,7 @@ export const metadata = createPageMetadata({
 export default function Home() {
   return (
     <main>
+      <SiteStructuredData />
       <HeroSection />
       <ServicesSection />
       <ProcessSection />

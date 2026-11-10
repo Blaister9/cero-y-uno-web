@@ -85,7 +85,15 @@ Después de un cambio, comprobar HTTPS, redirecciones con rutas internas, los ci
 
 - El titular completó la creación del buzón; el 10 de noviembre de 2026 se comprobó el estado `ON` y la suscripción `ACTIVE`. La contraseña no se almacena en este repositorio.
 - MX, SPF, DKIM y DMARC están publicados. Queda pendiente comprobar recepción y envío de mensajes reales, incluyendo los resultados de autenticación en sus cabeceras; el estado del buzón y el DNS no sustituyen esta prueba.
-- RelateSEO ya tiene un proyecto para `ceroyuno.com.co`, con nombre y URL introducidos. El titular confirmó la dirección comercial `Carrera 72BIS # 25B-50, Bogotá`; faltan el código postal y la modalidad de atención para continuar el asistente. No reutilizar los datos personales del registrante como datos del negocio.
+- RelateSEO: configuración inicial completada para `ceroyuno.com.co`. Dirección confirmada: `Carrera 72BIS # 25B-50, Bogotá, 110931, Colombia`. Modalidad final solicitada por el titular: recibir clientes y visitarlos; área local de seguimiento: Bogotá. Correo corporativo y teléfono comercial guardados. Categorías: empresa de software y consultora informática; ocho palabras clave de los servicios y `asesoftware.com` como referencia inicial de comparación.
+- Incidencia de RelateSEO: conserva `http://ceroyuno.com.co` en un campo bloqueado, aunque HTTP redirige a HTTPS y la web responde correctamente. Consulta enviada a soporte con autorización del titular para actualizar la URL conservando el proyecto. La vinculación de Google Business y Analytics sigue pendiente.
+
+### Identidad E Indexación En Buscadores
+
+- La portada entrega JSON-LD `WebSite` y `Organization` desde el servidor, con nombre, dominio y contacto de `src/config/site.ts`. No añade horarios, reseñas, redes sociales ni otros datos sin confirmar.
+- Las cinco páginas públicas permiten indexación y tienen canonical propio. El sitemap y robots son accesibles; esto no demuestra que Google ya las haya indexado ni garantiza posiciones.
+- Google Search Console: propiedad de dominio preparada, pendiente de confirmar la cuenta propietaria y completar la verificación DNS. Después, enviar `https://ceroyuno.com.co/sitemap.xml` e inspeccionar la portada. No guardar credenciales ni registros de verificación de cuentas en el repositorio.
+- La indexación puede tardar días o semanas. Consultar el estado en Search Console; repetir solicitudes no acelera el rastreo. Referencia: https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl
 
 ## Backend Futuro
 
