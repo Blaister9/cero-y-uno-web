@@ -13,6 +13,13 @@ export const purchaseScroll = {
   report: [0.78, 0.9]
 };
 
+export const blockchainScroll = {
+  hash: [0.09, 0.23],
+  record: [0.27, 0.44],
+  compare: [0.52, 0.65],
+  change: [0.76, 0.85]
+};
+
 export const fadeUp: Variants = {
   hidden: {
     opacity: 0,

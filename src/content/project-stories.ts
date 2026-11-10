@@ -87,16 +87,12 @@ export const projectStories: ProjectStory[] = [
     label: "Blockchain",
     kind: "Ejemplo",
     title: "¿Es el mismo documento que se registró?",
-    description: "Un ejemplo para dos partes que necesitan comprobar la integridad de un archivo más adelante.",
+    description: "Dos personas comparten un acuerdo de entrega. Más adelante, quien recibe una copia quiere comprobar si conserva el mismo contenido. La prueba empieza con una huella del archivo.",
     chapters: [
-      { title: "El archivo tiene una huella", body: "Se calcula un hash del archivo. La huella se registra en una cadena compartida y el documento se conserva aparte." },
-      { title: "La otra parte recibe una copia", body: "Quien recibe el documento calcula su hash con el mismo método y consulta la huella registrada." },
-      { title: "Las dos huellas se comparan", body: "Si coinciden, la copia coincide con el archivo registrado. Esa comprobación sirve para revisar integridad. La identidad y la validez del contenido requieren sus propias verificaciones." }
-    ],
-    workflow: [
-      { title: "Documento", detail: "Calcular su huella digital" },
-      { title: "Cadena compartida", detail: "Registrar la huella" },
-      { title: "Verificación", detail: "Comparar ambas huellas" }
+      { title: "El acuerdo deja una huella", body: "El texto dice que la entrega está prevista para el martes. Calculamos su huella SHA-256, una secuencia que luego sirve para comprobar si el contenido cambió." },
+      { title: "La huella queda en la cadena", body: "El registro compartido guarda la huella del acuerdo. El archivo se conserva aparte. Así, quien reciba una copia tendrá una referencia con la que compararla." },
+      { title: "La copia conserva el martes", body: "Quien recibe el documento calcula la huella de su copia. Coincide con la registrada, lo que da evidencia de que conserva el mismo contenido." },
+      { title: "Alguien cambia martes por jueves", body: "Al calcular la huella de la versión modificada, aparece un valor distinto. La huella guardada sigue siendo la misma y la comparación detecta el cambio.", detail: "La prueba comprueba integridad. Para verificar quién firmó el acuerdo hace falta una prueba de autoría.", showExample: true }
     ]
   },
   {

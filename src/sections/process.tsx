@@ -1,6 +1,7 @@
 import { ProjectPicker } from "@/components/experience/project-picker";
 import { Container } from "@/components/layout/container";
 import { SectionHeading } from "@/components/ui/section-heading";
+import { blockchainDemo } from "@/content/blockchain-demo";
 
 export function ProcessSection() {
   return (
@@ -12,7 +13,7 @@ export function ProcessSection() {
           </SectionHeading>
         </div>
 
-        <ProjectPicker />
+        <ProjectPicker blockchainDemo={blockchainDemo} />
       </Container>
     </section>
   );

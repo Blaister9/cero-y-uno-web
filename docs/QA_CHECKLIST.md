@@ -21,6 +21,7 @@
 - Confirmar que el scroll mueve la consulta hacia la consola, trae la respuesta y muestra el cierre. Al subir, la escena debe retroceder a la posición correspondiente.
 - En Automatización financiera, comprobar que la lectura resalta un campo a la vez, que cada dato cruza antes de aparecer en el registro y que la confirmación se ve completa. Al subir, el recorrido debe revertirse.
 - En Power Platform, comprobar que la misma solicitud llega a la bandeja, que la decisión cambia su estado en Dataverse y que el informe cambia sus conteos después.
+- En Blockchain, comprobar que se registra la huella del original, que la copia coincide y que al cambiar la fecha aparece otra huella mientras la registrada se conserva.
 - Confirmar que el ejemplo fijo y los cuatro capítulos se leen en orden en móvil y con movimiento reducido.
 - Confirmar que los botones de diagnóstico llevan a `/contacto#canales` y que el encabezado fijo deja visible el bloque.
 - Verificar correo, teléfono y enlace al mapa en Contacto y en el pie de página.
