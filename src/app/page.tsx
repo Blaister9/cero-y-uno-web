@@ -1,4 +1,3 @@
-import { BinaryIntro } from "@/components/experience/binary-intro";
 import { BinaryDivider } from "@/components/experience/binary-divider";
 import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/metadata";
@@ -19,7 +18,6 @@ export const metadata = createPageMetadata({
 export default function Home() {
   return (
     <main>
-      <BinaryIntro />
       <HeroSection />
       <BinaryDivider label="identity.formed" />
       <ManifestoSection />

@@ -6,7 +6,7 @@ import { processSteps } from "@/content/site";
 
 export function ProcessSection() {
   return (
-    <section className="border-t border-white/10 bg-graphite py-24" id="proceso">
+    <section className="scroll-mt-16 border-t border-white/10 bg-graphite py-24" id="proceso">
       <Container>
         <ScrollReveal>
           <SectionHeading eyebrow="Proceso" title="De necesidad ambigua a software operando.">

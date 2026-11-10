@@ -46,7 +46,7 @@ src/components
 Contiene componentes reutilizables:
 
 - `layout`: header, footer y contenedores.
-- `experience`: intro binaria, canvas, wordmark, terminal decorativa y glow interactivo.
+- `experience`: canvas, terminal decorativa, separadores y apariciones por scroll.
 - `motion`: wrappers de animación.
 - `ui`: tarjetas y headings.
 - `visual`: elementos visuales como la animación binaria.
@@ -91,28 +91,23 @@ Contiene utilidades compartidas y variantes de animación.
 
 Los componentes de `src/components/experience` elevan la home sin cambiar la arquitectura multipágina:
 
-- `binary-intro.tsx`: intro inicial de la home, con botón para saltar, control por `sessionStorage` y degradación para reduced motion.
-- `binary-canvas.tsx`: lluvia binaria en canvas 2D. Se usa canvas para mantener bajo el número de nodos DOM y controlar densidad, velocidad y limpieza de `requestAnimationFrame`.
-- `binary-wordmark.tsx`: formación visual de `CERO Y UNO` con texto accesible para lectores de pantalla.
-- `code-terminal.tsx`: bloque decorativo de terminal con líneas de construcción del sistema.
-- `interactive-glow.tsx`: luz sutil guiada por cursor en desktop, desactivada para touch o reduced motion.
+- `binary-canvas.tsx` renderiza un patrón fijo en SVG y anima la lluvia con canvas 2D. `IntersectionObserver` y la visibilidad de la pestaña controlan el ciclo de dibujo. El patrón fijo cubre la carga inicial y el movimiento reducido.
+- `code-terminal.tsx` muestra una terminal decorativa en escritorio.
 - `scroll-reveal.tsx`: wrapper de aparición por scroll para narrativa progresiva sin bloquear scroll nativo.
 - `binary-divider.tsx`: separadores visuales de flujo entre secciones.
 - `process-pipeline.tsx`: pipeline animado para el proceso, con degradación limpia en móvil.
 
-La intro solo se monta en la ruta `/`. Las páginas internas mantienen navegación y contenido corporativo sin depender de la animación para comunicar información esencial.
+El hero renderiza su contenido y sus enlaces desde el servidor. El canvas decora el fondo en la ruta `/`.
 
 ## Scroll Storytelling
 
 La home sigue esta secuencia narrativa:
 
-1. Caos binario inicial en hero.
-2. Formación de identidad con `CERO Y UNO`.
-3. Conversión de idea en sistema mediante terminal y señales técnicas.
-4. Servicios como módulos ejecutables.
-5. Impacto como transformación de desorden a operación.
-6. Proceso como pipeline de diagnóstico a evolución.
-7. Contacto como estado `ready for deploy`.
+1. Propuesta principal con lluvia binaria de fondo y terminal secundaria.
+2. Servicios como módulos ejecutables.
+3. Impacto como transformación de desorden a operación.
+4. Proceso como pipeline de diagnóstico a evolución.
+5. Contacto mediante los canales comerciales.
 
 Las animaciones deben limitarse a `opacity` y `transform`. No se usa scroll hijacking, Three.js, GSAP ni dependencias externas para scroll.
 

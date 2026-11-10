@@ -55,13 +55,13 @@ Esta URL debe tratarse como productiva mientras no exista dominio propio.
 
 ## Experiencia Interactiva Binaria
 
-La home incluye una intro visual de lluvia binaria y formación de marca. La experiencia se ejecuta solo en cliente, usa `sessionStorage` para mostrarse una vez por sesión y permite omitirla con el botón accesible `Saltar intro`.
+El primer pantallazo combina el mensaje principal con lluvia binaria verde. El titular, los botones y el fondo estático se sirven desde la primera carga.
 
-La matriz binaria está implementada con canvas 2D para evitar miles de nodos DOM. Los componentes respetan `prefers-reduced-motion`: si el usuario reduce movimiento, se muestra una versión estática y la intro no ejecuta la lluvia completa.
+El canvas 2D anima la lluvia mientras el hero está a la vista y la pestaña está activa. Con `prefers-reduced-motion`, permanece el patrón estático.
 
 ## Interactive Scroll
 
-La home usa una narrativa de scroll sobria: identidad formada, módulos de servicio cargados, transformación de operación y pipeline de despliegue. Las interacciones se apoyan en Framer Motion con `transform` y `opacity`, sin scroll hijacking ni librerías externas.
+La home pasa de la propuesta principal a los servicios, el antes y después y el proceso de trabajo. Las apariciones se apoyan en Framer Motion con `transform` y `opacity` y conservan el desplazamiento del navegador.
 
 El proceso se presenta como pipeline visual: diagnóstico, diseño, arquitectura, desarrollo, pruebas, despliegue y evolución. En móviles se degrada a una lectura limpia por tarjetas.
 

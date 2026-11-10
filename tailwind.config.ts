@@ -18,6 +18,7 @@ const config: Config = {
         signal: "#8DB4FF",
         deepblue: "#123A6F",
         ember: "#D7B56D",
+        matrix: "#A8EDBE",
         porcelain: "#F7F8F4"
       },
       boxShadow: {

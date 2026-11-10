@@ -20,7 +20,7 @@ Estado: completado.
 
 ## v2 - Preparación Comercial Sin Dominio Propio
 
-Estado: en revisión.
+Estado: completado.
 
 - Centralizar correo, teléfono y dirección en `src/config/site.ts`.
 - Unificar los botones de diagnóstico en `/contacto#canales`.

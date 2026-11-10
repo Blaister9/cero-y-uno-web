@@ -57,7 +57,7 @@ export function Header() {
       </Container>
 
       {isOpen ? (
-        <div className="border-t border-white/10 bg-ink/96 lg:hidden">
+        <div className="border-t border-white/10 bg-ink/[0.96] lg:hidden">
           <Container className="py-4">
             <nav className="grid gap-2" aria-label="Navegación móvil">
               {siteConfig.navItems.map((item) => (

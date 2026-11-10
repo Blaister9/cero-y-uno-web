@@ -1,12 +1,11 @@
 export const heroContent = {
-  kicker: "Software, automatización e inteligencia aplicada",
-  brand: "Cero y Uno",
-  title: "Lo que otros imaginan, nosotros lo convertimos en software.",
+  kicker: "Ingeniería para la operación",
+  title: "Construimos software a medida para operaciones complejas",
   subtitle:
-    "Desarrollamos plataformas, automatizaciones e integraciones que convierten procesos complejos en sistemas digitales funcionales, escalables y mantenibles.",
+    "Diseñamos plataformas, automatizaciones e integraciones para conectar tus sistemas y dar trazabilidad a la operación.",
   primaryCta: "Solicitar diagnóstico",
-  secondaryCta: "Conocer soluciones",
-  signals: ["Estrategia", "Arquitectura", "Ejecución"]
+  secondaryCta: "Ver cómo trabajamos",
+  terminalLines: ["plataformas a medida", "automatización de procesos", "integraciones y APIs"]
 };
 
 export const manifesto = {
