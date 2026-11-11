@@ -1,25 +1,29 @@
 import { SiteStructuredData } from "@/components/seo/site-structured-data";
 import { siteConfig } from "@/config/site";
 import { createPageMetadata } from "@/lib/metadata";
-import { ContactSection } from "@/sections/contact";
-import { HeroSection } from "@/sections/hero";
-import { ProcessSection } from "@/sections/process";
-import { ServicesSection } from "@/sections/services";
+import {
+  HomeCapabilities,
+  HomeClosing,
+  HomeIntro,
+} from "@/sections/home-intro";
+import { HomePortfolio } from "@/components/home/home-portfolio";
+import { blockchainDemo } from "@/content/blockchain-demo";
 
 export const metadata = createPageMetadata({
-  title: "Cero y Uno | Desarrollo de software, automatización e inteligencia aplicada",
+  title:
+    "Cero y Uno | Desarrollo de software, automatización e inteligencia aplicada",
   description: siteConfig.description,
-  path: "/"
+  path: "/",
 });
 
 export default function Home() {
   return (
-    <main>
+    <main className="home-page" id="contenido" tabIndex={-1}>
       <SiteStructuredData />
-      <HeroSection />
-      <ServicesSection />
-      <ProcessSection />
-      <ContactSection />
+      <HomeIntro />
+      <HomePortfolio blockchain={blockchainDemo} />
+      <HomeCapabilities />
+      <HomeClosing />
     </main>
   );
 }

@@ -6,24 +6,6 @@ export const heroContent = {
   primaryCta: "Solicitar diagnóstico"
 };
 
-export const portfolioContent = {
-  eyebrow: "Portafolio / trabajo en acción",
-  title: "El software,",
-  titleAccent: "por dentro.",
-  description: "De una consulta sin respuesta a un pedido confirmado. Sigue el recorrido de cada proceso y mira dónde interviene el software.",
-  selectionLabel: "Elige un recorrido",
-  storyLabel: "Ahora estás explorando"
-};
-
-export const contactContent = {
-  eyebrow: "Siguiente paso",
-  title: "Hablemos del proceso que necesita convertirse en software.",
-  body:
-    "Cuéntanos qué operación quieres ordenar, automatizar o escalar. Empecemos por entender cómo funciona hoy y dónde podemos ayudarte.",
-  primaryCta: "Solicitar diagnóstico",
-  secondaryCta: "Ver servicios"
-};
-
 export const contactPageContent = {
   eyebrow: "Contacto",
   title: "Hablemos de tu operación",

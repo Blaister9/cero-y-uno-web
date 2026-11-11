@@ -1,4 +1,5 @@
 @import "../lib/solution-motion.css";
+@import "../lib/home.css";
 
 @tailwind base;
 @tailwind components;
@@ -33,26 +34,6 @@ body {
   h4 {
     letter-spacing: -0.025em;
   }
-}
-
-.portfolio-intro {
-  background-image: radial-gradient(ellipse at 95% 0%, rgb(22 61 41 / 0.22), transparent 60%);
-}
-
-.portfolio-choice {
-  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
-}
-
-.portfolio-choice[aria-pressed="true"],
-.portfolio-choice[aria-pressed="true"]:hover,
-.portfolio-choice[aria-pressed="true"]:focus-visible {
-  background-color: theme("colors.matrix");
-  border-color: theme("colors.matrix");
-  color: theme("colors.ink");
-}
-
-.portfolio-choice[aria-pressed="true"] .portfolio-choice-detail {
-  color: #193B27;
 }
 
 a {

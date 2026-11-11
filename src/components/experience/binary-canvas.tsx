@@ -20,12 +20,27 @@ const stillStreams = [
   { x: 117, y: 147, bits: "01001" },
   { x: 151, y: 23, bits: "10110011" },
   { x: 183, y: 111, bits: "0010101" },
-  { x: 215, y: 65, bits: "010110" }
+  { x: 215, y: 65, bits: "010110" },
 ];
 
-export function BinaryCanvas({ className }: { className?: string }) {
+export function BinaryCanvas({
+  className,
+  paused = false,
+  background = "#0B0D0E",
+}: {
+  className?: string;
+  paused?: boolean;
+  background?: string;
+}) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const patternId = useId();
+  const pausedRef = useRef(paused);
+  const updateAnimationRef = useRef<(() => void) | null>(null);
+
+  useEffect(() => {
+    pausedRef.current = paused;
+    updateAnimationRef.current?.();
+  }, [paused]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -42,7 +57,7 @@ export function BinaryCanvas({ className }: { className?: string }) {
 
     const draw = () => {
       context.globalAlpha = 1;
-      context.fillStyle = "#0B0D0E";
+      context.fillStyle = background;
       context.fillRect(0, 0, width, height);
 
       for (const stream of streams) {
@@ -53,8 +68,13 @@ export function BinaryCanvas({ className }: { className?: string }) {
           if (y < 0 || y > height + rowHeight) continue;
 
           context.fillStyle = tail === 0 ? "#c7f9d7" : "#68da8f";
-          context.globalAlpha = tail === 0 ? 0.88 : 0.69 * (1 - tail / stream.length) ** 1.7;
-          context.fillText(digits[(row + stream.offset) % digits.length], stream.x, y);
+          context.globalAlpha =
+            tail === 0 ? 0.88 : 0.69 * (1 - tail / stream.length) ** 1.7;
+          context.fillText(
+            digits[(row + stream.offset) % digits.length],
+            stream.x,
+            y,
+          );
         }
       }
     };
@@ -70,16 +90,20 @@ export function BinaryCanvas({ className }: { className?: string }) {
       canvas.width = Math.floor(width * dpr);
       canvas.height = Math.floor(height * dpr);
       context.setTransform(dpr, 0, 0, dpr, 0, 0);
-      context.font = "15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
+      context.font =
+        "15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
 
       const spacing = width < 640 ? 34 : 30;
-      streams = Array.from({ length: Math.ceil(width / spacing) }, (_, column) => ({
-        x: column * spacing + 8,
-        head: Math.random() * (height + 160),
-        speed: 55 + Math.random() * 95,
-        length: 6 + Math.floor(Math.random() * 9),
-        offset: Math.floor(Math.random() * digits.length)
-      }));
+      streams = Array.from(
+        { length: Math.ceil(width / spacing) },
+        (_, column) => ({
+          x: column * spacing + 8,
+          head: Math.random() * (height + 160),
+          speed: 55 + Math.random() * 95,
+          length: 6 + Math.floor(Math.random() * 9),
+          offset: Math.floor(Math.random() * digits.length),
+        }),
+      );
       draw();
     };
 
@@ -91,13 +115,18 @@ export function BinaryCanvas({ className }: { className?: string }) {
       lastFrame = time;
       for (const stream of streams) {
         stream.head += stream.speed * seconds;
-        if (stream.head > height + stream.length * rowHeight) stream.head = -Math.random() * 180;
+        if (stream.head > height + stream.length * rowHeight)
+          stream.head = -Math.random() * 180;
       }
       draw();
     };
 
     const updateAnimation = () => {
-      const shouldAnimate = inViewport && !reducedMotion.matches && document.visibilityState === "visible";
+      const shouldAnimate =
+        inViewport &&
+        !pausedRef.current &&
+        !reducedMotion.matches &&
+        document.visibilityState === "visible";
       if (shouldAnimate && frameId === null) {
         lastFrame = 0;
         frameId = requestAnimationFrame(animate);
@@ -106,6 +135,7 @@ export function BinaryCanvas({ className }: { className?: string }) {
         frameId = null;
       }
     };
+    updateAnimationRef.current = updateAnimation;
 
     const intersection = new IntersectionObserver(([entry]) => {
       inViewport = entry.isIntersecting;
@@ -129,14 +159,24 @@ export function BinaryCanvas({ className }: { className?: string }) {
       size.disconnect();
       reducedMotion.removeEventListener("change", updateMotion);
       document.removeEventListener("visibilitychange", updateAnimation);
+      updateAnimationRef.current = null;
     };
-  }, []);
+  }, [background]);
 
   return (
     <div aria-hidden="true" className={className}>
-      <svg className="absolute inset-0 size-full bg-[#0B0D0E] font-mono" focusable="false">
+      <svg
+        className="absolute inset-0 size-full font-mono"
+        style={{ background }}
+        focusable="false"
+      >
         <defs>
-          <pattern height="268" id={patternId} patternUnits="userSpaceOnUse" width="242">
+          <pattern
+            height="268"
+            id={patternId}
+            patternUnits="userSpaceOnUse"
+            width="242"
+          >
             {stillStreams.map(({ x, y, bits }) => (
               <text fill="#68da8f" fontSize="15" key={x} x={x} y={y}>
                 {Array.from(bits, (bit, index) => (
@@ -155,7 +195,10 @@ export function BinaryCanvas({ className }: { className?: string }) {
         </defs>
         <rect fill={`url(#${patternId})`} height="100%" width="100%" />
       </svg>
-      <canvas className="absolute inset-0 size-full motion-reduce:hidden" ref={canvasRef} />
+      <canvas
+        className="absolute inset-0 size-full motion-reduce:hidden"
+        ref={canvasRef}
+      />
     </div>
   );
 }

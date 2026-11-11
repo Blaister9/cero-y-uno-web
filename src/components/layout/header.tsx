@@ -2,19 +2,27 @@
 
 import { ArrowRight, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 import { siteConfig } from "@/config/site";
+import { HomeHeader } from "@/components/home/home-chrome";
 
 import { Container } from "./container";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  if (pathname === "/") return <HomeHeader />;
 
   return (
     <header className="glass-nav fixed left-0 right-0 top-0 z-50 border-b border-white/15">
       <Container className="flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3" aria-label="Cero y Uno inicio">
+        <Link
+          href="/"
+          className="flex items-center gap-3"
+          aria-label="Cero y Uno inicio"
+        >
           <span className="grid h-9 w-9 place-items-center rounded border border-white/15 bg-matrixdeep/35 text-sm text-matrix shadow-inner-line">
             01
           </span>
@@ -23,7 +31,10 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Navegación principal">
+        <nav
+          className="hidden items-center gap-6 lg:flex"
+          aria-label="Navegación principal"
+        >
           {siteConfig.navItems.map((item) => (
             <Link
               className="text-sm text-steel transition hover:text-porcelain"
@@ -52,7 +63,11 @@ export function Header() {
           onClick={() => setIsOpen((current) => !current)}
           type="button"
         >
-          {isOpen ? <X aria-hidden="true" size={20} /> : <Menu aria-hidden="true" size={20} />}
+          {isOpen ? (
+            <X aria-hidden="true" size={20} />
+          ) : (
+            <Menu aria-hidden="true" size={20} />
+          )}
         </button>
       </Container>
 
