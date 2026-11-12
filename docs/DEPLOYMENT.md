@@ -1,10 +1,26 @@
 # Despliegue
 
-## Vista previa · recorridos visuales
+## Publicación de recorridos visuales · 11 de noviembre de 2026
 
-Rama `feature/scrollytelling-escenas`: cinco escenas independientes con fotografía,
-objetos e interfaces animadas por scroll y acciones contextuales. Ver
-`docs/SCROLLYTELLING_QA.md`. Requiere revisión visual; no se ha promovido a producción.
+Publicados todos los cambios aprobados en https://ceroyuno.com.co/ desde
+`feature/scrollytelling-escenas`, sin merge a `main`.
+
+- Commit de aplicación: `be44291a6082f90c529b90676d16dedd86e55d45`.
+- Deployment de producción: `5SYwJbjX1pixjU9NGZB9FybyMnjm`.
+- Panel: https://vercel.com/blaisters-projects/cero-y-uno-web/5SYwJbjX1pixjU9NGZB9FybyMnjm.
+- Vercel reconstruyó la vista previa aprobada con el entorno de producción tras
+  la verificación del titular y confirmó `Ready` / `Production`.
+- Incluye escenas financieras y de atención, recorridos continuos de Power Platform,
+  Blockchain e Integraciones y APIs, paleta neutral y mayor densidad Matrix.
+- CI `43151282650` correcto; instalación congelada, typecheck, lint y build validados.
+- Las cinco páginas, robots, sitemap y Open Graph respondieron 200 en producción.
+  Los seis recursos fotográficos de las escenas coincidieron por SHA-256 con el
+  repositorio. Se abrieron los recorridos nuevos en el dominio público y se verificó
+  el resultado de integraciones: seis disponibles, dos reservadas y RES-042.
+- Detalles de implementación y límites de QA: `docs/SCROLLYTELLING_QA.md`.
+
+El commit posterior de documentación registra esta publicación; no modifica la
+versión de aplicación servida en producción.
 
 ## Publicación de portadas v3 · 11 de noviembre de 2026
 
