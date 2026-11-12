@@ -33,6 +33,7 @@ ambas filas. Todos los datos son ficticios.
 - Desplazamiento nativo hacia delante y hacia atrás devuelve exactamente los mismos
   valores de posición, presión del sello, tinta y trazo de firma.
 - Una pausa en el scroll conserva el mismo fotograma.
+- El modo estático se comprobó a 390 × 600: campos completos e informe legible.
 - Se retiraron los estilos y la acción de aprobación del componente anterior.
 - No se añadieron dependencias, servicios ni conexiones externas.
 - `pnpm install --frozen-lockfile`, `pnpm typecheck`, `pnpm lint` y `pnpm build`:

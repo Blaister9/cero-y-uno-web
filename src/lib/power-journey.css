@@ -205,7 +205,7 @@
 .power-inbox-label {
   position: absolute;
   left: 112%;
-  top: 5%;
+  top: 3%;
   width: 35%;
   color: #294434;
   opacity: calc(var(--power-departure) * (1 - var(--power-report)));
@@ -213,6 +213,8 @@
 .power-inbox-label strong {
   display: block;
   font-size: 19px;
+  line-height: 1.15;
+  margin-top: 3px;
   font-weight: 400;
   letter-spacing: -0.025em;
 }
