@@ -161,5 +161,5 @@ Las capturas de escritorio y móvil están en `docs/qa/scrollytelling/`.
 La preferencia de movimiento reducido se verificó en la implementación; el navegador
 integrado no expone emulación de esa preferencia y no se cambiaron ajustes del sistema.
 Queda pendiente revisión en dispositivos físicos, Safari y lector de pantalla.
-La aprobación visual se realiza sobre una vista previa; esta rama no se ha promovido
-a producción ni fusionado con `main`.
+La aprobación visual se realizó sobre vistas previas. La versión aprobada se publicó
+en producción por solicitud del titular; véase `docs/DEPLOYMENT.md`. No se fusionó con `main`.
