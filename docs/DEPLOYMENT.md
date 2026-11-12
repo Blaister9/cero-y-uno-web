@@ -1,11 +1,22 @@
 # Despliegue
 
-## Candidato en GitHub · portadas v3
+## Vista previa · recorridos visuales
+
+Rama `feature/scrollytelling-escenas`: cinco escenas independientes con fotografía,
+objetos e interfaces animadas por scroll y acciones contextuales. Ver
+`docs/SCROLLYTELLING_QA.md`. Requiere revisión visual; no se ha promovido a producción.
+
+## Publicación de portadas v3 · 11 de noviembre de 2026
 
 Rama `feature/portfolio-imagenes-v3`. Incluye todo el rediseño anterior y el reemplazo
-completo de las cinco portadas del portafolio. Por instrucción del titular, esta
-revisión se entrega como código en GitHub para desplegarla después; no se promueve a
-producción ni se fusiona con `main`.
+completo de las cinco portadas del portafolio. Publicada por solicitud del titular
+en `https://ceroyuno.com.co/`, desde el commit
+`d0f37827cc476ed2c1b314e257d130dafa34ca5b`, sin merge a `main`.
+
+- Deployment: `9twJ91b5UG6Qx1TAttrwiYUinyuS`.
+- Vercel confirmó `Ready` y `Production` a las 20:16 de Bogotá.
+- Las cinco páginas, robots, sitemap y Open Graph respondieron 200. Las cinco
+  imágenes v3 públicas coincidieron por SHA-256 con las del commit.
 
 Los archivos de imagen están incluidos en `public/images/portfolio/*-v3.webp`.
 La configuración está en `src/content/portfolio.ts`; no requiere servicios nuevos ni

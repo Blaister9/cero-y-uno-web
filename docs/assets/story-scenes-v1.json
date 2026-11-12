@@ -1,0 +1,16 @@
+{
+  "tool": "image_gen (built-in)",
+  "purpose": "Photographic assets for interactive scrollytelling. Illustrative, not client photography.",
+  "assets": [
+    {
+      "name": "finance-desk",
+      "prompt": "Use case: photorealistic-natural. Asset type: full-width background of a corporate financial automation scrollytelling scene. Primary request: a restrained editorial photograph of a real finance office desk viewed from directly above, landscape 3:2. Charcoal walnut desk with tactile grain, the edge of a laptop keyboard entering at the upper right, a black pen toward the lower left, a small ceramic coffee cup at the far upper left. Keep the large central and left area EMPTY wooden desk surface, where we will overlay an HTML invoice and accounting application. No papers, no screens, no text, no people, no logos, no symbols. Warm directional daylight from left, subdued green-gray shadows, believable materials and quiet premium technology editorial aesthetic. Straight overhead camera, crisp texture, natural imperfections, no glossy 3D render.",
+      "path": "public/images/stories/mesa-financiera-v1.webp"
+    },
+    {
+      "name": "inventory-lamp",
+      "prompt": "Use case: product-mockup. Asset type: isolated product photograph for an interactive inventory story. Primary request: one elegant matte pale sage green anglepoise desktop lamp, whole lamp including round base and downward-facing conical shade, photographed from a front three-quarter view. Real studio product photography, brushed metal hinges, believable proportions. Single object centered with generous padding, no shadow beyond a soft contact shadow, no text, no logos, no people, no additional objects. Transparent background. This image will be repeated as eight actual inventory units in a corporate website visual story.",
+      "path": "public/images/stories/lampara-inventario-v1.webp"
+    }
+  ]
+}

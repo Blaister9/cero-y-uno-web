@@ -18,7 +18,9 @@ export function useStoryProgress(
       frame = 0;
       if (!screen.matches || !track.current) return;
       const rect = track.current.getBoundingClientRect();
-      const distance = rect.height - (window.innerHeight - 104);
+      const dock = track.current.firstElementChild as HTMLElement | null;
+      const distance =
+        rect.height - (dock?.offsetHeight ?? window.innerHeight - 104);
       setProgress(
         Math.max(0, Math.min(1, (104 - rect.top) / Math.max(1, distance))),
       );
@@ -42,12 +44,15 @@ export function useStoryProgress(
     };
   }, [track, storyId]);
   function selectStage(index: number) {
-    const value = index === 3 ? 1 : (index + 0.48) / 4;
+    const value = index === 3 ? 1 : (index + 0.12) / 4;
     setProgress(value);
     if (linked && track.current) {
       const top =
         window.scrollY + track.current.getBoundingClientRect().top - 104;
-      const distance = track.current.offsetHeight - (window.innerHeight - 104);
+      const dock = track.current.firstElementChild as HTMLElement | null;
+      const distance =
+        track.current.offsetHeight -
+        (dock?.offsetHeight ?? window.innerHeight - 104);
       window.scrollTo({ top: top + distance * value, behavior: "instant" });
     }
   }
