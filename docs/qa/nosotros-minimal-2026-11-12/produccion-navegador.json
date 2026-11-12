@@ -1,0 +1,43 @@
+{
+  "fullstack": "Desarrollo fullstack, diseño de APIs e integración de sistemas mediante webhooks y servicios externos.",
+  "height": 900,
+  "images": [
+    {
+      "alt": "Retrato conceptual de Weso: hombre negro de espaldas, con degradado bajo y rizos cortos, iluminado con un acento verde.",
+      "loaded": true
+    },
+    {
+      "alt": "Retrato conceptual de Santensor: hombre negro de espaldas, con trenzas pegadas al cuero cabelludo, sobre un fondo oscuro con luz verde.",
+      "loaded": true
+    }
+  ],
+  "openingStart": {
+    "a": "0.5227",
+    "b": "0.3930"
+  },
+  "overflow": false,
+  "profiles": 2,
+  "removedParagraphAbsent": true,
+  "teamBackground": "rgb(247, 247, 245)",
+  "url": "https://ceroyuno.com.co/nosotros#equipo",
+  "width": 1280,
+  "openingEnd": {
+    "a": "1.0000",
+    "b": "1.0000",
+    "clips": [
+      "inset(0% round 8px)",
+      "inset(0% round 8px)"
+    ]
+  },
+  "mobile": {
+    "clientWidth": 375,
+    "clip": "none",
+    "headerHeight": 65,
+    "profileY": 111.65625,
+    "role": "Desarrollo fullstack, diseño de APIs e integración de sistemas mediante webhooks y servicios externos.",
+    "scrollWidth": 375,
+    "url": "https://ceroyuno.com.co/nosotros#perfil-santensor",
+    "width": 390
+  },
+  "console": []
+}

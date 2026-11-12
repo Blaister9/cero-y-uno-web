@@ -1,5 +1,35 @@
 # Despliegue
 
+## Publicación de Nosotros · 12 de noviembre de 2026
+
+Publicada la versión completa revisada en [ceroyuno.com.co](https://ceroyuno.com.co/),
+desde `feature/nosotros-sticky`, conservando Inicio, Servicios y Soluciones.
+No se hizo merge a `main`.
+
+- Commit de aplicación: `8e2c2a4843d497adf4726a7f5f073386e9fc7cf9`.
+- Deployment de producción: `73kq2eKUwAstrBPgz65frsaVFDk7`.
+- [Panel de Vercel](https://vercel.com/blaisters-projects/cero-y-uno-web/73kq2eKUwAstrBPgz65frsaVFDk7).
+- [CI 43291498089](https://github.com/Blaister9/cero-y-uno-web/actions/runs/43291498089)
+  completado correctamente para ese commit. Instalación congelada, tipos, lint y build
+  validados; la copia local revisada coincide con 114 archivos de código y recursos.
+- Preview `BtdHQe9oiEnEJL4ZWyyyMn9pHB5Y` revisado antes de promoverlo. El titular
+  completó la verificación de identidad solicitada por Vercel. La plataforma reconstruyó
+  con el entorno de producción y confirmó `Ready` con el dominio público asignado.
+- Incluye los perfiles Weso y Santensor, con Santensor como desarrollador fullstack,
+  la apertura de retratos ligada al scroll, fondo claro continuo, principios apilados
+  y el enlace de Inicio a `/nosotros#equipo`. El párrafo retirado permanece ausente.
+- Las cinco páginas, robots, sitemap e imagen Open Graph respondieron HTTP 200.
+  Los canonical conservan el dominio principal. Los dos retratos publicados coinciden
+  por SHA-256 con los archivos aprobados del repositorio.
+- Evidencia pública: [HTTP y recursos](qa/nosotros-minimal-2026-11-12/produccion.json),
+  [navegación](qa/nosotros-minimal-2026-11-12/produccion-navegador.json),
+  [captura de escritorio](qa/nosotros-minimal-2026-11-12/produccion-desktop.png) y
+  [captura móvil](qa/nosotros-minimal-2026-11-12/produccion-mobile.png).
+- Alcance y límites de las pruebas: [Nosotros minimalista](NOSOTROS_MINIMAL_2026-11-12.md).
+
+El registro posterior de publicación modifica documentación y evidencia; no cambia
+el código de aplicación servido en producción.
+
 ## Publicación de páginas interiores · 12 de noviembre de 2026
 
 Publicadas la base compartida y las páginas Servicios y Soluciones en

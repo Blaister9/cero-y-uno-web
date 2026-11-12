@@ -1,7 +1,9 @@
 # Nosotros: continuidad clara y apertura de retratos
 
-12 de noviembre de 2026. Rama `feature/nosotros-sticky`. Revisión local posterior
-a [la primera propuesta](NOSOTROS_2026-11-12.md); no publicada.
+12 de noviembre de 2026. Rama `feature/nosotros-sticky`. Revisión posterior
+a [la primera propuesta](NOSOTROS_2026-11-12.md), publicada en
+[ceroyuno.com.co/nosotros](https://ceroyuno.com.co/nosotros) desde `8e2c2a4`.
+Registro de la publicación y verificación pública en [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## Cambios solicitados
 

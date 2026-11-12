@@ -1,0 +1,72 @@
+{
+  "commit": "8e2c2a4843d497adf4726a7f5f073386e9fc7cf9",
+  "deployment": "73kq2eKUwAstrBPgz65frsaVFDk7",
+  "productionUrl": "https://ceroyuno.com.co",
+  "checkedAtUtc": "2026-11-12T19:44:20.9241917Z",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "canonical": "https://ceroyuno.com.co"
+    },
+    {
+      "route": "/servicios",
+      "status": 200,
+      "canonical": "https://ceroyuno.com.co/servicios"
+    },
+    {
+      "route": "/soluciones",
+      "status": 200,
+      "canonical": "https://ceroyuno.com.co/soluciones"
+    },
+    {
+      "route": "/nosotros",
+      "status": 200,
+      "canonical": "https://ceroyuno.com.co/nosotros"
+    },
+    {
+      "route": "/contacto",
+      "status": 200,
+      "canonical": "https://ceroyuno.com.co/contacto"
+    },
+    {
+      "route": "/robots.txt",
+      "status": 200,
+      "canonical": ""
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 200,
+      "canonical": ""
+    },
+    {
+      "route": "/opengraph-image",
+      "status": 200,
+      "canonical": ""
+    }
+  ],
+  "content": {
+    "newTitle": true,
+    "fullstack": true,
+    "hasWeso": true,
+    "hasSantensor": true,
+    "removedParagraphAbsent": true
+  },
+  "homeTeamLink": true,
+  "images": [
+    {
+      "file": "weso-v2.webp",
+      "status": 200,
+      "bytes": 68580,
+      "sha256": "11c3a4a431d080160171447405821b03b940be80e91631d1b3fa75b5ded2f481",
+      "matchesRepository": true
+    },
+    {
+      "file": "santensor-v2.webp",
+      "status": 200,
+      "bytes": 76142,
+      "sha256": "3129fce394ea35135fbc872327a3db70b7937336b840aa92f22dc67ad08c3164",
+      "matchesRepository": true
+    }
+  ]
+}
