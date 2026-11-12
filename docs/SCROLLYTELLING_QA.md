@@ -70,6 +70,25 @@ reutilizan fotografías existentes del portafolio.
 
 Las capturas de escritorio y móvil están en `docs/qa/scrollytelling/`.
 
+## Ajuste de atención: retrato que responde
+
+- La etapa «La respuesta» inicia una secuencia de 5,4 segundos. Un único reloj
+  coordina boca, burbuja y consola; el celular recibe el mismo texto 440 ms después.
+- El retrato original se conserva. Dos recortes fotográficos generados con IA
+  (17 KB en total) cambian únicamente la zona de los labios con una máscara suave.
+  Es una animación ilustrativa sin audio, no una videollamada ni sincronización fonética real.
+- Al terminar, la boca vuelve al reposo y aparece la confirmación en el celular.
+  «Volver a ver la respuesta» reinicia la secuencia. Retroceder de etapa la cancela;
+  regresar a la respuesta la inicia de nuevo. El historial muestra el mensaje completo.
+- Movimiento reducido: retrato quieto y respuesta completa, sin escritura progresiva.
+- Verificación en navegador: poses abierta/redonda/reposo, texto parcial con desfase,
+  igualdad del mensaje final, repetición, reinicio al retroceder, avance con scroll
+  y activación con Enter conservando el foco en el relato.
+- Ajustes de encuadre y lectura comprobados a 320, 390, 601, 768, 901 y 1280 px;
+  los mensajes, la burbuja y el historial caben también a 720 px de alto en escritorio.
+- Los otros cuatro recorridos conservan su implementación.
+- Imágenes y prompts: `docs/assets/atencion-hablando-v1.json`.
+
 ## Límites
 
 La preferencia de movimiento reducido se verificó en la implementación; el navegador

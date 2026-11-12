@@ -53,6 +53,12 @@ export const financeScene = {
 export const conversationScene = {
   action: "Responder desde la consola",
   image: "/images/portfolio/atencion-en-tiempo-real-v3.webp",
+  mouthOpen: "/images/stories/atencion-boca-abierta-v1.webp",
+  mouthRound: "/images/stories/atencion-boca-redonda-v1.webp",
+  speaking: "Respondiendo…",
+  sent: "Respuesta enviada",
+  delivered: "Recibido en tu celular",
+  replay: "Volver a ver la respuesta",
   label: "Una consulta conecta a una persona y a quien puede ayudarla.",
   portal: "Portal de atención",
   online: "Conversación en línea",

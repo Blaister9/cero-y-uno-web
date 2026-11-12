@@ -1,0 +1,24 @@
+{
+  "tool": "image_gen (built-in)",
+  "purpose": "Two localized photographic lip poses. Original portrait remains untouched; SVG feather mask composites only the mouth.",
+  "source": "public/images/portfolio/atencion-en-tiempo-real-v3.webp",
+  "preparation": {
+    "resize": [1280, 720],
+    "extract": {
+      "left": 580,
+      "top": 330,
+      "width": 240,
+      "height": 180
+    }
+  },
+  "assets": [
+    {
+      "path": "public/images/stories/atencion-boca-abierta-v1.webp",
+      "prompt": "Use case: identity-preserve. Asset type: second frame of a photorealistic talking portrait for an interactive website. Input image 1 is the edit target. Edit ONLY the woman's lips and the tiny immediately adjacent chin area: part her lips naturally as if saying 'ah' in the middle of a calm sentence, with a SMALL opening and a little visible upper teeth. It is a subtle speaking mouth, not laughing, not a big smile. Preserve EXACT same woman, facial identity, eyes, gaze, nose, head angle, head position, skin tone and texture, headset, microphone, clothing, lighting and all background details. No movement of any other feature. Keep the exact original 16:9 framing, composition and pixel registration: face and mouth must remain at the same coordinates. The mouth center is at approximately 54% image width, 55% image height. This will be composited over the original photograph. No text, no graphic elements. Landscape image."
+    },
+    {
+      "path": "public/images/stories/atencion-boca-redonda-v1.webp",
+      "prompt": "Use case: identity-preserve. Asset type: a second speaking-mouth pose for a photorealistic portrait animation. Input image is the edit target. Change ONLY the woman's lips to a gentle small rounded 'oh' speaking shape, with lips lightly pursed and a SMALL dark opening. Keep the mouth relaxed and natural, not exaggerated. Preserve EXACTLY the original face, eyes, gaze, skin, head tilt, position, nose, headset, microphone, clothing, lighting and background. Pixel-aligned invariants are crucial: absolutely no shift of face, crop, scale or camera. Mouth center stays around 54% image width and 55% image height. Exact same original 16:9 photograph framing. Do not change any other features, don't add text or graphic elements."
+    }
+  ]
+}
