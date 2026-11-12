@@ -11,7 +11,7 @@ export function useStoryProgress(
   const [linked, setLinked] = useState(false);
   useEffect(() => {
     const screen = window.matchMedia(
-      storyId === "power-platform"
+      storyId === "power-platform" || storyId === "blockchain"
         ? "(min-height: 720px) and (prefers-reduced-motion: no-preference), (max-width: 600px) and (min-height: 650px) and (prefers-reduced-motion: no-preference)"
         : "(min-width: 901px) and (min-height: 720px) and (prefers-reduced-motion: no-preference)",
     );

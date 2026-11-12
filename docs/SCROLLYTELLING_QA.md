@@ -89,6 +89,42 @@ Las capturas de escritorio y móvil están en `docs/qa/scrollytelling/`.
 - Los otros cuatro recorridos conservan su implementación.
 - Imágenes y prompts: `docs/assets/atencion-hablando-v1.json`.
 
+## Blockchain: cristal, huella y comparación
+
+- El scroll forma una huella en un bloque de cristal, lo incorpora a la cadena
+  y abre la comparación entre el documento original y la copia. Al avanzar,
+  «martes» cambia a «jueves»; retroceder restaura exactamente el estado anterior.
+- Se conservan las huellas SHA-256 reales calculadas en el servidor. Se muestran
+  completas en la comparación; los 63 caracteres distintos se destacan en ámbar.
+  La huella registrada permanece fija. La cadena es una representación ilustrativa.
+- Todas las posiciones y opacidades dependen del scroll. Sin reloj, reproducción
+  automática ni controles dentro de la escena. Los capítulos siguen disponibles.
+- Cristal azul grisáceo con transparencia: 45,9 KB; generación integrada, prompt
+  y preparación documentados en `docs/assets/blockchain-scroll-v1.json`.
+- Revisado en 1280 × 720, 901 × 720, 768 × 1024, 390 × 844 y 320 × 650.
+  Se corrigió el cruce de huellas con el resultado en móvil. Sin desbordamiento
+  horizontal; el relato cabe en la ventana mínima con scroll activo.
+- A 390 × 600 se verificó la alternativa sin fijación: capítulos seleccionables
+  y estados completos. La preferencia de movimiento reducido usa esa misma ruta.
+- Avanzar y retroceder la misma distancia recuperó idénticos progreso, matriz de
+  transformación y huellas. Se comprobaron los límites de cambio del texto y los
+  valores SHA-256 frente a `node:crypto`. La escena no contiene botones ni inputs.
+- Regresión de Power Platform: último capítulo, progreso completo y sin
+  desbordamiento en móvil. La selección financiera inicial sigue disponible.
+- `pnpm install --frozen-lockfile`, `pnpm typecheck`, `pnpm lint` y `pnpm build`
+  correctos con Node 24. Inicio: 131 KB de JavaScript inicial, sin dependencias nuevas.
+
+## Paleta y densidad Matrix
+
+- Inicio adopta fondo carbón, superficies neutras y texto grafito. El verde se
+  conserva en los acentos de marca y los dígitos del banner.
+- Separación de columnas: 18 px en escritorio (antes 30) y 21 px en móvil
+  (antes 34), aproximadamente un 65 % más de columnas. Se densificó también
+  la alternativa SVG estática. Se mantienen el límite de fotogramas, DPR y
+  la suspensión fuera de pantalla o con la pestaña oculta.
+- Revisados banner de escritorio y móvil, contraste del texto y botón de pausa
+  con actualización correcta de `aria-pressed`.
+
 ## Límites
 
 La preferencia de movimiento reducido se verificó en la implementación; el navegador

@@ -1,0 +1,8 @@
+{
+  "tool": "image_gen.imagegen",
+  "mode": "generate",
+  "transparent_background": true,
+  "prompt": "Use case: product-mockup. Asset type: a real glass block isolated for a sophisticated blockchain scroll narrative. One substantial SOLID CUBE of clear smoky optical glass, seen in three-quarter perspective from slightly above: the top and right side must be clearly visible, each taking about a quarter of the object's silhouette. Thick deep sides and polished beveled corners, like a luxury optical paperweight, NOT a thin display panel or screen. A short brushed titanium cylindrical connector on each side. Centered whole object, plenty of padding. Broad clean front face, completely blank so a small hash pattern can be overlaid later. Photorealistic studio product photography with believable refraction and fine material texture. Cool ice-blue edge highlights, silver-gray reflections, neutral charcoal glass. NO green or emerald hue, no neon. No fingerprints, no symbols, no text, no logo, no scene, no pedestal, no other objects. Transparent background. Square canvas.",
+  "asset": "public/images/stories/bloque-cristal-v1.webp",
+  "preparation": "Resize to 600px wide and encode WebP quality 88 with alpha preserved."
+}

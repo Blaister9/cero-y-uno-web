@@ -1,6 +1,7 @@
 @import "./project-covers.css";
 @import "./story-scenes.css";
 @import "./power-journey.css";
+@import "./integrity-journey.css";
 
 @font-face {
   font-family: "IBM Plex Mono";
@@ -13,17 +14,17 @@
 .home-page,
 .home-header,
 .home-footer {
-  --home-page: #f7f8f4;
+  --home-page: #f7f7f5;
   --home-surface: #ffffff;
-  --home-ink: #172b24;
-  --home-muted: #52645b;
+  --home-ink: #24292d;
+  --home-muted: #61666b;
   --home-brand: #19533b;
   --home-brand-hover: #123d2b;
   --home-matrix: #68da8f;
-  --home-mint: #a8edbe;
-  --home-soft: #e9f1e7;
-  --home-line: #dde5db;
-  --home-stage: #103629;
+  --home-highlight: #dce4e7;
+  --home-soft: #ececeb;
+  --home-line: #dedfdd;
+  --home-stage: #12171c;
   color: var(--home-ink);
   background: var(--home-page);
   color-scheme: light;
@@ -33,7 +34,7 @@
 html:has(.home-page) {
   color-scheme: light;
   scroll-padding-top: 104px;
-  background: #f7f8f4;
+  background: #f7f7f5;
 }
 .home-page :focus-visible,
 .home-header :focus-visible,
@@ -45,7 +46,7 @@ html:has(.home-page) {
 .home-page ::selection,
 .home-header ::selection,
 .home-footer ::selection {
-  background: var(--home-mint);
+  background: var(--home-highlight);
   color: var(--home-ink);
 }
 .home-page {
@@ -233,10 +234,10 @@ html:has(.home-page) {
   max-width: 780px;
 }
 .home-hero .home-eyebrow {
-  color: var(--home-mint);
+  color: var(--home-highlight);
 }
 .home-hero :focus-visible {
-  outline-color: var(--home-mint);
+  outline-color: var(--home-highlight);
 }
 .home-hero h1 {
   font-size: clamp(44px, calc(27.657px + 4.19048vw), 88px);
@@ -250,7 +251,7 @@ html:has(.home-page) {
 }
 .home-hero em {
   font-style: normal;
-  color: var(--home-mint);
+  color: var(--home-highlight);
 }
 .home-hero-description {
   font-size: clamp(17px, calc(15.886px + 0.28571vw), 20px);
@@ -267,7 +268,7 @@ html:has(.home-page) {
   margin-top: 32px;
 }
 .home-hero .home-button {
-  background: var(--home-mint);
+  background: var(--home-highlight);
   color: var(--home-ink);
 }
 .home-hero .home-button:hover {
@@ -277,7 +278,7 @@ html:has(.home-page) {
   color: var(--home-page);
 }
 .home-hero .home-text-link:hover {
-  color: var(--home-mint);
+  color: var(--home-highlight);
 }
 .home-hero-atmosphere,
 .home-matrix-rain,
@@ -292,10 +293,10 @@ html:has(.home-page) {
 .home-hero-shade {
   background: linear-gradient(
     90deg,
-    rgb(16 54 41 / 0.86),
-    rgb(16 54 41 / 0.82) 50%,
-    rgb(16 54 41 / 0.25) 78%,
-    rgb(16 54 41 / 0.04)
+    rgb(18 23 28 / 0.86),
+    rgb(18 23 28 / 0.82) 50%,
+    rgb(18 23 28 / 0.25) 78%,
+    rgb(18 23 28 / 0.04)
   );
 }
 .home-hero-controls {
@@ -314,16 +315,16 @@ html:has(.home-page) {
   min-height: 48px;
   padding: 0 8px;
   font-size: 12px;
-  border: 1px solid #a8edbe99;
+  border: 1px solid #dce4e799;
   border-radius: 6px;
-  color: var(--home-mint);
-  background: #103629;
+  color: var(--home-highlight);
+  background: #12171c;
 }
 .home-pause:hover {
   background: #19533b;
 }
 .home-page .home-pause:focus-visible {
-  outline-color: var(--home-mint);
+  outline-color: var(--home-highlight);
 }
 .home-motion-note {
   display: none;
@@ -702,7 +703,7 @@ html:has(.home-page) {
 }
 @media (max-width: 1100px) {
   .home-hero-shade {
-    background: rgb(16 54 41 / 0.82);
+    background: rgb(18 23 28 / 0.7);
   }
   .home-desktop-nav {
     gap: 20px;
@@ -897,7 +898,7 @@ html:has(.home-page) {
 @media (prefers-reduced-motion: reduce) {
   .home-motion-note {
     display: block;
-    color: var(--home-mint);
+    color: var(--home-highlight);
     font:
       11px/1.5 "IBM Plex Mono",
       monospace;

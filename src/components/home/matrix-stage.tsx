@@ -20,7 +20,7 @@ export function MatrixStage({ children }: { children: ReactNode }) {
       <div className="home-hero-atmosphere" ref={rainRef} aria-hidden="true">
         <BinaryCanvas
           className="home-matrix-rain"
-          background="#103629"
+          background="#12171c"
           paused={paused}
         />
       </div>

@@ -1,0 +1,594 @@
+/* One continuous optical scene. Every position is derived from scroll. */
+.story-integrity {
+  background: #10161d;
+  color: #e5edf3;
+}
+.story-integrity::after {
+  display: none;
+}
+.ledger-stage {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  perspective: 1100px;
+}
+.ledger-stage *,
+.ledger-stage *::before,
+.ledger-stage *::after {
+  transition: none;
+  animation: none;
+}
+.ledger-atmosphere {
+  position: absolute;
+  inset: 0;
+  opacity: calc(0.065 * (1 - var(--ledger-compare)));
+}
+.ledger-atmosphere img {
+  object-fit: cover;
+  filter: grayscale(1);
+}
+.ledger-light {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 65% 20%, #51749330, transparent 65%);
+}
+.ledger-source {
+  position: absolute;
+  left: 9%;
+  top: 10%;
+  width: 31%;
+  height: 71%;
+  padding: 26px;
+  color: #303840;
+  background: #e5e6e4;
+  box-shadow: 12px 22px 45px #0006;
+  transform: translateX(calc(var(--ledger-register) * -22%))
+    rotate(calc(-5deg + var(--ledger-read) * 3deg))
+    scale(calc(1 - var(--ledger-register) * 0.15));
+  opacity: calc(1 - var(--ledger-register));
+}
+.ledger-paper-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #aeb5b8;
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+}
+.ledger-source h4 {
+  font-size: clamp(19px, 2.2vw, 29px);
+  line-height: 1.16;
+  letter-spacing: -0.035em;
+  margin-top: 23px;
+  font-weight: 500;
+}
+.home-page .ledger-source-label {
+  margin-top: 20px;
+  font-size: 12px;
+}
+.ledger-source-day {
+  display: block;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+.ledger-paper-lines {
+  display: grid;
+  gap: 9px;
+  margin-top: 20px;
+}
+.ledger-paper-lines i {
+  display: block;
+  height: 1px;
+  background: #b9c0c3;
+}
+.ledger-paper-lines i:last-child {
+  width: 66%;
+}
+.ledger-source-note {
+  position: absolute;
+  bottom: 15px;
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+.ledger-reader {
+  position: absolute;
+  top: calc(18% + var(--ledger-read) * 66%);
+  left: -3%;
+  width: 106%;
+  height: 1px;
+  background: #c4e6ff;
+  box-shadow: 0 -4px 20px 5px #b0d4ff70;
+  opacity: calc(var(--ledger-read) * (1 - var(--ledger-register)));
+}
+.ledger-extraction {
+  position: absolute;
+  left: 48%;
+  top: 75%;
+  width: 40%;
+  opacity: calc(var(--ledger-read) * (1 - var(--ledger-register)));
+}
+.ledger-extraction .story-overline {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #b5c6d5;
+}
+.ledger-extraction code {
+  display: block;
+  overflow-wrap: anywhere;
+  font:
+    10px/1.6 "IBM Plex Mono",
+    monospace;
+  margin-top: 8px;
+  min-height: 32px;
+}
+.ledger-extraction-rule {
+  display: block;
+  width: calc(var(--ledger-read) * 100%);
+  height: 1px;
+  background: #b7d4ee;
+  margin-top: 10px;
+}
+.ledger-vault {
+  position: absolute;
+  top: 5%;
+  left: calc(72% - var(--ledger-register) * 22%);
+  width: min(30%, 340px);
+  aspect-ratio: 1;
+  transform: translateX(-50%) scale(calc(1 - var(--ledger-compare) * 0.65));
+  transform-origin: center top;
+}
+.ledger-block {
+  position: relative;
+  z-index: 2;
+  transform: rotateY(calc(-16deg + var(--ledger-register) * 16deg))
+    rotateZ(calc(6deg - var(--ledger-register) * 6deg));
+}
+.ledger-block > img,
+.ledger-neighbor > img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 18px 24px #0007);
+}
+.ledger-pattern {
+  position: absolute;
+  left: 28%;
+  top: 39%;
+  width: 39%;
+  aspect-ratio: 1;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 4px;
+  transform: skewY(1.8deg);
+}
+.ledger-pattern i {
+  display: block;
+  border-radius: 1px;
+  box-shadow: 0 0 8px #adcfff24;
+}
+.ledger-block-id {
+  position: absolute;
+  top: 78%;
+  left: 42%;
+  color: #d1e5f6;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.2em;
+}
+.ledger-neighbor {
+  position: absolute;
+  top: 16%;
+  width: 64%;
+  opacity: calc(var(--ledger-connect) * 0.64 * (1 - var(--ledger-compare)));
+}
+.ledger-neighbor-left {
+  left: -59%;
+  transform: translateX(calc((1 - var(--ledger-connect)) * -40%));
+}
+.ledger-neighbor-right {
+  right: -59%;
+  transform: translateX(calc((1 - var(--ledger-connect)) * 40%));
+}
+.ledger-neighbor span {
+  position: absolute;
+  left: 41%;
+  top: 65%;
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+}
+.ledger-rail {
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  top: 57%;
+  height: 1px;
+  display: flex;
+  opacity: calc(var(--ledger-connect) * (1 - var(--ledger-compare)));
+  background: #c7ddf039;
+}
+.ledger-rail i {
+  width: 33.33%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b2d1ed, transparent);
+  transform: scaleX(var(--ledger-connect));
+}
+.ledger-vault-caption {
+  text-align: center;
+  margin: 14px -40% 0;
+  opacity: calc(var(--ledger-register) * (1 - var(--ledger-compare)));
+}
+.ledger-vault-caption code {
+  display: block;
+  font:
+    13px "IBM Plex Mono",
+    monospace;
+  margin-top: 10px;
+  color: #c5e0f5;
+}
+.ledger-vault-caption > span:last-child {
+  display: block;
+  margin-top: 8px;
+  font-size: 10px;
+  color: #9daebb;
+}
+.ledger-comparison {
+  position: absolute;
+  inset: 17% 7% auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 21%;
+  opacity: var(--ledger-compare);
+  transform: translateY(calc((1 - var(--ledger-compare)) * 28px));
+}
+.ledger-comparison .story-overline {
+  color: #b1c3d2;
+}
+.home-page .ledger-compare-sentence {
+  margin-top: 18px;
+}
+.ledger-compare-sentence > span {
+  display: block;
+  font-size: 12px;
+  color: #b9c5ce;
+}
+.ledger-compare-sentence strong {
+  display: block;
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-top: 3px;
+}
+.ledger-copy[data-changed="true"] .ledger-compare-sentence strong {
+  color: #f1bf82;
+}
+.ledger-hash-group {
+  margin-top: 23px;
+}
+.ledger-hash-group > span {
+  display: block;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  color: #a5b5c2;
+  margin-bottom: 8px;
+}
+.ledger-hash {
+  display: grid;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  font:
+    12px/1.7 "IBM Plex Mono",
+    monospace;
+  color: #d0e2f0;
+}
+.ledger-hash [data-different="true"] {
+  color: #f1bf82;
+}
+.home-page .ledger-original-note {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 10px;
+  color: #9db5c8;
+  margin-top: 12px;
+}
+.ledger-original-note svg {
+  flex-shrink: 0;
+}
+.ledger-verdict {
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: max-content;
+  max-width: 90%;
+}
+.ledger-verdict svg {
+  flex-shrink: 0;
+}
+.ledger-verdict strong {
+  display: block;
+  font-size: 19px;
+  font-weight: 400;
+}
+.ledger-verdict span {
+  display: block;
+  font-size: 11px;
+  color: #b0c0cc;
+}
+.ledger-verdict-changed {
+  color: #f1bf82;
+}
+.ledger-footnote {
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
+  right: 5%;
+  text-align: center;
+  font-size: 10px;
+  color: #97a8b6;
+  line-height: 1.4;
+}
+@media (min-width: 601px) and (max-height: 850px) {
+  .ledger-vault {
+    width: min(28%, 245px);
+  }
+  .ledger-source {
+    padding: 20px;
+  }
+  .ledger-source h4 {
+    margin-top: 15px;
+  }
+  .home-page .ledger-source-label {
+    margin-top: 14px;
+  }
+  .ledger-paper-lines {
+    margin-top: 15px;
+  }
+  .ledger-comparison {
+    top: 13%;
+  }
+  .ledger-hash-group {
+    margin-top: 17px;
+  }
+  .ledger-hash {
+    font-size: 11px;
+  }
+  .ledger-verdict {
+    bottom: 11%;
+  }
+}
+@media (max-width: 900px) and (min-width: 601px) {
+  .ledger-source {
+    left: 6%;
+    width: 36%;
+  }
+  .ledger-comparison {
+    gap: 17%;
+  }
+}
+@media (max-width: 600px) {
+  .story-project[data-story="blockchain"] .story-track {
+    --journey-pin-top: 72px;
+  }
+  .story-project[data-story="blockchain"] .journey-caption {
+    gap: 10px 12px;
+    padding-top: 15px;
+    min-height: 138px;
+  }
+  .story-project[data-story="blockchain"] .journey-caption h4 {
+    font-size: 18px;
+  }
+  .story-project[data-story="blockchain"] .journey-caption > p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .story-project[data-story="blockchain"] .journey-caption-title {
+    grid-template-columns: 28px 1fr;
+    gap: 6px;
+  }
+  .story-project[data-story="blockchain"] .journey-arrows {
+    gap: 4px;
+  }
+  .story-project[data-story="blockchain"] .journey-arrows button {
+    width: 34px;
+    height: 34px;
+  }
+  .story-project[data-story="blockchain"] .journey-chapters {
+    gap: 10px;
+  }
+  .story-integrity {
+    height: clamp(300px, calc(100svh - 350px), 480px);
+  }
+  .ledger-source {
+    left: 6%;
+    top: 10%;
+    width: 62%;
+    height: 70%;
+    padding: 16px;
+  }
+  .ledger-source h4 {
+    margin-top: 17px;
+    font-size: 22px;
+  }
+  .home-page .ledger-source-label {
+    margin-top: 18px;
+    font-size: 11px;
+  }
+  .ledger-source-day {
+    font-size: 30px;
+  }
+  .ledger-paper-top {
+    font-size: 8px;
+    padding-bottom: 9px;
+  }
+  .ledger-paper-lines {
+    margin-top: 20px;
+  }
+  .ledger-vault {
+    left: calc(76% - var(--ledger-register) * 26%);
+    top: calc(20% - var(--ledger-register) * 10% - var(--ledger-compare) * 8%);
+    width: 61%;
+    transform: translateX(-50%) scale(calc(1 - var(--ledger-compare) * 0.7));
+  }
+  .ledger-neighbor {
+    width: 61%;
+  }
+  .ledger-neighbor-left {
+    left: -54%;
+  }
+  .ledger-neighbor-right {
+    right: -54%;
+  }
+  .ledger-vault-caption {
+    margin-top: 18px;
+  }
+  .ledger-vault-caption code {
+    font-size: 11px;
+  }
+  .ledger-vault-caption .story-overline {
+    font-size: 9px;
+  }
+  .ledger-extraction {
+    left: 10%;
+    top: 78%;
+    width: 80%;
+  }
+  .ledger-extraction .story-overline {
+    font-size: 8px;
+  }
+  .ledger-extraction code {
+    font-size: 8px;
+    line-height: 1.5;
+  }
+  .ledger-extraction-rule {
+    margin-top: 6px;
+  }
+  .ledger-comparison {
+    top: 26%;
+    left: 6%;
+    right: 6%;
+    gap: 10%;
+  }
+  .ledger-comparison .story-overline {
+    font-size: 8px;
+  }
+  .home-page .ledger-compare-sentence {
+    margin-top: 14px;
+  }
+  .ledger-compare-sentence > span {
+    font-size: 9px;
+  }
+  .ledger-compare-sentence strong {
+    font-size: 31px;
+  }
+  .ledger-hash-group {
+    margin-top: 17px;
+  }
+  .ledger-hash-group > span {
+    font-size: 8px;
+  }
+  .ledger-hash {
+    font-size: 9px;
+    line-height: 1.8;
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+  .home-page .ledger-original-note {
+    font-size: 8px;
+    line-height: 1.4;
+  }
+  .ledger-verdict {
+    bottom: 13%;
+    gap: 8px;
+  }
+  .ledger-verdict strong {
+    font-size: 17px;
+  }
+  .ledger-verdict span {
+    font-size: 9px;
+  }
+  .ledger-footnote {
+    font-size: 8px;
+  }
+  .story-project[data-story="blockchain"]
+    .story-track[data-linked="false"]
+    .story-integrity {
+    height: 480px;
+  }
+}
+@media (max-width: 600px) and (max-height: 760px) {
+  .ledger-source {
+    top: 7%;
+    height: 72%;
+  }
+  .ledger-source h4 {
+    font-size: 19px;
+    margin-top: 11px;
+  }
+  .home-page .ledger-source-label {
+    margin-top: 12px;
+  }
+  .ledger-paper-lines {
+    margin-top: 12px;
+  }
+  .ledger-vault {
+    width: 53%;
+  }
+  .ledger-vault-caption {
+    margin-top: 9px;
+  }
+  .ledger-vault-caption > span:last-child {
+    font-size: 8px;
+  }
+  .ledger-comparison {
+    top: 20%;
+  }
+  .home-page .ledger-compare-sentence {
+    margin-top: 10px;
+  }
+  .ledger-hash-group {
+    margin-top: 11px;
+  }
+  .ledger-hash {
+    font-size: 8px;
+    line-height: 1.5;
+  }
+  .ledger-compare-sentence strong {
+    font-size: 28px;
+  }
+  .ledger-verdict {
+    bottom: 11%;
+  }
+  .ledger-verdict strong {
+    font-size: 15px;
+  }
+  .home-page .ledger-original-note {
+    display: none;
+  }
+}
+@media (max-width: 600px) and (max-height: 700px) {
+  .ledger-comparison {
+    top: 16%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ledger-block {
+    transform: none;
+  }
+  .ledger-reader {
+    display: none;
+  }
+}

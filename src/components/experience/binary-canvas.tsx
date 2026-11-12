@@ -13,14 +13,15 @@ type Stream = {
 const rowHeight = 19;
 const frameInterval = 50;
 const digits = "010011010100101";
+// Keep the static reduced-motion version as dense as the animated rain.
 const stillStreams = [
-  { x: 16, y: 12, bits: "0100110" },
-  { x: 51, y: 101, bits: "101101" },
-  { x: 83, y: 39, bits: "00101010" },
-  { x: 117, y: 147, bits: "01001" },
-  { x: 151, y: 23, bits: "10110011" },
-  { x: 183, y: 111, bits: "0010101" },
-  { x: 215, y: 65, bits: "010110" },
+  { x: 8, y: 12, bits: "0100110" },
+  { x: 29, y: 101, bits: "101101" },
+  { x: 50, y: 39, bits: "00101010" },
+  { x: 71, y: 147, bits: "01001" },
+  { x: 92, y: 23, bits: "10110011" },
+  { x: 113, y: 111, bits: "0010101" },
+  { x: 134, y: 65, bits: "010110" },
 ];
 
 export function BinaryCanvas({
@@ -93,7 +94,7 @@ export function BinaryCanvas({
       context.font =
         "15px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace";
 
-      const spacing = width < 640 ? 34 : 30;
+      const spacing = width < 640 ? 21 : 18;
       streams = Array.from(
         { length: Math.ceil(width / spacing) },
         (_, column) => ({
@@ -175,7 +176,7 @@ export function BinaryCanvas({
             height="268"
             id={patternId}
             patternUnits="userSpaceOnUse"
-            width="242"
+            width="148"
           >
             {stillStreams.map(({ x, y, bits }) => (
               <text fill="#68da8f" fontSize="15" key={x} x={x} y={y}>

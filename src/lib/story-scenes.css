@@ -45,7 +45,7 @@
   padding: 8px 0 14px;
   text-align: left;
   color: var(--home-muted);
-  border-bottom: 1px solid #c3cec4;
+  border-bottom: 1px solid var(--home-line);
   font-size: 14px;
 }
 .journey-chapters button[aria-pressed="true"] {
@@ -214,7 +214,7 @@
   padding: 8px 24px;
   color: #fff;
   font-size: 12px;
-  background: #10281ee6;
+  background: #171d24e8;
 }
 .story-status svg {
   flex-shrink: 0;
@@ -254,11 +254,6 @@
 }
 .story-action:hover {
   background: #103923;
-}
-.story-integrity .story-action {
-  border-color: #6d9674;
-  color: #e2efdf;
-  background: #173d2b;
 }
 .story-scene button:focus-visible {
   outline: 3px solid #89b46b;
@@ -776,145 +771,6 @@
   background: #61866b;
 }
 /* Document evidence against a dark photographic chain, with a real SHA-256 comparison. */
-.story-integrity {
-  background: #0c211b;
-}
-.story-integrity .story-photo {
-  opacity: 0.23;
-  object-position: center;
-}
-.story-integrity::after {
-  background: linear-gradient(90deg, #102a20aa, #071c17e6);
-}
-.integrity-document {
-  position: absolute;
-  left: 10%;
-  top: 13%;
-  width: 33%;
-  height: 76%;
-  max-height: 380px;
-  padding: 32px;
-  background: #f3f0e2;
-  box-shadow: 10px 20px 32px #0007;
-  transform: perspective(1200px)
-    rotateY(calc(-9deg + var(--story-progress) * 14deg)) rotateZ(-4deg);
-}
-.integrity-document h4 {
-  font-size: 29px;
-  margin-top: 12px;
-}
-.document-variant {
-  font-size: 11px;
-  color: #6c7163;
-}
-.home-page .document-sentence {
-  font-size: clamp(22px, 2.7vw, 37px);
-  line-height: 1.3;
-  margin-top: 25px;
-  letter-spacing: -0.025em;
-}
-.document-sentence span {
-  text-decoration: underline;
-  text-decoration-color: #58876b;
-  text-underline-offset: 8px;
-}
-.document-sentence mark {
-  background: #ebbf9d;
-  padding: 0 5px;
-  color: #5c2e14;
-}
-.document-fingerprint {
-  position: absolute;
-  bottom: 24px;
-  left: 32px;
-  right: 32px;
-  display: flex;
-  gap: 12px;
-  padding-top: 13px;
-  border-top: 1px solid #cacbbd;
-  color: #65715d;
-  font-size: 9px;
-}
-.document-fingerprint code {
-  display: block;
-  color: #354a37;
-  font:
-    11px "IBM Plex Mono",
-    monospace;
-  margin-top: 5px;
-}
-.integrity-proof {
-  position: absolute;
-  left: 50%;
-  right: 8%;
-  top: 10%;
-  color: #e4eddf;
-}
-.chain-records {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin: 20px 0;
-  color: #7a9c86;
-}
-.chain-records > span {
-  border: 1px solid #4d7563;
-  padding: 16px 22px;
-  transform: skewY(-5deg);
-  font:
-    14px "IBM Plex Mono",
-    monospace;
-  background: #193d2a88;
-}
-.chain-records .chain-recorded {
-  background: #a3c895;
-  color: #15351c;
-  box-shadow: 6px 6px 0 #3e654f;
-}
-.hash-comparison p {
-  font-size: 10px;
-  color: #a2bca6;
-  margin: 13px 0 5px;
-}
-.hash-comparison code {
-  display: block;
-  font:
-    12px/1.7 "IBM Plex Mono",
-    monospace;
-  letter-spacing: 0.025em;
-  overflow-wrap: anywhere;
-  max-width: 40ch;
-}
-.hash-comparison [data-different="true"] {
-  color: #ffd0ac;
-  background: #bc693328;
-}
-.integrity-verdict {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  margin-top: 23px;
-  color: #bce7af;
-}
-.integrity-verdict strong {
-  font-size: 21px;
-  font-weight: 400;
-}
-.integrity-verdict[data-changed="true"] {
-  color: #ffd0ac;
-}
-.home-page .integrity-storage {
-  display: flex;
-  gap: 8px;
-  font-size: 12px;
-  margin-top: 20px;
-}
-.home-page .integrity-limit {
-  font-size: 10px;
-  color: #b2c2b3;
-  max-width: 44ch;
-  margin-top: 15px;
-}
 /* Physical units move to a reservation. The same units stay reserved on retry. */
 .story-inventory {
   background: #e7e5d8;
@@ -1154,9 +1010,6 @@
   .story-conversation[data-stage="2"] .phone-messages .chat-response {
     animation-delay: 0.22s;
   }
-  .story-integrity[data-stage="3"] .document-sentence mark {
-    animation: changed-word 0.6s both;
-  }
   .lamp-interaction:hover .order-lamp {
     transform: rotate(5deg);
     transition: transform 0.4s ease;
@@ -1169,14 +1022,6 @@
     to {
       opacity: 1;
       transform: none;
-    }
-  }
-  @keyframes changed-word {
-    from {
-      background: transparent;
-    }
-    to {
-      background: #ebbf9d;
     }
   }
 }
@@ -1266,24 +1111,6 @@
     line-height: 1.5;
     margin-top: 3px;
   }
-  .integrity-document {
-    padding: 23px;
-  }
-  .integrity-document h4 {
-    font-size: 24px;
-  }
-  .document-fingerprint {
-    bottom: 17px;
-  }
-  .chain-records {
-    margin-block: 12px;
-  }
-  .chain-records > span {
-    padding-block: 10px;
-  }
-  .integrity-verdict {
-    margin-top: 13px;
-  }
   .inventory-units {
     margin-top: 10px;
     gap: 10px;
@@ -1322,14 +1149,6 @@
   }
   .conversation-speech p {
     font-size: 11px;
-  }
-  .integrity-document {
-    left: 5%;
-    width: 38%;
-  }
-  .integrity-proof {
-    right: 5%;
-    left: 49%;
   }
   .inventory-order {
     left: 3%;
@@ -1669,52 +1488,6 @@
   .transcript span {
     font-size: 8px;
   }
-  .story-integrity {
-    height: 720px;
-  }
-  .integrity-document {
-    left: 10%;
-    top: 4%;
-    width: 80%;
-    height: 40%;
-    padding: 24px;
-  }
-  .integrity-document h4 {
-    font-size: 26px;
-  }
-  .home-page .document-sentence {
-    font-size: 30px;
-    margin-top: 17px;
-  }
-  .document-fingerprint {
-    bottom: 18px;
-    left: 24px;
-    right: 24px;
-  }
-  .integrity-proof {
-    top: 50%;
-    left: 8%;
-    right: 8%;
-  }
-  .chain-records {
-    margin: 13px 0 18px;
-    gap: 11px;
-  }
-  .chain-records > span {
-    padding: 12px 18px;
-  }
-  .hash-comparison code {
-    font-size: 11px;
-  }
-  .integrity-verdict {
-    margin-top: 17px;
-  }
-  .integrity-verdict strong {
-    font-size: 18px;
-  }
-  .home-page .integrity-limit {
-    font-size: 9px;
-  }
   .story-inventory {
     height: auto;
   }
@@ -1813,29 +1586,6 @@
     transform: scale(0.88);
     transform-origin: top left;
   }
-  .integrity-document {
-    top: 3%;
-    height: 90%;
-  }
-  .home-page .document-sentence {
-    font-size: 29px;
-    margin-top: 16px;
-  }
-  .chain-records {
-    margin-block: 8px;
-  }
-  .chain-records > span {
-    padding: 8px 18px;
-  }
-  .integrity-proof {
-    top: 5%;
-  }
-  .integrity-verdict {
-    margin-top: 12px;
-  }
-  .home-page .integrity-limit {
-    margin-top: 10px;
-  }
   .journey-caption {
     padding-block: 12px;
   }
@@ -1883,7 +1633,6 @@
   .finance-paper,
   .finance-software,
   .conversation-phone,
-  .integrity-document,
   .order-lamp {
     transform: none !important;
   }

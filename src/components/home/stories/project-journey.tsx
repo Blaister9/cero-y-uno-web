@@ -14,6 +14,7 @@ import { projectStories } from "@/content/project-stories";
 import {
   journeyCopy,
   purchaseScene as purchaseCopy,
+  integrityScene as integrityCopy,
 } from "@/content/story-scenes";
 import { useStoryProgress } from "@/lib/use-story-progress";
 import { FinanceScene } from "./finance-scene";
@@ -87,7 +88,9 @@ export function ProjectJourney({
         {linked
           ? id === "power-platform"
             ? purchaseCopy.scroll
-            : journeyCopy.scroll
+            : id === "blockchain"
+              ? integrityCopy.scroll
+              : journeyCopy.scroll
           : journeyCopy.manual}
       </p>
       <div className="story-track" data-linked={linked} ref={track}>
@@ -129,7 +132,11 @@ export function ProjectJourney({
               />
             )}
             {id === "blockchain" && (
-              <IntegrityScene {...sceneProps} demo={blockchain} />
+              <IntegrityScene
+                {...sceneProps}
+                progress={linked ? progress : [0.2, 0.45, 0.7, 1][stage]}
+                demo={blockchain}
+              />
             )}
             {id === "integraciones" && story.integrationDemo && (
               <InventoryScene {...sceneProps} demo={story.integrationDemo} />
