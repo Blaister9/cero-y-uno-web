@@ -1,5 +1,17 @@
 # Despliegue
 
+## Candidato en GitHub · portadas v3
+
+Rama `feature/portfolio-imagenes-v3`. Incluye todo el rediseño anterior y el reemplazo
+completo de las cinco portadas del portafolio. Por instrucción del titular, esta
+revisión se entrega como código en GitHub para desplegarla después; no se promueve a
+producción ni se fusiona con `main`.
+
+Los archivos de imagen están incluidos en `public/images/portfolio/*-v3.webp`.
+La configuración está en `src/content/portfolio.ts`; no requiere servicios nuevos ni
+variables adicionales. Conservar Node 24 y pnpm 9.15.4. El historial de la publicación
+anterior se mantiene a continuación como referencia.
+
 ## Publicación de Inicio · 11 de noviembre de 2026
 
 - URL verificada: https://ceroyuno.com.co/.

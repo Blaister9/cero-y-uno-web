@@ -6,11 +6,12 @@ Se configuran en **`src/content/portfolio.ts`**: título, descripción de secci�
 orden, clasificación, nombre y frase de cada acceso. Conservar las clasificaciones
 Proyecto, Prototipo y Ejemplo de acuerdo con la procedencia real.
 
-Las cinco portadas actuales (serie v2) son **imágenes generadas con `image_gen`**, con aspecto
-fotográfico: escaneo de documentos, atención con auriculares, bandejas de aprobación,
-sello que deja huella y conexión de red. Son escenas conceptuales; no representan
-clientes, personal de Cero y Uno ni capturas de proyectos. La serie v2 incorpora
-protagonistas negros a petición del titular. Los recorridos completos
+Las cinco portadas de esta rama (serie v3) son **imágenes generadas con `image_gen`**,
+con aspecto fotográfico. Reemplazan las cinco portadas de la serie v2 para diferenciar
+personas, edades, peinados, vestuario, entornos, encuadres y color.
+Son escenas conceptuales; no representan clientes, personal de Cero y Uno ni capturas
+de productos de Microsoft. Se conserva el protagonismo de personas negras solicitado
+por el titular. Los recorridos completos
 conservan sus datos y estados en `src/content/project-stories.ts` y
 `src/content/blockchain-demo.ts`.
 
@@ -19,7 +20,7 @@ Para sustituir una portada, guardar una imagen nueva en
 
 ```ts
 image: {
-  src: "/images/portfolio/automatizacion-financiera-v2.webp",
+  src: "/images/portfolio/automatizacion-financiera-v3.webp",
   alt: "Descripción del contenido de la fotografía o captura nueva.",
   position: "50% 50%",
 },
@@ -29,9 +30,21 @@ El encuadre es 16:9 en escritorio y 4:3 en las portadas principales de
 móvil/tableta. Conservar los elementos importantes en la zona central y comprobar
 ambos recortes. Usar capturas con datos ficticios o con permiso explícito de uso.
 El botón conserva su nombre accesible; su portada es decorativa. Las imágenes
-finales son cinco WebP de 1280 × 720 px, 499.480 bytes en total, con carga diferida
+finales son cinco WebP de 1280 × 720 px, 462.644 bytes en total, con carga diferida
 y tamaños adaptados mediante `next/image`. Los prompts completos y la procedencia
-están en [`assets/portfolio-images-v2.json`](assets/portfolio-images-v2.json).
+están en [`assets/portfolio-images-v3.json`](assets/portfolio-images-v3.json).
+
+| Experiencia | Composición de la serie v3 |
+| --- | --- |
+| Automatización financiera | Profesional mayor con gafas y barba cana; documentos y escáner en oficina azul grisácea |
+| Atención en tiempo real | Mujer joven con cabello corto rubio, jersey azul y auriculares; fondo terracota |
+| Power Platform | Responsable con locs recogidos y gafas; revisión de una solicitud en tableta, entorno de operaciones |
+| Blockchain | Metáfora de una cadena física de registros con huellas distintas; un bloque altera la alineación |
+| Integraciones y APIs | Profesional joven con trenzas; un pedido se registra con lector y tableta en inventario |
+
+La serie v3 se entrega en GitHub para su despliegue posterior por el titular.
+No se promueve a producción en esta entrega. Las series anteriores quedan conservadas
+con sus nombres versionados; la configuración de esta rama referencia solo v3.
 
 Componentes: `src/components/home/project-cover.tsx`,
 `src/components/home/home-portfolio.tsx` y `src/lib/project-covers.css`.

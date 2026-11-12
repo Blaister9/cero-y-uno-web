@@ -28,8 +28,8 @@ export const portfolioContent = {
       label: "Automatización financiera",
       summary: "Del documento al registro.",
       image: {
-        src: "/images/portfolio/automatizacion-financiera-v2.webp",
-        alt: "Un profesional negro introduce un documento en un escáner sobre una mesa iluminada.",
+        src: "/images/portfolio/automatizacion-financiera-v3.webp",
+        alt: "Un profesional negro mayor, calvo y con gafas, digitaliza documentos financieros junto a un registro de trabajo.",
         position: "50% 50%",
       },
     },
@@ -39,9 +39,9 @@ export const portfolioContent = {
       label: "Atención en tiempo real",
       summary: "De la consulta a la respuesta.",
       image: {
-        src: "/images/portfolio/atencion-en-tiempo-real-v2.webp",
-        alt: "Una mujer negra con cabello natural y auriculares atiende una conversación junto a su computador.",
-        position: "45% 44%",
+        src: "/images/portfolio/atencion-en-tiempo-real-v3.webp",
+        alt: "Una mujer negra con cabello corto rubio y jersey azul escucha una conversación con sus auriculares.",
+        position: "50% 45%",
       },
     },
     {
@@ -50,8 +50,8 @@ export const portfolioContent = {
       label: "Power Platform",
       summary: "De la solicitud a la aprobación.",
       image: {
-        src: "/images/portfolio/power-platform-v2.webp",
-        alt: "Una profesional negra organiza documentos entre tres bandejas de vidrio.",
+        src: "/images/portfolio/power-platform-v3.webp",
+        alt: "Una responsable de operaciones negra con locs recogidos y gafas revisa una solicitud en una tableta.",
         position: "50% 50%",
       },
     },
@@ -61,9 +61,9 @@ export const portfolioContent = {
       label: "Blockchain",
       summary: "Del archivo a su verificación.",
       image: {
-        src: "/images/portfolio/blockchain-v2.webp",
-        alt: "Manos de piel negra comprueban un sello documental que deja huella al abrirse.",
-        position: "50% 48%",
+        src: "/images/portfolio/blockchain-v3.webp",
+        alt: "Cadena de bloques translúcidos con huellas distintas y un bloque desplazado: metáfora de registros vinculados y alteraciones detectables.",
+        position: "50% 50%",
       },
     },
     {
@@ -72,9 +72,9 @@ export const portfolioContent = {
       label: "Integraciones y APIs",
       summary: "Del pedido a la reserva.",
       image: {
-        src: "/images/portfolio/integraciones-y-apis-v2.webp",
-        alt: "Un profesional negro conecta un cable de red a un panel de conexiones.",
-        position: "55% 50%",
+        src: "/images/portfolio/integraciones-y-apis-v3.webp",
+        alt: "Un profesional negro joven con trenzas registra un paquete con un lector y una tableta en una zona de inventario.",
+        position: "50% 50%",
       },
     },
   ] satisfies PortfolioCard[],

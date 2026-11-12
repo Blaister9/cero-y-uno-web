@@ -4,12 +4,51 @@
 La publicación de esta propuesta fue autorizada por el titular el 11 de noviembre
 de 2026. Las revisiones anteriores documentan su preparación local.
 
-**Publicada y verificada:** https://ceroyuno.com.co/, commit `6f8b6aa`, deployment
+**Entrega actual en GitHub:** `feature/portfolio-imagenes-v3` reemplaza las cinco
+portadas. El titular realizará el despliegue después; esta entrega no se promueve a
+producción.
+
+**Publicación anterior verificada:** https://ceroyuno.com.co/, commit `6f8b6aa`, deployment
 `EvfzirgUMvLnLgvdgPpqG6UkQUhY`. Vercel confirmó Production / Ready después de la
 verificación de identidad del titular. Las cinco rutas responden 200; imágenes y
 selector de los cinco relatos comprobados en el dominio público. Capturas de
 producción: [1440 px](qa/inicio-claro/produccion-1440.jpg) y
 [390 px](qa/inicio-claro/produccion-390.jpg).
+
+## Revisión 6 · cinco portadas distintas, entrega para despliegue posterior
+
+Se rehacen por completo las cinco imágenes del portafolio tras la observación del
+titular sobre la repetición de rostros, peinados, vestuario y escenarios. Los cuatro
+protagonistas humanos se diferencian por edad, rasgos, cabello, ropa, entorno y
+actividad. Blockchain usa una metáfora de objetos para variar también la composición.
+
+La relación con cada experiencia se concreta en documentos financieros, conversación,
+aprobación de una solicitud en tableta, cadena de registros e intercambio entre pedido
+e inventario. Las imágenes siguen siendo conceptuales y generadas con IA; no se
+presentan como clientes, equipo real o capturas de Microsoft.
+
+- Cinco archivos nuevos `public/images/portfolio/*-v3.webp`, 1280 × 720 px,
+  462.644 bytes en total. Las versiones anteriores se conservan con sus nombres.
+- `src/content/portfolio.ts` referencia únicamente v3 y actualiza sus textos
+  alternativos y encuadres. No se modifica la lógica de los cinco relatos.
+- Prompts y procedencia completos: `docs/assets/portfolio-images-v3.json`.
+
+Pruebas realizadas:
+
+| Comprobación | Resultado |
+| --- | --- |
+| Instalación con lockfile congelado, tipos, lint y build | Correctos |
+| Carga de las cinco imágenes | Correcta; el DOM referencia las cinco rutas v3 |
+| Composición 1440 px y recorte 390 px | Revisados en el navegador integrado |
+| 320, 390, 768 y 1440 px | Sin desbordamiento horizontal de página ni tarjetas |
+| Los cinco accesos y “Ver resultado” | Seleccionan su relato y muestran la etapa 04; scroll-linked activo en escritorio |
+
+Capturas: [1440 px](qa/inicio-claro/portafolio-v3-1440.jpg) y
+[390 px](qa/inicio-claro/portafolio-v3-390.jpg).
+
+Se sube la rama completa a GitHub para el despliegue posterior del titular. No hay
+merge a `main` ni promoción a producción. Las validaciones de movimiento reducido y
+teléfono físico pendientes de revisiones anteriores no se presentan como realizadas.
 
 ## Revisión 5 · cinco relatos por scroll y representación negra
 
