@@ -1,5 +1,36 @@
 # Despliegue
 
+## Publicación de Matrix y header glass · 12 de noviembre de 2026
+
+Publicada la versión aprobada en [ceroyuno.com.co](https://ceroyuno.com.co/),
+desde `feature/header-matrix-polish`, sin merge a `main`.
+
+- Commit de aplicación: `21c26c69e3c53d8b8a361a39972dbaab33f6780d`.
+- Deployment de producción: `3YmCyiEW6juuz5b4wnF1mNrQcjcy`.
+- [Panel de Vercel](https://vercel.com/blaisters-projects/cero-y-uno-web/3YmCyiEW6juuz5b4wnF1mNrQcjcy).
+- [CI 43312930779](https://github.com/Blaister9/cero-y-uno-web/actions/runs/43312930779)
+  completado correctamente. Instalación congelada, tipos, lint y build validados;
+  116 archivos de código y recursos coinciden con la copia local revisada.
+- Preview `93mKWch1pimYYmEDRRU4rbKzGeNM` correcto. Tras la verificación de
+  identidad completada por el titular, Vercel reconstruyó con el entorno de producción
+  y confirmó `Ready`, `Production` y el dominio público asignado.
+- Incluye más columnas Matrix, pausa discreta en la esquina inferior derecha y
+  header flotante de 480 px con icono de panel, reflejos de vidrio y desvanecido al
+  28 % en reposo. Mantiene los cambios de Nosotros, Servicios y Soluciones.
+- Las cinco páginas, robots, sitemap y Open Graph responden 200; canonical públicos
+  correctos. El CSS de la publicación coincide con el build revisado tras normalizar
+  CRLF/LF. En escritorio y móvil se comprobaron el header, el menú, el teclado y el
+  cierre al navegar a Nosotros, sin desbordamientos ni errores del sitio.
+- Evidencia: [HTTP](qa/header-matrix-2026-11-12/produccion-http.json),
+  [recursos](qa/header-matrix-2026-11-12/produccion-assets.json),
+  [navegación](qa/header-matrix-2026-11-12/produccion-navegador.json),
+  [escritorio](qa/header-matrix-2026-11-12/produccion-desktop.png) y
+  [móvil](qa/header-matrix-2026-11-12/produccion-mobile.png).
+- Detalles: [Matrix y header](HEADER_MATRIX_2026-11-12.md).
+
+El registro posterior de publicación modifica documentación y evidencia; no cambia
+el código de aplicación servido en producción.
+
 ## Publicación de Nosotros · 12 de noviembre de 2026
 
 Publicada la versión completa revisada en [ceroyuno.com.co](https://ceroyuno.com.co/),

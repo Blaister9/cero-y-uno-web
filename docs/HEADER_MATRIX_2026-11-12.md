@@ -20,4 +20,8 @@ Evidencia en `docs/qa/header-matrix-2026-11-12/`; la revisión posterior queda e
 
 Diseño de vidrio comprobado sobre las fotografías del portafolio: reposo al 28 %, hover al 100 %, menú abierto con cursor fuera, foco de teclado y regreso al reposo. Móvil a 390 px conserva fondo y opacidad completos. Sin errores de navegador. Instalación congelada, tipos, lint y build nuevamente correctos. Evidencia actual en `verificacion-liquid-glass.json` y `desktop-liquid-glass-*.png`; los archivos de transparencia anteriores documentan la versión previa.
 
-Vista previa local en `http://127.0.0.1:3114/`. Estos cambios todavía no se han publicado en producción.
+Publicado en [ceroyuno.com.co](https://ceroyuno.com.co/) desde el commit `21c26c69e3c53d8b8a361a39972dbaab33f6780d`, deployment de producción `3YmCyiEW6juuz5b4wnF1mNrQcjcy`.
+
+GitHub CI `43312930779` y Vercel completados correctamente. En el dominio público se verificaron el header al 28 %, la apertura del menú, el foco de teclado, la navegación a Nosotros y el comportamiento móvil, sin desbordamientos ni errores del sitio. Las cinco páginas, robots, sitemap y Open Graph responden 200. El CSS publicado coincide con el revisado al normalizar los saltos de línea de Windows y Linux; el patrón Matrix usa el nuevo ancho de 84 px.
+
+Evidencia de publicación: `produccion-http.json`, `produccion-assets.json`, `produccion-navegador.json` y `produccion-*.png` en la misma carpeta de QA. La vista previa local sigue disponible en `http://127.0.0.1:3114/`.

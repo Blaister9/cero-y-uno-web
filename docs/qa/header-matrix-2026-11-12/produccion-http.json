@@ -1,0 +1,42 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "canonical": "https://ceroyuno.com.co"
+  },
+  {
+    "path": "/contacto",
+    "status": 200,
+    "canonical": "https://ceroyuno.com.co/contacto"
+  },
+  {
+    "path": "/nosotros",
+    "status": 200,
+    "canonical": "https://ceroyuno.com.co/nosotros"
+  },
+  {
+    "path": "/opengraph-image",
+    "status": 200,
+    "canonical": null
+  },
+  {
+    "path": "/robots.txt",
+    "status": 200,
+    "canonical": null
+  },
+  {
+    "path": "/servicios",
+    "status": 200,
+    "canonical": "https://ceroyuno.com.co/servicios"
+  },
+  {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "canonical": null
+  },
+  {
+    "path": "/soluciones",
+    "status": 200,
+    "canonical": "https://ceroyuno.com.co/soluciones"
+  }
+]

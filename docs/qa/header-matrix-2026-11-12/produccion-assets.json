@@ -1,0 +1,25 @@
+{
+  "checkedAtUtc": "2026-11-12T21:51:32.2144966Z",
+  "sourceCommit": "21c26c69e3c53d8b8a361a39972dbaab33f6780d",
+  "deployment": "3YmCyiEW6juuz5b4wnF1mNrQcjcy",
+  "homeStatus": 200,
+  "denseMatrixPattern": true,
+  "styles": [
+    {
+      "url": "https://ceroyuno.com.co/_next/static/css/33191a2e090460d7.css",
+      "status": 200,
+      "sha256": "29F94F85182C7359B48496A2D93072F3FB9432E23AFF48EC514F6751D2B236F8",
+      "liquidHeader": false,
+      "idleOpacity28": false
+    },
+    {
+      "url": "https://ceroyuno.com.co/_next/static/css/d6e70f663f98f6e5.css",
+      "status": 200,
+      "sha256": "B1E406E71BC835C5310D6DC6D5039B4132A6DD078957F9856572C7F9C3383DED",
+      "liquidHeader": true,
+      "idleOpacity28": true,
+      "matchesReviewedCssAfterLineEndingNormalization": true,
+      "comparisonNote": "Windows CRLF vs Linux LF only"
+    }
+  ]
+}
