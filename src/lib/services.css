@@ -1,0 +1,1098 @@
+.services-page {
+  --services-paper: #f7f7f5;
+  --services-ink: #24292d;
+  --services-muted: #60666b;
+  --services-line: #d8dbd9;
+  background: var(--services-paper);
+  color: var(--services-ink);
+  color-scheme: light;
+  padding-top: 80px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+html:has(.services-page) {
+  color-scheme: light;
+  background: #f7f7f5;
+}
+.services-page :focus-visible {
+  outline: 2px solid #345970;
+  outline-offset: 5px;
+}
+.services-page ::selection {
+  color: #24292d;
+  background: #dce4e7;
+}
+.services-page h1,
+.services-page h2,
+.services-page h3,
+.services-page h4,
+.services-page p,
+.services-page figure {
+  margin: 0;
+}
+.services-page a {
+  -webkit-tap-highlight-color: transparent;
+}
+.services-mono {
+  font:
+    11px/1.5 "IBM Plex Mono",
+    monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.services-intro {
+  padding-top: 42px;
+  padding-bottom: 64px;
+}
+.services-intro-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--services-line);
+  color: var(--services-muted);
+}
+.services-intro-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: center;
+  gap: 64px;
+  padding-block: 48px 56px;
+}
+.services-intro h1 {
+  font-size: clamp(44px, 5.2vw, 76px);
+  line-height: 1.06;
+  font-weight: 500;
+  letter-spacing: -0.055em;
+}
+.services-intro h1 span {
+  display: block;
+  color: #667c89;
+}
+.services-intro-copy > p {
+  max-width: 42ch;
+  margin-top: 26px;
+  color: var(--services-muted);
+  font-size: 17px;
+  line-height: 1.75;
+}
+.services-button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 20px;
+  border-radius: 5px;
+  background: #263d49;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.services-button:hover {
+  background: #1c303a;
+}
+.services-intro-copy .services-button {
+  margin-top: 30px;
+}
+.services-hero-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.22;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.services-hero-photo figcaption {
+  display: grid;
+  gap: 3px;
+  padding-top: 12px;
+  color: var(--services-muted);
+  font-size: 12px;
+}
+.services-hero-photo figcaption small {
+  font-size: 10px;
+}
+.services-index {
+  border-top: 1px solid var(--services-line);
+  padding-top: 22px;
+}
+.services-index > p {
+  color: var(--services-muted);
+}
+.services-index ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 32px;
+  margin-top: 18px;
+  list-style: none;
+  padding: 0;
+}
+.services-index a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 58px;
+  border-bottom: 1px solid var(--services-line);
+  font-size: 14px;
+  font-weight: 600;
+}
+.services-index a > span {
+  color: var(--services-muted);
+  font-weight: 400;
+}
+.services-index a > svg {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.services-index a:hover {
+  color: #345970;
+  border-color: #345970;
+}
+.services-catalogue,
+.service-chapter,
+.services-closing {
+  scroll-margin-top: 96px;
+}
+.services-catalogue-heading {
+  padding-block: 42px 36px;
+}
+.services-catalogue-heading > .services-mono {
+  color: var(--services-muted);
+}
+.services-catalogue-heading h2 {
+  font-size: clamp(30px, 3.4vw, 44px);
+  font-weight: 500;
+  line-height: 1.15;
+  margin-top: 14px;
+}
+.services-catalogue-heading > p:last-child {
+  margin-top: 14px;
+  color: var(--services-muted);
+}
+.service-chapter {
+  border-top: 1px solid var(--services-line);
+  padding-block: 72px;
+}
+.service-chapter:nth-of-type(even) {
+  background: #efefec;
+}
+.service-chapter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  align-items: center;
+  gap: clamp(32px, 6vw, 90px);
+}
+.service-chapter:nth-of-type(even) .service-chapter-copy {
+  order: 2;
+}
+.service-chapter:nth-of-type(even) .service-figure {
+  order: 1;
+}
+.service-number {
+  color: var(--services-muted);
+}
+.service-chapter h3 {
+  font-size: clamp(32px, 3.6vw, 46px);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+  margin-top: 20px;
+}
+.service-summary-copy {
+  margin-top: 24px !important;
+  color: var(--services-muted);
+  font-size: 17px;
+  line-height: 1.75;
+  max-width: 44ch;
+}
+.service-scope {
+  margin-top: 28px;
+  border-block: 1px solid #cdd1d0;
+}
+.service-scope summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  cursor: pointer;
+  min-height: 56px;
+  padding-block: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.service-scope summary::-webkit-details-marker {
+  display: none;
+}
+.service-scope[open] summary svg {
+  transform: rotate(45deg);
+}
+.service-scope > div {
+  padding-bottom: 24px;
+}
+.service-scope h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 18px;
+}
+.service-scope p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--services-muted);
+  margin-top: 8px;
+}
+.service-contact {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.service-contact:hover {
+  color: #345970;
+}
+.service-figure {
+  min-width: 0;
+}
+.service-stage {
+  min-height: 380px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 32px;
+  background: #e2e8eb;
+}
+.service-figure figcaption {
+  display: grid;
+  gap: 6px;
+  padding-top: 18px;
+}
+.service-figure figcaption > .services-mono {
+  font-size: 9px;
+  color: var(--services-muted);
+}
+.service-figure figcaption strong {
+  font-size: 15px;
+  font-weight: 500;
+}
+.service-example-flow {
+  font-size: 12px;
+  color: var(--services-muted);
+}
+/* A working application, with a persistent navigation rail and a readable inbox. */
+.service-app {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 20px 35px -20px #334d5c55;
+  border: 1px solid #d2d9dd;
+  border-radius: 6px;
+  overflow: hidden;
+  transform: rotate(-2deg);
+}
+.service-window-bar {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 12px 14px;
+  background: #f4f5f6;
+  color: #5b656c;
+  font-size: 9px;
+  border-bottom: 1px solid #e4e7e8;
+}
+.window-dots {
+  font-size: 7px;
+  letter-spacing: 3px;
+  color: #89959c;
+}
+.service-app-body {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  min-height: 224px;
+}
+.service-app-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 20px 10px;
+  background: #263c49;
+  color: #d9e2e7;
+  font-size: 9px;
+}
+.service-app-sidebar > svg {
+  margin-bottom: 6px;
+}
+.service-app-content {
+  padding: 24px 16px 16px;
+  min-width: 0;
+}
+.service-app-content > small {
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  color: #63737e;
+}
+.service-app-content > strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-top: 6px;
+}
+.service-app-table {
+  margin-top: 22px;
+}
+.service-app-row {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr;
+  gap: 8px;
+  padding-block: 10px;
+  border-bottom: 1px solid #e4e7e8;
+  font-size: 8px;
+}
+.service-app-row span:last-child {
+  color: #385f73;
+}
+.service-app-row.row-heading {
+  color: #65727b;
+  font-size: 7px;
+}
+.service-app-trace {
+  height: 2px;
+  background: #668da1;
+  transform-origin: left;
+}
+.service-app-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 8px;
+  margin-top: 15px !important;
+  color: #526773;
+}
+.service-window-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #f4f5f6;
+  font-size: 8px;
+  color: #526773;
+}
+/* A paper approval, with a recorded decision instead of another dashboard. */
+.scene-automatizacion .service-stage {
+  background: #e8dfd2;
+  min-height: 420px;
+  gap: 22px;
+}
+.service-paper {
+  width: 260px;
+  flex-shrink: 0;
+  padding: 25px 25px 20px;
+  background: #fffdf8;
+  color: #4a4036;
+  box-shadow: 12px 22px 26px -15px #786b5d66;
+}
+.service-paper-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  color: #8c6b50;
+}
+.service-paper > small {
+  font-size: 10px;
+  color: #756958;
+}
+.service-paper > strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 23px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+.service-paper dl {
+  margin-block: 24px;
+}
+.service-paper dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-block: 8px;
+  border-bottom: 1px solid #e4ddd1;
+  font-size: 9px;
+}
+.service-paper dt {
+  color: #756958;
+}
+.service-stamp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid #9b5d42;
+  color: #9b5d42;
+  padding: 9px;
+  font:
+    15px "IBM Plex Mono",
+    monospace;
+  transform: rotate(-8deg);
+  margin-block: 20px;
+}
+.service-paper-date {
+  display: block;
+  border-top: 1px solid #e4ddd1;
+  padding-top: 12px;
+}
+.service-paper-trail {
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 25px;
+  color: #6d5947;
+  font-size: 10px;
+}
+.service-paper-trail li {
+  display: grid;
+  gap: 8px;
+}
+/* Dark space is reserved for an actual system-to-system exchange. */
+.scene-integraciones-y-apis .service-stage {
+  background: #232d35;
+  color: #e4e9ec;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-content: center;
+}
+.service-receipt {
+  width: 155px;
+  background: #faf7f0;
+  color: #3e454a;
+  padding: 22px 16px;
+  transform: rotate(-5deg);
+  box-shadow: 0 15px 20px #0002;
+  border-bottom: 5px dotted #232d35;
+}
+.service-receipt > small {
+  font:
+    8px "IBM Plex Mono",
+    monospace;
+}
+.receipt-product {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+.receipt-product strong {
+  font-size: 17px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+.service-receipt p {
+  font-size: 10px;
+  margin-top: 16px;
+}
+.receipt-barcode {
+  display: block;
+  height: 20px;
+  width: 100%;
+  margin-top: 25px;
+  background: repeating-linear-gradient(
+    90deg,
+    #58636b 0 1px,
+    transparent 1px 3px,
+    #58636b 3px 5px,
+    transparent 5px 8px
+  );
+}
+.service-transit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  color: #adc7d7;
+}
+.service-transit > span {
+  writing-mode: vertical-rl;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+}
+.service-terminal {
+  flex: 1;
+  min-width: 145px;
+  max-width: 200px;
+  font:
+    11px/1.8 "IBM Plex Mono",
+    monospace;
+}
+.service-terminal > small {
+  color: #9aadb9;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+.service-terminal pre {
+  font: inherit;
+  margin-block: 20px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.service-response {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid #51616d;
+  padding-top: 14px;
+  font-size: 9px;
+  color: #b9d0de;
+}
+/* Capture on a phone, decision on paper, familiar platform names. */
+.scene-power-platform .service-stage {
+  background: #e7e3eb;
+  min-height: 430px;
+  padding-bottom: 80px;
+  justify-content: flex-start;
+  padding-left: 64px;
+}
+.service-phone {
+  width: 185px;
+  flex-shrink: 0;
+  background: #fbfafc;
+  border: 5px solid #393540;
+  border-radius: 26px;
+  box-shadow: 10px 18px 26px -16px #4a405b66;
+  transform: rotate(-5deg);
+  padding: 10px 12px 24px;
+}
+.service-phone-speaker {
+  display: block;
+  width: 45px;
+  height: 5px;
+  border-radius: 10px;
+  background: #393540;
+  margin: 0 auto 22px;
+}
+.service-phone small {
+  font-size: 9px;
+  color: #776783;
+}
+.service-phone strong {
+  display: block;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-top: 8px;
+}
+.service-phone-field {
+  display: grid;
+  gap: 6px;
+  margin-top: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #dfdae4;
+}
+.service-phone-field > span {
+  font-size: 11px;
+}
+.service-phone-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 24px;
+  background: #675575;
+  color: white;
+  padding: 10px 5px;
+  border-radius: 4px;
+  font-size: 8px;
+}
+.service-approval {
+  position: absolute;
+  left: 48%;
+  right: 24px;
+  top: 125px;
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+  background: #fff;
+  box-shadow: 6px 15px 30px #53476022;
+  border-left: 3px solid #877495;
+  color: #5a476a;
+  font-size: 13px;
+}
+.service-approval strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-top: 1px solid #e6e0eb;
+  padding-top: 14px;
+  font-size: 10px;
+  font-weight: 500;
+}
+.service-power-tools {
+  position: absolute;
+  bottom: 26px;
+  inset-inline: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: #675575;
+  font-size: 9px;
+}
+.service-power-tools span {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.service-power-tools i {
+  font:
+    normal 9px "IBM Plex Mono",
+    monospace;
+  border-bottom: 1px solid #877495;
+}
+/* The plotted values are explicitly fictional, with a text interpretation. */
+.scene-analitica-e-ia .service-stage {
+  background: #e5ebed;
+}
+.service-analytics {
+  width: 100%;
+}
+.service-analytics > small {
+  color: #526b7b;
+  font-size: 10px;
+}
+.service-analytics > strong {
+  display: block;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 9px;
+}
+.service-chart-key {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 25px;
+  color: #526b7b;
+  font-size: 8px;
+}
+.service-chart-key > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.service-chart {
+  display: block;
+  width: 100%;
+  margin-top: 25px;
+  overflow: visible;
+}
+.service-chart-days {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3%;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  color: #526b7b;
+}
+.service-insight {
+  margin-top: 24px;
+  border-top: 1px solid #b9c9d2;
+  padding-top: 16px;
+}
+.service-insight > span {
+  font-size: 11px;
+  font-weight: 600;
+}
+.service-insight > p {
+  margin-top: 5px;
+  font-size: 10px;
+  color: #526b7b;
+}
+.service-insight > small {
+  display: block;
+  font-size: 8px;
+  color: #526b7b;
+  margin-top: 8px;
+}
+/* One replaceable module over the parts of the system that remain in place. */
+.scene-modernizacion .service-stage {
+  background: #e5e4df;
+}
+.service-system {
+  width: 100%;
+}
+.service-system > small {
+  font-size: 9px;
+  color: #676a63;
+}
+.service-system > strong {
+  display: block;
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.2;
+  max-width: 20ch;
+  margin-top: 10px;
+}
+.service-system-map {
+  position: relative;
+  margin: 35px 0 28px;
+  padding-top: 65px;
+}
+.service-system-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  color: #676a63;
+}
+.service-system-base {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  padding: 60px 15px 20px;
+  background: #d3d3cc;
+  border: 1px solid #b5b8b1;
+  box-shadow: 0 8px 0 #b7bbb3;
+  transform: skewY(-4deg);
+  color: #565e56;
+  font-size: 11px;
+}
+.service-system-piece {
+  position: absolute;
+  inset: 30px 12% auto 20%;
+  padding: 18px;
+  background: #fafaf6;
+  border: 1px solid #b6bdba;
+  box-shadow:
+    0 9px 0 #a8b8bc,
+    0 15px 24px #4b5b631a;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #3c5866;
+  font-size: 14px;
+}
+.service-system-piece > svg:last-child {
+  margin-left: auto;
+}
+.service-system-checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 25px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 9px;
+  color: #565e56;
+}
+.service-system-checks li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.services-closing {
+  padding-block: 80px;
+  background: #dfe7e9;
+  border-block: 1px solid #d2dce0;
+}
+.services-closing > div > p {
+  color: #526773;
+}
+.services-closing-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 70px;
+  align-items: end;
+  margin-top: 22px;
+}
+.services-closing h2 {
+  font-size: clamp(32px, 3.8vw, 50px);
+  font-weight: 500;
+  line-height: 1.12;
+  max-width: 20ch;
+}
+.services-closing-grid > div > p {
+  max-width: 38ch;
+  color: #526773;
+}
+.services-closing .services-button {
+  margin-top: 24px;
+}
+@media (max-width: 1100px) {
+  .services-intro-grid {
+    gap: 36px;
+  }
+  .service-stage {
+    padding: 24px;
+  }
+  .scene-automatizacion .service-stage {
+    gap: 14px;
+  }
+  .service-paper {
+    width: 220px;
+    padding: 20px;
+  }
+  .service-paper-trail {
+    font-size: 9px;
+  }
+  .scene-power-platform .service-stage {
+    padding-left: 30px;
+  }
+  .service-approval {
+    padding: 18px;
+    right: 16px;
+  }
+  .service-receipt {
+    width: 126px;
+    padding: 18px 12px;
+  }
+  .scene-integraciones-y-apis .service-stage {
+    gap: 12px;
+  }
+}
+@media (max-width: 900px) {
+  .services-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-top: 32px;
+  }
+  .services-intro-copy {
+    max-width: 560px;
+  }
+  .services-intro h1 {
+    font-size: clamp(44px, 8vw, 62px);
+  }
+  .services-hero-photo img {
+    aspect-ratio: 1.6;
+  }
+  .services-index ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 24px;
+  }
+  .service-chapter-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .service-chapter:nth-of-type(even) .service-chapter-copy,
+  .service-chapter:nth-of-type(even) .service-figure {
+    order: initial;
+  }
+  .service-chapter-copy {
+    max-width: 560px;
+  }
+  .service-stage {
+    min-height: 360px;
+    padding: 32px;
+  }
+  .service-app {
+    max-width: 500px;
+  }
+  .service-paper {
+    width: 260px;
+    padding: 25px;
+  }
+  .scene-automatizacion .service-stage {
+    gap: 35px;
+  }
+  .service-paper-trail {
+    font-size: 10px;
+  }
+  .scene-power-platform .service-stage {
+    padding-left: 18%;
+  }
+  .service-approval {
+    left: 48%;
+    right: 10%;
+  }
+  .service-receipt {
+    width: 155px;
+  }
+  .scene-integraciones-y-apis .service-stage {
+    gap: 22px;
+  }
+  .service-terminal {
+    max-width: 220px;
+  }
+  .services-closing-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .services-page {
+    padding-top: 64px;
+  }
+  .services-intro {
+    padding-top: 28px;
+    padding-bottom: 38px;
+  }
+  .services-intro-top {
+    gap: 14px;
+    font-size: 9px;
+  }
+  .services-intro-top > p:last-child {
+    max-width: 160px;
+    text-align: right;
+  }
+  .services-intro-copy > p {
+    font-size: 16px;
+    margin-top: 22px;
+  }
+  .services-intro-grid {
+    padding-bottom: 36px;
+  }
+  .services-index ol {
+    grid-template-columns: 1fr;
+    margin-top: 14px;
+  }
+  .services-index a {
+    font-size: 14px;
+    min-height: 52px;
+  }
+  .services-catalogue-heading {
+    padding-block: 28px 32px;
+  }
+  .service-chapter {
+    padding-block: 42px;
+  }
+  .service-chapter h3 {
+    font-size: 36px;
+    margin-top: 16px;
+  }
+  .service-summary-copy {
+    font-size: 16px;
+    margin-top: 20px !important;
+  }
+  .service-stage {
+    padding: 22px 16px;
+    min-height: 330px;
+  }
+  .service-app-body {
+    grid-template-columns: 48px 1fr;
+  }
+  .service-app-sidebar {
+    padding: 18px 6px;
+    font-size: 7px;
+    gap: 17px;
+  }
+  .service-app-content {
+    padding: 18px 12px 12px;
+  }
+  .service-app-content > strong {
+    font-size: 15px;
+  }
+  .service-app-row {
+    font-size: 7px;
+    gap: 5px;
+  }
+  .service-app-note {
+    font-size: 7px;
+  }
+  .service-app-note svg {
+    flex-shrink: 0;
+  }
+  .service-paper {
+    width: 205px;
+    padding: 22px;
+  }
+  .scene-automatizacion .service-stage {
+    flex-direction: column;
+    gap: 20px;
+    padding-block: 30px;
+  }
+  .service-paper-trail {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    font-size: 8px;
+  }
+  .service-paper-trail li {
+    flex: 1;
+  }
+  .scene-integraciones-y-apis .service-stage {
+    gap: 16px;
+    padding-block: 30px;
+  }
+  .service-receipt {
+    width: 145px;
+  }
+  .service-transit {
+    width: 50px;
+  }
+  .service-terminal {
+    flex-basis: 100%;
+    max-width: none;
+    border-top: 1px solid #51616d;
+    padding: 16px 12px 0;
+  }
+  .service-terminal pre {
+    margin-block: 10px;
+  }
+  .scene-power-platform .service-stage {
+    min-height: 420px;
+    padding-left: 22px;
+  }
+  .service-phone {
+    width: 165px;
+  }
+  .service-approval {
+    left: 45%;
+    right: 14px;
+    top: 150px;
+    padding: 16px 12px;
+    font-size: 11px;
+  }
+  .service-approval strong {
+    font-size: 9px;
+    align-items: start;
+  }
+  .service-approval svg {
+    flex-shrink: 0;
+  }
+  .service-power-tools {
+    inset-inline: 16px;
+    font-size: 8px;
+  }
+  .service-power-tools span {
+    flex-direction: column;
+    align-items: start;
+  }
+  .service-analytics > strong {
+    font-size: 23px;
+  }
+  .service-chart-key {
+    align-items: start;
+    font-size: 7px;
+  }
+  .service-system-base {
+    font-size: 9px;
+  }
+  .service-system-piece {
+    inset-inline: 12%;
+    font-size: 12px;
+    padding: 16px;
+  }
+  .services-closing {
+    padding-block: 48px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .services-page * {
+    scroll-behavior: auto !important;
+  }
+}

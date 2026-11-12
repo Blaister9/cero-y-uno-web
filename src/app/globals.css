@@ -1,5 +1,6 @@
 @import "../lib/solution-motion.css";
 @import "../lib/home.css";
+@import "../lib/services.css";
 
 @tailwind base;
 @tailwind components;
@@ -38,18 +39,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-.service-summary::-webkit-details-marker {
-  display: none;
-}
-
-.service-summary::marker {
-  content: "";
-}
-
-.services-hero {
-  background-image: radial-gradient(ellipse at 85% 100%, rgb(22 61 41 / 0.32), transparent 60%);
 }
 
 .solutions-hero {

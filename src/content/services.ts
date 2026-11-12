@@ -6,10 +6,19 @@ export const servicesPage = {
   exploreLabel: "Explorar servicios",
   description:
     "Una aplicación propia. Un proceso que avanza. Dos sistemas que por fin se entienden. Encuentra dónde podemos ayudarte.",
+  heroImage: {
+    src: "/images/services/mesa-software-v1.webp",
+    alt: "Portátil con una aplicación de trabajo junto a un cuaderno de procesos, en una mesa iluminada por luz natural.",
+    caption: "Del proceso a una herramienta propia.",
+    disclosure: "Imagen conceptual generada con IA."
+  },
+  scopeLabel: "Ver alcance y entregables",
+  exampleDisclosure: "Ejemplo ilustrativo · Datos ficticios",
+  indexLabel: "Encuentra tu punto de partida",
   explorer: {
     eyebrow: "Qué podemos construir",
     title: "Elige por dónde empezar.",
-    description: "Abre un servicio para ver cuándo encaja, qué construimos y cómo podría funcionar.",
+    description: "Seis capacidades. Distintas formas de hacer que el trabajo avance.",
     problemLabel: "Tiene sentido si…",
     deliveryLabel: "Qué construimos",
     outcomeLabel: "Lo que buscamos",
@@ -20,7 +29,7 @@ export const servicesPage = {
     eyebrow: "El siguiente paso",
     title: "Cuéntanos qué necesita funcionar mejor.",
     description: "Puede ser una idea, una tarea que toma demasiado tiempo o un sistema que ya se quedó corto.",
-    action: "Solicitar diagnóstico"
+    action: "Hablemos de tu proyecto"
   },
   items: [
     {

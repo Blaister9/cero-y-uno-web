@@ -1,20 +1,5 @@
 import type { Variants } from "framer-motion";
 
-// The service diagrams stay visible in server-rendered HTML. Opening a service
-// draws its connector and gives each step a small, sequential lift.
-export const serviceFlowLine: Variants = {
-  rest: { opacity: 0.3, scale: 0 },
-  connected: { opacity: 1, scale: 1, transition: { duration: 0.65 } }
-};
-
-export const serviceFlowStep: Variants = {
-  rest: { y: 0 },
-  connected: (step: number) => ({
-    y: step < 0 ? 0 : [0, -5, 0],
-    transition: { duration: step < 0 ? 0 : 0.6, delay: step < 0 ? 0 : step * 0.14 }
-  })
-};
-
 export const financialScroll = {
   scan: [0.22, 0.49],
   transfer: [0.49, 0.78],

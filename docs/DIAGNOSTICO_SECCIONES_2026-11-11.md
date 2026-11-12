@@ -11,6 +11,10 @@ resuelve INT-01, INT-02, INT-04, INT-05 e INT-11 en la rama de trabajo. El diagn
 de abajo conserva las observaciones originales; la implementación se entrega como
 vista previa y todavía no se ha promovido a producción.
 
+Segunda fase: [rediseño de Servicios](SERVICIOS_2026-11-12.md), con base clara,
+ejemplos visuales diferenciados y alcances accesibles. Atiende INT-03 e INT-08
+para esa página; el resto del diagnóstico continúa como referencia pendiente.
+
 ## Conclusión
 
 Las páginas interiores funcionan, pero conservan una etapa visual anterior al

@@ -1,0 +1,306 @@
+{
+  "environment": "Local production build, Node 24, integrated browser",
+  "viewportObservations": [
+    {
+      "chapters": 6,
+      "figures": [
+        {
+          "class": "service-figure scene-software-a-medida",
+          "scrollWidth": 261,
+          "width": 261
+        },
+        {
+          "class": "service-figure scene-automatizacion",
+          "scrollWidth": 261,
+          "width": 261
+        },
+        {
+          "class": "service-figure scene-integraciones-y-apis",
+          "scrollWidth": 261,
+          "width": 261
+        },
+        {
+          "class": "service-figure scene-power-platform",
+          "scrollWidth": 261,
+          "width": 261
+        },
+        {
+          "class": "service-figure scene-analitica-e-ia",
+          "scrollWidth": 261,
+          "width": 261
+        },
+        {
+          "class": "service-figure scene-modernizacion",
+          "scrollWidth": 261,
+          "width": 261
+        }
+      ],
+      "h1": [
+        "Software para el trabajo real."
+      ],
+      "images": [
+        {
+          "alt": "Portátil con una aplicación de trabajo junto a un cuaderno de procesos, en una mesa iluminada por luz natural.",
+          "loaded": false
+        }
+      ],
+      "mainBackground": "rgb(247, 247, 245)",
+      "overflow": false,
+      "viewport": [
+        320,
+        740
+      ]
+    },
+    {
+      "chapters": 6,
+      "figures": [
+        {
+          "class": "service-figure scene-software-a-medida",
+          "scrollWidth": 331,
+          "width": 331
+        },
+        {
+          "class": "service-figure scene-automatizacion",
+          "scrollWidth": 331,
+          "width": 331
+        },
+        {
+          "class": "service-figure scene-integraciones-y-apis",
+          "scrollWidth": 331,
+          "width": 331
+        },
+        {
+          "class": "service-figure scene-power-platform",
+          "scrollWidth": 331,
+          "width": 331
+        },
+        {
+          "class": "service-figure scene-analitica-e-ia",
+          "scrollWidth": 331,
+          "width": 331
+        },
+        {
+          "class": "service-figure scene-modernizacion",
+          "scrollWidth": 331,
+          "width": 331
+        }
+      ],
+      "h1": [
+        "Software para el trabajo real."
+      ],
+      "images": [
+        {
+          "alt": "Portátil con una aplicación de trabajo junto a un cuaderno de procesos, en una mesa iluminada por luz natural.",
+          "loaded": false
+        }
+      ],
+      "mainBackground": "rgb(247, 247, 245)",
+      "overflow": false,
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "chapters": 6,
+      "figures": [
+        {
+          "class": "service-figure scene-software-a-medida",
+          "scrollWidth": 689,
+          "width": 689
+        },
+        {
+          "class": "service-figure scene-automatizacion",
+          "scrollWidth": 689,
+          "width": 689
+        },
+        {
+          "class": "service-figure scene-integraciones-y-apis",
+          "scrollWidth": 689,
+          "width": 689
+        },
+        {
+          "class": "service-figure scene-power-platform",
+          "scrollWidth": 689,
+          "width": 689
+        },
+        {
+          "class": "service-figure scene-analitica-e-ia",
+          "scrollWidth": 689,
+          "width": 689
+        },
+        {
+          "class": "service-figure scene-modernizacion",
+          "scrollWidth": 689,
+          "width": 689
+        }
+      ],
+      "h1": [
+        "Software para el trabajo real."
+      ],
+      "images": [
+        {
+          "alt": "Portátil con una aplicación de trabajo junto a un cuaderno de procesos, en una mesa iluminada por luz natural.",
+          "loaded": false
+        }
+      ],
+      "mainBackground": "rgb(247, 247, 245)",
+      "overflow": false,
+      "viewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "chapters": 6,
+      "figures": [
+        {
+          "class": "service-figure scene-software-a-medida",
+          "scrollWidth": 601,
+          "width": 601
+        },
+        {
+          "class": "service-figure scene-automatizacion",
+          "scrollWidth": 523,
+          "width": 523
+        },
+        {
+          "class": "service-figure scene-integraciones-y-apis",
+          "scrollWidth": 601,
+          "width": 601
+        },
+        {
+          "class": "service-figure scene-power-platform",
+          "scrollWidth": 523,
+          "width": 523
+        },
+        {
+          "class": "service-figure scene-analitica-e-ia",
+          "scrollWidth": 601,
+          "width": 601
+        },
+        {
+          "class": "service-figure scene-modernizacion",
+          "scrollWidth": 523,
+          "width": 523
+        }
+      ],
+      "h1": [
+        "Software para el trabajo real."
+      ],
+      "images": [
+        {
+          "alt": "Portátil con una aplicación de trabajo junto a un cuaderno de procesos, en una mesa iluminada por luz natural.",
+          "loaded": true
+        }
+      ],
+      "mainBackground": "rgb(247, 247, 245)",
+      "overflow": false,
+      "viewport": [
+        1280,
+        900
+      ]
+    }
+  ],
+  "imageAfterLoad": {
+    "loaded": true,
+    "naturalWidth": 390
+  },
+  "keyboard": [
+    {
+      "headings": [
+        "Tiene sentido si…",
+        "Qué construimos",
+        "Lo que buscamos"
+      ],
+      "open": true,
+      "service": "software-a-medida"
+    },
+    {
+      "headings": [
+        "Tiene sentido si…",
+        "Qué construimos",
+        "Lo que buscamos"
+      ],
+      "open": true,
+      "service": "automatizacion"
+    },
+    {
+      "headings": [
+        "Tiene sentido si…",
+        "Qué construimos",
+        "Lo que buscamos"
+      ],
+      "open": true,
+      "service": "integraciones-y-apis"
+    },
+    {
+      "headings": [
+        "Tiene sentido si…",
+        "Qué construimos",
+        "Lo que buscamos"
+      ],
+      "open": true,
+      "service": "power-platform"
+    },
+    {
+      "headings": [
+        "Tiene sentido si…",
+        "Qué construimos",
+        "Lo que buscamos"
+      ],
+      "open": true,
+      "service": "analitica-e-ia"
+    },
+    {
+      "headings": [
+        "Tiene sentido si…",
+        "Qué construimos",
+        "Lo que buscamos"
+      ],
+      "open": true,
+      "service": "modernizacion"
+    }
+  ],
+  "skip": {
+    "focused": "contenido",
+    "hash": "#contenido"
+  },
+  "deepLinks": [
+    {
+      "hash": "#software-a-medida",
+      "headerBottom": 65,
+      "top": 96.390625
+    },
+    {
+      "hash": "#automatizacion",
+      "headerBottom": 65,
+      "top": 96.375
+    },
+    {
+      "hash": "#integraciones-y-apis",
+      "headerBottom": 65,
+      "top": 95.828125
+    },
+    {
+      "hash": "#power-platform",
+      "headerBottom": 65,
+      "top": 96.484375
+    },
+    {
+      "hash": "#analitica-e-ia",
+      "headerBottom": 65,
+      "top": 95.546875
+    },
+    {
+      "hash": "#modernizacion",
+      "headerBottom": 65,
+      "top": 95.953125
+    }
+  ],
+  "motion": {
+    "before": "transform:scaleX(0)",
+    "after": "transform: scaleX(0.974905);"
+  },
+  "note": "Early image observations occurred during responsive image loading; imageAfterLoad records the completed mobile load."
+}
