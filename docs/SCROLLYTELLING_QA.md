@@ -13,7 +13,7 @@ composición independiente, cuatro capítulos y acciones dentro de la escena.
 | --- | --- |
 | Automatización financiera | Documento sobre una mesa fotográfica, línea de lectura, traslado de valores, escritura progresiva y teclas que se presionan; los tres campos quedan registrados. |
 | Atención | Teléfono en primer plano, fotografía de la persona que atiende y consola; la respuesta se escribe y llega al portal, y el cierre deja un historial. |
-| Power Platform | Solicitud en una tableta, aprobación accionable, sello de decisión y barras que incorporan el cambio de pendientes a aprobadas. |
+| Power Platform | Recorrido continuo controlado por scroll: app, traslado de una misma solicitud, sello de aprobación e incorporación al informe. Sin decisiones del visitante. Véase `POWER_PLATFORM_SCROLL_QA.md`. |
 | Blockchain | Documento sobre una escena oscura, registro de la huella y comparación SHA-256 real del texto; cambiar/restaurar una palabra modifica el resultado. El registro en cadena es ilustrativo. |
 | Integraciones | Producto fotográfico con luz accionable; ocho unidades visibles, dos apartadas y un reintento que conserva la misma reserva. |
 
@@ -63,7 +63,7 @@ reutilizan fotografías existentes del portafolio.
 - La interrupción deja seis unidades disponibles y dos reservadas. El reintento,
   también accionado con Enter, conserva ambas cantidades.
 - La lámpara cambia `aria-pressed` y su luz visible al activarse.
-- La aprobación responde a Enter. Las acciones de escena trasladan el foco al relato.
+- Los capítulos responden al teclado. Las acciones de las otras escenas trasladan el foco al relato.
 - Se corrigieron recortes de documento, consola, aprobación y reserva en los tamaños
   mínimos. No se observó desplazamiento horizontal en los tamaños comprobados.
 - Consola del navegador: sin errores durante la revisión.

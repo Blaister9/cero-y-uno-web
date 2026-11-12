@@ -1,0 +1,870 @@
+/* A single horizontal scene, positioned directly by scroll. */
+.story-purchase {
+  background: #152b25;
+}
+.story-purchase::after {
+  display: none;
+}
+.power-camera {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.power-world {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(calc(var(--power-camera) * -1%), 0, 0);
+}
+.power-world *,
+.power-world *::before,
+.power-world *::after {
+  transition: none;
+  animation: none;
+}
+.power-office {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 76%;
+  z-index: 1;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, #000 68%, transparent);
+}
+.power-office img {
+  object-fit: cover;
+  object-position: 35% 40%;
+  transform: scale(calc(1 + var(--power-departure) * 0.08));
+}
+.power-office::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #11251de6, transparent 65%);
+}
+.power-office-caption {
+  position: absolute;
+  left: 6%;
+  bottom: 18%;
+  width: 45%;
+  z-index: 1;
+  color: #fff;
+}
+.power-office-caption span {
+  display: block;
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+.power-office-caption strong {
+  font-size: clamp(23px, 3vw, 40px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+}
+.power-desk {
+  position: absolute;
+  left: 58%;
+  top: 0;
+  width: 166%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 27% 20%, #c3c5b9, transparent 58%),
+    linear-gradient(100deg, #7e8d7b, #aeb3a2 35%, #19382e 62%, #10291f);
+}
+.power-desk::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0 3px,
+    #18311f33 3px 4px
+  );
+}
+.power-flow {
+  position: absolute;
+  left: 86%;
+  top: 85%;
+  width: 68%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #e1e6d6;
+  opacity: var(--power-departure);
+}
+.power-flow span {
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  white-space: nowrap;
+}
+.power-flow i {
+  height: 1px;
+  background: currentColor;
+  flex: 1;
+}
+.power-tablet {
+  position: absolute;
+  left: 50%;
+  top: 7%;
+  width: 41%;
+  height: 82%;
+  border: 8px solid #23322c;
+  border-right-width: 16px;
+  border-radius: 19px;
+  background: #f7f8f3;
+  box-shadow: 16px 22px 35px #07190d55;
+  transform: perspective(1100px)
+    rotateY(calc(-12deg + var(--power-departure) * 17deg))
+    rotateZ(calc(2deg - var(--power-departure) * 4deg));
+  z-index: 3;
+}
+.power-tablet-camera {
+  position: absolute;
+  right: -11px;
+  top: 49%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #8b9d88;
+}
+.power-appbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #543d68;
+  color: #fff;
+  font-size: 10px;
+  border-radius: 10px 8px 0 0;
+}
+.power-appbar > span {
+  margin-left: auto;
+}
+.power-form {
+  padding: 18px 24px;
+}
+.power-form .story-overline {
+  font-size: 9px;
+  color: #7b6586;
+}
+.power-form h4 {
+  font-size: clamp(20px, 2.3vw, 29px);
+  margin-top: 5px;
+}
+.power-form dl {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+.power-form dl > div {
+  display: grid;
+  grid-template-columns: 34% 1fr;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #d5dcce;
+  padding-bottom: 8px;
+}
+.power-form dt {
+  font-size: 10px;
+}
+.power-form dd {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 24px;
+  font-size: 13px;
+  gap: 5px;
+}
+.power-form dd svg {
+  flex-shrink: 0;
+  color: #436c40;
+}
+.power-submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 12px;
+  background: #ece6f1;
+  color: #594268;
+  margin-top: 16px;
+  font-size: 10px;
+}
+.power-form-reference {
+  display: block;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  color: #83927c;
+  margin-top: 12px;
+}
+.power-inbox-label {
+  position: absolute;
+  left: 112%;
+  top: 5%;
+  width: 35%;
+  color: #294434;
+  opacity: calc(var(--power-departure) * (1 - var(--power-report)));
+}
+.power-inbox-label strong {
+  display: block;
+  font-size: 19px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+.power-paper {
+  position: absolute;
+  left: calc(72% + var(--power-departure) * 35% + var(--power-report) * 15%);
+  top: 16%;
+  width: 32%;
+  height: 66%;
+  background: #faf8ec;
+  color: #334339;
+  box-shadow:
+    3px 7px 2px #1a362124,
+    15px 24px 35px #12281755;
+  opacity: var(--power-paper);
+  transform-origin: center;
+  transform: rotate(
+      calc(-10deg + var(--power-departure) * 12deg - var(--power-report) * 7deg)
+    )
+    scale(calc(1 - var(--power-report) * 0.24));
+  z-index: 5;
+}
+.power-paper::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(45deg, #d6d9cb 50%, #849984 51%);
+  box-shadow: -2px 2px 2px #0001;
+}
+.power-paper-top {
+  position: absolute;
+  top: 7%;
+  left: 9%;
+  right: 10%;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  font-size: 9px;
+  color: #74806f;
+}
+.power-paper-reference {
+  position: absolute;
+  top: 20%;
+  left: 9%;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+}
+.power-paper h4 {
+  position: absolute;
+  top: 29%;
+  left: 9%;
+  width: 82%;
+  font-size: clamp(20px, 2.2vw, 30px);
+  line-height: 1.05;
+}
+.power-paper-detail {
+  position: absolute;
+  top: 45%;
+  left: 9%;
+  right: 9%;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+.power-paper-detail strong {
+  font-size: 23px;
+  font-weight: 400;
+}
+.power-paper-detail span {
+  font-size: 11px;
+}
+.power-paper-rules {
+  position: absolute;
+  left: 9%;
+  right: 9%;
+  top: 59%;
+  display: grid;
+  gap: 9px;
+}
+.power-paper-rules i {
+  display: block;
+  height: 1px;
+  background: #d5d7c9;
+}
+.power-paper-rules i:last-child {
+  width: 62%;
+}
+.power-signature {
+  position: absolute;
+  left: 9%;
+  bottom: 14%;
+  width: 49%;
+  color: #3c5940;
+}
+.power-signature span {
+  font-size: 8px;
+}
+.power-signature svg {
+  display: block;
+  width: 100%;
+  height: 30px;
+}
+.power-impression {
+  position: absolute;
+  bottom: 16%;
+  right: 6%;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  border: 3px double #3a6c47;
+  color: #3a6c47;
+  padding: 6px 8px;
+  font:
+    13px "IBM Plex Mono",
+    monospace;
+  text-transform: uppercase;
+  transform: rotate(-12deg) scale(calc(1.08 - var(--power-ink) * 0.08));
+  opacity: var(--power-ink);
+}
+.power-paper-state {
+  position: absolute;
+  bottom: 6%;
+  left: 9%;
+  font-size: 9px;
+  color: #5f735e;
+}
+.power-rubber-stamp {
+  position: absolute;
+  right: -7%;
+  bottom: 12%;
+  width: 53%;
+  height: auto;
+  object-fit: contain;
+  opacity: var(--power-stamp);
+  transform-origin: 50% 86%;
+  transform: translateY(var(--power-stamp-y)) rotate(-12deg)
+    scale(var(--power-stamp-scale));
+  filter: drop-shadow(5px 11px 6px #0003);
+}
+.power-report {
+  position: absolute;
+  left: 152%;
+  top: 8%;
+  width: 59%;
+  color: #edf0df;
+  opacity: var(--power-report);
+}
+.power-report .story-overline {
+  color: #b1c1ab;
+  font-size: 9px;
+}
+.power-report h4 {
+  font-size: clamp(25px, 3vw, 39px);
+  line-height: 1.08;
+  max-width: 18ch;
+  margin-top: 10px;
+}
+.power-report-counts {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+  margin-top: 20px;
+}
+.power-report-counts > div {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.power-report-counts strong {
+  font-size: 48px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+.power-report-counts span {
+  font-size: 11px;
+  color: #bdcbb5;
+}
+.power-report-counts > div:first-child strong {
+  color: #c5b5d6;
+}
+.power-report-counts > svg {
+  color: #71947a;
+}
+.power-report-chart {
+  display: block;
+  width: 100%;
+  height: 110px;
+  margin-top: 12px;
+}
+.power-report-record {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid #a8c39140;
+  padding-top: 12px;
+  color: #dce9c1;
+  font-size: 11px;
+}
+.power-report-record strong {
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+}
+.power-report-record > span {
+  margin-left: auto;
+}
+.power-report p {
+  font-size: 11px;
+  color: #bdcbb5;
+  margin-top: 8px;
+}
+.power-route {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: #e0e9d6;
+  z-index: 6;
+}
+.power-route > span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  opacity: 0.5;
+}
+.power-route > span[data-current="true"] {
+  opacity: 1;
+}
+.power-route i {
+  width: 5px;
+  height: 5px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.power-route > span[data-current="true"] i {
+  background: currentColor;
+}
+@media (min-width: 601px) and (max-height: 850px) {
+  .power-form {
+    padding: 12px 18px;
+  }
+  .power-form dl {
+    margin-top: 9px;
+    gap: 6px;
+  }
+  .power-form dl > div {
+    padding-bottom: 5px;
+  }
+  .power-form-reference {
+    margin-top: 8px;
+  }
+  .power-submit {
+    margin-top: 10px;
+    padding: 7px 10px;
+  }
+  .power-appbar {
+    padding: 8px 16px;
+  }
+  .power-form h4 {
+    font-size: 22px;
+  }
+  .power-paper-detail strong {
+    font-size: 19px;
+  }
+  .power-paper-rules {
+    gap: 6px;
+  }
+  .power-report h4 {
+    font-size: 28px;
+  }
+  .power-report-counts {
+    margin-top: 14px;
+  }
+  .power-report-counts strong {
+    font-size: 38px;
+  }
+  .power-report-chart {
+    height: 85px;
+    margin-top: 6px;
+  }
+  .power-report-record {
+    padding-top: 8px;
+  }
+}
+@media (min-width: 601px) and (max-width: 1000px) {
+  .power-tablet {
+    left: 48%;
+    width: 47%;
+  }
+  .power-form {
+    padding-inline: 14px;
+  }
+  .power-form dd {
+    font-size: 11px;
+  }
+  .power-paper {
+    width: 36%;
+  }
+  .power-inbox-label {
+    font-size: 9px;
+  }
+  .power-report-counts {
+    gap: 16px;
+  }
+  .power-report-counts > div {
+    gap: 7px;
+  }
+  .power-report-counts span {
+    font-size: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .story-project[data-story="power-platform"] .story-track {
+    --journey-pin-top: 72px;
+  }
+  .story-project[data-story="power-platform"] .journey-caption {
+    padding-block: 14px;
+    gap: 10px;
+  }
+  .story-project[data-story="power-platform"] .journey-caption h4 {
+    font-size: 17px;
+  }
+  .story-project[data-story="power-platform"] .journey-caption > p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .story-project[data-story="power-platform"] .journey-caption-title {
+    grid-template-columns: 40px 1fr;
+    gap: 7px;
+  }
+  .story-project[data-story="power-platform"] .journey-arrows {
+    flex-direction: column;
+  }
+  .story-project[data-story="power-platform"] .journey-arrows button {
+    width: 34px;
+    height: 34px;
+  }
+  .story-project[data-story="power-platform"] .journey-chapters {
+    gap: 8px;
+    padding-bottom: 8px;
+  }
+  .story-purchase {
+    height: clamp(300px, calc(100svh - 350px), 480px);
+  }
+  .power-world {
+    transform: translate3d(calc(var(--power-mobile-camera) * -1%), 0, 0);
+  }
+  .power-office {
+    width: 105%;
+    mask-image: linear-gradient(90deg, #000 80%, transparent);
+  }
+  .power-office img {
+    object-position: 34% 30%;
+  }
+  .power-office::after {
+    background: linear-gradient(0deg, #11251df0, #11251d40);
+  }
+  .power-office-caption {
+    left: 6%;
+    top: 5%;
+    bottom: auto;
+    width: 75%;
+  }
+  .power-office-caption strong {
+    font-size: 21px;
+  }
+  .power-office-caption span {
+    font-size: 8px;
+    margin-bottom: 3px;
+  }
+  .power-desk {
+    left: 80%;
+    width: 235%;
+    background:
+      radial-gradient(ellipse at 26% 25%, #bdc3b1, transparent 62%),
+      linear-gradient(90deg, #7d927b, #a6b29d 34%, #19382e 67%, #10291f);
+  }
+  .power-tablet {
+    left: 12%;
+    top: 23%;
+    width: 78%;
+    height: 65%;
+    border-width: 6px;
+    border-right-width: 13px;
+    border-radius: 13px;
+  }
+  .power-tablet-camera {
+    right: -9px;
+    width: 4px;
+    height: 4px;
+  }
+  .power-appbar {
+    padding: 7px 12px;
+    font-size: 9px;
+    border-radius: 6px 5px 0 0;
+  }
+  .power-form {
+    padding: 10px 14px;
+  }
+  .power-form .story-overline {
+    font-size: 7px;
+  }
+  .power-form h4 {
+    font-size: 19px;
+    margin-top: 3px;
+  }
+  .power-form dl {
+    margin-top: 8px;
+    gap: 5px;
+  }
+  .power-form dl > div {
+    padding-bottom: 3px;
+    gap: 7px;
+  }
+  .power-form dt {
+    font-size: 8px;
+  }
+  .power-form dd {
+    font-size: 10px;
+    min-height: 20px;
+  }
+  .power-submit {
+    margin-top: 9px;
+    padding: 6px 9px;
+    font-size: 8px;
+  }
+  .power-form-reference {
+    display: none;
+  }
+  .power-inbox-label {
+    left: 132%;
+    top: 5%;
+    width: 70%;
+  }
+  .power-inbox-label strong {
+    font-size: 20px;
+  }
+  .power-paper {
+    left: calc(60% + var(--power-departure) * 70%);
+    top: 23%;
+    width: 74%;
+    height: 62%;
+    opacity: calc(var(--power-paper) * (1 - var(--power-report)));
+  }
+  .power-paper h4 {
+    font-size: 23px;
+  }
+  .power-paper-detail strong {
+    font-size: 19px;
+  }
+  .power-paper-detail span {
+    font-size: 10px;
+  }
+  .power-paper-rules {
+    gap: 6px;
+  }
+  .power-impression {
+    font-size: 10px;
+    padding: 5px 7px;
+    right: 5%;
+  }
+  .power-impression svg {
+    width: 15px;
+  }
+  .power-signature span {
+    font-size: 7px;
+  }
+  .power-signature svg {
+    height: 24px;
+  }
+  .power-paper-state {
+    font-size: 8px;
+  }
+  .power-flow {
+    display: none;
+  }
+  .power-report {
+    left: 211%;
+    top: 9%;
+    width: 83%;
+  }
+  .power-report .story-overline {
+    font-size: 7px;
+  }
+  .power-report h4 {
+    font-size: 27px;
+    margin-top: 10px;
+  }
+  .power-report-counts {
+    margin-top: 19px;
+    gap: 15px;
+    justify-content: space-between;
+  }
+  .power-report-counts > div {
+    display: block;
+  }
+  .power-report-counts strong {
+    font-size: 42px;
+  }
+  .power-report-counts span {
+    display: block;
+    font-size: 10px;
+    margin-top: 3px;
+  }
+  .power-report-chart {
+    margin-top: 12px;
+    height: 85px;
+  }
+  .power-report-record {
+    font-size: 10px;
+    padding-top: 10px;
+    gap: 5px;
+  }
+  .power-report-record strong {
+    font-size: 9px;
+  }
+  .power-report p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  .power-route {
+    bottom: 8px;
+    display: block;
+  }
+  .power-route > span {
+    display: none;
+    font-size: 9px;
+    gap: 6px;
+  }
+  .power-route > span[data-current="true"] {
+    display: flex;
+  }
+}
+@media (max-width: 600px) and (max-height: 760px) {
+  .power-tablet {
+    top: 24%;
+    height: 66%;
+  }
+  .power-form {
+    padding: 8px 11px;
+  }
+  .power-form h4 {
+    font-size: 17px;
+  }
+  .power-form dl {
+    margin-top: 6px;
+    gap: 3px;
+  }
+  .power-form dd {
+    min-height: 18px;
+  }
+  .power-submit {
+    margin-top: 6px;
+    padding: 5px 8px;
+  }
+  .power-report h4 {
+    font-size: 23px;
+  }
+  .power-report-counts {
+    margin-top: 12px;
+  }
+  .power-report-counts strong {
+    font-size: 34px;
+  }
+  .power-report-chart {
+    height: 68px;
+    margin-top: 8px;
+  }
+  .power-report-record {
+    padding-top: 8px;
+  }
+  .power-paper h4 {
+    font-size: 20px;
+  }
+  .power-paper-detail strong {
+    font-size: 17px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .power-tablet,
+  .power-paper,
+  .power-impression {
+    transform: none;
+  }
+  .power-rubber-stamp {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) and (max-height: 700px) {
+  .power-tablet {
+    top: 21%;
+    height: 70%;
+  }
+  .power-form .story-overline {
+    display: none;
+  }
+  .power-form {
+    padding: 6px 10px;
+  }
+  .power-form h4 {
+    font-size: 16px;
+  }
+  .power-form dd {
+    min-height: 16px;
+  }
+  .power-form dl {
+    gap: 2px;
+    margin-top: 5px;
+  }
+  .power-submit {
+    padding: 4px 7px;
+  }
+  .power-report {
+    top: 7%;
+  }
+  .power-report h4 {
+    font-size: 21px;
+    margin-top: 7px;
+  }
+  .power-report-counts {
+    margin-top: 10px;
+  }
+  .power-report-counts strong {
+    font-size: 30px;
+  }
+  .power-report-chart {
+    height: 48px;
+    margin-top: 5px;
+  }
+  .power-report p {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 600px) {
+  .story-project[data-story="power-platform"]
+    .story-track[data-linked="false"]
+    .story-purchase {
+    height: 480px;
+  }
+}

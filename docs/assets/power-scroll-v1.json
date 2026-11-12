@@ -1,0 +1,10 @@
+{
+  "tool": "image_gen (built-in)",
+  "purpose": "Photographic stamp for a scroll-controlled, non-interactive Power Platform sequence",
+  "assets": [
+    {
+      "path": "public/images/stories/sello-aprobacion-v1.webp",
+      "prompt": "Use case: product-mockup. Asset type: isolated photographic object for a premium corporate website scroll-controlled approval scene. Primary request: one real traditional office rubber approval stamp with a deep forest green turned wooden handle and a brushed dark brass rectangular base. Three-quarter front view, slightly elevated camera, entire object centered, generous clear padding, upright handle. Premium natural materials with subtle worn texture, believable studio photograph, soft warm light from upper left, restrained shadows. No words, no letters, no ink impression, no logos, no extra objects. Transparent background. The stamp will descend onto a paper during a scroll sequence; keep its flat rectangular base clearly visible and horizontal."
+    }
+  ]
+}

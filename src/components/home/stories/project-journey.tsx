@@ -11,7 +11,10 @@ import { useRef } from "react";
 import type { BlockchainDemo } from "@/content/blockchain-demo";
 import { portfolioContent, type PortfolioId } from "@/content/portfolio";
 import { projectStories } from "@/content/project-stories";
-import { journeyCopy } from "@/content/story-scenes";
+import {
+  journeyCopy,
+  purchaseScene as purchaseCopy,
+} from "@/content/story-scenes";
 import { useStoryProgress } from "@/lib/use-story-progress";
 import { FinanceScene } from "./finance-scene";
 import { ConversationScene } from "./conversation-scene";
@@ -54,6 +57,7 @@ export function ProjectJourney({
     <article
       id="home-current-project"
       className="story-project"
+      data-story={id}
       aria-labelledby="home-project-title"
     >
       <header className="home-project-heading">
@@ -80,7 +84,11 @@ export function ProjectJourney({
       </header>
       <p className="journey-instruction">
         <ArrowDown size={15} aria-hidden="true" />
-        {linked ? journeyCopy.scroll : journeyCopy.manual}
+        {linked
+          ? id === "power-platform"
+            ? purchaseCopy.scroll
+            : journeyCopy.scroll
+          : journeyCopy.manual}
       </p>
       <div className="story-track" data-linked={linked} ref={track}>
         <div className="journey-dock">
@@ -114,7 +122,11 @@ export function ProjectJourney({
             )}
             {id === "atencion" && <ConversationScene {...sceneProps} />}
             {id === "power-platform" && story.purchaseDemo && (
-              <PurchaseScene {...sceneProps} demo={story.purchaseDemo} />
+              <PurchaseScene
+                {...sceneProps}
+                progress={linked ? progress : [0.16, 0.43, 0.68, 1][stage]}
+                demo={story.purchaseDemo}
+              />
             )}
             {id === "blockchain" && (
               <IntegrityScene {...sceneProps} demo={blockchain} />

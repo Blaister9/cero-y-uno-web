@@ -82,8 +82,13 @@ export const conversationScene = {
 };
 
 export const purchaseScene = {
-  action: "Aprobar esta solicitud",
   image: "/images/portfolio/power-platform-v3.webp",
+  stampImage: "/images/stories/sello-aprobacion-v1.webp",
+  scroll: "Una misma solicitud, de principio a fin. Avanza con el scroll.",
+  team: "Operaciones",
+  need: "El equipo necesita material.",
+  referenceLine: "La misma referencia, en cada paso",
+  reportHeading: "Una decisión que ya se puede ver.",
   label: "Una solicitud pasa del equipo a compras y al informe.",
   app: "Compras del equipo",
   form: "Nueva solicitud",
@@ -108,7 +113,7 @@ export const purchaseScene = {
   states: [
     "La solicitud tiene una referencia",
     "La compra espera una decisión",
-    "El equipo puede consultar la aprobación",
+    "La decisión queda en la solicitud",
     "El informe incorpora el cambio",
   ],
 };

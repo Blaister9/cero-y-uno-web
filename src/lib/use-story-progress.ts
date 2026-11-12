@@ -11,7 +11,9 @@ export function useStoryProgress(
   const [linked, setLinked] = useState(false);
   useEffect(() => {
     const screen = window.matchMedia(
-      "(min-width: 901px) and (min-height: 720px) and (prefers-reduced-motion: no-preference)",
+      storyId === "power-platform"
+        ? "(min-height: 720px) and (prefers-reduced-motion: no-preference), (max-width: 600px) and (min-height: 650px) and (prefers-reduced-motion: no-preference)"
+        : "(min-width: 901px) and (min-height: 720px) and (prefers-reduced-motion: no-preference)",
     );
     let frame = 0;
     const update = () => {
@@ -22,7 +24,13 @@ export function useStoryProgress(
       const distance =
         rect.height - (dock?.offsetHeight ?? window.innerHeight - 104);
       setProgress(
-        Math.max(0, Math.min(1, (104 - rect.top) / Math.max(1, distance))),
+        Math.max(
+          0,
+          Math.min(
+            1,
+            (pinOffset(track.current) - rect.top) / Math.max(1, distance),
+          ),
+        ),
       );
     };
     const requestUpdate = () => {
@@ -48,7 +56,9 @@ export function useStoryProgress(
     setProgress(value);
     if (linked && track.current) {
       const top =
-        window.scrollY + track.current.getBoundingClientRect().top - 104;
+        window.scrollY +
+        track.current.getBoundingClientRect().top -
+        pinOffset(track.current);
       const dock = track.current.firstElementChild as HTMLElement | null;
       const distance =
         track.current.offsetHeight -
@@ -62,4 +72,12 @@ export function useStoryProgress(
     selectStage,
     stage: Math.min(3, Math.floor(progress * 4)),
   };
+}
+
+function pinOffset(track: HTMLElement) {
+  return (
+    (parseFloat(
+      getComputedStyle(track).getPropertyValue("--journey-pin-top"),
+    ) || 96) + 8
+  );
 }
