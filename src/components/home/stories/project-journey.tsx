@@ -15,6 +15,7 @@ import {
   journeyCopy,
   purchaseScene as purchaseCopy,
   integrityScene as integrityCopy,
+  inventoryScene as inventoryCopy,
 } from "@/content/story-scenes";
 import { useStoryProgress } from "@/lib/use-story-progress";
 import { FinanceScene } from "./finance-scene";
@@ -90,7 +91,9 @@ export function ProjectJourney({
             ? purchaseCopy.scroll
             : id === "blockchain"
               ? integrityCopy.scroll
-              : journeyCopy.scroll
+              : id === "integraciones"
+                ? inventoryCopy.scroll
+                : journeyCopy.scroll
           : journeyCopy.manual}
       </p>
       <div className="story-track" data-linked={linked} ref={track}>
@@ -139,7 +142,11 @@ export function ProjectJourney({
               />
             )}
             {id === "integraciones" && story.integrationDemo && (
-              <InventoryScene {...sceneProps} demo={story.integrationDemo} />
+              <InventoryScene
+                {...sceneProps}
+                progress={linked ? progress : [0.12, 0.36, 0.7, 1][stage]}
+                demo={story.integrationDemo}
+              />
             )}
           </div>
           <div

@@ -772,220 +772,6 @@
 }
 /* Document evidence against a dark photographic chain, with a real SHA-256 comparison. */
 /* Physical units move to a reservation. The same units stay reserved on retry. */
-.story-inventory {
-  background: #e7e5d8;
-}
-.story-inventory::after {
-  background: radial-gradient(ellipse at 65% 40%, #fff8, transparent 70%);
-}
-.inventory-order {
-  position: absolute;
-  left: 6%;
-  top: 6%;
-  width: 25%;
-  height: 89%;
-  padding: 20px 24px;
-  background: #fffef5;
-  box-shadow: 8px 10px 28px #243d2829;
-  transform: rotate(calc(-4deg + var(--story-progress) * 3deg));
-  text-align: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.inventory-order h4 {
-  font-size: 27px;
-  margin-top: 4px;
-}
-.lamp-interaction {
-  display: block;
-  position: relative;
-  min-height: 0;
-  flex: 1;
-  width: 100%;
-  isolation: isolate;
-  border-radius: 3px;
-}
-.order-lamp {
-  width: auto;
-  height: clamp(110px, 23svh, 200px);
-  max-height: 100%;
-  object-fit: contain;
-  margin: auto;
-  transform-origin: 50% 95%;
-  transform: rotate(calc(-6deg + var(--story-progress) * 10deg));
-  transition: filter 0.3s;
-}
-.lamp-light {
-  position: absolute;
-  top: 26%;
-  left: 20%;
-  right: -12%;
-  height: 65%;
-  border-radius: 50%;
-  background: radial-gradient(
-    ellipse,
-    #ffe298d9,
-    #ffdb7b50 40%,
-    transparent 70%
-  );
-  opacity: 0;
-  transition: opacity 0.3s;
-  z-index: -1;
-}
-.lamp-interaction[data-lit="true"] .lamp-light {
-  opacity: 1;
-}
-.lamp-interaction[data-lit="true"] .order-lamp {
-  filter: drop-shadow(5px 3px 8px #ffc34c66) brightness(1.08);
-}
-.lamp-switch {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  justify-content: center;
-  color: #55654d;
-  font-size: 9px;
-  margin-top: 5px;
-}
-.inventory-order > strong {
-  font-size: 13px;
-  font-weight: 500;
-  margin-top: 8px;
-}
-.inventory-sku {
-  font-size: 10px;
-  color: #697c5d;
-}
-.order-perforation {
-  border-top: 1px dashed #bbc3b1;
-  width: calc(100% + 48px);
-  margin: 13px 0;
-}
-.order-key span,
-.order-key code {
-  display: block;
-  font-size: 9px;
-}
-.order-key code {
-  font-size: 11px;
-  margin-top: 4px;
-}
-.inventory-connection {
-  position: absolute;
-  left: 34%;
-  top: 45%;
-  color: #526c48;
-}
-.story-inventory[data-stage="2"] .inventory-connection {
-  color: #9d5e29;
-}
-.inventory-shelf {
-  position: absolute;
-  left: 40%;
-  right: 5%;
-  top: 6%;
-}
-.inventory-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-.inventory-heading > div {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  align-items: baseline;
-  gap: 8px;
-}
-.inventory-heading strong {
-  font-size: 26px;
-  font-weight: 500;
-}
-.inventory-heading span {
-  font-size: 10px;
-}
-.inventory-units {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px 12px;
-  margin-top: 22px;
-}
-.inventory-unit {
-  border-bottom: 5px solid #bfc4af;
-  text-align: center;
-  position: relative;
-  padding-bottom: 8px;
-  transition:
-    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
-    border-color 0.5s;
-}
-.inventory-unit::after {
-  content: "";
-  position: absolute;
-  left: 4%;
-  right: 4%;
-  bottom: 15px;
-  height: 10px;
-  background: #4c5b422c;
-  border-radius: 50%;
-  filter: blur(4px);
-  z-index: -1;
-}
-.inventory-unit img {
-  height: clamp(65px, 12svh, 115px);
-  width: auto;
-  margin: auto;
-  object-fit: contain;
-}
-.inventory-unit > span {
-  font:
-    8px/1.5 "IBM Plex Mono",
-    monospace;
-  display: flex;
-  justify-content: center;
-  gap: 3px;
-  align-items: center;
-  margin-top: 4px;
-}
-.inventory-unit[data-reserved="true"] {
-  border-color: #447348;
-  transform: translateY(-9px) rotate(-3deg);
-  background: linear-gradient(0deg, #b7d5a947, transparent 75%);
-}
-.inventory-unit[data-reserved="true"] + .inventory-unit {
-  transform: translateY(-9px) rotate(3deg);
-}
-.inventory-receipt {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  border-top: 1px solid #b9c6ac;
-  padding: 16px 0;
-  margin-top: 18px;
-  color: #285431;
-  opacity: 0;
-  transform: translateY(8px);
-  transition:
-    transform 0.4s,
-    opacity 0.4s;
-}
-.inventory-receipt[data-visible="true"] {
-  opacity: 1;
-  transform: none;
-}
-.inventory-receipt strong {
-  display: block;
-  font-size: 15px;
-  font-weight: 500;
-}
-.inventory-receipt p {
-  font-size: 11px;
-  margin-top: 4px;
-}
-.inventory-receipt[data-warning="true"] {
-  color: #855120;
-}
 @media (prefers-reduced-motion: no-preference) {
   .conversation-speech[data-speaking="true"] .speech-wave i {
     animation: speech-wave 0.48s ease-in-out infinite alternate;
@@ -1009,10 +795,6 @@
   }
   .story-conversation[data-stage="2"] .phone-messages .chat-response {
     animation-delay: 0.22s;
-  }
-  .lamp-interaction:hover .order-lamp {
-    transform: rotate(5deg);
-    transition: transform 0.4s ease;
   }
   @keyframes message-arrives {
     from {
@@ -1111,20 +893,6 @@
     line-height: 1.5;
     margin-top: 3px;
   }
-  .inventory-units {
-    margin-top: 10px;
-    gap: 10px;
-  }
-  .inventory-receipt {
-    margin-top: 10px;
-    padding-top: 9px;
-  }
-  .inventory-unit img {
-    height: 65px;
-  }
-  .order-lamp {
-    height: 125px;
-  }
 }
 @media (max-width: 1000px) {
   .finance-paper {
@@ -1149,29 +917,6 @@
   }
   .conversation-speech p {
     font-size: 11px;
-  }
-  .inventory-order {
-    left: 3%;
-    width: 28%;
-    padding-inline: 14px;
-  }
-  .inventory-shelf {
-    left: 38%;
-    right: 3%;
-  }
-  .inventory-heading {
-    display: flex;
-  }
-  .inventory-heading > div {
-    justify-content: start;
-  }
-}
-@media (min-width: 601px) and (max-width: 1000px) {
-  .inventory-unit img {
-    height: 72px;
-  }
-  .order-lamp {
-    height: 130px;
   }
 }
 @media (min-width: 601px) and (max-width: 900px) {
@@ -1211,14 +956,6 @@
   .console-thread .chat-bubble {
     font-size: 10px;
     padding: 8px;
-  }
-}
-@media (min-width: 601px) and (max-height: 850px) {
-  .inventory-unit img {
-    height: 54px;
-  }
-  .inventory-receipt {
-    padding-block: 8px;
   }
 }
 @media (max-width: 900px), (max-height: 719px) {
@@ -1488,94 +1225,6 @@
   .transcript span {
     font-size: 8px;
   }
-  .story-inventory {
-    height: auto;
-  }
-  .story-inventory .story-composition {
-    height: auto;
-    padding: 20px 16px 62px;
-  }
-  .inventory-order {
-    position: relative;
-    width: 78%;
-    left: auto;
-    top: auto;
-    height: 310px;
-    margin-inline: auto;
-    padding: 12px 16px;
-  }
-  .inventory-order h4 {
-    font-size: 23px;
-  }
-  .order-lamp {
-    height: 130px;
-  }
-  .inventory-order > strong {
-    font-size: 12px;
-    margin-top: 6px;
-  }
-  .order-perforation {
-    margin: 8px 0;
-  }
-  .order-key code {
-    font-size: 10px;
-  }
-  .inventory-connection {
-    position: relative;
-    left: auto;
-    top: auto;
-    display: grid;
-    place-items: center;
-    margin-block: 18px;
-    transform: rotate(90deg);
-  }
-  .inventory-shelf {
-    position: relative;
-    left: auto;
-    right: auto;
-    top: auto;
-  }
-  .inventory-heading {
-    display: flex;
-    gap: 8px;
-  }
-  .inventory-heading > .story-overline {
-    max-width: 10ch;
-  }
-  .inventory-heading > div {
-    gap: 5px;
-  }
-  .inventory-heading strong {
-    font-size: 22px;
-  }
-  .inventory-heading span {
-    font-size: 8px;
-  }
-  .inventory-units {
-    gap: 14px 10px;
-    margin-top: 14px;
-  }
-  .inventory-unit img {
-    height: 68px;
-  }
-  .inventory-unit > span {
-    font-size: 8px;
-    flex-wrap: wrap;
-  }
-  .inventory-unit > span svg {
-    width: 9px;
-  }
-  .inventory-receipt {
-    gap: 9px;
-    margin-top: 12px;
-    padding-top: 12px;
-  }
-  .inventory-receipt strong {
-    font-size: 12px;
-  }
-  .inventory-receipt p {
-    font-size: 10px;
-  }
 }
 @media (min-width: 901px) and (min-height: 720px) and (max-height: 759px) {
   .finance-paper {
@@ -1591,10 +1240,6 @@
   }
   .story-track[data-linked="true"] .journey-caption {
     min-height: 136px;
-  }
-  .inventory-receipt {
-    padding-block: 4px;
-    margin-top: 6px;
   }
 }
 @media (max-width: 360px) {
@@ -1632,8 +1277,7 @@
   .conversation-portrait,
   .finance-paper,
   .finance-software,
-  .conversation-phone,
-  .order-lamp {
+  .conversation-phone {
     transform: none !important;
   }
   .field-travel,

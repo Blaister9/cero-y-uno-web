@@ -1,0 +1,785 @@
+/* A product and a real inventory share one route; scroll is the only clock. */
+.story-inventory {
+  background: #211e1c;
+  color: #eee7dd;
+}
+.story-inventory::after {
+  display: none;
+}
+.story-inventory .story-status {
+  background: #1b1918;
+}
+.dispatch-studio {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.dispatch-studio *,
+.dispatch-studio *::before,
+.dispatch-studio *::after {
+  transition: none;
+  animation: none;
+}
+.dispatch-ambient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 16% 55%, #9e80622e, transparent 54%),
+    linear-gradient(125deg, #36302b, #211e1c 65%);
+}
+.dispatch-ambient::after {
+  content: "";
+  position: absolute;
+  inset: 71% 0 0;
+  background: linear-gradient(#0e0c0b36, transparent);
+  border-top: 1px solid #aa94821a;
+  transform: skewY(-4deg);
+}
+.dispatch-product {
+  position: absolute;
+  left: 5%;
+  top: 6%;
+  width: 26%;
+  height: 79%;
+}
+.dispatch-shop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.dispatch-shop .story-overline {
+  color: #c1b4a7;
+}
+.dispatch-shop code {
+  font:
+    10px "IBM Plex Mono",
+    monospace;
+  color: #e8d6c4;
+}
+.dispatch-product-photo {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  width: auto;
+  aspect-ratio: 560 / 595;
+  height: 68%;
+  transform: translateX(-50%) rotate(calc(-5deg + var(--dispatch-light) * 5deg));
+  transform-origin: 50% 94%;
+}
+.dispatch-product-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  filter: drop-shadow(8px 18px 12px #0006);
+}
+.dispatch-beam {
+  position: absolute;
+  top: 42%;
+  left: 56%;
+  width: 60%;
+  height: 67%;
+  opacity: calc(var(--dispatch-light) * 0.36);
+  background: linear-gradient(165deg, #ffe3aa, #d8b2790d 85%);
+  clip-path: polygon(7% 0, 54% 0, 100% 100%, 0 100%);
+  filter: blur(9px);
+  transform: rotate(-12deg);
+}
+.dispatch-bulb {
+  position: absolute;
+  left: 53%;
+  top: 37%;
+  width: 34%;
+  height: 7%;
+  border-radius: 50%;
+  background: #fff2d1;
+  box-shadow: 0 0 12px #ffde94ad;
+  transform: rotate(-20deg);
+  opacity: calc(var(--dispatch-light) * 0.85);
+  z-index: 2;
+}
+.dispatch-product-caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.dispatch-product-caption > strong {
+  font-size: clamp(22px, 2.5vw, 35px);
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  display: block;
+  font-weight: 400;
+  margin-top: 4px;
+}
+.dispatch-product-caption > span:last-child {
+  display: block;
+  font-size: 11px;
+  color: #c2b6ab;
+  margin-top: 3px;
+}
+.dispatch-routing,
+.dispatch-route,
+.dispatch-route svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.dispatch-routing {
+  opacity: var(--dispatch-reveal);
+  pointer-events: none;
+}
+.dispatch-route-mobile {
+  display: none;
+}
+.dispatch-route path {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+}
+.dispatch-wire-shadow {
+  stroke: #0b0908;
+  stroke-width: 7;
+}
+.dispatch-wire {
+  stroke: #a9896c8c;
+  stroke-width: 2;
+}
+.dispatch-trace {
+  stroke: #f1d0a4;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+.dispatch-signal {
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(-4deg);
+  padding: 8px 28px 8px 12px;
+  color: #302a25;
+  background: #e8d9c5;
+  box-shadow: 0 4px 12px #0004;
+  min-width: 105px;
+  border-radius: 2px 9px 9px 2px;
+  z-index: 4;
+}
+.dispatch-signal > span {
+  display: block;
+  font:
+    7px "IBM Plex Mono",
+    monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.dispatch-signal code {
+  display: block;
+  margin-top: 4px;
+  font:
+    12px "IBM Plex Mono",
+    monospace;
+}
+.dispatch-signal svg {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: 9px;
+  top: 50%;
+  left: auto;
+  transform: translateY(-50%);
+}
+.dispatch-signal[data-response="true"] {
+  background: #dce3e8;
+}
+.dispatch-signal[data-retry="true"] {
+  outline: 1px solid #e9c99d99;
+  outline-offset: 3px;
+}
+.dispatch-api {
+  position: absolute;
+  left: 50%;
+  top: 17%;
+  transform: translateX(-50%);
+  text-align: center;
+  opacity: var(--dispatch-reveal);
+}
+.dispatch-api-node {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 3px;
+  width: 32px;
+  height: 28px;
+  margin: auto auto 8px;
+  padding: 5px;
+  border-bottom: 1px solid #bda48b;
+}
+.dispatch-api-node i {
+  height: 60%;
+  width: 4px;
+  background: #c9ac8e;
+}
+.dispatch-api-node i:nth-child(2) {
+  height: 100%;
+}
+.dispatch-api-node i:last-child {
+  height: 80%;
+}
+.dispatch-api .story-overline {
+  font-size: 9px;
+  color: #cdb69e;
+}
+.dispatch-key {
+  position: absolute;
+  left: 34%;
+  top: 54%;
+  width: 27%;
+  text-align: center;
+}
+.dispatch-key > span:first-child {
+  display: block;
+  font-size: 10px;
+  color: #c6b8aa;
+}
+.dispatch-key code {
+  display: block;
+  font:
+    12px "IBM Plex Mono",
+    monospace;
+  color: #f0d9bb;
+  margin-top: 9px;
+}
+.dispatch-key > span:last-child {
+  display: block;
+  font-size: 9px;
+  color: #a89c91;
+  margin-top: 8px;
+}
+.dispatch-warehouse {
+  position: absolute;
+  top: 6%;
+  right: 4%;
+  width: 31%;
+  height: 83%;
+  opacity: calc(0.4 + var(--dispatch-reveal) * 0.6);
+}
+.dispatch-stock-heading > .story-overline {
+  color: #bcb1a6;
+}
+.dispatch-stock-heading > div {
+  display: flex;
+  align-items: baseline;
+  gap: 23px;
+  margin-top: 5px;
+}
+.dispatch-stock-heading > div > span {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 9px;
+  color: #beb2a6;
+}
+.dispatch-stock-heading strong {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  color: #f4ece1;
+}
+.dispatch-shelves {
+  position: absolute;
+  inset: 0;
+}
+.dispatch-shelves i {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  top: 44%;
+  background: linear-gradient(#7c7168, #292522);
+  box-shadow: 0 9px 10px #0006;
+}
+.dispatch-shelves i:nth-child(2) {
+  top: 71%;
+}
+.dispatch-shelves i:last-child {
+  top: 99%;
+}
+.dispatch-unit {
+  position: absolute;
+  width: 21%;
+  height: 25%;
+}
+.dispatch-unit img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(3px 5px 3px #0007);
+}
+.dispatch-reserved-bay {
+  position: absolute;
+  left: 21%;
+  right: 22%;
+  bottom: 0;
+  height: 29%;
+  border-bottom: 2px solid #c6a17a;
+  background: linear-gradient(transparent 65%, #b48c5f1a);
+}
+.dispatch-reserved-bay span {
+  position: absolute;
+  bottom: -21px;
+  left: 50%;
+  transform: translateX(-50%);
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  color: #d5b993;
+}
+.dispatch-interruption {
+  position: absolute;
+  left: 35%;
+  top: 72%;
+  width: 27%;
+  text-align: center;
+  color: #efb698;
+}
+.dispatch-interruption svg {
+  margin: auto auto 8px;
+}
+.dispatch-interruption strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+}
+.dispatch-interruption > span {
+  font-size: 9px;
+  color: #c5b6a8;
+  display: block;
+  margin-top: 4px;
+}
+.dispatch-confirmation {
+  position: absolute;
+  left: 34%;
+  top: 70%;
+  width: 28%;
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  color: #e8ded1;
+}
+.dispatch-confirmation svg {
+  flex-shrink: 0;
+}
+.dispatch-confirmation .story-overline {
+  font-size: 8px;
+}
+.dispatch-confirmation strong {
+  display: block;
+  font:
+    22px "IBM Plex Mono",
+    monospace;
+  margin-top: 4px;
+}
+.dispatch-confirmation div > span:last-child {
+  display: block;
+  font-size: 10px;
+  color: #beb1a5;
+  margin-top: 5px;
+}
+.dispatch-attempt {
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
+  right: 5%;
+  display: flex;
+  gap: 20px;
+  font:
+    9px "IBM Plex Mono",
+    monospace;
+  color: #b3a69a;
+}
+@media (max-height: 850px) and (min-width: 601px) {
+  .dispatch-stock-heading strong {
+    font-size: 21px;
+  }
+  .dispatch-stock-heading > div {
+    margin-top: 3px;
+  }
+  .dispatch-key {
+    top: 52%;
+  }
+  .dispatch-api {
+    top: 13%;
+  }
+  .dispatch-interruption {
+    top: 72%;
+  }
+  .dispatch-interruption svg {
+    width: 17px;
+    height: 17px;
+    margin-bottom: 4px;
+  }
+  .dispatch-confirmation strong {
+    font-size: 19px;
+  }
+}
+@media (max-width: 900px) and (min-width: 601px) {
+  .dispatch-shop {
+    display: block;
+  }
+  .dispatch-shop code {
+    display: block;
+    margin-top: 4px;
+  }
+  .dispatch-stock-heading > div {
+    gap: 9px;
+  }
+  .dispatch-stock-heading > div > span {
+    display: block;
+    font-size: 8px;
+  }
+  .dispatch-stock-heading strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+  .dispatch-key code {
+    font-size: 10px;
+  }
+  .dispatch-key > span:first-child {
+    font-size: 9px;
+  }
+  .dispatch-key > span:last-child {
+    font-size: 8px;
+  }
+  .dispatch-confirmation {
+    gap: 6px;
+  }
+  .dispatch-confirmation strong {
+    font-size: 18px;
+  }
+  .dispatch-confirmation .story-overline {
+    font-size: 7px;
+  }
+  .dispatch-confirmation div > span:last-child {
+    font-size: 9px;
+  }
+  .dispatch-interruption strong {
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .story-project[data-story="integraciones"] .story-track {
+    --journey-pin-top: 72px;
+  }
+  .story-project[data-story="integraciones"] .journey-caption {
+    padding-block: 14px;
+    gap: 10px;
+  }
+  .story-project[data-story="integraciones"] .journey-caption h4 {
+    font-size: 17px;
+  }
+  .story-project[data-story="integraciones"] .journey-caption > p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .story-project[data-story="integraciones"] .journey-caption-title {
+    grid-template-columns: 35px 1fr;
+    gap: 7px;
+  }
+  .story-project[data-story="integraciones"] .journey-arrows {
+    flex-direction: column;
+  }
+  .story-project[data-story="integraciones"] .journey-arrows button {
+    width: 34px;
+    height: 34px;
+  }
+  .story-project[data-story="integraciones"] .journey-chapters {
+    gap: 8px;
+    padding-bottom: 8px;
+  }
+  .story-inventory {
+    height: clamp(320px, calc(100svh - 330px), 490px);
+  }
+  .dispatch-product {
+    left: 5%;
+    top: 5%;
+    width: 88%;
+    height: 36%;
+  }
+  .dispatch-shop {
+    position: absolute;
+    left: 47%;
+    top: 0;
+    display: block;
+  }
+  .dispatch-shop .story-overline {
+    font-size: 8px;
+  }
+  .dispatch-shop code {
+    display: block;
+    margin-top: 4px;
+    font-size: 10px;
+  }
+  .dispatch-product-photo {
+    width: auto;
+    height: 100%;
+    left: 20%;
+    top: 0;
+  }
+  .dispatch-product-caption {
+    left: 47%;
+    bottom: 2%;
+  }
+  .dispatch-product-caption .story-overline {
+    font-size: 8px;
+  }
+  .dispatch-product-caption > strong {
+    font-size: 24px;
+  }
+  .dispatch-product-caption > span:last-child {
+    font-size: 10px;
+  }
+  .dispatch-product-caption,
+  .dispatch-shop {
+    z-index: 1;
+  }
+  .dispatch-route-desktop {
+    display: none;
+  }
+  .dispatch-route-mobile {
+    display: block;
+  }
+  .dispatch-signal {
+    min-width: 74px;
+    padding: 6px 22px 6px 8px;
+  }
+  .dispatch-signal > span {
+    font-size: 6px;
+  }
+  .dispatch-signal code {
+    font-size: 9px;
+    margin-top: 2px;
+  }
+  .dispatch-signal svg {
+    width: 10px;
+    height: 10px;
+    right: 7px;
+  }
+  .dispatch-api {
+    left: 87%;
+    top: 39%;
+  }
+  .dispatch-api-node {
+    width: 24px;
+    height: 20px;
+    margin-bottom: 4px;
+  }
+  .dispatch-api .story-overline {
+    font-size: 6px;
+    width: 60px;
+  }
+  .dispatch-key {
+    left: 7%;
+    top: 41%;
+    width: 67%;
+    text-align: left;
+  }
+  .dispatch-key > span:first-child {
+    font-size: 8px;
+  }
+  .dispatch-key code {
+    font-size: 10px;
+    margin-top: 4px;
+  }
+  .dispatch-key > span:last-child {
+    display: none;
+  }
+  .dispatch-warehouse {
+    top: 54%;
+    left: 5%;
+    width: 65%;
+    height: 36%;
+  }
+  .dispatch-stock-heading {
+    position: absolute;
+    left: 108%;
+    top: 9%;
+    width: 36%;
+  }
+  .dispatch-stock-heading > .story-overline {
+    font-size: 8px;
+  }
+  .dispatch-stock-heading > div {
+    display: grid;
+    gap: 9px;
+    margin-top: 7px;
+  }
+  .dispatch-stock-heading > div > span {
+    display: block;
+    font-size: 7px;
+  }
+  .dispatch-stock-heading strong {
+    display: block;
+    font-size: 25px;
+    margin-bottom: 3px;
+  }
+  .dispatch-unit {
+    height: 25%;
+  }
+  .dispatch-shelves i {
+    top: 43%;
+    height: 3px;
+  }
+  .dispatch-shelves i:nth-child(2) {
+    top: 70%;
+  }
+  .dispatch-shelves i:last-child {
+    top: 97%;
+  }
+  .dispatch-reserved-bay {
+    bottom: 1%;
+  }
+  .dispatch-reserved-bay span {
+    bottom: -14px;
+    font-size: 7px;
+  }
+  .dispatch-interruption {
+    left: 7%;
+    top: 48%;
+    width: 67%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-align: left;
+  }
+  .dispatch-interruption svg {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+  .dispatch-interruption strong {
+    font-size: 10px;
+  }
+  .dispatch-interruption > span {
+    display: none;
+  }
+  .dispatch-confirmation {
+    left: 7%;
+    top: 48%;
+    width: 69%;
+    gap: 6px;
+  }
+  .dispatch-confirmation svg {
+    width: 15px;
+    height: 15px;
+  }
+  .dispatch-confirmation > div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .dispatch-confirmation .story-overline {
+    font-size: 8px;
+    max-width: 110px;
+  }
+  .dispatch-confirmation strong {
+    margin: 0;
+    font-size: 11px;
+  }
+  .dispatch-confirmation div > span:last-child {
+    display: none;
+  }
+  .dispatch-attempt {
+    bottom: 2%;
+    left: 5%;
+    right: 5%;
+    justify-content: space-between;
+    gap: 6px;
+    font-size: 6px;
+  }
+  .dispatch-attempt > span:last-child {
+    max-width: 61%;
+    text-align: right;
+  }
+  .story-project[data-story="integraciones"]
+    .story-track[data-linked="false"]
+    .story-inventory {
+    height: 490px;
+  }
+}
+@media (max-width: 600px) and (max-height: 740px) {
+  .dispatch-product-caption > strong {
+    font-size: 20px;
+  }
+  .dispatch-product-caption > span:last-child {
+    font-size: 8px;
+  }
+  .dispatch-shop .story-overline {
+    font-size: 7px;
+  }
+  .dispatch-shop code {
+    font-size: 9px;
+  }
+  .dispatch-product-caption .story-overline {
+    display: none;
+  }
+  .dispatch-key {
+    top: 40%;
+  }
+  .dispatch-key > span:first-child {
+    font-size: 7px;
+  }
+  .dispatch-key code {
+    font-size: 9px;
+    margin-top: 3px;
+  }
+  .dispatch-stock-heading strong {
+    font-size: 20px;
+  }
+  .dispatch-stock-heading > div {
+    gap: 6px;
+  }
+  .dispatch-interruption strong {
+    font-size: 8px;
+  }
+  .dispatch-confirmation .story-overline {
+    display: none;
+  }
+  .dispatch-confirmation strong {
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) and (max-height: 700px) {
+  .story-inventory {
+    height: 300px;
+  }
+  .dispatch-product-caption > span:last-child {
+    display: none;
+  }
+  .dispatch-key {
+    top: 38%;
+  }
+  .dispatch-confirmation {
+    top: 49%;
+  }
+  .dispatch-stock-heading {
+    top: 0;
+  }
+  .dispatch-stock-heading > .story-overline {
+    font-size: 7px;
+    line-height: 1.3;
+  }
+  .dispatch-stock-heading > div {
+    margin-top: 5px;
+    gap: 5px;
+  }
+  .dispatch-stock-heading strong {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dispatch-product-photo {
+    transform: translateX(-50%);
+  }
+}

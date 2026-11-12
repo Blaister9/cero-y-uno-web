@@ -1,25 +1,27 @@
 import Image from "next/image";
-import { useState } from "react";
-import {
-  ArrowRight,
-  CheckCheck,
-  Lightbulb,
-  PackageCheck,
-  RefreshCw,
-  WifiOff,
-} from "lucide-react";
+import { ArrowUpRight, Check, PackageCheck, Unplug } from "lucide-react";
+import type { CSSProperties } from "react";
 import type { IntegrationDemo } from "@/content/project-stories";
 import { inventoryScene as copy } from "@/content/story-scenes";
+import {
+  getIntegrationFrame,
+  integrationRoutes,
+  pointOnRoute,
+  routePath,
+} from "@/lib/integration-journey";
 import { SceneShell, type SceneProps } from "./scene-shell";
 
 export function InventoryScene({
   demo,
   stage,
   progress,
-  onStage,
 }: SceneProps & { demo: IntegrationDemo }) {
-  const reserved = stage >= 2;
-  const [lit, setLit] = useState(false);
+  const frame = getIntegrationFrame(progress);
+  const variables = {
+    "--dispatch-light": frame.light,
+    "--dispatch-reveal": frame.reveal,
+    "--dispatch-receipt": frame.receipt,
+  } as CSSProperties;
   return (
     <SceneShell
       name="inventory"
@@ -28,129 +30,198 @@ export function InventoryScene({
       progress={progress}
       status={copy.states[stage]}
     >
-      <div className="inventory-order">
-        <span className="story-overline">{copy.shop}</span>
-        <h4>{demo.order}</h4>
-        <button
-          className="lamp-interaction"
-          type="button"
-          aria-pressed={lit}
-          aria-label={copy.lampToggle}
-          data-lit={lit}
-          onClick={() => setLit((value) => !value)}
-        >
-          <span className="lamp-light" aria-hidden="true" />
-          <Image
-            src={copy.image}
-            width={190}
-            height={210}
-            sizes="190px"
-            alt={demo.item}
-            className="order-lamp"
-          />
-          <span className="lamp-switch">
-            <Lightbulb size={14} aria-hidden="true" />
-            {lit ? copy.lampOn : copy.lampOff}
-          </span>
-        </button>
-        <strong>{demo.item}</strong>
-        <span className="inventory-sku">
-          {demo.sku} × {demo.quantity}
-        </span>
-        <div className="order-perforation" />
-        <div className="order-key">
-          <span>{stage === 0 ? copy.ticket : copy.key}</span>
-          <code>{stage >= 1 ? demo.reservationKey : demo.order}</code>
-        </div>
-      </div>
-      <div className="inventory-connection" aria-hidden="true">
-        {stage === 2 ? (
-          <WifiOff />
-        ) : stage === 3 ? (
-          <RefreshCw />
-        ) : (
-          <ArrowRight />
-        )}
-      </div>
-      <div className="inventory-shelf">
-        <div className="inventory-heading">
-          <span className="story-overline">
-            {copy.stock} / {demo.sku}
-          </span>
-          <div>
+      <div
+        className="dispatch-studio"
+        style={variables}
+        data-reserved={frame.reserved}
+        data-confirmed={frame.confirmed}
+      >
+        <div className="dispatch-ambient" aria-hidden="true" />
+        <div className="dispatch-product">
+          <div className="dispatch-shop">
+            <span className="story-overline">{copy.shop}</span>
+            <code>{demo.order}</code>
+          </div>
+          <div className="dispatch-product-photo">
+            <div className="dispatch-beam" aria-hidden="true" />
+            <Image
+              src={copy.image}
+              alt={demo.item}
+              width={420}
+              height={440}
+              sizes="(max-width: 600px) 180px, 360px"
+            />
+            <span className="dispatch-bulb" aria-hidden="true" />
+          </div>
+          <div className="dispatch-product-caption">
+            <span className="story-overline">{demo.sku}</span>
             <strong>
-              {reserved ? demo.stock - demo.quantity : demo.stock}
+              {demo.quantity} {copy.productPlural}
             </strong>
-            <span>{copy.available}</span>
-            <strong>{reserved ? demo.quantity : 0}</strong>
-            <span>{copy.reserved}</span>
+            <span>{copy.oneOrder}</span>
           </div>
         </div>
-        <div className="inventory-units">
-          {Array.from({ length: demo.stock }, (_, index) => (
-            <div
-              className="inventory-unit"
-              key={index}
-              data-reserved={reserved && index >= demo.stock - demo.quantity}
-            >
-              <Image
-                src={copy.image}
-                width={110}
-                height={120}
-                alt=""
-                sizes="(max-width: 600px) 55px, 100px"
-              />
-              <span>
-                {reserved && index >= demo.stock - demo.quantity ? (
-                  <>
-                    <PackageCheck size={12} aria-hidden="true" />
-                    {demo.order}
-                  </>
-                ) : (
-                  `${copy.unit} ${String(index + 1).padStart(2, "0")}`
-                )}
-              </span>
-            </div>
-          ))}
+        <div className="dispatch-routing" aria-hidden="true">
+          {Object.entries(integrationRoutes).map(([layout, points]) => {
+            const [x, y] = pointOnRoute(frame.route, points);
+            return (
+              <div
+                key={layout}
+                className={`dispatch-route dispatch-route-${layout}`}
+              >
+                <svg viewBox="0 0 1000 500" preserveAspectRatio="none">
+                  <path
+                    className="dispatch-wire-shadow"
+                    d={routePath(points)}
+                  />
+                  <path className="dispatch-wire" d={routePath(points)} />
+                  <path
+                    className="dispatch-trace"
+                    d={routePath(points)}
+                    pathLength="1"
+                    strokeDasharray="0.07 0.93"
+                    strokeDashoffset={-frame.route * 0.93}
+                    style={{ opacity: frame.signal }}
+                  />
+                </svg>
+                <div
+                  className="dispatch-signal"
+                  data-response={frame.response}
+                  data-retry={frame.retry}
+                  style={{
+                    left: `clamp(48px, ${x / 10}%, calc(100% - 48px))`,
+                    top: `${y / 5}%`,
+                    opacity: frame.signal,
+                  }}
+                >
+                  <span>
+                    {frame.response
+                      ? copy.response
+                      : frame.retry
+                        ? copy.sameRequest
+                        : copy.request}
+                  </span>
+                  <code>{frame.response ? demo.reservation : demo.order}</code>
+                  {frame.response ? (
+                    <Check size={12} />
+                  ) : (
+                    <ArrowUpRight size={12} />
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="dispatch-api">
+          <span className="dispatch-api-node" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+          </span>
+          <span className="story-overline">{copy.api}</span>
         </div>
         <div
-          className="inventory-receipt"
-          data-visible={stage >= 1}
-          data-warning={stage === 2}
-          aria-hidden={stage < 1}
+          className="dispatch-key"
+          style={{ opacity: frame.reveal }}
+          aria-hidden={frame.reveal < 0.5}
         >
-          {stage === 2 ? (
-            <WifiOff size={24} aria-hidden="true" />
-          ) : stage === 3 ? (
-            <CheckCheck size={24} aria-hidden="true" />
-          ) : (
-            <PackageCheck size={24} aria-hidden="true" />
-          )}
-          <div>
-            <strong>
-              {stage === 2
-                ? copy.lost
-                : stage === 3
-                  ? copy.retry
-                  : copy.reserve}
-            </strong>
-            <p>
-              {stage === 2
-                ? copy.timeout
-                : stage === 3
-                  ? `${demo.reservation} · ${copy.once}`
-                  : demo.reservationKey}
-            </p>
-            {stage === 2 && (
-              <button
-                type="button"
-                className="story-action"
-                onClick={() => onStage?.(3)}
-              >
-                {copy.retryAction}
-              </button>
-            )}
+          <span>{frame.retry ? copy.keyAgain : copy.key}</span>
+          <code>{demo.reservationKey}</code>
+          <span>{copy.keyNote}</span>
+        </div>
+        <div className="dispatch-warehouse">
+          <div className="dispatch-stock-heading">
+            <span className="story-overline">
+              {copy.stock} / {demo.sku}
+            </span>
+            <div>
+              <span>
+                <strong>
+                  {frame.reserved ? demo.stock - demo.quantity : demo.stock}
+                </strong>
+                {copy.available}
+              </span>
+              <span>
+                <strong>{frame.reserved ? demo.quantity : 0}</strong>
+                {copy.reserved}
+              </span>
+            </div>
           </div>
+          <div className="dispatch-shelves" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+          </div>
+          <div
+            className="dispatch-reserved-bay"
+            style={{
+              opacity: Math.min(1, frame.reserveFirst + frame.reserveSecond),
+            }}
+            aria-hidden="true"
+          >
+            <span>{demo.order}</span>
+          </div>
+          {Array.from({ length: demo.stock }, (_, index) => {
+            const selected = index >= demo.stock - demo.quantity;
+            const movement =
+              index === demo.stock - 2
+                ? frame.reserveFirst
+                : index === demo.stock - 1
+                  ? frame.reserveSecond
+                  : 0;
+            const column = index % 4;
+            const row = Math.floor(index / 4);
+            const target = index - (demo.stock - demo.quantity);
+            return (
+              <div
+                className="dispatch-unit"
+                key={index}
+                aria-hidden="true"
+                data-reserved={selected && frame.reserved}
+                style={{
+                  left: `${3 + column * 24 + movement * ((target + 1) * 24 - column * 24)}%`,
+                  top: `${19 + row * 27 + movement * 27}%`,
+                }}
+              >
+                <Image
+                  src={copy.image}
+                  alt=""
+                  width={120}
+                  height={130}
+                  sizes="(max-width: 600px) 60px, 110px"
+                />
+              </div>
+            );
+          })}
+        </div>
+        <div
+          className="dispatch-interruption"
+          style={{ opacity: frame.warning }}
+          aria-hidden={frame.warning < 0.5}
+        >
+          <Unplug size={20} aria-hidden="true" />
+          <strong>{copy.lost}</strong>
+          <span>{copy.timeout}</span>
+        </div>
+        <div
+          className="dispatch-confirmation"
+          style={{ opacity: frame.receipt }}
+          aria-hidden={frame.receipt < 0.5}
+        >
+          <PackageCheck size={24} aria-hidden="true" />
+          <div>
+            <span className="story-overline">{copy.retry}</span>
+            <strong>{demo.reservation}</strong>
+            <span>{copy.once}</span>
+          </div>
+        </div>
+        <div
+          className="dispatch-attempt"
+          style={{ opacity: frame.reveal }}
+          aria-hidden={frame.reveal < 0.5}
+        >
+          <span>{frame.retry ? copy.secondAttempt : copy.firstAttempt}</span>
+          <span>{frame.reserved ? copy.reservationHeld : copy.connecting}</span>
         </div>
       </div>
     </SceneShell>

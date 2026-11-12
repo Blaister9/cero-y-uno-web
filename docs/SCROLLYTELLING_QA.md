@@ -125,6 +125,37 @@ Las capturas de escritorio y móvil están en `docs/qa/scrollytelling/`.
 - Revisados banner de escritorio y móvil, contraste del texto y botón de pausa
   con actualización correcta de `aria-pressed`.
 
+## Integraciones y APIs: un pedido, una reserva
+
+- La tienda muestra la lámpara en marfil. El scroll enciende la luz y hace viajar
+  una etiqueta por una conexión de cobre hasta el inventario. Dos unidades bajan
+  a una zona reservada para PED-042; las seis restantes permanecen en los estantes.
+- La respuesta RES-042 se interrumpe a mitad del regreso. El reintento conserva
+  `reserva-PED-042` y recupera RES-042. La cantidad y posición de las unidades
+  reservadas no cambian durante ese segundo envío.
+- Se retiraron los botones de encendido y reintento. No hay reloj ni reproducción
+  automática: luz, recorrido del mensaje, reserva y confirmación son funciones
+  del scroll. Los capítulos y flechas siguen siendo atajos de navegación.
+- Paleta propia: carbón cálido, marfil y cobre; aviso en terracota suave y respuesta
+  en gris claro. La ruta usa SVG y coordenadas compartidas con la etiqueta, sin
+  nuevas dependencias. Hay una composición vertical específica para móvil.
+- Se editó el acabado de la lámpara con `image_gen` integrado. El recurso WebP
+  conserva la transparencia y pesa 43,8 KB. Prompt, entrada y ruta final:
+  `docs/assets/integrations-scroll-v1.json`.
+- Navegador integrado: 1280 × 720, 901 × 720, 768 × 1024, 390 × 844 y 320 × 650.
+  En el mínimo se comprobaron los cuatro capítulos: el relato completo queda
+  dentro de los 650 px, sin desbordamiento horizontal ni controles en la escena.
+- En 390 × 600, el recorrido pasa a estados completos sin fijación; se seleccionó
+  «La interrupción» con Enter y se verificaron las dos unidades reservadas.
+- Una pausa conserva el mismo fotograma. El scroll nativo avanzó de progreso
+  0,279929 a 0,523499 y al retroceder recuperó exactamente la posición del mensaje,
+  las ocho posiciones del inventario y el progreso original.
+- Se validaron 1001 muestras del cálculo: valores acotados, uniones continuas de
+  la curva, una sola reserva, desaparición de la respuesta y confirmación final.
+- El resultado final conserva seis disponibles, dos reservadas y RES-042.
+- Instalación con lockfile congelado, typecheck, lint y build correctos con Node 24.
+  Las 12 salidas estáticas se generaron; inicio: 132 KB de JavaScript inicial.
+
 ## Límites
 
 La preferencia de movimiento reducido se verificó en la implementación; el navegador

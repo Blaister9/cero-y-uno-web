@@ -116,10 +116,10 @@ export const projectStories: ProjectStory[] = [
     title: "El pedido entró. ¿Quedó reservado?",
     description: "Alguien compra dos lámparas en la tienda. Quedan ocho en inventario. Sigamos el pedido para ver cómo se apartan las dos unidades y qué pasa cuando la confirmación se pierde en el camino.",
     chapters: [
-      { title: "La tienda avisa que hubo una compra", body: "Al confirmar el pedido, la tienda envía un aviso automático, llamado webhook. En él van la referencia del pedido, el código de la lámpara y las dos unidades." },
-      { title: "La integración pide apartar las lámparas", body: "La integración toma esos datos y los envía a la API de inventario como una solicitud de reserva. Le asigna una clave que guardará por si necesita volver a enviarla." },
-      { title: "El inventario reserva. La respuesta se pierde", body: "Quedan seis lámparas disponibles y dos apartadas. Como la confirmación nunca llega, la integración deja la reserva por confirmar y registra que se agotó el tiempo de espera." },
-      { title: "El segundo intento recupera la confirmación", body: "La integración usa la misma clave para el reintento. La API reconoce la solicitud y devuelve la referencia de la reserva que ya existe. Así se confirma que las dos lámparas siguen apartadas para ese pedido.", showExample: true }
+      { title: "Dos lámparas, un pedido", body: "La tienda confirma PED-042 y envía un aviso automático, llamado webhook. El mensaje lleva la referencia, el producto y la cantidad: dos lámparas." },
+      { title: "La API recibe la solicitud", body: "La integración pide reservar dos unidades. Envía una clave que identifica esta operación y que conservará si necesita repetir la solicitud." },
+      { title: "La reserva quedó hecha", body: "El inventario aparta dos lámparas: quedan seis disponibles. La confirmación se pierde en el camino y la tienda sigue esperando, aunque la reserva ya existe." },
+      { title: "Una sola reserva, confirmada", body: "El reintento envía la misma clave. La API reconoce la operación y devuelve RES-042: las dos lámparas ya estaban reservadas. El inventario no se descuenta otra vez.", showExample: true }
     ],
     integrationDemo: {
       caption: "Ejemplo con un pedido y existencias ficticias",

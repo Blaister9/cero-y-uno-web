@@ -1,0 +1,9 @@
+{
+  "tool": "image_gen.imagegen (built-in)",
+  "mode": "edit",
+  "input": "public/images/stories/lampara-inventario-v1.webp",
+  "asset": "public/images/stories/lampara-marfil-v1.webp",
+  "transparent_background": true,
+  "prompt": "Use case: precise-object-edit. Asset type: transparent photographic product cutout for an API and inventory scrollytelling website. Edit target: the supplied isolated anglepoise desk lamp. Change ONLY its sage-green painted metal finish to warm matte ivory / porcelain white, with a very slight champagne tone in shadow. Preserve the exact lamp silhouette, camera angle, mechanical joints, spring geometry, black wire, shade, round base, proportions and lighting. Preserve realistic brushed silver hinges. The bulb is off; no cast beam or glow. Entire lamp isolated on a genuinely transparent background, preserve alpha. No green tint anywhere, no text, no logos, no extra objects. Product photography, believable material texture, no redesign.",
+  "preparation": "Resize to 560px wide, WebP quality 88, alpha preserved."
+}

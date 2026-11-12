@@ -2,6 +2,7 @@
 @import "./story-scenes.css";
 @import "./power-journey.css";
 @import "./integrity-journey.css";
+@import "./integration-journey.css";
 
 @font-face {
   font-family: "IBM Plex Mono";
