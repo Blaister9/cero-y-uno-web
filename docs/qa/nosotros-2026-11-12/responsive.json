@@ -1,0 +1,198 @@
+[
+  {
+    "cards": [
+      {
+        "height": 545.921875,
+        "id": "entender",
+        "position": "relative",
+        "stickyTop": "0px"
+      },
+      {
+        "height": 526.328125,
+        "id": "disenar",
+        "position": "relative",
+        "stickyTop": "0px"
+      },
+      {
+        "height": 488.140625,
+        "id": "construir",
+        "position": "relative",
+        "stickyTop": "0px"
+      }
+    ],
+    "clientWidth": 305,
+    "scrollWidth": 305,
+    "viewport": {
+      "height": 740,
+      "width": 320
+    }
+  },
+  {
+    "cards": [
+      {
+        "height": 474.140625,
+        "id": "entender",
+        "position": "relative",
+        "stickyTop": "0px"
+      },
+      {
+        "height": 474.140625,
+        "id": "disenar",
+        "position": "relative",
+        "stickyTop": "0px"
+      },
+      {
+        "height": 474.140625,
+        "id": "construir",
+        "position": "relative",
+        "stickyTop": "0px"
+      }
+    ],
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "viewport": {
+      "height": 844,
+      "width": 390
+    }
+  },
+  {
+    "cards": [
+      {
+        "height": 471.15625,
+        "id": "entender",
+        "position": "relative",
+        "stickyTop": "0px"
+      },
+      {
+        "height": 471.15625,
+        "id": "disenar",
+        "position": "relative",
+        "stickyTop": "0px"
+      },
+      {
+        "height": 437.5625,
+        "id": "construir",
+        "position": "relative",
+        "stickyTop": "0px"
+      }
+    ],
+    "clientWidth": 753,
+    "scrollWidth": 753,
+    "viewport": {
+      "height": 1024,
+      "width": 768
+    }
+  },
+  {
+    "cards": [
+      {
+        "height": 472.75,
+        "id": "entender",
+        "position": "sticky",
+        "stickyTop": "104px"
+      },
+      {
+        "height": 472.75,
+        "id": "disenar",
+        "position": "sticky",
+        "stickyTop": "160px"
+      },
+      {
+        "height": 438.359375,
+        "id": "construir",
+        "position": "sticky",
+        "stickyTop": "216px"
+      }
+    ],
+    "clientWidth": 1009,
+    "scrollWidth": 1009,
+    "viewport": {
+      "height": 700,
+      "width": 1024
+    }
+  },
+  {
+    "cards": [
+      {
+        "height": 489.96875,
+        "id": "entender",
+        "position": "relative",
+        "stickyTop": "0px"
+      },
+      {
+        "height": 489.96875,
+        "id": "disenar",
+        "position": "relative",
+        "stickyTop": "0px"
+      },
+      {
+        "height": 446.96875,
+        "id": "construir",
+        "position": "relative",
+        "stickyTop": "0px"
+      }
+    ],
+    "clientWidth": 1265,
+    "scrollWidth": 1265,
+    "viewport": {
+      "height": 650,
+      "width": 1280
+    }
+  },
+  {
+    "cards": [
+      {
+        "height": 489.96875,
+        "id": "entender",
+        "position": "sticky",
+        "stickyTop": "104px"
+      },
+      {
+        "height": 489.96875,
+        "id": "disenar",
+        "position": "sticky",
+        "stickyTop": "160px"
+      },
+      {
+        "height": 446.96875,
+        "id": "construir",
+        "position": "sticky",
+        "stickyTop": "216px"
+      }
+    ],
+    "clientWidth": 1265,
+    "scrollWidth": 1265,
+    "viewport": {
+      "height": 720,
+      "width": 1280
+    }
+  },
+  {
+    "cards": [
+      {
+        "height": 489.96875,
+        "id": "entender",
+        "position": "sticky",
+        "stickyTop": "104px"
+      },
+      {
+        "height": 489.96875,
+        "id": "disenar",
+        "position": "sticky",
+        "stickyTop": "160px"
+      },
+      {
+        "height": 446.96875,
+        "id": "construir",
+        "position": "sticky",
+        "stickyTop": "216px"
+      }
+    ],
+    "clientWidth": 1265,
+    "scrollWidth": 1265,
+    "viewport": {
+      "height": 900,
+      "width": 1280
+    }
+  }
+]

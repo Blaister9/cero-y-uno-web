@@ -13,5 +13,6 @@ export const homeContent = {
     title: "Tu próxima solución puede empezar aquí.",
     description: "Cuéntanos qué necesita funcionar mejor.",
     action: "Hablemos de tu proyecto",
+    teamAction: "Conoce a nuestro equipo desarrollador",
   },
 };

@@ -61,6 +61,10 @@ export function HomeClosing() {
         <div>
           <h2 id="cierre-titulo">{closing.title}</h2>
           <p>{closing.description}</p>
+          <Link className="home-text-link home-team-link" href="/nosotros#equipo">
+            {closing.teamAction}
+            <ArrowUpRight size={16} aria-hidden="true" />
+          </Link>
         </div>
         <Link className="home-button" href="/contacto">
           {closing.action}

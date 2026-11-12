@@ -1,0 +1,24 @@
+{
+  "tool": "image_gen.imagegen",
+  "purpose": "Conceptual anonymous team portraits; not photographs of the team",
+  "assets": [
+    {
+      "alias": "Weso",
+      "prompt": "Use case: photorealistic-natural. Asset: a vertical 4:5 photographic conceptual portrait for the developer team of Cero y Uno, a premium software engineering company. Subject must be an adult BLACK MAN with dark brown skin, viewed STRICTLY FROM BEHIND, back of head, nape, shoulders and upper torso visible. His head faces directly away from the camera; absolutely no side profile, face, eyes, nose or mouth. Dark charcoal photographic studio backdrop, restrained forest-green rim lighting and subtle vertical architectural shadows. Matching editorial photo series: realistic black fabric, rich brown skin visible at the neck, soft green edge light on hair and shoulders, fine photographic grain, understated luxury, realistic anatomy, gentle contrast that keeps the haircut legible. Center head fully inside the frame with breathing room at top. No words, logos, masks, hoods, screens, code or hacker styling. Fictional conceptual person, not a likeness of a real person. For Weso: distinct Black man with a neat LOW SKIN FADE haircut and VERY SHORT tightly coiled hair on top, clean tapered nape, slightly broad shoulders wearing a black structured overshirt. Mid upper-body crop, calm upright posture. The low fade must be clearly visible from the back. Keep the background nearly black with a narrow green light on one side.",
+      "file": "weso-v2.webp",
+      "output": "/images/team/weso-v2.webp",
+      "width": 960,
+      "height": 1200,
+      "bytes": 68580
+    },
+    {
+      "alias": "Santensor",
+      "prompt": "Use case: photorealistic-natural. Asset: a vertical 4:5 photographic conceptual portrait for the developer team of Cero y Uno, a premium software engineering company. Subject must be an adult BLACK MAN with dark brown skin, viewed STRICTLY FROM BEHIND, back of head, nape, shoulders and upper torso visible. His head faces directly away from the camera; absolutely no side profile, face, eyes, nose or mouth. Dark charcoal photographic studio backdrop, restrained forest-green rim lighting and subtle vertical architectural shadows. Matching editorial photo series: realistic black fabric, rich brown skin visible at the neck, soft green edge light on hair and shoulders, fine photographic grain, understated luxury, realistic anatomy, gentle contrast that keeps the haircut legible. Center head fully inside the frame with breathing room at top. No words, logos, masks, hoods, screens, code or hacker styling. Fictional conceptual person, not a likeness of a real person. For Santensor: a DIFFERENT Black man with neat close-to-scalp CORNROW BRAIDS, clearly visible parallel braided rows running from crown to nape, clean tapered sides; no loose braids covering the shoulders. Slightly slimmer shoulders in a plain black fine-knit crewneck. A slightly closer upper-body crop, straight back view. The braided haircut must be clearly distinguishable from a short fade, with soft green rim lighting on the rows and nape. Same black-green photographic identity as the other portrait.",
+      "file": "santensor-v2.webp",
+      "output": "/images/team/santensor-v2.webp",
+      "width": 960,
+      "height": 1200,
+      "bytes": 76142
+    }
+  ]
+}

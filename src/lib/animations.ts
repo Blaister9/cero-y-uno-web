@@ -1,5 +1,3 @@
-import type { Variants } from "framer-motion";
-
 export const financialScroll = {
   scan: [0.22, 0.49],
   transfer: [0.49, 0.78],
@@ -27,27 +25,3 @@ export const integrationScroll = {
   retry: [0.76, 0.85],
   response: [0.86, 0.92]
 } as const;
-
-export const fadeUp: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 24
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.7,
-      ease: [0.22, 1, 0.36, 1]
-    }
-  }
-};
-
-export const staggerContainer: Variants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.12
-    }
-  }
-};

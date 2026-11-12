@@ -1,38 +1,22 @@
-import { Container } from "@/components/layout/container";
-import { PageHero } from "@/components/layout/page-hero";
-import { ValueCard } from "@/components/ui/value-card";
+import { CompanyPrinciples } from "@/components/company/company-principles";
 import { companyPage } from "@/content/company";
 import { createPageMetadata } from "@/lib/metadata";
+import { CompanyClosing, CompanyIntro, CompanyTeam } from "@/sections/company";
 
 export const metadata = createPageMetadata({
   title: "Nosotros | Cero y Uno",
   description:
-    "Conoce el enfoque de Cero y Uno: estrategia, arquitectura y ejecución para convertir ideas y procesos en sistemas reales.",
+    "Conoce a Weso y Santensor, el equipo desarrollador de Cero y Uno, y nuestro enfoque de arquitectura, software a medida e integración de sistemas.",
   path: "/nosotros"
 });
 
 export default function NosotrosPage() {
   return (
-    <main id="contenido" tabIndex={-1}>
-      <PageHero
-        description={companyPage.description}
-        eyebrow={companyPage.eyebrow}
-        title={companyPage.title}
-      />
-
-      <Container className="grid gap-4 py-20 md:py-24 lg:grid-cols-[0.9fr_1.1fr]">
-        <ValueCard eyebrow="Filosofía" title={companyPage.philosophy.title}>
-          <p>{companyPage.philosophy.body}</p>
-        </ValueCard>
-
-        <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-1">
-          {companyPage.approach.map((item, index) => (
-            <ValueCard eyebrow={`Enfoque 0${index + 1}`} key={item.title} title={item.title}>
-              <p>{item.description}</p>
-            </ValueCard>
-          ))}
-        </div>
-      </Container>
+    <main className="company-page" id="contenido" tabIndex={-1}>
+      <CompanyIntro />
+      <CompanyTeam />
+      <CompanyPrinciples content={companyPage.approach} />
+      <CompanyClosing />
     </main>
   );
 }

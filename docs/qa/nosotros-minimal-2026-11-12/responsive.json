@@ -1,0 +1,65 @@
+[
+  {
+    "clientWidth": 305,
+    "h1s": 1,
+    "height": 740,
+    "portraitPosition": "static",
+    "principlePosition": "relative",
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "clientWidth": 375,
+    "h1s": 1,
+    "height": 844,
+    "portraitPosition": "static",
+    "principlePosition": "relative",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "clientWidth": 753,
+    "h1s": 1,
+    "height": 1024,
+    "portraitPosition": "sticky",
+    "principlePosition": "relative",
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "clientWidth": 799,
+    "h1s": 1,
+    "height": 884,
+    "portraitPosition": "sticky",
+    "principlePosition": "relative",
+    "scrollWidth": 799,
+    "width": 814
+  },
+  {
+    "clientWidth": 1009,
+    "h1s": 1,
+    "height": 700,
+    "portraitPosition": "sticky",
+    "principlePosition": "sticky",
+    "scrollWidth": 1009,
+    "width": 1024
+  },
+  {
+    "clientWidth": 1265,
+    "h1s": 1,
+    "height": 650,
+    "portraitPosition": "static",
+    "principlePosition": "relative",
+    "scrollWidth": 1265,
+    "width": 1280
+  },
+  {
+    "clientWidth": 1265,
+    "h1s": 1,
+    "height": 900,
+    "portraitPosition": "sticky",
+    "principlePosition": "sticky",
+    "scrollWidth": 1265,
+    "width": 1280
+  }
+]

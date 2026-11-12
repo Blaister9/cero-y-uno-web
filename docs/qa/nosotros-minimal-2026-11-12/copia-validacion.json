@@ -1,0 +1,576 @@
+{
+  "files": 114,
+  "allMatch": true,
+  "checks": [
+    {
+      "file": "src/app/contacto/page.tsx",
+      "sha256": "8a94836da09e1800ad3adcd77294118665764697631e1535a2c4c471eb5ae2b1",
+      "match": true
+    },
+    {
+      "file": "src/app/fonts/manrope-400.ttf",
+      "sha256": "ed335894f8d954263675f7e457bf657374d8b7be629be4dc43aef97c309ad3ae",
+      "match": true
+    },
+    {
+      "file": "src/app/fonts/manrope-700.ttf",
+      "sha256": "ea1f264039fed13fd36e6d6f49fcae4fe7007def02cf2972b5c7f6d6f1349d06",
+      "match": true
+    },
+    {
+      "file": "src/app/fonts/manrope-latin-variable.woff2",
+      "sha256": "8c2def024c1bf31aacf3624ae3c4d701269b4ec3dc765c04830839f0d36b2d9e",
+      "match": true
+    },
+    {
+      "file": "src/app/fonts/OFL.txt",
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b",
+      "match": true
+    },
+    {
+      "file": "src/app/globals.css",
+      "sha256": "a9035cceef08841d5b7f1dedfae3af44d074b94d56b577bf0e25ed68090d22c4",
+      "match": true
+    },
+    {
+      "file": "src/app/icon.svg",
+      "sha256": "e18b78ae936192b5a59a667b08d66f5865d6daf9058a66b670165107a2ba294d",
+      "match": true
+    },
+    {
+      "file": "src/app/layout.tsx",
+      "sha256": "0e93c6089e4df09e540de904c4ca09f9562ef9486f04d596c1b26c05f364ce4d",
+      "match": true
+    },
+    {
+      "file": "src/app/nosotros/page.tsx",
+      "sha256": "64e0ebfb4aae55168987be64c248b4171e8ddb816cc839be6f70b23a3e0ec5e6",
+      "match": true
+    },
+    {
+      "file": "src/app/opengraph-image.tsx",
+      "sha256": "d21e7330273b8464da27268f02fda04cac6f44641dca470e4834a8bec1309b05",
+      "match": true
+    },
+    {
+      "file": "src/app/page.tsx",
+      "sha256": "0aeacf7848009cd8aff61afefee1ed147ae040ca4e3246903719d7385bb8558b",
+      "match": true
+    },
+    {
+      "file": "src/app/robots.ts",
+      "sha256": "3fee44c2d0bcb7e090175d54f10fc3102179cc5a3cb22da79f5e2e6226cdae1d",
+      "match": true
+    },
+    {
+      "file": "src/app/servicios/page.tsx",
+      "sha256": "5ae0b478ee8ee2a2c03640329687f6e7b5e7aebbba7d4dd3f33473f4c34ec643",
+      "match": true
+    },
+    {
+      "file": "src/app/sitemap.ts",
+      "sha256": "e74bc4986640e00ec77ff1c48b1e222f78ca70e016aefee473b8bcf7e6ee9a5a",
+      "match": true
+    },
+    {
+      "file": "src/app/soluciones/page.tsx",
+      "sha256": "ef6a8fa28a864b18758e1def709f60a2ca29cbd53293737e12c11cd408543995",
+      "match": true
+    },
+    {
+      "file": "src/components/company/company-principles.tsx",
+      "sha256": "508921401cac358191b50866041b33da37f6bf53d9d38f20d42aa531a7afdf33",
+      "match": true
+    },
+    {
+      "file": "src/components/company/company-team-reveal.tsx",
+      "sha256": "7c9277a3c293b74070b01873c2e3d8866c3abd3cae08ee5c169a74c97d84766e",
+      "match": true
+    },
+    {
+      "file": "src/components/experience/binary-canvas.tsx",
+      "sha256": "2666e38381f6dd980a59415317f1f637a748b1a4786e8c7f65b3973b1cdeff09",
+      "match": true
+    },
+    {
+      "file": "src/components/home/capability-gallery.tsx",
+      "sha256": "a964f1b23eef5698b35c5249b941fc14bd14c4464ea750ad6491821948c93e86",
+      "match": true
+    },
+    {
+      "file": "src/components/home/home-portfolio.tsx",
+      "sha256": "037b59bb91e73e9b23f980e3665f4321a176edfac2becadecbb9ed0cbb639b49",
+      "match": true
+    },
+    {
+      "file": "src/components/home/matrix-stage.tsx",
+      "sha256": "01c293ea2e2dd52e4dfc516198a1aafa10512605ac6c07e53fe5c69ae1d452e1",
+      "match": true
+    },
+    {
+      "file": "src/components/home/project-cover.tsx",
+      "sha256": "44c3c2b96da517dc02930b5cf1d86bc15846ccdeecd12d2b6d4e41176dff8c49",
+      "match": true
+    },
+    {
+      "file": "src/components/home/stories/conversation-scene.tsx",
+      "sha256": "c683fdd3483d9cb7c9e35febb0f85f16e130e34f10b93bfbaa6fa9883b843df0",
+      "match": true
+    },
+    {
+      "file": "src/components/home/stories/finance-scene.tsx",
+      "sha256": "402be60d7c49cc3faee74f1b320a3e1629b6d7862e0ff94c107f69ef20c33223",
+      "match": true
+    },
+    {
+      "file": "src/components/home/stories/integrity-scene.tsx",
+      "sha256": "edabc78c7cb2de811bf1015f1b62a180c9108a08887498a90a8f676cb4fbf6eb",
+      "match": true
+    },
+    {
+      "file": "src/components/home/stories/inventory-scene.tsx",
+      "sha256": "6c5756d63a5834e1005e3e68837eff61ecc9723abd6ffd305c005da219483bed",
+      "match": true
+    },
+    {
+      "file": "src/components/home/stories/project-journey.tsx",
+      "sha256": "0e582de8eaaf073bf927c332cda16e0df5ed3cca5c2b18c79fe88b5e70b97cc1",
+      "match": true
+    },
+    {
+      "file": "src/components/home/stories/purchase-scene.tsx",
+      "sha256": "272214ad9d0a7c94be891ff50f0f55d78e58d30bf97b7fc809040a7ddfe50ad0",
+      "match": true
+    },
+    {
+      "file": "src/components/home/stories/scene-shell.tsx",
+      "sha256": "2fe406a7d528e23e56ff29aa4db89d59d41d3c6247845fbeb4965d9efc89615d",
+      "match": true
+    },
+    {
+      "file": "src/components/layout/brand.tsx",
+      "sha256": "874083f5fcd57f4d46ca6225ec6fffbad3f6a7a889e9457b77934a7708f3163f",
+      "match": true
+    },
+    {
+      "file": "src/components/layout/container.tsx",
+      "sha256": "2104cfd13a39e755e3ca5c81f7862abe2394e84f38be622e3509861f38bbfb60",
+      "match": true
+    },
+    {
+      "file": "src/components/layout/footer.tsx",
+      "sha256": "e91d7ba01a4337dc9fa16e2b7bba8d9ecce0a3b06fdb62e7470f7a38b5a9f92e",
+      "match": true
+    },
+    {
+      "file": "src/components/layout/header.tsx",
+      "sha256": "b07d539d576566ecc8e1f272bdf2c054aa125ced1255dbab87c72b376f24985f",
+      "match": true
+    },
+    {
+      "file": "src/components/seo/site-structured-data.tsx",
+      "sha256": "ba9b1e3a81c614c23599afdfc19ab6474186106a6da8001988fcf16c1ec88b25",
+      "match": true
+    },
+    {
+      "file": "src/components/services/service-explorer.tsx",
+      "sha256": "0940b7bce6a5cd0e5d237e4bcb3bdafbd45bd70db8b95e8be24b3e1ac8060ac5",
+      "match": true
+    },
+    {
+      "file": "src/components/services/service-scene.tsx",
+      "sha256": "e78a0d49e40fc4d052979dde4b178011b55bb6319c13f47b5e14964b8b0379db",
+      "match": true
+    },
+    {
+      "file": "src/components/solutions/solution-example.tsx",
+      "sha256": "a9e1aa9f2a3ce9abe35a5273d545824638034410ca240611ef0e5110bf2a06ad",
+      "match": true
+    },
+    {
+      "file": "src/components/solutions/solution-explorer.tsx",
+      "sha256": "7256969111fd632084a4255f91746153806c3bce16c789489b5c4423ffc97151",
+      "match": true
+    },
+    {
+      "file": "src/components/solutions/solution-journey.tsx",
+      "sha256": "dcf9689b226d7640dcdee5f3bfc4f5a2ce594ed432fe1216260e081e3635013e",
+      "match": true
+    },
+    {
+      "file": "src/components/solutions/solution-selector.tsx",
+      "sha256": "6fddc25caeea3fc2d9048ddb31da3e57a850c864cf64861550b0331a13301956",
+      "match": true
+    },
+    {
+      "file": "src/components/ui/feature-grid.tsx",
+      "sha256": "f3bc1034d26b3d618bc9bfd3ea6fcae7e16824579fd6f3986cd6756e8ae21686",
+      "match": true
+    },
+    {
+      "file": "src/components/visual/binary-field.tsx",
+      "sha256": "882e0d0d2ac6866b4ca9ef2883aa01274be3546bbcd583fe588115753d0fa66e",
+      "match": true
+    },
+    {
+      "file": "src/config/site.ts",
+      "sha256": "1024f339492c49814f556ffff6d230de50d995d4c80e740ece6c9d2e1ceb35e6",
+      "match": true
+    },
+    {
+      "file": "src/content/blockchain-demo.ts",
+      "sha256": "3c24f797d0ae0831f7dbe3b6f63ad52716b006d0668296b18e8f51966da1644c",
+      "match": true
+    },
+    {
+      "file": "src/content/capabilities.ts",
+      "sha256": "0878f6682228eb5d0affe42075f4be041e947b36616a8aeb5a48d819dc6c0610",
+      "match": true
+    },
+    {
+      "file": "src/content/chrome.ts",
+      "sha256": "b929689617a49c94a33206d7c8edc422db515cc8525f1b94ed375336d5d3f9e6",
+      "match": true
+    },
+    {
+      "file": "src/content/company.ts",
+      "sha256": "0ab28da9c07e9d988d3e6ca87c288c7f37e6073e7ea76f6f25ca7f904afb33a4",
+      "match": true
+    },
+    {
+      "file": "src/content/home.ts",
+      "sha256": "9cca38b5c13bc6e9b4dcc2a4b644d3b490a208c982326780d683085339d9c1db",
+      "match": true
+    },
+    {
+      "file": "src/content/portfolio.ts",
+      "sha256": "9674c9f6adb09d08dd06407722a85bba9f0240b17b1c5f82e4a603d1c4c0d022",
+      "match": true
+    },
+    {
+      "file": "src/content/project-stories.ts",
+      "sha256": "2e9b4ec6ea377c951b8f76cbe8e2212dbdaadfc820e1d5bc554d0ae5f2b36785",
+      "match": true
+    },
+    {
+      "file": "src/content/service-case.ts",
+      "sha256": "583babed9251045a2670999ad98d4a846a945b4525cdd3e0e8c9b449cd3d1bbc",
+      "match": true
+    },
+    {
+      "file": "src/content/service-visuals.ts",
+      "sha256": "a5229347bee5b7457163d4fc02a0a2061edfddd376b55e79442d207e70629b73",
+      "match": true
+    },
+    {
+      "file": "src/content/services.ts",
+      "sha256": "12e00be9109607f67009e5e9da448fa4951c1f59df2256a1ba9374778735964f",
+      "match": true
+    },
+    {
+      "file": "src/content/site.ts",
+      "sha256": "0d50c648eac4b2c50508f23a5ea19998282bc810ab8a442103f6f6c5deda772d",
+      "match": true
+    },
+    {
+      "file": "src/content/solution-visuals.ts",
+      "sha256": "a9a6a823a3bf330d3fde27dfcde804511ab42ea1ecb3e0f2f4bfa411093dea6c",
+      "match": true
+    },
+    {
+      "file": "src/content/solutions.ts",
+      "sha256": "2d2b3a0581113444050b7f12edf649bff60f6102d1ee16b3212c5fa4c565b36b",
+      "match": true
+    },
+    {
+      "file": "src/content/story-scenes.ts",
+      "sha256": "ae82a626ed26e020252212dbf0dc171857c70663a94e2974cf23fcfc971c03a1",
+      "match": true
+    },
+    {
+      "file": "src/lib/animations.ts",
+      "sha256": "fd9214c17ba826c97d301b40d0001a8ba586304aa5035ed1f1a945d9d1d58d6f",
+      "match": true
+    },
+    {
+      "file": "src/lib/company.css",
+      "sha256": "eea506157b29ddb7114915fe4b90a85e3f3ee179dc5c83b81dfc20ee6920228c",
+      "match": true
+    },
+    {
+      "file": "src/lib/home.css",
+      "sha256": "afc5031b370f926249f488bb5a79c733209c4151187cf485b00c88ae5254544b",
+      "match": true
+    },
+    {
+      "file": "src/lib/integration-journey.css",
+      "sha256": "ef309e18c383726257a9dcfee65f359ed2649407ee78efd70f568c3910ca372c",
+      "match": true
+    },
+    {
+      "file": "src/lib/integration-journey.ts",
+      "sha256": "51b5aebdcb4fda38c6ad99965b704d522ee11c032d42a19a869203443fb28a58",
+      "match": true
+    },
+    {
+      "file": "src/lib/integrity-journey.css",
+      "sha256": "2b35c124e8c3457ab7d0c4ded26fe1af105311df4277b17432c569a8a675724a",
+      "match": true
+    },
+    {
+      "file": "src/lib/integrity-journey.ts",
+      "sha256": "34084de758ebc43a88c9539c420be87995a82846cc3187ec486bb859926bae70",
+      "match": true
+    },
+    {
+      "file": "src/lib/metadata.ts",
+      "sha256": "2f0c8a4b30fa851e2cb60fe1ea3d0643e5a2635475f0270c7c04dc9942804e5f",
+      "match": true
+    },
+    {
+      "file": "src/lib/power-journey.css",
+      "sha256": "0b5db55f9f2dcacea2a0f48e0003c9cb3d13bcb8a2e911ec310edc58d72eb3d1",
+      "match": true
+    },
+    {
+      "file": "src/lib/power-journey.ts",
+      "sha256": "b5d6627a2b0c5333bbd95fa141e23006306b444386dbdd1f9eff825e079a1763",
+      "match": true
+    },
+    {
+      "file": "src/lib/project-covers.css",
+      "sha256": "d769197613adab8de651d8a4aeec8b9d0447b6dbe3fde9640b52d66899d93937",
+      "match": true
+    },
+    {
+      "file": "src/lib/services.css",
+      "sha256": "db15308217da3550f97715734431dfb364636f6b859c363827642b2a30f3f72b",
+      "match": true
+    },
+    {
+      "file": "src/lib/solutions.css",
+      "sha256": "98fb0e31682f35cdbbfdd9b4f90c130712fd22384cd5438b14695d7efd2db7ae",
+      "match": true
+    },
+    {
+      "file": "src/lib/story-scenes.css",
+      "sha256": "c54ca1fbde41216af2b8c1730fa2abf3889a762ea0703de75aa48ff5f58d54d0",
+      "match": true
+    },
+    {
+      "file": "src/lib/use-capability-gallery.ts",
+      "sha256": "3e6057786d745b1d0d265f03b500287e52a70e7f1c6ac4e6f2bcf9f036d2480c",
+      "match": true
+    },
+    {
+      "file": "src/lib/use-conversation-performance.ts",
+      "sha256": "5fbb46ad8c5999947bf6d9967b60c64d2c72662014f6375a0dce29037cda80d9",
+      "match": true
+    },
+    {
+      "file": "src/lib/use-hero-rain.ts",
+      "sha256": "1ddad9438a6da4f41ff64098cf541a8a25100bfa4ecdac0a97480d46c0acff83",
+      "match": true
+    },
+    {
+      "file": "src/lib/use-service-scene.ts",
+      "sha256": "fdcbadf25711a5b79bd72d0922488f41fa9d3b1953b414740613af8d88a4d504",
+      "match": true
+    },
+    {
+      "file": "src/lib/use-solution-selection.ts",
+      "sha256": "66e4f7be63b32518fd75a9d0337e6421884921728be0c4aee02c5efb9140aa4c",
+      "match": true
+    },
+    {
+      "file": "src/lib/use-story-progress.ts",
+      "sha256": "dcfddcf872703f4fe325871e98cf478e318e56cfa6daf4e90e5dca77fe45370a",
+      "match": true
+    },
+    {
+      "file": "src/lib/use-team-reveal.ts",
+      "sha256": "8608f7955c13e4836ebf3fc80e07c47bd99a9e68c5f15aa24abec222b32950bf",
+      "match": true
+    },
+    {
+      "file": "src/lib/utils.ts",
+      "sha256": "579adc03a7bcdcce50cf54eb3dab1b01a17a3a6e3b1d045f6594ab28a56c85c9",
+      "match": true
+    },
+    {
+      "file": "src/sections/company.tsx",
+      "sha256": "a400944d8297272ea4b0aea032376068ef8c5040adeb9c51429f1eda21f6200d",
+      "match": true
+    },
+    {
+      "file": "src/sections/home-intro.tsx",
+      "sha256": "44304acecaec1f3bfafde61c931be45387a3aa558b43328f035d6d1ef7c29749",
+      "match": true
+    },
+    {
+      "file": "public/fonts/ibm-plex-mono-regular.ttf",
+      "sha256": "5cbc4288c3489acb668caf9bb59fcab8767f961575ad74c1366c40bc43a8cde3",
+      "match": true
+    },
+    {
+      "file": "public/fonts/OFL-IBM-Plex-Mono.txt",
+      "sha256": "3ff4395aeb203050b3d4e775861cf0b93b598e0a6d2b16f0eb41df3350b15695",
+      "match": true
+    },
+    {
+      "file": "public/images/capabilities/analitica-e-ia-v1.webp",
+      "sha256": "0688aeb3566f691f3c4f8d8ade99da9c41b97193258bf6269b72f8a55979455a",
+      "match": true
+    },
+    {
+      "file": "public/images/capabilities/automatizacion-v1.webp",
+      "sha256": "6b8f522ea0f6cb07d0b7f2987cdaadfd516a36584bea6c4b98c488a72bff5ee9",
+      "match": true
+    },
+    {
+      "file": "public/images/capabilities/integraciones-y-apis-v1.webp",
+      "sha256": "f53b9b059974e88ef079724b7e6cd91bd108692cf8d9b77a125cc92a496c4387",
+      "match": true
+    },
+    {
+      "file": "public/images/capabilities/modernizacion-v1.webp",
+      "sha256": "e368045ab49c02a339743586c6d3edc8b7f24c0514a812d206aca0613ca39ef5",
+      "match": true
+    },
+    {
+      "file": "public/images/capabilities/power-platform-v1.webp",
+      "sha256": "8cd6b24dc5ca75bda142269b605d754d7522576177b26c3906325684ae2c022b",
+      "match": true
+    },
+    {
+      "file": "public/images/capabilities/software-a-medida-v1.webp",
+      "sha256": "76705a9130f36d12a0c1401ab57dde7274f11beb3be01587ae2427dfa4c2d69e",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/atencion-en-tiempo-real-v1.webp",
+      "sha256": "ec3cfe0f7d2bbe80110faeaadba1de9e77ad594f3576e83b94cf0c9c1ab82851",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/atencion-en-tiempo-real-v2.webp",
+      "sha256": "28a63a60115d07d6e80a8ea1384954fed092e5bd94ca32e5f5af2b01bcfb59f8",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/atencion-en-tiempo-real-v3.webp",
+      "sha256": "4df1ea9ab81ead221062a714cb12afcde7fa378d77ab71ff7ad8ce1f769a5202",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/automatizacion-financiera-v1.webp",
+      "sha256": "27c70b5b389e179c6c00d668e01a607c33293f61189fa8eda30889955d909ef1",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/automatizacion-financiera-v2.webp",
+      "sha256": "b965dbc27853a70607aac891a0af7f1b3c015cc709d4dd21a5c899ae1cac5996",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/automatizacion-financiera-v3.webp",
+      "sha256": "ac7e1a5cf026961bcf8689b6f2b9dcc3005e023758fbaf0bf9fd5664199ec76e",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/blockchain-v1.webp",
+      "sha256": "9a1f56bfa3499a6e216e0859d2b45a239f14e8b0596fc411266a7d84f109cb52",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/blockchain-v2.webp",
+      "sha256": "76ee2b608c2ef3b85e41c03ca9ff95255ea1cf674006a076f9723f1415021139",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/blockchain-v3.webp",
+      "sha256": "a0b06f98c7f779194d63e4f9b65db90a5306b19127e7176488ac7ec465c84fa9",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/integraciones-y-apis-v1.webp",
+      "sha256": "d2c058e3799ccae1ef70af993726074e3602301f8f82d014aa364a07e5c48fd1",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/integraciones-y-apis-v2.webp",
+      "sha256": "ee50e79fc783d7e4142c52d05d29f77d6c1dd40df01b327874129791a8e4cf03",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/integraciones-y-apis-v3.webp",
+      "sha256": "9668c93218043317afc3476afbd65429dc42b08acc9e35b1da48666e2b98e61e",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/power-platform-v1.webp",
+      "sha256": "614ef224976b5e6f54e9a97218e5cdff5f2ba3755bb0dfdb04e476d3ca35d81b",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/power-platform-v2.webp",
+      "sha256": "0be17e6ffacb7840a957cfa9eb9265806136940898fad3c7f26c87d1a5fd09d1",
+      "match": true
+    },
+    {
+      "file": "public/images/portfolio/power-platform-v3.webp",
+      "sha256": "f7c42edf5061c5ad15ed2fafca53e4a1a0a0a9df0c65c333d89183b8a4f0cc01",
+      "match": true
+    },
+    {
+      "file": "public/images/services/mesa-software-v1.webp",
+      "sha256": "f18927799fda68401d3e97f3dcac144c14e74b4f430b8689769d422d77058997",
+      "match": true
+    },
+    {
+      "file": "public/images/stories/atencion-boca-abierta-v1.webp",
+      "sha256": "6b49e4a00c4a849d7c257e32025ab7cf9437b3dd0ebff09c05acdf763ffe6d49",
+      "match": true
+    },
+    {
+      "file": "public/images/stories/atencion-boca-redonda-v1.webp",
+      "sha256": "2b71e529f323a32c2e3c804460a5e96eb4a927ae913fce50b29b5ac9bc093420",
+      "match": true
+    },
+    {
+      "file": "public/images/stories/bloque-cristal-v1.webp",
+      "sha256": "76c7a2b1ccaf5e1f6f537b413e4347429ac6c52d5805a6d28d881fda9247e4be",
+      "match": true
+    },
+    {
+      "file": "public/images/stories/lampara-inventario-v1.webp",
+      "sha256": "1d3cfa4f94a60037a81915f33f01aaade69c6254053efa07ba5a63b3cb5369db",
+      "match": true
+    },
+    {
+      "file": "public/images/stories/lampara-marfil-v1.webp",
+      "sha256": "31312a28a419c21a3e161af1396ec62b74b31b87e3ea95a85b2a86061cc7308b",
+      "match": true
+    },
+    {
+      "file": "public/images/stories/mesa-financiera-v1.webp",
+      "sha256": "6163d4365a226df09cd4b3a39fddac24426f6ae64231108a586a66641c5aa982",
+      "match": true
+    },
+    {
+      "file": "public/images/stories/sello-aprobacion-v1.webp",
+      "sha256": "665edf4b272aaf23afc7e19f44385a416d36faea66c6fa0ec95d325af377b536",
+      "match": true
+    },
+    {
+      "file": "public/images/team/santensor-v2.webp",
+      "sha256": "3129fce394ea35135fbc872327a3db70b7937336b840aa92f22dc67ad08c3164",
+      "match": true
+    },
+    {
+      "file": "public/images/team/weso-v2.webp",
+      "sha256": "11c3a4a431d080160171447405821b03b940be80e91631d1b3fa75b5ded2f481",
+      "match": true
+    }
+  ]
+}

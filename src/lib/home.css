@@ -11,6 +11,9 @@
   font-style: normal;
   font-display: swap;
 }
+.home-closing .home-team-link {
+  margin-top: 16px;
+}
 
 .home-page,
 .home-header,

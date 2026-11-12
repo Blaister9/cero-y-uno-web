@@ -1,6 +1,7 @@
 @import "../lib/solutions.css";
 @import "../lib/home.css";
 @import "../lib/services.css";
+@import "../lib/company.css";
 
 @tailwind base;
 @tailwind components;
