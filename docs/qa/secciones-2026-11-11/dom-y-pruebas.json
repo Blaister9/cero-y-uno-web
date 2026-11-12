@@ -1,0 +1,1332 @@
+{
+  "pages": [
+    {
+      "canonical": "https://ceroyuno.com.co/servicios",
+      "description": "Servicios de desarrollo de software a medida, automatización, integraciones, Power Platform, analítica e inteligencia aplicada.",
+      "h1": [
+        "Software parael trabajo real."
+      ],
+      "images": 0,
+      "links": [
+        {
+          "href": "/",
+          "text": "01Cero y Uno"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Diagnóstico"
+        },
+        {
+          "href": "#explorar",
+          "text": "Explorar servicios"
+        },
+        {
+          "href": "#software-a-medida",
+          "text": "01Software a medida"
+        },
+        {
+          "href": "#automatizacion",
+          "text": "02Automatización"
+        },
+        {
+          "href": "#integraciones-y-apis",
+          "text": "03Integraciones y APIs"
+        },
+        {
+          "href": "#power-platform",
+          "text": "04Power Platform"
+        },
+        {
+          "href": "#analitica-e-ia",
+          "text": "05Analítica e IA aplicada"
+        },
+        {
+          "href": "#modernizacion",
+          "text": "06Modernización"
+        },
+        {
+          "href": "#hablemos",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Solicitar diagnóstico"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "contacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Carrera 72BIS # 25B-50, Bogotá"
+        }
+      ],
+      "navCurrent": [],
+      "overflow": false,
+      "skip": 0,
+      "title": "Servicios | Cero y Uno",
+      "url": "https://ceroyuno.com.co/servicios",
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "canonical": "https://ceroyuno.com.co/soluciones",
+      "description": "Plataformas internas, portales, aprobaciones, sistemas conectados, tableros e IA aplicada. Explora una solución según el problema de tu equipo.",
+      "h1": [
+        "Que el trabajosiga su curso."
+      ],
+      "images": 0,
+      "links": [
+        {
+          "href": "/",
+          "text": "01Cero y Uno"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Diagnóstico"
+        },
+        {
+          "href": "#escenarios",
+          "text": "Encuentra tu escenario"
+        },
+        {
+          "href": "/servicios#software-a-medida",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#software-a-medida",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#automatizacion",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#integraciones-y-apis",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#analitica-e-ia",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#analitica-e-ia",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu caso"
+        },
+        {
+          "href": "/#proceso",
+          "text": "Ver recorridos del portafolio"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "contacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Carrera 72BIS # 25B-50, Bogotá"
+        }
+      ],
+      "navCurrent": [],
+      "overflow": false,
+      "skip": 0,
+      "title": "Soluciones digitales | Cero y Uno",
+      "url": "https://ceroyuno.com.co/soluciones",
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "canonical": "https://ceroyuno.com.co/nosotros",
+      "description": "Conoce el enfoque de Cero y Uno: estrategia, arquitectura y ejecución para convertir ideas y procesos en sistemas reales.",
+      "h1": [
+        "Cero y Uno convierte ideas en sistemas que pueden operar."
+      ],
+      "images": 0,
+      "links": [
+        {
+          "href": "/",
+          "text": "01Cero y Uno"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Diagnóstico"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "contacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Carrera 72BIS # 25B-50, Bogotá"
+        }
+      ],
+      "navCurrent": [],
+      "overflow": false,
+      "skip": 0,
+      "title": "Nosotros | Cero y Uno",
+      "url": "https://ceroyuno.com.co/nosotros",
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "canonical": "https://ceroyuno.com.co/contacto",
+      "description": "Escríbenos o llámanos para conversar sobre el proceso que quieres mejorar con software, automatización o integraciones.",
+      "h1": [
+        "Hablemos de tu operación"
+      ],
+      "images": 0,
+      "links": [
+        {
+          "href": "/",
+          "text": "01Cero y Uno"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Diagnóstico"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "Escríbenoscontacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "Llámanos+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Ver en el mapaCarrera 72BIS # 25B-50, Bogotá"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "contacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Carrera 72BIS # 25B-50, Bogotá"
+        }
+      ],
+      "navCurrent": [],
+      "overflow": false,
+      "skip": 0,
+      "title": "Contacto | Cero y Uno",
+      "url": "https://ceroyuno.com.co/contacto",
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "canonical": "https://ceroyuno.com.co/contacto",
+      "description": "Escríbenos o llámanos para conversar sobre el proceso que quieres mejorar con software, automatización o integraciones.",
+      "h1": [
+        "Hablemos de tu operación"
+      ],
+      "images": 0,
+      "links": [
+        {
+          "href": "/",
+          "text": "01Cero y Uno"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Diagnóstico"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "Escríbenoscontacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "Llámanos+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Ver en el mapaCarrera 72BIS # 25B-50, Bogotá"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "contacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Carrera 72BIS # 25B-50, Bogotá"
+        }
+      ],
+      "navCurrent": [],
+      "overflow": false,
+      "skip": 0,
+      "title": "Contacto | Cero y Uno",
+      "url": "https://ceroyuno.com.co/contacto",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "canonical": "https://ceroyuno.com.co/nosotros",
+      "description": "Conoce el enfoque de Cero y Uno: estrategia, arquitectura y ejecución para convertir ideas y procesos en sistemas reales.",
+      "h1": [
+        "Cero y Uno convierte ideas en sistemas que pueden operar."
+      ],
+      "images": 0,
+      "links": [
+        {
+          "href": "/",
+          "text": "01Cero y Uno"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Diagnóstico"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "contacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Carrera 72BIS # 25B-50, Bogotá"
+        }
+      ],
+      "navCurrent": [],
+      "overflow": false,
+      "skip": 0,
+      "title": "Nosotros | Cero y Uno",
+      "url": "https://ceroyuno.com.co/nosotros",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "canonical": "https://ceroyuno.com.co/servicios",
+      "description": "Servicios de desarrollo de software a medida, automatización, integraciones, Power Platform, analítica e inteligencia aplicada.",
+      "h1": [
+        "Software parael trabajo real."
+      ],
+      "images": 0,
+      "links": [
+        {
+          "href": "/",
+          "text": "01Cero y Uno"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Diagnóstico"
+        },
+        {
+          "href": "#explorar",
+          "text": "Explorar servicios"
+        },
+        {
+          "href": "#software-a-medida",
+          "text": "01Software a medida"
+        },
+        {
+          "href": "#automatizacion",
+          "text": "02Automatización"
+        },
+        {
+          "href": "#integraciones-y-apis",
+          "text": "03Integraciones y APIs"
+        },
+        {
+          "href": "#power-platform",
+          "text": "04Power Platform"
+        },
+        {
+          "href": "#analitica-e-ia",
+          "text": "05Analítica e IA aplicada"
+        },
+        {
+          "href": "#modernizacion",
+          "text": "06Modernización"
+        },
+        {
+          "href": "#hablemos",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Solicitar diagnóstico"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "contacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Carrera 72BIS # 25B-50, Bogotá"
+        }
+      ],
+      "navCurrent": [],
+      "overflow": false,
+      "skip": 0,
+      "title": "Servicios | Cero y Uno",
+      "url": "https://ceroyuno.com.co/servicios",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "canonical": "https://ceroyuno.com.co/soluciones",
+      "description": "Plataformas internas, portales, aprobaciones, sistemas conectados, tableros e IA aplicada. Explora una solución según el problema de tu equipo.",
+      "h1": [
+        "Que el trabajosiga su curso."
+      ],
+      "images": 0,
+      "links": [
+        {
+          "href": "/",
+          "text": "01Cero y Uno"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Diagnóstico"
+        },
+        {
+          "href": "#escenarios",
+          "text": "Encuentra tu escenario"
+        },
+        {
+          "href": "/servicios#software-a-medida",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#software-a-medida",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#automatizacion",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#integraciones-y-apis",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#analitica-e-ia",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#analitica-e-ia",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu caso"
+        },
+        {
+          "href": "/#proceso",
+          "text": "Ver recorridos del portafolio"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "contacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Carrera 72BIS # 25B-50, Bogotá"
+        }
+      ],
+      "navCurrent": [],
+      "overflow": false,
+      "skip": 0,
+      "title": "Soluciones digitales | Cero y Uno",
+      "url": "https://ceroyuno.com.co/soluciones",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "canonical": "https://ceroyuno.com.co/servicios",
+      "description": "Servicios de desarrollo de software a medida, automatización, integraciones, Power Platform, analítica e inteligencia aplicada.",
+      "h1": [
+        "Software parael trabajo real."
+      ],
+      "images": 0,
+      "links": [
+        {
+          "href": "/",
+          "text": "01Cero y Uno"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Diagnóstico"
+        },
+        {
+          "href": "#explorar",
+          "text": "Explorar servicios"
+        },
+        {
+          "href": "#software-a-medida",
+          "text": "01Software a medida"
+        },
+        {
+          "href": "#automatizacion",
+          "text": "02Automatización"
+        },
+        {
+          "href": "#integraciones-y-apis",
+          "text": "03Integraciones y APIs"
+        },
+        {
+          "href": "#power-platform",
+          "text": "04Power Platform"
+        },
+        {
+          "href": "#analitica-e-ia",
+          "text": "05Analítica e IA aplicada"
+        },
+        {
+          "href": "#modernizacion",
+          "text": "06Modernización"
+        },
+        {
+          "href": "#hablemos",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu proyecto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Solicitar diagnóstico"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "contacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Carrera 72BIS # 25B-50, Bogotá"
+        }
+      ],
+      "navCurrent": [],
+      "overflow": false,
+      "skip": 0,
+      "title": "Servicios | Cero y Uno",
+      "url": "https://ceroyuno.com.co/servicios",
+      "viewport": [
+        320,
+        740
+      ]
+    },
+    {
+      "canonical": "https://ceroyuno.com.co/soluciones",
+      "description": "Plataformas internas, portales, aprobaciones, sistemas conectados, tableros e IA aplicada. Explora una solución según el problema de tu equipo.",
+      "h1": [
+        "Que el trabajosiga su curso."
+      ],
+      "images": 0,
+      "links": [
+        {
+          "href": "/",
+          "text": "01Cero y Uno"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Diagnóstico"
+        },
+        {
+          "href": "#escenarios",
+          "text": "Encuentra tu escenario"
+        },
+        {
+          "href": "/servicios#software-a-medida",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#software-a-medida",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#automatizacion",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#integraciones-y-apis",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#analitica-e-ia",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/servicios#analitica-e-ia",
+          "text": "Ver servicio relacionado"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Hablemos de tu caso"
+        },
+        {
+          "href": "/#proceso",
+          "text": "Ver recorridos del portafolio"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "contacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Carrera 72BIS # 25B-50, Bogotá"
+        }
+      ],
+      "navCurrent": [],
+      "overflow": false,
+      "skip": 0,
+      "title": "Soluciones digitales | Cero y Uno",
+      "url": "https://ceroyuno.com.co/soluciones",
+      "viewport": [
+        320,
+        740
+      ]
+    },
+    {
+      "canonical": "https://ceroyuno.com.co/nosotros",
+      "description": "Conoce el enfoque de Cero y Uno: estrategia, arquitectura y ejecución para convertir ideas y procesos en sistemas reales.",
+      "h1": [
+        "Cero y Uno convierte ideas en sistemas que pueden operar."
+      ],
+      "images": 0,
+      "links": [
+        {
+          "href": "/",
+          "text": "01Cero y Uno"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Diagnóstico"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "contacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Carrera 72BIS # 25B-50, Bogotá"
+        }
+      ],
+      "navCurrent": [],
+      "overflow": false,
+      "skip": 0,
+      "title": "Nosotros | Cero y Uno",
+      "url": "https://ceroyuno.com.co/nosotros",
+      "viewport": [
+        320,
+        740
+      ]
+    },
+    {
+      "canonical": "https://ceroyuno.com.co/contacto",
+      "description": "Escríbenos o llámanos para conversar sobre el proceso que quieres mejorar con software, automatización o integraciones.",
+      "h1": [
+        "Hablemos de tu operación"
+      ],
+      "images": 0,
+      "links": [
+        {
+          "href": "/",
+          "text": "01Cero y Uno"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "/contacto#canales",
+          "text": "Diagnóstico"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "Escríbenoscontacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "Llámanos+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Ver en el mapaCarrera 72BIS # 25B-50, Bogotá"
+        },
+        {
+          "href": "/",
+          "text": "Inicio"
+        },
+        {
+          "href": "/servicios",
+          "text": "Servicios"
+        },
+        {
+          "href": "/soluciones",
+          "text": "Soluciones"
+        },
+        {
+          "href": "/nosotros",
+          "text": "Nosotros"
+        },
+        {
+          "href": "/contacto",
+          "text": "Contacto"
+        },
+        {
+          "href": "mailto:contacto@ceroyuno.com.co",
+          "text": "contacto@ceroyuno.com.co"
+        },
+        {
+          "href": "tel:+573053288831",
+          "text": "+57 305 328 8831"
+        },
+        {
+          "href": "https://www.google.com/maps/search/?api=1&query=Carrera%2072BIS%20%23%2025B-50%2C%20Bogot%C3%A1",
+          "text": "Carrera 72BIS # 25B-50, Bogotá"
+        }
+      ],
+      "navCurrent": [],
+      "overflow": false,
+      "skip": 0,
+      "title": "Contacto | Cero y Uno",
+      "url": "https://ceroyuno.com.co/contacto",
+      "viewport": [
+        320,
+        740
+      ]
+    }
+  ],
+  "serviceTests": [
+    [
+      "automatizacion"
+    ],
+    [
+      "integraciones-y-apis"
+    ],
+    [
+      "power-platform"
+    ],
+    [
+      "analitica-e-ia"
+    ],
+    [
+      "modernizacion"
+    ]
+  ],
+  "solutionTests": [
+    {
+      "value": "plataformas-internas",
+      "visible": [
+        "scenario-plataformas-internas"
+      ]
+    },
+    {
+      "value": "portales-corporativos",
+      "visible": [
+        "scenario-portales-corporativos"
+      ]
+    },
+    {
+      "value": "automatizacion-operativa",
+      "visible": [
+        "scenario-automatizacion-operativa"
+      ]
+    },
+    {
+      "value": "integracion-de-sistemas",
+      "visible": [
+        "scenario-integracion-de-sistemas"
+      ]
+    },
+    {
+      "value": "tableros-gerenciales",
+      "visible": [
+        "scenario-tableros-gerenciales"
+      ]
+    },
+    {
+      "value": "ia-aplicada",
+      "visible": [
+        "scenario-ia-aplicada"
+      ]
+    }
+  ],
+  "menuAfterEscape": true
+}

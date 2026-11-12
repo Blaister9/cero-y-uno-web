@@ -148,6 +148,7 @@ Los datos públicos de contacto se editan en `src/config/site.ts`. Los botones d
 
 ## Documentación
 
+- [Diagnóstico de Servicios, Soluciones, Nosotros y Contacto](docs/DIAGNOSTICO_SECCIONES_2026-11-11.md)
 - [Concepto de marca](docs/BRAND_CONCEPT.md)
 - [Arquitectura](docs/ARCHITECTURE.md)
 - [Despliegue](docs/DEPLOYMENT.md)
