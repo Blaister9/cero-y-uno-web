@@ -4,7 +4,12 @@ Fecha: 11 de noviembre de 2026, Bogotá. Sitio revisado: https://ceroyuno.com.co
 Versión de aplicación publicada: `be44291a6082f90c529b90676d16dedd86e55d45`.
 Alcance: Servicios, Soluciones, Nosotros, Contacto y los elementos compartidos que
 conectan esas páginas con Inicio. Este documento registra el diagnóstico y la
-propuesta de trabajo; los hallazgos todavía no están corregidos.
+propuesta de trabajo sobre esa versión publicada.
+
+Seguimiento: la [primera implementación de la base compartida](BASE_COMPARTIDA_2026-11-11.md)
+resuelve INT-01, INT-02, INT-04, INT-05 e INT-11 en la rama de trabajo. El diagnóstico
+de abajo conserva las observaciones originales; la implementación se entrega como
+vista previa y todavía no se ha promovido a producción.
 
 ## Conclusión
 
@@ -68,20 +73,22 @@ en las comprobaciones realizadas. «Confirmado» describe comportamiento/código
 
 ### Localización en el código
 
-- INT-01: [enlace de Soluciones](../src/app/soluciones/page.tsx#L60).
-- INT-02, INT-04, INT-05: [cabecera interior](../src/components/layout/header.tsx),
-  [cabecera de Inicio](../src/components/home/home-chrome.tsx) y los `main` de las rutas.
-- INT-03: [tokens actuales](../tailwind.config.ts), [CSS global](../src/app/globals.css),
-  [paleta de Inicio](../src/lib/home.css) y clases `text-matrix` / `bg-matrix` de los exploradores.
-- INT-06, INT-12: [Nosotros](../src/app/nosotros/page.tsx),
-  [contenido de empresa](../src/content/company.ts), [PageHero](../src/components/layout/page-hero.tsx).
-- INT-07, INT-10: [destino comercial](../src/config/site.ts#L21),
-  [Contacto](../src/app/contacto/page.tsx), [copy de contacto](../src/content/site.ts).
-- INT-08: [explorador de Servicios](../src/components/services/service-explorer.tsx),
-  [contenido](../src/content/services.ts).
-- INT-09, INT-10: [explorador de Soluciones](../src/components/solutions/solution-explorer.tsx),
-  [flujo del hero](../src/components/solutions/solution-journey.tsx), [contenido](../src/content/solutions.ts).
-- INT-11: [pie interior](../src/components/layout/footer.tsx#L53).
+Referencias fijadas a la versión de aplicación auditada, antes de la implementación.
+
+- INT-01: [enlace de Soluciones](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/app/soluciones/page.tsx#L60).
+- INT-02, INT-04, INT-05: [cabecera interior](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/components/layout/header.tsx),
+  [cabecera de Inicio](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/components/home/home-chrome.tsx) y los `main` de las rutas.
+- INT-03: [tokens actuales](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/tailwind.config.ts), [CSS global](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/app/globals.css),
+  [paleta de Inicio](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/lib/home.css) y clases `text-matrix` / `bg-matrix` de los exploradores.
+- INT-06, INT-12: [Nosotros](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/app/nosotros/page.tsx),
+  [contenido de empresa](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/content/company.ts), [PageHero](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/components/layout/page-hero.tsx).
+- INT-07, INT-10: [destino comercial](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/config/site.ts#L21),
+  [Contacto](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/app/contacto/page.tsx), [copy de contacto](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/content/site.ts).
+- INT-08: [explorador de Servicios](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/components/services/service-explorer.tsx),
+  [contenido](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/content/services.ts).
+- INT-09, INT-10: [explorador de Soluciones](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/components/solutions/solution-explorer.tsx),
+  [flujo del hero](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/components/solutions/solution-journey.tsx), [contenido](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/content/solutions.ts).
+- INT-11: [pie interior](https://github.com/Blaister9/cero-y-uno-web/blob/be44291a6082f90c529b90676d16dedd86e55d45/src/components/layout/footer.tsx#L53).
 
 ## Dirección por página
 

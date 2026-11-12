@@ -17,7 +17,7 @@ export const metadata = createPageMetadata({
 
 export default function SolucionesPage() {
   return (
-    <main>
+    <main id="contenido" tabIndex={-1}>
       <section className="solutions-hero overflow-hidden pb-14 pt-28 md:pb-20 md:pt-36" aria-labelledby="solutions-title">
         <Container>
           <div className="mb-10 flex items-center gap-3 text-sm font-medium text-matrix">
@@ -57,7 +57,7 @@ export default function SolucionesPage() {
               {solutionsPage.closing.action}
               <ArrowUpRight aria-hidden="true" size={18} />
             </Link>
-            <Link className="mt-4 flex min-h-11 w-fit items-center gap-2 text-sm text-steel transition hover:text-matrix" href="/#proceso">
+            <Link className="mt-4 flex min-h-11 w-fit items-center gap-2 text-sm text-steel transition hover:text-matrix" href="/#portafolio">
               {solutionsPage.closing.secondaryAction}
               <ArrowUpRight aria-hidden="true" size={16} />
             </Link>

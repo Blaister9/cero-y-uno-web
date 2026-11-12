@@ -1,102 +1,85 @@
 "use client";
 
-import { ArrowRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { siteConfig } from "@/config/site";
-import { HomeHeader } from "@/components/home/home-chrome";
-
-import { Container } from "./container";
+import { chromeContent } from "@/content/chrome";
+import { Brand } from "./brand";
 
 export function Header() {
-  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  if (pathname === "/") return <HomeHeader />;
+  // Reset the disclosure on every route change, including browser history.
+  return <HeaderNavigation key={pathname} pathname={pathname} />;
+}
+
+function HeaderNavigation({ pathname }: { pathname: string }) {
+  const [open, setOpen] = useState(false);
+  const trigger = useRef<HTMLButtonElement>(null);
 
   return (
-    <header className="glass-nav fixed left-0 right-0 top-0 z-50 border-b border-white/15">
-      <Container className="flex h-16 items-center justify-between">
-        <Link
-          href="/"
-          className="flex items-center gap-3"
-          aria-label="Cero y Uno inicio"
-        >
-          <span className="grid h-9 w-9 place-items-center rounded border border-white/15 bg-matrixdeep/35 text-sm text-matrix shadow-inner-line">
-            01
-          </span>
-          <span className="text-sm font-semibold tracking-[0.18em] text-porcelain uppercase">
-            Cero y Uno
-          </span>
-        </Link>
-
-        <nav
-          className="hidden items-center gap-6 lg:flex"
-          aria-label="Navegación principal"
-        >
+    <header
+      className="home-header"
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && open) {
+          setOpen(false);
+          trigger.current?.focus();
+        }
+      }}
+    >
+      <a className="home-skip" href="#contenido" onClick={() => setOpen(false)}>
+        {chromeContent.skipLabel}
+      </a>
+      <div className="home-container home-header-inner">
+        <Brand />
+        <nav className="home-desktop-nav" aria-label="Navegación principal">
           {siteConfig.navItems.map((item) => (
             <Link
-              className="text-sm text-steel transition hover:text-porcelain"
-              href={item.href}
               key={item.href}
+              href={item.href}
+              aria-current={item.href === pathname ? "page" : undefined}
             >
               {item.label}
             </Link>
           ))}
         </nav>
-
-        <div className="hidden items-center gap-3 md:flex">
-          <a
-            className="inline-flex h-10 items-center gap-2 rounded border border-matrix/45 bg-matrix/10 px-4 text-sm font-medium text-porcelain transition hover:border-matrix/75 hover:bg-matrix/15"
-            href={siteConfig.primaryContactHref}
+        <div className="home-header-actions">
+          <Link className="home-text-link" href={siteConfig.primaryContactHref} onClick={() => setOpen(false)}>
+            {chromeContent.contactLabel} <ArrowUpRight size={16} aria-hidden="true" />
+          </Link>
+          <button
+            className="home-menu-toggle"
+            type="button"
+            ref={trigger}
+            aria-label={open ? "Cerrar navegación" : "Abrir navegación"}
+            aria-expanded={open}
+            aria-controls="site-mobile-nav"
+            onClick={() => setOpen(!open)}
           >
-            Diagnóstico
-            <ArrowRight aria-hidden="true" size={16} />
-          </a>
+            {open ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
+          </button>
         </div>
-
-        <button
-          aria-expanded={isOpen}
-          aria-label={isOpen ? "Cerrar navegación" : "Abrir navegación"}
-          className="grid h-10 w-10 place-items-center rounded border border-white/15 bg-white/[0.035] text-porcelain transition hover:border-matrix/45 lg:hidden"
-          onClick={() => setIsOpen((current) => !current)}
-          type="button"
-        >
-          {isOpen ? (
-            <X aria-hidden="true" size={20} />
-          ) : (
-            <Menu aria-hidden="true" size={20} />
-          )}
-        </button>
-      </Container>
-
-      {isOpen ? (
-        <div className="glass-panel border-t border-white/15 lg:hidden">
-          <Container className="py-4">
-            <nav className="grid gap-2" aria-label="Navegación móvil">
-              {siteConfig.navItems.map((item) => (
-                <Link
-                  className="rounded border border-white/10 bg-white/[0.025] px-4 py-3 text-sm text-steel transition hover:border-matrix/40 hover:text-porcelain"
-                  href={item.href}
-                  key={item.href}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-              <a
-                className="mt-2 inline-flex h-11 items-center justify-center gap-2 rounded bg-matrix px-4 text-sm font-semibold text-ink transition hover:bg-porcelain"
-                href={siteConfig.primaryContactHref}
-                onClick={() => setIsOpen(false)}
-              >
-                Solicitar diagnóstico
-                <ArrowRight aria-hidden="true" size={16} />
-              </a>
-            </nav>
-          </Container>
-        </div>
-      ) : null}
+      </div>
+      <nav
+        className="home-mobile-nav home-container"
+        id="site-mobile-nav"
+        aria-label="Navegación móvil"
+        hidden={!open}
+      >
+        {siteConfig.navItems.map((item) => (
+          <Link
+            href={item.href}
+            key={item.href}
+            aria-current={item.href === pathname ? "page" : undefined}
+            onClick={() => setOpen(false)}
+          >
+            {item.label}
+            <ArrowUpRight size={16} aria-hidden="true" />
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }

@@ -33,11 +33,5 @@ export const siteConfig = {
     { label: "Soluciones", href: "/soluciones" },
     { label: "Nosotros", href: "/nosotros" },
     { label: "Contacto", href: "/contacto" }
-  ],
-  footerServices: [
-    "Software a medida",
-    "Automatización",
-    "Integraciones",
-    "Inteligencia aplicada"
   ]
 };

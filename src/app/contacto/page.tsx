@@ -22,7 +22,7 @@ export default function ContactoPage() {
   ];
 
   return (
-    <main className="bg-ink bg-[radial-gradient(ellipse_at_72%_12%,rgba(22,61,41,0.32),transparent_65%)] pb-16 pt-28 md:pb-24 md:pt-36">
+    <main id="contenido" tabIndex={-1} className="bg-ink bg-[radial-gradient(ellipse_at_72%_12%,rgba(22,61,41,0.32),transparent_65%)] pb-16 pt-28 md:pb-24 md:pt-36">
       <Container>
         <section aria-labelledby="contacto-titulo" className="scroll-mt-24" id="canales">
           <p className="text-sm uppercase tracking-[0.28em] text-matrix">{eyebrow}</p>

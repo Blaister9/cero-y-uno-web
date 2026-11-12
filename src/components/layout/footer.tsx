@@ -1,82 +1,50 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { HomeFooter } from "@/components/home/home-chrome";
 
 import { siteConfig } from "@/config/site";
-
-import { Container } from "./container";
+import { chromeContent } from "@/content/chrome";
+import { servicesPage } from "@/content/services";
+import { Brand } from "./brand";
 
 export function Footer() {
-  const pathname = usePathname();
-  const year = new Date().getFullYear();
-  const { email, emailHref, phone, phoneHref, address, mapHref } =
-    siteConfig.contact;
-  if (pathname === "/") return <HomeFooter />;
-
+  const { contact } = siteConfig;
   return (
-    <footer className="glass-panel border-t border-white/15 py-10">
-      <Container className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1.1fr_0.65fr_0.75fr_0.8fr]">
-        <div>
-          <p className="text-sm font-semibold tracking-[0.18em] text-porcelain uppercase">
-            Cero y Uno
-          </p>
-          <p className="mt-3 max-w-xl text-sm leading-6 text-steel">
-            Convertimos ideas, procesos complejos y caos operativo en sistemas
-            digitales reales.
-          </p>
-          <p className="mt-5 text-xs text-steel/80">
-            © {year} Cero y Uno. Todos los derechos reservados.
-          </p>
-        </div>
-
-        <div>
-          <p className="text-sm font-semibold text-porcelain">Navegación</p>
-          <ul className="mt-3 grid gap-2 text-sm text-steel">
+    <footer className="home-footer">
+      <div className="home-container">
+        <div className="home-footer-grid">
+          <div className="home-footer-brand">
+            <Brand />
+            <p>{chromeContent.footerDescription}</p>
+          </div>
+          <nav aria-label="Navegación del pie">
+            <h2 className="home-footer-heading">{chromeContent.navigationLabel}</h2>
             {siteConfig.navItems.map((item) => (
-              <li key={item.href}>
-                <Link
-                  className="transition hover:text-porcelain"
-                  href={item.href}
-                >
-                  {item.label}
-                </Link>
-              </li>
+              <Link href={item.href} key={item.href}>
+                {item.label}
+              </Link>
             ))}
-          </ul>
-        </div>
-
-        <div>
-          <p className="text-sm font-semibold text-porcelain">Servicios</p>
-          <ul className="mt-3 grid gap-2 text-sm text-steel">
-            {siteConfig.footerServices.map((service) => (
-              <li key={service}>{service}</li>
+          </nav>
+          <nav aria-label="Servicios del pie">
+            <h2 className="home-footer-heading">{chromeContent.servicesLabel}</h2>
+            {servicesPage.items.map((service) => (
+              <Link href={`/servicios#${service.id}`} key={service.id}>
+                {service.shortTitle}
+              </Link>
             ))}
-          </ul>
+          </nav>
+          <div className="home-footer-contact">
+            <h2 className="home-footer-heading">{chromeContent.contactHeading}</h2>
+            <address>
+              <a href={contact.emailHref}>{contact.email}</a>
+              <a href={contact.phoneHref}>{contact.phone}</a>
+              <a href={contact.mapHref}>{contact.address}</a>
+            </address>
+          </div>
         </div>
-
-        <div>
-          <p className="text-sm font-semibold text-porcelain">Contacto</p>
-          <address className="mt-3 grid gap-2 text-sm not-italic leading-6 text-steel">
-            <a
-              className="w-fit max-w-full break-words transition hover:text-porcelain"
-              href={emailHref}
-            >
-              {email}
-            </a>
-            <a
-              className="w-fit transition hover:text-porcelain"
-              href={phoneHref}
-            >
-              {phone}
-            </a>
-            <a className="w-fit transition hover:text-porcelain" href={mapHref}>
-              {address}
-            </a>
-          </address>
+        <div className="home-footer-bottom">
+          <span>© {new Date().getFullYear()} {siteConfig.name}</span>
+          <span>{chromeContent.footerClosing}</span>
         </div>
-      </Container>
+      </div>
     </footer>
   );
 }

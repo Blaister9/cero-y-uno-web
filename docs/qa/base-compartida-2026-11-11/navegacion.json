@@ -1,0 +1,373 @@
+{
+  "environment": "Local production build, Node 24, integrated browser",
+  "pages": [
+    {
+      "current": [
+        "Inicio"
+      ],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/",
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "current": [
+        "Servicios"
+      ],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/servicios",
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "current": [
+        "Soluciones"
+      ],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/soluciones",
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "current": [
+        "Nosotros"
+      ],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/nosotros",
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "current": [
+        "Contacto"
+      ],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/contacto",
+      "viewport": [
+        1280,
+        900
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/",
+      "viewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/servicios",
+      "viewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/soluciones",
+      "viewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/nosotros",
+      "viewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/contacto",
+      "viewport": [
+        768,
+        1024
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/servicios",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/soluciones",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/nosotros",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/contacto",
+      "viewport": [
+        390,
+        844
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/",
+      "viewport": [
+        320,
+        740
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/servicios",
+      "viewport": [
+        320,
+        740
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/soluciones",
+      "viewport": [
+        320,
+        740
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/nosotros",
+      "viewport": [
+        320,
+        740
+      ]
+    },
+    {
+      "current": [],
+      "footerServices": 6,
+      "main": "contenido",
+      "mainTabIndex": -1,
+      "menuHidden": true,
+      "overflow": false,
+      "path": "/contacto",
+      "viewport": [
+        320,
+        740
+      ]
+    }
+  ],
+  "keyboard": [
+    {
+      "route": "/",
+      "firstFocus": "Saltar al contenido",
+      "focus": "contenido",
+      "hash": "#contenido"
+    },
+    {
+      "route": "/servicios",
+      "firstFocus": "Saltar al contenido",
+      "focus": "contenido",
+      "hash": "#contenido"
+    },
+    {
+      "route": "/soluciones",
+      "firstFocus": "Saltar al contenido",
+      "focus": "contenido",
+      "hash": "#contenido"
+    },
+    {
+      "route": "/nosotros",
+      "firstFocus": "Saltar al contenido",
+      "focus": "contenido",
+      "hash": "#contenido"
+    },
+    {
+      "route": "/contacto",
+      "firstFocus": "Saltar al contenido",
+      "focus": "contenido",
+      "hash": "#contenido"
+    }
+  ],
+  "footerServiceLinks": [
+    {
+      "hash": "#software-a-medida",
+      "headerBottom": 65,
+      "open": [
+        "software-a-medida"
+      ],
+      "top": 96.15625
+    },
+    {
+      "hash": "#automatizacion",
+      "headerBottom": 65,
+      "open": [
+        "automatizacion"
+      ],
+      "top": 96.15625
+    },
+    {
+      "hash": "#integraciones-y-apis",
+      "headerBottom": 65,
+      "open": [
+        "integraciones-y-apis"
+      ],
+      "top": 96.15625
+    },
+    {
+      "hash": "#power-platform",
+      "headerBottom": 65,
+      "open": [
+        "power-platform"
+      ],
+      "top": 96.15625
+    },
+    {
+      "hash": "#analitica-e-ia",
+      "headerBottom": 65,
+      "open": [
+        "analitica-e-ia"
+      ],
+      "top": 96.15625
+    },
+    {
+      "hash": "#modernizacion",
+      "headerBottom": 65,
+      "open": [
+        "modernizacion"
+      ],
+      "top": 96.15625
+    }
+  ],
+  "menu": {
+    "open": {
+      "current": "Servicios",
+      "expanded": "true"
+    },
+    "afterEscape": {
+      "expanded": "false",
+      "focus": "Abrir navegación",
+      "hidden": true
+    }
+  },
+  "portfolio": {
+    "url": "/#portafolio",
+    "top": 103.59375,
+    "headerBottom": 65
+  }
+}

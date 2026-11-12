@@ -16,7 +16,7 @@ export const metadata = createPageMetadata({
 
 export default function ServiciosPage() {
   return (
-    <main>
+    <main id="contenido" tabIndex={-1}>
       <section className="services-hero overflow-hidden pb-14 pt-32 md:pb-20 md:pt-40" aria-labelledby="services-title">
         <Container>
           <div className="mb-10 flex items-center justify-between gap-4 border-b border-white/15 pb-5 text-sm">

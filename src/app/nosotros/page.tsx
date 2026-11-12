@@ -13,7 +13,7 @@ export const metadata = createPageMetadata({
 
 export default function NosotrosPage() {
   return (
-    <main>
+    <main id="contenido" tabIndex={-1}>
       <PageHero
         description={companyPage.description}
         eyebrow={companyPage.eyebrow}
