@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-11-12T05:22:56.587Z",
+  "appCommit": "bac632fb6e91eb7b287e313415df9cc71f4ba3a6",
+  "deployment": "37suEsHFAhM4huYaUv5v1PrmFp9u",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "url": "https://ceroyuno.com.co/",
+      "title": "Cero y Uno | Desarrollo de software, automatización e inteligencia aplicada",
+      "canonical": "https://ceroyuno.com.co",
+      "skipLink": true,
+      "headerContact": true
+    },
+    {
+      "path": "/servicios",
+      "status": 200,
+      "url": "https://ceroyuno.com.co/servicios",
+      "title": "Servicios | Cero y Uno",
+      "canonical": "https://ceroyuno.com.co/servicios",
+      "skipLink": true,
+      "headerContact": true,
+      "redesign": true
+    },
+    {
+      "path": "/soluciones",
+      "status": 200,
+      "url": "https://ceroyuno.com.co/soluciones",
+      "title": "Soluciones digitales | Cero y Uno",
+      "canonical": "https://ceroyuno.com.co/soluciones",
+      "skipLink": true,
+      "headerContact": true,
+      "redesign": true
+    },
+    {
+      "path": "/nosotros",
+      "status": 200,
+      "url": "https://ceroyuno.com.co/nosotros",
+      "title": "Nosotros | Cero y Uno",
+      "canonical": "https://ceroyuno.com.co/nosotros",
+      "skipLink": true,
+      "headerContact": true
+    },
+    {
+      "path": "/contacto",
+      "status": 200,
+      "url": "https://ceroyuno.com.co/contacto",
+      "title": "Contacto | Cero y Uno",
+      "canonical": "https://ceroyuno.com.co/contacto",
+      "skipLink": true,
+      "headerContact": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "url": "https://ceroyuno.com.co/robots.txt"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "url": "https://ceroyuno.com.co/sitemap.xml"
+    },
+    {
+      "path": "/opengraph-image",
+      "status": 200,
+      "url": "https://ceroyuno.com.co/opengraph-image"
+    }
+  ],
+  "assets": [
+    {
+      "path": "/images/services/mesa-software-v1.webp",
+      "status": 200,
+      "bytes": 168908,
+      "publicSha256": "f18927799fda68401d3e97f3dcac144c14e74b4f430b8689769d422d77058997",
+      "repoSha256": "f18927799fda68401d3e97f3dcac144c14e74b4f430b8689769d422d77058997",
+      "match": true
+    },
+    {
+      "path": "/images/stories/mesa-financiera-v1.webp",
+      "status": 200,
+      "bytes": 227486,
+      "publicSha256": "6163d4365a226df09cd4b3a39fddac24426f6ae64231108a586a66641c5aa982",
+      "repoSha256": "6163d4365a226df09cd4b3a39fddac24426f6ae64231108a586a66641c5aa982",
+      "match": true
+    }
+  ]
+}

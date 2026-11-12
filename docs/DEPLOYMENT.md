@@ -1,5 +1,36 @@
 # Despliegue
 
+## Publicación de páginas interiores · 12 de noviembre de 2026
+
+Publicadas la base compartida y las páginas Servicios y Soluciones en
+[ceroyuno.com.co](https://ceroyuno.com.co/), desde `feature/scrollytelling-escenas`.
+No se hizo merge a `main`.
+
+- Commit de aplicación: `bac632fb6e91eb7b287e313415df9cc71f4ba3a6`.
+- Deployment de producción: `37suEsHFAhM4huYaUv5v1PrmFp9u`.
+- [Panel de Vercel](https://vercel.com/blaisters-projects/cero-y-uno-web/37suEsHFAhM4huYaUv5v1PrmFp9u).
+- Vercel reconstruyó la vista previa con el entorno de producción tras la
+  verificación del titular y confirmó `Ready` / `Production` a las 00:22 de Bogotá.
+- Incluye cabecera y pie comunes, navegación accesible, Servicios con base clara
+  y seis escenas, y Soluciones con seis ejemplos diferenciados y enlaces compartibles.
+- [CI 43160397159](https://github.com/Blaister9/cero-y-uno-web/actions/runs/43160397159)
+  correcto; instalación congelada, typecheck, lint y build validados.
+- Las cinco páginas, robots, sitemap y Open Graph respondieron 200. Los canonical
+  apuntan al dominio público. Las dos fotografías usadas en las nuevas entradas
+  coinciden por SHA-256 con el repositorio.
+- En el navegador público se comprobó la selección de Integración de sistemas,
+  su conservación al recargar y el enlace al servicio correspondiente. El alcance
+  del servicio se abre y no se observaron desbordamientos en estas vistas.
+- Evidencia: [comprobación pública](qa/soluciones-2026-11-12/produccion.json),
+  [Soluciones](qa/soluciones-2026-11-12/produccion-desktop.png) y
+  [detalle de Servicios](qa/soluciones-2026-11-12/produccion-servicios.png).
+- Alcance y límites de QA: [base compartida](BASE_COMPARTIDA_2026-11-11.md),
+  [Servicios](SERVICIOS_2026-11-12.md) y [Soluciones](SOLUCIONES_2026-11-12.md).
+
+El commit posterior de documentación registra esta publicación; no modifica la
+versión de aplicación servida en producción. Nosotros y Contacto conservan su
+composición de contenido anterior y quedan como siguientes fases del diagnóstico.
+
 ## Publicación de recorridos visuales · 11 de noviembre de 2026
 
 Publicados todos los cambios aprobados en https://ceroyuno.com.co/ desde

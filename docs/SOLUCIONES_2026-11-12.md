@@ -75,5 +75,6 @@ y sin `:has` se revisó en código, no mediante emulación.
 
 INT-03 e INT-09 abordados para Soluciones. INT-10 mejora con enlaces compartibles;
 la conservación del contexto comercial al llegar a Contacto sigue pendiente.
-El registro de la publicación conjunta con Servicios y la base compartida se mantiene
-en [DEPLOYMENT.md](DEPLOYMENT.md). No se hace merge a `main`.
+Publicado el 12 de noviembre de 2026 junto a Servicios y la base compartida, desde
+`bac632f`. El registro y la verificación pública se mantienen en
+[DEPLOYMENT.md](DEPLOYMENT.md). No se hizo merge a `main`.

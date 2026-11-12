@@ -57,5 +57,6 @@ Safari, Firefox o dispositivos físicos. No se modifican las animaciones existen
 
 ## Entrega
 
-Código, diagnóstico actualizado y evidencia en GitHub. Vista previa para revisión;
-producción conserva la última versión publicada. No se hizo merge a `main`.
+Código, diagnóstico actualizado y evidencia en GitHub. Publicado el 12 de noviembre
+de 2026 junto a Servicios y Soluciones, desde `bac632f`. Detalles y verificación en
+[DEPLOYMENT.md](DEPLOYMENT.md). No se hizo merge a `main`.

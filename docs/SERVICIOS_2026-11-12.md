@@ -80,6 +80,7 @@ físicos adicionales. La revisión no constituye una certificación de accesibil
 
 ## Estado
 
-INT-03 e INT-08 abordados para Servicios; el resto de páginas interiores mantiene su
-contenido actual. Entrega para revisión en preview y GitHub, sin promoción a producción
-ni merge a `main`.
+INT-03 e INT-08 abordados para Servicios. Publicado el 12 de noviembre de 2026 junto
+a Soluciones y la base compartida, desde `bac632f`. Detalles y verificación en
+[DEPLOYMENT.md](DEPLOYMENT.md). Nosotros y Contacto quedan como siguientes fases.
+No se hizo merge a `main`.

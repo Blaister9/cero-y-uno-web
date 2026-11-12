@@ -8,8 +8,9 @@ propuesta de trabajo sobre esa versión publicada.
 
 Seguimiento: la [primera implementación de la base compartida](BASE_COMPARTIDA_2026-11-11.md)
 resuelve INT-01, INT-02, INT-04, INT-05 e INT-11 en la rama de trabajo. El diagnóstico
-de abajo conserva las observaciones originales; la implementación se entrega como
-vista previa y todavía no se ha promovido a producción.
+de abajo conserva las observaciones originales. La base compartida, Servicios y
+Soluciones se publicaron el 12 de noviembre de 2026 desde `bac632f`;
+el registro y la evidencia están en [DEPLOYMENT.md](DEPLOYMENT.md).
 
 Segunda fase: [rediseño de Servicios](SERVICIOS_2026-11-12.md), con base clara,
 ejemplos visuales diferenciados y alcances accesibles. Atiende INT-03 e INT-08
