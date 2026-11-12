@@ -4,6 +4,13 @@
 La publicación de esta propuesta fue autorizada por el titular el 11 de noviembre
 de 2026. Las revisiones anteriores documentan su preparación local.
 
+**Publicada y verificada:** https://ceroyuno.com.co/, commit `6f8b6aa`, deployment
+`EvfzirgUMvLnLgvdgPpqG6UkQUhY`. Vercel confirmó Production / Ready después de la
+verificación de identidad del titular. Las cinco rutas responden 200; imágenes y
+selector de los cinco relatos comprobados en el dominio público. Capturas de
+producción: [1440 px](qa/inicio-claro/produccion-1440.jpg) y
+[390 px](qa/inicio-claro/produccion-390.jpg).
+
 ## Revisión 5 · cinco relatos por scroll y representación negra
 
 - Las cinco experiencias usan la escena sticky y progreso reversible con scroll

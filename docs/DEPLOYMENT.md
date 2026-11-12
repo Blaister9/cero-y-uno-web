@@ -1,5 +1,27 @@
 # Despliegue
 
+## Publicación de Inicio · 11 de noviembre de 2026
+
+- URL verificada: https://ceroyuno.com.co/.
+- Commit publicado: `6f8b6aa6db6200953bb617848b5bc4ee5bc00861`.
+- Rama de origen: `feature/inicio-claro`, basada en `dev`.
+- Deployment de producción: `EvfzirgUMvLnLgvdgPpqG6UkQUhY`.
+- Panel: https://vercel.com/blaisters-projects/cero-y-uno-web/EvfzirgUMvLnLgvdgPpqG6UkQUhY.
+- Se promovió la preview revisada y Vercel reconstruyó la versión con el entorno
+  de producción. El titular completó la verificación de identidad requerida.
+- Vercel confirmó `Ready` y `Production`. GitHub CI `Validate` y la preview del
+  commit publicado terminaron correctamente.
+- Inicio incluye el banner Matrix ampliado, capacidades fotográficas con movimiento
+  por extremos, cinco portadas con protagonistas negros y los cinco relatos por scroll.
+- Verificación pública: las cinco páginas, robots, sitemap y la imagen nueva de
+  Atención responden 200. Las cinco portadas cargan; los cinco recorridos activan
+  scroll-linked en escritorio y etapas estáticas en móvil. Capturas en
+  `docs/qa/inicio-claro/produccion-1440.jpg` y `produccion-390.jpg`.
+
+No se hizo merge a `main`. `main` y `dev` todavía no contienen este rediseño;
+la referencia del código publicado es el commit anterior de `feature/inicio-claro`.
+Los commits posteriores de documentación no cambian la versión que sirve producción.
+
 ## Variables
 
 Copiar `.env.example` a `.env.local` cuando se necesite configurar el entorno local.
