@@ -4,6 +4,7 @@ import { Pause, Play } from "lucide-react";
 import { useRef, useState, type ReactNode } from "react";
 
 import { BinaryCanvas } from "@/components/experience/binary-canvas";
+import { homeContent } from "@/content/home";
 import { useHeroRain } from "@/lib/use-hero-rain";
 
 export function MatrixStage({ children }: { children: ReactNode }) {
@@ -11,6 +12,9 @@ export function MatrixStage({ children }: { children: ReactNode }) {
   const heroRef = useRef<HTMLElement>(null);
   const rainRef = useRef<HTMLDivElement>(null);
   useHeroRain(heroRef, rainRef);
+  const motionLabel = paused
+    ? homeContent.hero.motion.resume
+    : homeContent.hero.motion.pause;
   return (
     <section
       className="home-hero"
@@ -29,9 +33,8 @@ export function MatrixStage({ children }: { children: ReactNode }) {
         <button
           className="home-pause"
           type="button"
-          aria-label={
-            paused ? "Reanudar animación Matrix" : "Pausar animación Matrix"
-          }
+          aria-label={motionLabel}
+          title={motionLabel}
           aria-pressed={paused}
           onClick={() => setPaused(!paused)}
         >
@@ -40,9 +43,8 @@ export function MatrixStage({ children }: { children: ReactNode }) {
           ) : (
             <Pause size={16} aria-hidden="true" />
           )}
-          <span>{paused ? "Reanudar" : "Pausar"}</span>
         </button>
-        <p className="home-motion-note">Movimiento reducido · fondo estático</p>
+        <p className="home-motion-note">{homeContent.hero.motion.reduced}</p>
       </div>
       {children}
     </section>

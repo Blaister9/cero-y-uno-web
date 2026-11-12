@@ -1,0 +1,82 @@
+{
+  "checks": [
+    {
+      "case": "idle",
+      "background": "rgba(247, 247, 245, 0.76)",
+      "blur": "blur(8px)",
+      "compact": "true",
+      "focusWithin": false,
+      "hover": false,
+      "menuOpen": "false",
+      "opacity": "1",
+      "overflow": false,
+      "scrollY": 1100,
+      "width": 480
+    },
+    {
+      "case": "hover",
+      "background": "rgb(247, 247, 245)",
+      "blur": "blur(8px)",
+      "compact": "true",
+      "focusWithin": false,
+      "hover": true,
+      "menuOpen": "false",
+      "opacity": "1",
+      "overflow": false,
+      "scrollY": 1100,
+      "width": 480
+    },
+    {
+      "case": "menu-open-pointer-outside",
+      "background": "rgb(247, 247, 245)",
+      "blur": "blur(8px)",
+      "compact": "true",
+      "focusWithin": false,
+      "hover": false,
+      "menuOpen": "true",
+      "opacity": "1",
+      "overflow": false,
+      "scrollY": 1242,
+      "width": 480
+    },
+    {
+      "case": "keyboard-focus-pointer-outside",
+      "background": "rgb(247, 247, 245)",
+      "blur": "blur(8px)",
+      "compact": "true",
+      "focusWithin": true,
+      "hover": false,
+      "menuOpen": "false",
+      "opacity": "1",
+      "overflow": false,
+      "scrollY": 1242,
+      "width": 480
+    },
+    {
+      "case": "idle-restored",
+      "background": "rgba(247, 247, 245, 0.76)",
+      "blur": "blur(8px)",
+      "compact": "true",
+      "focusWithin": false,
+      "hover": false,
+      "menuOpen": "false",
+      "opacity": "1",
+      "overflow": false,
+      "scrollY": 1101,
+      "width": 480
+    }
+  ],
+  "sourceCopy": {
+    "files": 116,
+    "allMatch": true
+  },
+  "minimumBrandContrastOverBlack": 4.7,
+  "commands": {
+    "install": "passed (pnpm 9.15.4, frozen lockfile)",
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed (identical copy outside OneDrive)"
+  },
+  "errors": [],
+  "publication": "local preview"
+}

@@ -8,6 +8,11 @@ export const homeContent = {
       "Desarrollamos software a medida para conectar tus sistemas, automatizar procesos y hacer que tu operación avance.",
     primary: "Explorar nuestro trabajo",
     secondary: "Hablemos de tu proyecto",
+    motion: {
+      pause: "Pausar animación Matrix",
+      resume: "Reanudar animación Matrix",
+      reduced: "Movimiento reducido · fondo estático",
+    },
   },
   closing: {
     title: "Tu próxima solución puede empezar aquí.",

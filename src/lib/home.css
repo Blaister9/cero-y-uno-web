@@ -125,17 +125,31 @@ html:has(.home-page) {
   color: var(--home-brand-hover);
 }
 .home-header {
+  --header-height: 80px;
   position: fixed;
   inset: 0 0 auto;
   z-index: 50;
+  width: 100%;
+  margin-inline: auto;
   border-bottom: 1px solid var(--home-line);
 }
 .home-header-inner {
-  height: 80px;
+  height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  transition: height 200ms ease;
+}
+.home-header .home-brand {
+  transform-origin: left center;
+  transition: transform 200ms ease;
+}
+.home-header[data-compact="true"] {
+  --header-height: 64px;
+}
+.home-header[data-compact="true"] .home-brand {
+  transform: scale(0.93);
 }
 .home-brand {
   display: inline-flex;
@@ -182,24 +196,43 @@ html:has(.home-page) {
 }
 .home-header-actions {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 16px;
 }
 .home-menu-toggle {
   display: none;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
   place-items: center;
-  border: 1px solid var(--home-muted);
-  border-radius: 6px;
+  border: 0;
+  border-radius: 8px;
   color: var(--home-ink);
   background: transparent;
 }
+.home-menu-toggle:hover,
+.home-menu-toggle[aria-expanded="true"] {
+  background: var(--home-soft);
+}
 .home-mobile-nav {
   display: none;
+  gap: 0;
+  padding-block: 8px 16px;
+  max-height: calc(100dvh - var(--header-height) - 28px);
+  overflow-y: auto;
 }
 .home-mobile-nav[hidden] {
   display: none;
+}
+.home-mobile-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 12px;
+  border-top: 1px solid var(--home-line);
+  font-size: 14px;
+  font-weight: 600;
 }
 .home-mobile-nav a[aria-current] {
   color: var(--home-brand);
@@ -313,7 +346,7 @@ html:has(.home-page) {
 }
 .home-hero-controls {
   position: absolute;
-  inset: 24px 0 auto;
+  inset: auto 0 24px;
   z-index: 3;
   display: flex;
   align-items: center;
@@ -323,20 +356,19 @@ html:has(.home-page) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
-  min-height: 48px;
-  padding: 0 8px;
-  font-size: 12px;
-  border: 1px solid #dce4e799;
-  border-radius: 6px;
-  color: var(--home-highlight);
-  background: #12171c;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  color: var(--home-ink);
+  background: transparent;
 }
 .home-pause:hover {
-  background: #19533b;
+  background: rgb(36 41 45 / 0.08);
 }
 .home-page .home-pause:focus-visible {
-  outline-color: var(--home-highlight);
+  outline-color: var(--home-brand);
 }
 .home-motion-note {
   display: none;
@@ -739,6 +771,100 @@ html:has(.home-page) {
   }
 }
 
+@media (min-width: 901px) {
+  .home-header {
+    --header-glass-duration: 160ms;
+    transition:
+      width 280ms ease,
+      top 280ms ease,
+      border-radius 280ms ease,
+      box-shadow var(--header-glass-duration) ease,
+      background-color var(--header-glass-duration) ease,
+      border-color var(--header-glass-duration) ease,
+      backdrop-filter var(--header-glass-duration) ease,
+      opacity var(--header-glass-duration) ease;
+  }
+  .home-header .home-header-inner {
+    transition:
+      height 200ms ease,
+      width 280ms ease;
+  }
+  .home-desktop-nav {
+    min-width: 0;
+    max-width: 560px;
+    white-space: nowrap;
+    transition:
+      max-width 280ms ease,
+      margin-right 280ms ease,
+      opacity 120ms ease 140ms,
+      visibility 0s linear 140ms;
+  }
+  .home-header[data-compact="true"] {
+    --header-glass-duration: 480ms;
+    top: 12px;
+    width: min(480px, calc(100% - 64px));
+    border: 1px solid rgb(255 255 255 / 0.64);
+    border-radius: 12px;
+    background-color: rgb(247 247 245 / 0.88);
+    background-image: linear-gradient(
+      135deg,
+      rgb(255 255 255 / 0.42),
+      rgb(255 255 255 / 0.03) 46%,
+      rgb(255 255 255 / 0.2)
+    );
+    backdrop-filter: blur(18px) saturate(1.35);
+    box-shadow:
+      0 8px 28px rgb(18 23 28 / 0.06),
+      inset 1px 1px 1px rgb(255 255 255 / 0.7),
+      inset -1px -1px 1px rgb(255 255 255 / 0.14);
+  }
+  .home-header[data-compact="true"]:where(:hover, :focus-within, [data-menu-open="true"]) {
+    --header-glass-duration: 160ms;
+  }
+  .home-header[data-compact="true"]:where(:focus-within, [data-menu-open="true"]) {
+    background-color: var(--home-page);
+  }
+  .home-header[data-compact="true"] .home-header-inner,
+  .home-header[data-compact="true"] .home-mobile-nav {
+    width: calc(100% - 32px);
+  }
+  .home-header[data-compact="true"] .home-desktop-nav {
+    max-width: 0;
+    overflow: hidden;
+    margin-right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      max-width 280ms ease,
+      margin-right 280ms ease,
+      opacity 80ms ease,
+      visibility 0s;
+  }
+  .home-header[data-compact="true"] .home-menu-toggle,
+  .home-header[data-compact="true"] .home-mobile-nav:not([hidden]) {
+    display: grid;
+  }
+}
+@media (min-width: 901px) and (hover: hover) and (pointer: fine) {
+  .home-header[data-compact="true"]:where(:not(:hover):not(:focus-within):not([data-menu-open="true"])) {
+    opacity: 0.28;
+    background-color: rgb(247 247 245 / 0.1);
+    backdrop-filter: blur(6px) saturate(1.2);
+    border-color: rgb(255 255 255 / 0.34);
+    box-shadow:
+      0 4px 16px rgb(18 23 28 / 0.025),
+      inset 1px 1px 1px rgb(255 255 255 / 0.4);
+  }
+}
+@media (min-width: 901px) and (prefers-reduced-transparency: reduce) {
+  .home-header[data-compact="true"] {
+    opacity: 1;
+    background-color: var(--home-page);
+    background-image: none;
+    backdrop-filter: none;
+    border-color: var(--home-line);
+  }
+}
 @media (max-width: 900px) {
   .home-desktop-nav {
     display: none;
@@ -748,19 +874,7 @@ html:has(.home-page) {
   }
   .home-mobile-nav {
     display: grid;
-    gap: 0;
-    padding-block: 8px 16px;
-    max-height: calc(100dvh - 80px);
-    overflow-y: auto;
-  }
-  .home-mobile-nav a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-block: 12px;
-    border-top: 1px solid var(--home-line);
-    font-size: 14px;
-    font-weight: 600;
+    max-height: calc(100dvh - var(--header-height));
   }
   .home-hero-copy {
     max-width: 640px;
@@ -801,12 +915,14 @@ html:has(.home-page) {
   .home-page {
     padding-top: 64px;
   }
-  .home-header-inner {
-    height: 64px;
-    gap: 8px;
+  .home-header {
+    --header-height: 64px;
   }
-  .home-mobile-nav {
-    max-height: calc(100dvh - 64px);
+  .home-header[data-compact="true"] {
+    --header-height: 56px;
+  }
+  .home-header-inner {
+    gap: 8px;
   }
   .home-brand {
     gap: 8px;
@@ -821,9 +937,6 @@ html:has(.home-page) {
   .home-header-actions .home-text-link {
     font-size: 12px;
     gap: 4px;
-  }
-  .home-menu-toggle {
-    width: 48px;
   }
   .home-hero {
     min-height: calc(100svh - 64px);
@@ -846,10 +959,6 @@ html:has(.home-page) {
   }
   .home-hero-actions .home-text-link {
     justify-content: center;
-  }
-  .home-pause {
-    padding: 0 6px;
-    gap: 4px;
   }
   .home-section-heading {
     margin-top: 24px;
@@ -932,7 +1041,7 @@ html:has(.home-page) {
 @media (prefers-reduced-motion: reduce) {
   .home-motion-note {
     display: block;
-    color: var(--home-highlight);
+    color: var(--home-muted);
     font:
       11px/1.5 "IBM Plex Mono",
       monospace;

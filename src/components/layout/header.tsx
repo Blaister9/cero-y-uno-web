@@ -1,12 +1,13 @@
 "use client";
 
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, PanelLeft, PanelLeftClose } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
 
 import { siteConfig } from "@/config/site";
 import { chromeContent } from "@/content/chrome";
+import { useHeaderCompact } from "@/lib/use-header-compact";
 import { Brand } from "./brand";
 
 export function Header() {
@@ -18,10 +19,14 @@ export function Header() {
 function HeaderNavigation({ pathname }: { pathname: string }) {
   const [open, setOpen] = useState(false);
   const trigger = useRef<HTMLButtonElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
+  useHeaderCompact(headerRef);
 
   return (
     <header
       className="home-header"
+      data-menu-open={open}
+      ref={headerRef}
       onKeyDown={(event) => {
         if (event.key === "Escape" && open) {
           setOpen(false);
@@ -34,7 +39,7 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
       </a>
       <div className="home-container home-header-inner">
         <Brand />
-        <nav className="home-desktop-nav" aria-label="Navegación principal">
+        <nav className="home-desktop-nav" aria-label={chromeContent.mainNavigationLabel}>
           {siteConfig.navItems.map((item) => (
             <Link
               key={item.href}
@@ -53,19 +58,25 @@ function HeaderNavigation({ pathname }: { pathname: string }) {
             className="home-menu-toggle"
             type="button"
             ref={trigger}
-            aria-label={open ? "Cerrar navegación" : "Abrir navegación"}
+            aria-label={
+              open ? chromeContent.closeNavigation : chromeContent.openNavigation
+            }
             aria-expanded={open}
             aria-controls="site-mobile-nav"
             onClick={() => setOpen(!open)}
           >
-            {open ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
+            {open ? (
+              <PanelLeftClose size={22} strokeWidth={1.6} aria-hidden="true" />
+            ) : (
+              <PanelLeft size={22} strokeWidth={1.6} aria-hidden="true" />
+            )}
           </button>
         </div>
       </div>
       <nav
         className="home-mobile-nav home-container"
         id="site-mobile-nav"
-        aria-label="Navegación móvil"
+        aria-label={chromeContent.panelNavigationLabel}
         hidden={!open}
       >
         {siteConfig.navItems.map((item) => (

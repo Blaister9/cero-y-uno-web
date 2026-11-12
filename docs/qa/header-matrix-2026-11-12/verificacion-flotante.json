@@ -1,0 +1,253 @@
+{
+  "checks": [
+    {
+      "case": "desktop-compact",
+      "compact": "true",
+      "innerHeight": 64,
+      "menuDisplay": "grid",
+      "menuExpanded": "false",
+      "navDisplay": "flex",
+      "navVisibility": "hidden",
+      "outer": {
+        "bottom": 78,
+        "height": 66,
+        "left": 328.5,
+        "right": 808.5,
+        "top": 12,
+        "width": 480,
+        "x": 328.5,
+        "y": 12
+      },
+      "overflow": false,
+      "panelHidden": true,
+      "scrollY": 265,
+      "viewport": 1152
+    },
+    {
+      "case": "desktop-menu-open",
+      "compact": "true",
+      "innerHeight": 64,
+      "menuDisplay": "grid",
+      "menuExpanded": "true",
+      "navDisplay": "flex",
+      "navVisibility": "hidden",
+      "outer": {
+        "bottom": 338.953125,
+        "height": 326.953125,
+        "left": 328.5,
+        "right": 808.5,
+        "top": 12,
+        "width": 480,
+        "x": 328.5,
+        "y": 12
+      },
+      "overflow": false,
+      "panelHidden": false,
+      "scrollY": 265,
+      "viewport": 1152
+    },
+    {
+      "case": "desktop-escape",
+      "compact": "true",
+      "innerHeight": 64,
+      "menuDisplay": "grid",
+      "menuExpanded": "false",
+      "navDisplay": "flex",
+      "navVisibility": "hidden",
+      "outer": {
+        "bottom": 78,
+        "height": 66,
+        "left": 328.5,
+        "right": 808.5,
+        "top": 12,
+        "width": 480,
+        "x": 328.5,
+        "y": 12
+      },
+      "overflow": false,
+      "panelHidden": true,
+      "scrollY": 265,
+      "viewport": 1152,
+      "focusReturned": true
+    },
+    {
+      "case": "desktop-expanded",
+      "compact": "false",
+      "innerHeight": 80,
+      "menuDisplay": "none",
+      "menuExpanded": "false",
+      "navDisplay": "flex",
+      "navVisibility": "visible",
+      "outer": {
+        "bottom": 81,
+        "height": 81,
+        "left": 0,
+        "right": 1137,
+        "top": 0,
+        "width": 1137,
+        "x": 0,
+        "y": 0
+      },
+      "overflow": false,
+      "panelHidden": true,
+      "scrollY": 0,
+      "viewport": 1152
+    },
+    {
+      "case": "desktop-901-top",
+      "compact": "false",
+      "innerHeight": 80,
+      "menuDisplay": "none",
+      "menuExpanded": "false",
+      "navDisplay": "flex",
+      "navVisibility": "visible",
+      "outer": {
+        "bottom": 81,
+        "height": 81,
+        "left": 0,
+        "right": 886,
+        "top": 0,
+        "width": 886,
+        "x": 0,
+        "y": 0
+      },
+      "overflow": false,
+      "panelHidden": true,
+      "scrollY": 0,
+      "viewport": 901
+    },
+    {
+      "case": "desktop-hidden-links-skip",
+      "activeLink": "Hablemos"
+    },
+    {
+      "case": "desktop-901-menu-escape",
+      "compact": "true",
+      "innerHeight": 64,
+      "menuDisplay": "grid",
+      "menuExpanded": "false",
+      "navDisplay": "flex",
+      "navVisibility": "hidden",
+      "outer": {
+        "bottom": 78,
+        "height": 66,
+        "left": 203,
+        "right": 683,
+        "top": 12,
+        "width": 480,
+        "x": 203,
+        "y": 12
+      },
+      "overflow": false,
+      "panelHidden": true,
+      "scrollY": 222,
+      "viewport": 901,
+      "focusReturned": true
+    },
+    {
+      "case": "mobile-320-top",
+      "compact": "false",
+      "innerHeight": 64,
+      "menuDisplay": "grid",
+      "menuExpanded": "false",
+      "navDisplay": "none",
+      "navVisibility": "visible",
+      "outer": {
+        "bottom": 65,
+        "height": 65,
+        "left": 0,
+        "right": 305,
+        "top": 0,
+        "width": 305,
+        "x": 0,
+        "y": 0
+      },
+      "overflow": false,
+      "panelHidden": true,
+      "scrollY": 0,
+      "viewport": 320
+    },
+    {
+      "case": "mobile-compact-preserved",
+      "compact": "true",
+      "innerHeight": 56,
+      "menuDisplay": "grid",
+      "menuExpanded": "false",
+      "navDisplay": "none",
+      "navVisibility": "visible",
+      "outer": {
+        "bottom": 57,
+        "height": 57,
+        "left": 0,
+        "right": 375,
+        "top": 0,
+        "width": 375,
+        "x": 0,
+        "y": 0
+      },
+      "overflow": false,
+      "panelHidden": true,
+      "scrollY": 169,
+      "viewport": 390
+    },
+    {
+      "case": "desktop-route-reset",
+      "pathname": "/nosotros",
+      "compact": "false",
+      "innerHeight": 80,
+      "menuDisplay": "none",
+      "menuExpanded": "false",
+      "navDisplay": "flex",
+      "navVisibility": "visible",
+      "outer": {
+        "bottom": 81,
+        "height": 81,
+        "left": 0,
+        "right": 1137,
+        "top": 0,
+        "width": 1137,
+        "x": 0,
+        "y": 0
+      },
+      "overflow": false,
+      "panelHidden": true,
+      "scrollY": 0,
+      "viewport": 1152
+    },
+    {
+      "case": "final-production-build-local",
+      "compact": "true",
+      "innerHeight": 64,
+      "menuDisplay": "grid",
+      "menuExpanded": "false",
+      "navDisplay": "flex",
+      "navVisibility": "hidden",
+      "outer": {
+        "bottom": 78,
+        "height": 66,
+        "left": 328.5,
+        "right": 808.5,
+        "top": 12,
+        "width": 480,
+        "x": 328.5,
+        "y": 12
+      },
+      "overflow": false,
+      "panelHidden": true,
+      "scrollY": 265,
+      "viewport": 1152
+    }
+  ],
+  "sourceCopy": {
+    "files": 116,
+    "allMatch": true
+  },
+  "commands": {
+    "install": "passed (pnpm 9.15.4, frozen lockfile)",
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed (identical copy outside OneDrive)"
+  },
+  "errors": [],
+  "publication": "local review; production unchanged"
+}

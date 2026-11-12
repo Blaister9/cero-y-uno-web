@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "case": "mobile-top",
+      "compact": "false",
+      "height": 64,
+      "menuTarget": {
+        "bottom": 54,
+        "height": 44,
+        "left": 309,
+        "right": 353,
+        "top": 10,
+        "width": 44,
+        "x": 309,
+        "y": 10
+      },
+      "overflow": false,
+      "scrollY": 0,
+      "width": 390
+    },
+    {
+      "case": "menu-open",
+      "expanded": "true",
+      "hidden": false
+    },
+    {
+      "case": "menu-escape",
+      "expanded": "false",
+      "hidden": true,
+      "triggerFocused": true
+    },
+    {
+      "case": "mobile-compact",
+      "compact": "true",
+      "height": 56,
+      "scrollY": 169,
+      "width": 390
+    },
+    {
+      "case": "mobile-320",
+      "actions": {
+        "bottom": 52,
+        "height": 48,
+        "left": 154.0625,
+        "right": 283,
+        "top": 4,
+        "width": 128.9375,
+        "x": 154.0625,
+        "y": 4
+      },
+      "brand": {
+        "bottom": 45.10273361206055,
+        "height": 34.221092224121094,
+        "left": 22,
+        "right": 135.02406311035156,
+        "top": 10.881641387939451,
+        "width": 113.02406311035156,
+        "x": 22,
+        "y": 10.881641387939451
+      },
+      "overflow": false,
+      "width": 320
+    },
+    {
+      "case": "route-menu-reset",
+      "menuExpanded": "false",
+      "menuHidden": true,
+      "overflow": false,
+      "pathname": "/nosotros"
+    },
+    {
+      "case": "pause",
+      "iconOnly": true,
+      "label": "Reanudar animación Matrix",
+      "pressed": "true"
+    },
+    {
+      "case": "resume",
+      "label": "Pausar animación Matrix",
+      "pressed": "false"
+    },
+    {
+      "case": "desktop-top",
+      "compact": "false",
+      "height": 80,
+      "overflow": false,
+      "scrollY": 0,
+      "width": 1280
+    },
+    {
+      "case": "desktop-compact",
+      "brandTransform": "matrix(0.93, 0, 0, 0.93, 0, 0)",
+      "compact": "true",
+      "height": 64,
+      "pauseBottomGap": 24,
+      "scrollY": 216,
+      "width": 1280
+    }
+  ],
+  "pausePixelsStable": true,
+  "sourceCopy": {
+    "files": 116,
+    "allMatch": true
+  },
+  "commands": {
+    "install": "passed (pnpm 9.15.4, frozen lockfile)",
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed (identical copy outside OneDrive)"
+  },
+  "browserLogs": [
+    {
+      "level": "warn",
+      "message": "Detected `scroll-behavior: smooth` on the `<html>` element. In a future version, Next.js will no longer automatically disable smooth scrolling during route transitions. To prepare for this change, add `data-scroll-behavior=\"smooth\"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior",
+      "timestamp": "2026-11-12T20:19:22.147Z",
+      "url": "webpack-internal:///(app-pages-browser)/./node_modules/.pnpm/next@15.5.29_@types+node@22.20.5_react-dom@19.3.1_react@19.3.1__react@19.3.1/node_modules/next/dist/shared/lib/utils/warn-once.js"
+    }
+  ]
+}

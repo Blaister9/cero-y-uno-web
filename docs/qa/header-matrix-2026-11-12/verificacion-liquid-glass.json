@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "case": "idle",
+      "background": "rgba(247, 247, 245, 0.1)",
+      "compact": "true",
+      "fadeDuration": "480ms",
+      "filter": "blur(6px) saturate(1.2)",
+      "focusWithin": false,
+      "hover": false,
+      "menuOpen": "false",
+      "opacity": "0.28",
+      "overflow": false,
+      "reflection": "linear-gradient(135deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.03) 46%, rgba(255, 255, 255, 0.2))",
+      "scrollY": 1106,
+      "viewport": 994,
+      "width": 480
+    },
+    {
+      "case": "hover",
+      "background": "rgba(247, 247, 245, 0.88)",
+      "compact": "true",
+      "fadeDuration": "160ms",
+      "filter": "blur(18px) saturate(1.35)",
+      "focusWithin": false,
+      "hover": true,
+      "menuOpen": "false",
+      "opacity": "1",
+      "overflow": false,
+      "reflection": "linear-gradient(135deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.03) 46%, rgba(255, 255, 255, 0.2))",
+      "scrollY": 1106,
+      "viewport": 994,
+      "width": 480
+    },
+    {
+      "case": "menu-open-pointer-outside",
+      "background": "rgb(247, 247, 245)",
+      "compact": "true",
+      "fadeDuration": "160ms",
+      "filter": "blur(18px) saturate(1.35)",
+      "focusWithin": false,
+      "hover": false,
+      "menuOpen": "true",
+      "opacity": "1",
+      "overflow": false,
+      "reflection": "linear-gradient(135deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.03) 46%, rgba(255, 255, 255, 0.2))",
+      "scrollY": 1242,
+      "viewport": 994,
+      "width": 480
+    },
+    {
+      "case": "keyboard-focus",
+      "background": "rgb(247, 247, 245)",
+      "compact": "true",
+      "fadeDuration": "160ms",
+      "filter": "blur(18px) saturate(1.35)",
+      "focusWithin": true,
+      "hover": false,
+      "menuOpen": "false",
+      "opacity": "1",
+      "overflow": false,
+      "reflection": "linear-gradient(135deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.03) 46%, rgba(255, 255, 255, 0.2))",
+      "scrollY": 1242,
+      "viewport": 994,
+      "width": 480
+    },
+    {
+      "case": "mobile-preserved",
+      "background": "rgb(247, 247, 245)",
+      "compact": "true",
+      "fadeDuration": "",
+      "filter": "none",
+      "focusWithin": true,
+      "hover": false,
+      "menuOpen": "false",
+      "opacity": "1",
+      "overflow": false,
+      "reflection": "none",
+      "scrollY": 1242,
+      "viewport": 390,
+      "width": 375
+    },
+    {
+      "case": "idle-restored",
+      "background": "rgba(247, 247, 245, 0.1)",
+      "compact": "true",
+      "fadeDuration": "480ms",
+      "filter": "blur(6px) saturate(1.2)",
+      "focusWithin": false,
+      "hover": false,
+      "menuOpen": "false",
+      "opacity": "0.28",
+      "overflow": false,
+      "reflection": "linear-gradient(135deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.03) 46%, rgba(255, 255, 255, 0.2))",
+      "scrollY": 1100,
+      "viewport": 994,
+      "width": 480
+    }
+  ],
+  "sourceCopy": {
+    "files": 116,
+    "allMatch": true
+  },
+  "commands": {
+    "install": "passed (pnpm 9.15.4, frozen lockfile)",
+    "typecheck": "passed",
+    "lint": "passed",
+    "build": "passed (identical copy outside OneDrive)"
+  },
+  "errors": [],
+  "publication": "local preview"
+}

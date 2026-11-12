@@ -1,6 +1,10 @@
 export const chromeContent = {
   skipLabel: "Saltar al contenido",
   contactLabel: "Hablemos",
+  openNavigation: "Abrir navegación",
+  closeNavigation: "Cerrar navegación",
+  mainNavigationLabel: "Navegación principal",
+  panelNavigationLabel: "Navegación desplegable",
   navigationLabel: "Explorar",
   servicesLabel: "Servicios",
   contactHeading: "Contacto",
