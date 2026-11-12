@@ -15,6 +15,11 @@ Segunda fase: [rediseño de Servicios](SERVICIOS_2026-11-12.md), con base clara,
 ejemplos visuales diferenciados y alcances accesibles. Atiende INT-03 e INT-08
 para esa página; el resto del diagnóstico continúa como referencia pendiente.
 
+Tercera fase: [rediseño de Soluciones](SOLUCIONES_2026-11-12.md), con seis escenas
+diferenciadas, base clara y URLs compartibles. Atiende INT-03 e INT-09 para esa
+página y la parte de selección compartible de INT-10. Nosotros y Contacto quedan
+como siguientes fases de contenido y composición.
+
 ## Conclusión
 
 Las páginas interiores funcionan, pero conservan una etapa visual anterior al

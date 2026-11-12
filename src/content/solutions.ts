@@ -5,20 +5,24 @@ export const solutionsPage = {
   description: "Una solicitud que no avanza. Un dato que se copia tres veces. Un reporte que llega tarde. El software tiene que ayudar justo ahí.",
   exploreLabel: "Encuentra tu escenario",
   heroExample: {
-    label: "Un flujo posible",
-    title: "De pendiente a resuelto.",
-    steps: [
-      { title: "Alguien lo necesita", detail: "La solicitud queda registrada." },
-      { title: "Alguien decide", detail: "El responsable tiene el contexto." },
-      { title: "El trabajo continúa", detail: "La respuesta llega al siguiente paso." }
-    ]
+    label: "Una situación cotidiana",
+    title: "Una solicitud. Todo su contexto.",
+    image: "/images/stories/mesa-financiera-v1.webp",
+    disclosure: "Escena conceptual generada con IA · Datos ficticios",
+    documentLabel: "SOLICITUD / 024",
+    subject: "Acceso al reporte de compras",
+    fields: ["Documento adjunto", "Responsable de compras", "Decisión registrada"],
+    note: "El siguiente paso ya tiene lo que necesita.",
+    status: "Lista para continuar",
+    connection: "Del mensaje suelto al proceso compartido."
   },
   explorer: {
     eyebrow: "Del problema al sistema",
     title: "¿Dónde se frena tu equipo?",
     description: "Selecciona una situación para ver qué podríamos construir y cómo se usaría.",
     choiceLabel: "Situación de tu equipo",
-    exampleLabel: "Ejemplo ilustrativo",
+    exampleLabel: "Ejemplo ilustrativo · Datos ficticios",
+    shareLabel: "Enlace a este escenario",
     beforeLabel: "El atasco",
     afterLabel: "Qué cambia",
     includesLabel: "Qué tendría la solución",
@@ -153,4 +157,4 @@ export const solutionsPage = {
     action: "Hablemos de tu caso",
     secondaryAction: "Ver recorridos del portafolio"
   }
-};
+} as const;

@@ -1,0 +1,472 @@
+{
+  "environment": "Local production build, Node 24, integrated browser",
+  "scenarios": [
+    {
+      "checked": "plataformas-internas",
+      "hash": "",
+      "overflow": false,
+      "visible": [
+        "scenario-plataformas-internas"
+      ]
+    },
+    {
+      "checked": "portales-corporativos",
+      "hash": "#scenario-portales-corporativos",
+      "overflow": false,
+      "visible": [
+        "scenario-portales-corporativos"
+      ]
+    },
+    {
+      "checked": "automatizacion-operativa",
+      "hash": "#scenario-automatizacion-operativa",
+      "overflow": false,
+      "visible": [
+        "scenario-automatizacion-operativa"
+      ]
+    },
+    {
+      "checked": "integracion-de-sistemas",
+      "hash": "#scenario-integracion-de-sistemas",
+      "overflow": false,
+      "visible": [
+        "scenario-integracion-de-sistemas"
+      ]
+    },
+    {
+      "checked": "tableros-gerenciales",
+      "hash": "#scenario-tableros-gerenciales",
+      "overflow": false,
+      "visible": [
+        "scenario-tableros-gerenciales"
+      ]
+    },
+    {
+      "checked": "ia-aplicada",
+      "hash": "#scenario-ia-aplicada",
+      "overflow": false,
+      "visible": [
+        "scenario-ia-aplicada"
+      ]
+    }
+  ],
+  "viewports": [
+    {
+      "overflow": false,
+      "selected": "plataformas-internas",
+      "viewport": [
+        320,
+        740
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 261,
+          "canvasWidth": 261,
+          "id": "scenario-plataformas-internas"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "portales-corporativos",
+      "viewport": [
+        320,
+        740
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 261,
+          "canvasWidth": 261,
+          "id": "scenario-portales-corporativos"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "automatizacion-operativa",
+      "viewport": [
+        320,
+        740
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 261,
+          "canvasWidth": 261,
+          "id": "scenario-automatizacion-operativa"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "integracion-de-sistemas",
+      "viewport": [
+        320,
+        740
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 261,
+          "canvasWidth": 261,
+          "id": "scenario-integracion-de-sistemas"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "tableros-gerenciales",
+      "viewport": [
+        320,
+        740
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 261,
+          "canvasWidth": 261,
+          "id": "scenario-tableros-gerenciales"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "ia-aplicada",
+      "viewport": [
+        320,
+        740
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 261,
+          "canvasWidth": 261,
+          "id": "scenario-ia-aplicada"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "plataformas-internas",
+      "viewport": [
+        390,
+        844
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 331,
+          "canvasWidth": 331,
+          "id": "scenario-plataformas-internas"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "portales-corporativos",
+      "viewport": [
+        390,
+        844
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 331,
+          "canvasWidth": 331,
+          "id": "scenario-portales-corporativos"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "automatizacion-operativa",
+      "viewport": [
+        390,
+        844
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 331,
+          "canvasWidth": 331,
+          "id": "scenario-automatizacion-operativa"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "integracion-de-sistemas",
+      "viewport": [
+        390,
+        844
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 331,
+          "canvasWidth": 331,
+          "id": "scenario-integracion-de-sistemas"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "tableros-gerenciales",
+      "viewport": [
+        390,
+        844
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 331,
+          "canvasWidth": 331,
+          "id": "scenario-tableros-gerenciales"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "ia-aplicada",
+      "viewport": [
+        390,
+        844
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 331,
+          "canvasWidth": 331,
+          "id": "scenario-ia-aplicada"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "plataformas-internas",
+      "viewport": [
+        768,
+        1024
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 689,
+          "canvasWidth": 689,
+          "id": "scenario-plataformas-internas"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "portales-corporativos",
+      "viewport": [
+        768,
+        1024
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 689,
+          "canvasWidth": 689,
+          "id": "scenario-portales-corporativos"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "automatizacion-operativa",
+      "viewport": [
+        768,
+        1024
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 689,
+          "canvasWidth": 689,
+          "id": "scenario-automatizacion-operativa"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "integracion-de-sistemas",
+      "viewport": [
+        768,
+        1024
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 689,
+          "canvasWidth": 689,
+          "id": "scenario-integracion-de-sistemas"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "tableros-gerenciales",
+      "viewport": [
+        768,
+        1024
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 689,
+          "canvasWidth": 689,
+          "id": "scenario-tableros-gerenciales"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "ia-aplicada",
+      "viewport": [
+        768,
+        1024
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 689,
+          "canvasWidth": 689,
+          "id": "scenario-ia-aplicada"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "plataformas-internas",
+      "viewport": [
+        1280,
+        900
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 875,
+          "canvasWidth": 875,
+          "id": "scenario-plataformas-internas"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "portales-corporativos",
+      "viewport": [
+        1280,
+        900
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 875,
+          "canvasWidth": 875,
+          "id": "scenario-portales-corporativos"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "automatizacion-operativa",
+      "viewport": [
+        1280,
+        900
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 875,
+          "canvasWidth": 875,
+          "id": "scenario-automatizacion-operativa"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "integracion-de-sistemas",
+      "viewport": [
+        1280,
+        900
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 875,
+          "canvasWidth": 875,
+          "id": "scenario-integracion-de-sistemas"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "tableros-gerenciales",
+      "viewport": [
+        1280,
+        900
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 875,
+          "canvasWidth": 875,
+          "id": "scenario-tableros-gerenciales"
+        }
+      ]
+    },
+    {
+      "overflow": false,
+      "selected": "ia-aplicada",
+      "viewport": [
+        1280,
+        900
+      ],
+      "visible": [
+        {
+          "canvasScrollWidth": 875,
+          "canvasWidth": 875,
+          "id": "scenario-ia-aplicada"
+        }
+      ]
+    }
+  ],
+  "deepLinks": [
+    {
+      "checked": "plataformas-internas",
+      "hash": "#scenario-plataformas-internas",
+      "visible": [
+        "scenario-plataformas-internas"
+      ]
+    },
+    {
+      "checked": "portales-corporativos",
+      "hash": "#scenario-portales-corporativos",
+      "visible": [
+        "scenario-portales-corporativos"
+      ]
+    },
+    {
+      "checked": "automatizacion-operativa",
+      "hash": "#scenario-automatizacion-operativa",
+      "visible": [
+        "scenario-automatizacion-operativa"
+      ]
+    },
+    {
+      "checked": "integracion-de-sistemas",
+      "hash": "#scenario-integracion-de-sistemas",
+      "visible": [
+        "scenario-integracion-de-sistemas"
+      ]
+    },
+    {
+      "checked": "tableros-gerenciales",
+      "hash": "#scenario-tableros-gerenciales",
+      "visible": [
+        "scenario-tableros-gerenciales"
+      ]
+    },
+    {
+      "checked": "ia-aplicada",
+      "hash": "#scenario-ia-aplicada",
+      "visible": [
+        "scenario-ia-aplicada"
+      ]
+    }
+  ],
+  "skip": {
+    "focus": "contenido",
+    "hash": "#contenido"
+  },
+  "keyboard": {
+    "arrowRightFrom": "plataformas-internas",
+    "selected": "portales-corporativos"
+  },
+  "reloadAndBack": {
+    "scenario": "ia-aplicada",
+    "relatedService": "/servicios#analitica-e-ia",
+    "restored": true
+  }
+}
