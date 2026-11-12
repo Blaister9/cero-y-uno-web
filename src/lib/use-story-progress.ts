@@ -11,7 +11,7 @@ export function useStoryProgress(
   const [linked, setLinked] = useState(false);
   useEffect(() => {
     const screen = window.matchMedia(
-      "(min-width: 901px) and (min-height: 760px) and (prefers-reduced-motion: no-preference)",
+      "(min-width: 901px) and (min-height: 720px) and (prefers-reduced-motion: no-preference)",
     );
     let frame = 0;
     const update = () => {

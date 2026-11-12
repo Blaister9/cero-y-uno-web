@@ -1450,7 +1450,7 @@
     padding-block: 8px;
   }
 }
-@media (max-width: 900px), (max-height: 759px) {
+@media (max-width: 900px), (max-height: 719px) {
   .story-scene {
     height: 510px;
   }
@@ -1864,6 +1864,76 @@
   }
   .inventory-receipt p {
     font-size: 10px;
+  }
+}
+@media (min-width: 901px) and (min-height: 720px) and (max-height: 759px) {
+  .finance-paper {
+    transform: rotate(-3deg) scale(0.88);
+    transform-origin: top center;
+  }
+  .finance-software {
+    transform: scale(0.88);
+    transform-origin: top left;
+  }
+  .purchase-tablet {
+    top: 2%;
+    height: 92%;
+  }
+  .purchase-appbar {
+    padding: 9px 16px;
+    font-size: 10px;
+  }
+  .purchase-form dl {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+  }
+  .purchase-form dl > div:first-child {
+    grid-column: 1 / -1;
+  }
+  .purchase-form dd {
+    font-size: 12px;
+  }
+  .purchase-submit {
+    margin-top: 12px;
+  }
+  .report-bars {
+    height: 135px;
+  }
+  .purchase-decision {
+    top: 17%;
+  }
+  .integrity-document {
+    top: 3%;
+    height: 90%;
+  }
+  .home-page .document-sentence {
+    font-size: 29px;
+    margin-top: 16px;
+  }
+  .chain-records {
+    margin-block: 8px;
+  }
+  .chain-records > span {
+    padding: 8px 18px;
+  }
+  .integrity-proof {
+    top: 5%;
+  }
+  .integrity-verdict {
+    margin-top: 12px;
+  }
+  .home-page .integrity-limit {
+    margin-top: 10px;
+  }
+  .journey-caption {
+    padding-block: 12px;
+  }
+  .story-track[data-linked="true"] .journey-caption {
+    min-height: 136px;
+  }
+  .inventory-receipt {
+    padding-block: 4px;
+    margin-top: 6px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

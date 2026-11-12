@@ -31,7 +31,7 @@ servicios, dependencias de producción ni llamadas a sistemas de terceros.
 - El cambio de proyecto lleva directamente al encabezado para evitar atravesar las
   etapas de otro recorrido. Las acciones que desaparecen devuelven el foco al relato.
 
-En escritorio a partir de 901 × 760, el scroll controla la escena fijada. En pantallas
+En escritorio a partir de 901 × 720, el scroll controla la escena fijada. En pantallas
 menores y con movimiento reducido se usan estados completos seleccionables, flechas
 y acciones contextuales. El relato íntegro queda accesible en un desplegable.
 
@@ -49,6 +49,10 @@ reutilizan fotografías existentes del portafolio.
 - Compilación de producción: correcta con Node 24.22.3 y pnpm 9.15.4;
   las 12 salidas estáticas se generaron. Inicio: 129 KB de JavaScript inicial.
 - Navegador integrado: 1440 × 1000, 901 × 760, 768 × 1024, 390 × 844 y 320 × 740.
+- Ajuste adicional para la ventana integrada de 720 px: scroll activo desde
+  901 × 720. Se comprobaron los cuatro estados de las cinco escenas a 901 × 720
+  y 1280 × 720; se compactaron tableta e inventario y se verificó que no recortan
+  su contenido ni el texto del capítulo.
 - Los cinco recorridos permiten seleccionar las cuatro etapas.
 - En la compilación final, los cinco respondieron al scroll nativo de 01 a 02 y
   regresaron a 01 al invertirlo. Inicio y las otras cuatro páginas, robots y sitemap
